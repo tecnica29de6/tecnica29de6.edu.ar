@@ -1,0 +1,335 @@
+
+/* CSS Integrado y Modificado */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 🔹 BODY GENERAL - AÑADIENDO EL FONDO AZUL CLARO (#E8F7FF) */
+body {
+    padding-top: 80px; /* espacio igual al alto del navbar */
+    line-height: 1.6;
+    color: #111111;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #E8F7FF; /* Fondo azul claro, similar a la imagen */
+}
+
+/* 🔹 NAVBAR FIJA */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffffc9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    align-items: center; /* Alineación vertical centrada */
+    height: 90px;
+    padding: 0 1rem; /* Padding horizontal para centrar mejor el contenido */
+    justify-content: space-between;
+}
+
+.navbar-content {
+    max-width: 1200px;
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.navbar{
+    p{
+        margin-right: 30px;
+    }
+}
+
+.social-icons{
+    margin-right: 20px;
+    a{
+       padding-top: 20px
+    }
+}
+
+
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.navbar-logo {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.navbar-logo:hover {
+    transform: scale(1.05);
+}
+
+.navbar-link {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #111111;
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.navbar-link:hover {
+    text-decoration: underline;
+    color: #667eea;
+}
+
+/* 🔹 HEADER */
+header {
+    background-color: #9fdbf8;
+    text-align: center;
+    padding: 4rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.imagen_header {
+    height: 550px;
+    width: 1000px;
+    max-width: 100%; /* Asegura que la imagen no desborde en móvil */
+    height: auto;
+    border-radius: 10px; /* Estética moderna */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); /* Sombra añadida */
+    margin-top: 1.5rem;
+}
+
+/* 🔹 CONTENIDO PRINCIPAL */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.specialties {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.specialty-card {
+    display: block;
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.027);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+}
+
+.specialty-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada al hover */
+}
+
+.specialty-icon {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.specialty-card h3 {
+    color: #667eea;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.specialty-card p {
+    color: #666;
+    line-height: 1.8;
+    font-weight: normal; /* Texto de párrafo menos grueso */
+}
+
+/* 🔹 FOOTER */
+footer {
+    background: #9fdbf8;
+    color: rgb(0, 0, 0);
+    padding: 2rem 0; /* Padding vertical, se quita el horizontal para que el .social-copyright lo maneje */
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem; /* Padding horizontal para el contenido principal */
+    display: grid;
+    grid-template-columns: 1fr; /* Default mobile: 1 columna */
+    gap: 2rem;
+    text-align: left; 
+}
+
+/* 💡 Desktop: Contactos (1fr) y Mapa (2fr) para hacerlo más ancho */
+@media (min-width: 1024px) {
+    .footer-content {
+        grid-template-columns: 1fr 2fr;
+        align-items: start;
+    }
+}
+
+.contactos {
+    font-size: 3rem;
+    text-align: center;
+    grid-column: 1 / -1; /* Ocupa todo el ancho en el grid */
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+
+/* 💡 Tarjetas de Contacto (NUEVO) */
+.contact-cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Espacio entre las tarjetas */
+}
+
+.contact-card {
+    background-color: white; /* Fondo blanco */
+    padding: 1.5rem;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para el hover */
+}
+
+.contact-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-icon {
+    font-size: 2.5rem; /* Icono más grande */
+    line-height: 1;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-label {
+    font-size: 1.5rem; /* Texto "Teléfono" / "Email" más grande */
+    font-weight: bold;
+    color: #111111;
+    margin-bottom: 0.25rem;
+}
+
+.contact-link {
+    font-size: 1.1rem; /* El link o número */
+    color: #666;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+/* 💡 FIX: Asegura que el iframe sea responsivo y no desborde */
+.footer-content iframe {
+    width: 100%; /* Ocupa el 100% del espacio de su celda de grid */
+    height: 450px;
+    display: block;
+    border: 0;
+    border-radius: 10px; /* Estética */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para el mapa */
+    overflow: hidden; /* Importante para el contenedor */
+}
+
+.titulo {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2.5rem;
+}
+
+.subtitulo {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2.0rem;
+}
+
+/* 🔹 SECCIONES DE REDES SOCIALES Y COPYRIGHT (Ahora con fondo blanco) */
+.social-copyright-wrapper {
+    background-color: white; /* FONDO BLANCO SOLICITADO */
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+    width: 100%; /* Ocupa todo el ancho */
+}
+
+.social-copyright {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.social-icon {
+    font-size: 2rem;
+    color: #111111;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #667eea;
+}
+
+.copyright-text {
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.5;
+    color: #111111;
+}
+
+/* 🔹 RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .imagen_header {
+        width: 100%;
+        height: auto;
+    }
+
+    .navbar {
+        height: auto;
+        padding: 0.5rem 0;
+    }
+
+    .navbar-left {
+        flex-direction: row;
+        justify-content: flex-start;
+        padding-left: 1rem;
+    }
+
+    .navbar-logo {
+        height: 40px;
+    }
+
+    .navbar-link {
+        font-size: 1.1rem;
+    }
+
+    .footer-content iframe {
+        height: 300px; /* Reducir altura del mapa en móvil */
+    }
+}

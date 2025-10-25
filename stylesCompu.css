@@ -1,0 +1,186 @@
+
+
+/* --- Estilos para el título y el nuevo enlace --- */
+.titulo {
+    text-align: center;
+    color: #333; /* O el color que uses para títulos */
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 50px;
+}
+
+.area-social-link {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.area-social-link .social-icon-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem; /* Espacio entre ícono y texto */
+    padding: 0.6rem 1.2rem;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 25px; /* Píldora */
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.area-social-link .social-icon-button:hover {
+    background-color: #e0e0e0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.area-social-link .social-icon-button svg {
+    /* Color del ícono de Instagram */
+    fill: #E1306C; 
+}
+
+
+/* --- Estilos de la Maquetación (Layout) --- */
+.main-content-wrapper {
+    display: flex;
+    flex-wrap: wrap; /* En pantallas chicas, la sidebar pasa abajo */
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    gap: 2rem; /* Espacio entre la columna principal y la sidebar */
+}
+
+.main-column {
+    flex: 3; /* Ocupa 3 partes */
+    min-width: 300px; /* Ancho mínimo para que no se aplaste */
+}
+
+.sidebar-column {
+    flex: 1; /* Ocupa 1 parte */
+    min-width: 280px; /* Ancho mínimo */
+}
+
+
+/* --- Estilos del Video (Columna Principal) --- */
+.video-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; /* Proporción 16:9 */
+    margin-bottom: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* --- Estilos de los Artículos (Columna Principal) --- */
+.content-section {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.content-section h2 {
+    color: #0056b3; /* Un azul, asumiendo colores de escuela */
+    border-bottom: 2px solid #0056b3;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.content-section p, .content-section li {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+}
+
+.content-section ul {
+    padding-left: 20px;
+    margin-top: 1rem;
+}
+
+.content-section li {
+    margin-bottom: 0.5rem;
+}
+
+
+/* --- Estilos del Widget "Mala Señal" (Sidebar) --- */
+.malasenal {
+    background-color: #1a1a1a; /* Negro/Gris oscuro */
+    color: #ffffff; /* Letras blancas */
+    border-radius: 12px; /* Borde redondeado */
+    padding: 1.5rem;
+    text-align: center;
+    position: sticky; /* Se queda fijo al hacer scroll (opcional) */
+    top: 2rem; /* Distancia del top al pegarse */
+}
+
+.malasenal p {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.malasenal img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border: 2px solid #444;
+}
+
+.malasenal .social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem; /* Espacio entre ícono y texto */
+    padding: 0.75rem;
+    margin: 0.5rem auto;
+    border-radius: 8px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.malasenal .social-icon:hover {
+    background-color: #555;
+}
+
+.malasenal .social-icon svg {
+    fill: #fff; /* Íconos blancos */
+}
+
+.malasenal a{
+    font-size: 16px;
+}
+
+/* --- Media Query para Responsive en móviles --- */
+@media (max-width: 768px) {
+    .main-content-wrapper {
+        /* Se apilan verticalmente (comportamiento natural de flex-wrap) */
+        padding: 0.5rem;
+    }
+
+    .main-column, .sidebar-column {
+        /* Ocupan todo el ancho en móviles */
+        flex: 1 1 100%;
+    }
+
+    .content-section {
+        padding: 1.5rem 1rem;
+    }
+}
