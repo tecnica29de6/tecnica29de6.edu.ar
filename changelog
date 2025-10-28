@@ -1,0 +1,5 @@
+28/10 FRAN
+
+- Añadidos al navbar del index tres links, los cuales llevan a las secciones de ésta misma. Ya se les ha asignado una estructura de css.
+- Añadido también al index un div vacío con la sección de visita virtual, la cual queda pendiente. 
+- El div de mala señal en la página de computación pasó de ser sticky a static, para que no acompañe al usuario en toda la página. 

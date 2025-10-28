@@ -73,17 +73,50 @@ body {
 }
 
 .navbar-link {
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: #111111;
-    text-decoration: none;
-    transition: color 0.3s ease, text-decoration 0.3s ease;
+    font-size: 1.1rem;
+    font-weight: 600;
+     font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.navbar-content {
+    justify-content: space-between; /* Modifica la propiedad existente */
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.navbar-nav {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
 }
 
 .navbar-link:hover {
-    text-decoration: underline;
+    text-decoration: underline; 
     color: #667eea;
 }
+
+.nav-link {
+    color: #111111;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0.3rem 0.7rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #667eea;
+    color: white;
+}
+
+[id] {
+    scroll-margin-top: 100px;
+} /*Con esto ajustamos el margen superior de modo que el navbar anclado no tapa el contenido al que llevan sus links*/
 
 /* 🔹 HEADER */
 header {
@@ -112,6 +145,13 @@ header h1 {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem 1rem;
+}
+
+.container h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+    text-align: center;
 }
 
 .specialties {
@@ -156,6 +196,12 @@ header h1 {
     color: #666;
     line-height: 1.8;
     font-weight: normal; /* Texto de párrafo menos grueso */
+}
+
+.visita-virtual{
+    background-color: #9fdbf8;
+    text-align: center;
+    padding: 4rem;
 }
 
 /* 🔹 FOOTER */
@@ -299,6 +345,10 @@ footer {
     color: #111111;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* 🔹 RESPONSIVE DESIGN */
 @media (max-width: 768px) {
     header h1 {
@@ -325,8 +375,21 @@ footer {
         height: 40px;
     }
 
+    .navbar-content {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .navbar-nav {
+        margin-top: 1rem;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
     .navbar-link {
-        font-size: 1.1rem;
+        font-size: 1rem;
+        padding: 0.3rem 0.8rem;
     }
 
     .footer-content iframe {
