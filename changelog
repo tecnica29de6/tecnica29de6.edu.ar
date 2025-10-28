@@ -1,5 +1,14 @@
-28/10 FRAN
+28/10 
+
+FRAN
 
 - Añadidos al navbar del index tres links, los cuales llevan a las secciones de ésta misma. Ya se les ha asignado una estructura de css.
 - Añadido también al index un div vacío con la sección de visita virtual, la cual queda pendiente. 
 - El div de mala señal en la página de computación pasó de ser sticky a static, para que no acompañe al usuario en toda la página. 
+
+MARCO
+
+-Se añadio un arichivo js para darle la logica de tabs. Que es basicmaente cuando tocas un boton te aparece la info al lado.
+-Se le agrego nuevo estilo en el css stylesCompu para la clase content-section
+-Y en el html solo se vinculo el script "tabs.js" 
+
