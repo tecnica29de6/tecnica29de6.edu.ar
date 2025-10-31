@@ -245,7 +245,7 @@ header .neon-bar{
 .logo a {
   color: #00fff2; /* Neon cyan */
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 20px;
   font-family: 'Orbitron', sans-serif;
   font-weight: 700;
   letter-spacing: 0.6px;
@@ -314,11 +314,7 @@ header .neon-bar{
   .menu-toggle{ display: block; }
 }
 
-.especialidades{
-    display: flex;
-    height: 600px;
-    width: 430px;
-}
+
 
 /* --- CONTENEDOR --- */
 .card-container {
@@ -330,6 +326,8 @@ header .neon-bar{
   padding: 60px;
   perspective: 2000px;
   transform-style: preserve-3d;
+  margin: 30px;
+ 
 }
 
 /* --- CARD BASE --- */
@@ -340,10 +338,11 @@ header .neon-bar{
   overflow: hidden;
   text-decoration: none;
   transform-style: preserve-3d;
-  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.6s cubic-bezier(0.23, 1, 0.32, 1), border-color 0.6s ease;
   position: relative;
   transform: rotate3d(0, 1, 0, -5deg);
+  border: 2px solid transparent;
+  background: rgba(0, 0, 0, 0.8);
 }
 
 #especialidades{
@@ -354,11 +353,13 @@ header .neon-bar{
     align-items: center;
     font-size: 30px;
     border: 2px solid #00fff2;
+    border-radius: 10%;
     box-shadow: 0 0 15px #00fff2,
                 inset 0 0 15px #00fff2;
     padding: 20px;
     position: relative;
     overflow: hidden;
+    margin: 30px;
 }
 /* --- SECCION UBICACION (ESTILO TECH) --- */
 #ubicacion{
@@ -392,18 +393,25 @@ header .neon-bar{
 
 .map-container{
   width: 100%;
+  max-width: 720px; /* limit width so it can be centered */
   height: 320px;
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid rgba(0,255,242,0.06);
   box-shadow: 0 8px 28px rgba(0,0,0,0.5);
+  margin: 0 auto; /* center horizontally in its grid column */
+  justify-self: center; /* center inside grid cell */
+  align-self: center; /* vertical centering in grid */
+  grid-column: 1 / -1; /* span both columns so it appears centered */
 }
 
 .map-container iframe{
   width: 100%;
   height: 100%;
+  max-width: 100%;
   border: 0;
   display: block;
+  margin: 0 auto; /* ensure iframe content is centered */
 }
 
 /* Responsive: stack columns on small screens */
@@ -497,14 +505,43 @@ header .neon-bar{
 }
 
 /* --- SOMBRA SEGÚN ESPECIALIDAD --- */
+.computacion {
+  border-color: #00ffff;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3),
+              inset 0 0 15px rgba(0, 255, 255, 0.2);
+}
+
 .computacion:hover {
-  box-shadow: 0 20px 40px rgba(0, 255, 255, 0.61);
+  box-shadow: 0 20px 40px rgba(0, 255, 255, 0.4),
+              0 0 25px rgba(0, 255, 255, 0.4),
+              inset 0 0 20px rgba(0, 255, 255, 0.3);
+  border-color: #00ffff;
+}
+
+.electricidad {
+  border-color: #ffeb3b;
+  box-shadow: 0 0 15px rgba(255, 235, 59, 0.3),
+              inset 0 0 15px rgba(255, 235, 59, 0.2);
 }
 
 .electricidad:hover {
-  box-shadow: 0 20px 40px rgba(255, 255, 0, 0.61);
+  box-shadow: 0 20px 40px rgba(255, 235, 59, 0.4),
+              0 0 25px rgba(255, 235, 59, 0.4),
+              inset 0 0 20px rgba(255, 235, 59, 0.3);
+  border-color: #ffeb3b;
+}
+
+.mecanica {
+  border-color: #ff5622;
+  box-shadow: 0 0 15px rgba(255, 86, 34, 0.3),
+              inset 0 0 15px rgba(255, 86, 34, 0.2);
 }
 
 .mecanica:hover {
-  box-shadow: 0 20px 40px rgba(255, 86, 34, 0.61);
+  box-shadow: 0 20px 40px rgba(255, 86, 34, 0.4),
+              0 0 25px rgba(255, 86, 34, 0.4),
+              inset 0 0 20px rgba(255, 86, 34, 0.3);
+  border-color: #ff5622;
 }
+
+
