@@ -1,38 +1,39 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const menuToggle = document.getElementById('menuToggle');
-    const navLinks = document.getElementById('navLinks');
-    const contactForm = document.getElementById('contactForm');
-    
-    // 1. Lógica del Menú Hamburguesa (UX/UI Responsive)
-    // Al hacer clic en el ícono de hamburguesa, alterna la clase 'active' para mostrar/ocultar los enlaces.
-    menuToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
+ const items = document.querySelectorAll('.carousel-item');
+  const totalItems = items.length;
+  let currentIndex = 0;
+  const intervalTime = 2000;
+  let carouselInterval;
 
-    // 2. Cerrar el menú al hacer clic en un enlace (para móviles)
-    // Si el menú está abierto y se hace clic en un enlace de navegación, se cierra.
-    navLinks.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            if (navLinks.classList.contains('active')) {
-                navLinks.classList.remove('active');
-            }
-        });
+  function showSlide(index) {
+    items.forEach((item, i) => {
+      item.classList.toggle('active', i === index);
     });
+  }
 
-    // 3. Simulación de Envío de Formulario
-    // Detiene el envío HTTP por defecto y muestra un mensaje de confirmación.
-    contactForm.addEventListener('submit', (event) => {
-        event.preventDefault(); 
-        
-        const nombre = document.getElementById('nombre').value;
-        const email = document.getElementById('email').value;
-        
-        if (nombre && email) {
-            // Un alert simple para confirmar que el script funciona
-            alert('✅ Mensaje de ' + nombre + ' enviado con éxito. Pronto nos pondremos en contacto contigo al email: ' + email + '.');
-            contactForm.reset(); 
-        } else {
-            alert('⚠️ Por favor, completa todos los campos requeridos.');
-        }
-    });
-});
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % totalItems;
+    showSlide(currentIndex);
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+    showSlide(currentIndex);
+  }
+
+  document.getElementById('nextBtn').addEventListener('click', () => {
+    nextSlide();
+    resetInterval();
+  });
+
+  document.getElementById('prevBtn').addEventListener('click', () => {
+    prevSlide();
+    resetInterval();
+  });
+
+  function resetInterval() {
+    clearInterval(carouselInterval);
+    carouselInterval = setInterval(nextSlide, intervalTime);
+  }
+
+  // Iniciar el carrusel automático
+  carouselInterval = setInterval(nextSlide, intervalTime);

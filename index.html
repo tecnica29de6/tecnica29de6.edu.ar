@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Colegio Técnico - Especialidades Innovadoras</title>
+    <title>Escuela Tecnica 29de6 Reconquista de Buenos Aires</title>
     <link rel="stylesheet" href="/styleIndex.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
+ 
+
+
     <nav class="navbar">
         <div class="logo">
-            <a href="#"> Escuela Tecnica n° 29 Reconquista de Buenos Aires</a>
+            <a href="#"> Escuela Tecnica N° 29 Reconquista de Buenos Aires</a>
         </div>
         <ul class="nav-links" id="navLinks">
             <li><a href="#inicio">Inicio</a></li>
@@ -21,7 +24,35 @@
         </ul>
         <div class="menu-toggle" id="menuToggle">☰</div> </nav>
 
-    
+     <header>
+    <div id="carouselHeader">
+      <div class="carousel-item active">
+        <img src="/img/et29frente-1280x720.jpeg" alt="Imagen 1" />
+      </div>
+      <div class="carousel-item active">
+        <img src="/img/image.png" alt="Imagen 1" />
+      </div>
+      <div class="carousel-item active">
+        <img src="/img/malasenal.jpg" alt="Imagen 1" />
+      </div>
+      
+
+      <!-- Controles -->
+      <button id="prevBtn" aria-label="Anterior">&#10094;</button>
+      <button id="nextBtn" aria-label="Siguiente">&#10095;</button>
+    </div>
+
+    <!-- Hero overlay integrado con el carrusel -->
+    <div class="hero" role="region" aria-label="Inicio - Escuela Técnica 29">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>Escuela Técnica N.º 29 — Reconquista de Buenos Aires</h1>
+        <p class="hero-sub">Formamos técnicos con proyectos reales en computación, electricidad y mecánica. Innovación y tradición para tu futuro.</p>
+        <a class="btn-primary" href="#especialidades">Ver especialidades</a>
+      </div>
+      <div class="hero-visual" aria-hidden="true"></div>
+    </div>
+  </header>
 
     <section id="especialidades">
         <h2>Especialidades Técnicas</h2>
@@ -67,11 +98,6 @@
 
     </section>
 
-    <hr>
-
-  
-
-    <hr>
 
     <section id="ubicacion">
         <h2>Nuestra Ubicación</h2>
