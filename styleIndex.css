@@ -89,8 +89,8 @@ body {
   flex-wrap: wrap;
   gap: 40px;
   padding: 60px;
-  perspective: 1000px;
-  
+  perspective: 2000px;
+  transform-style: preserve-3d;
 }
 
 /* --- CARD BASE --- */
@@ -101,9 +101,10 @@ body {
   overflow: hidden;
   text-decoration: none;
   transform-style: preserve-3d;
-  transition: transform 0.4s ease, box-shadow 0.3s ease;
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.6s cubic-bezier(0.23, 1, 0.32, 1);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   position: relative;
+  transform: rotate3d(0, 1, 0, -5deg);
 }
 
 #especialidades{
@@ -130,7 +131,8 @@ body {
 
 /* --- EFECTO AL HOVER --- */
 .specialty-card:hover {
-  transform: scale(1.05) rotate3d(1, 1, 0, 10deg);
+  transform: scale(1.1) rotate3d(0, 1, 0, -25deg);
+  box-shadow: -25px 25px 50px rgba(0,0,0,0.5);
 }
 
 /* --- IMAGEN Y OVERLAY --- */
