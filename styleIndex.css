@@ -1,398 +1,372 @@
+/* ============================== */
+/* Variables y Reset Básico       */
+/* ============================== */
+:root {
+    --color-fondo-principal: #1f1f1f; /* Fondo Oscuro Profundo */
+    --color-componente: #2a2a2a; /* Fondo para componentes (navbar, cards) */
+    --color-texto: #e0e0e0; /* Texto claro */
+    --color-acento: #00ff99; /* Verde Neón / Ciberpunk para acentos */
+    --color-acento-claro: #39ffb4; /* Verde Neón más claro al hover */
+    --box-shadow-tech: 0 0 10px rgba(0, 255, 153, 0.3); /* Sombra de brillo neón */
+}
 
-/* CSS Integrado y Modificado */
+/* Aplicar una fuente de estilo 'tech' */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Orbitron:wght@400;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace; /* Tipografía Tech/Código */
 }
 
-/* 🔹 BODY GENERAL - AÑADIENDO EL FONDO AZUL CLARO (#E8F7FF) */
 body {
-    padding-top: 80px; /* espacio igual al alto del navbar */
     line-height: 1.6;
-    color: #111111;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #E8F7FF; /* Fondo azul claro, similar a la imagen */
-}
-
-/* 🔹 NAVBAR FIJA */
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #ffffffc9;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    display: flex;
-    align-items: center; /* Alineación vertical centrada */
-    height: 90px;
-    padding: 0 1rem; /* Padding horizontal para centrar mejor el contenido */
-    justify-content: space-between;
-}
-
-.navbar-content {
-    max-width: 1200px;
-    width: 70%;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-}
-
-.navbar{
-    p{
-        margin-right: 30px;
-    }
-}
-
-.social-icons{
-    margin-right: 20px;
-    a{
-       padding-top: 20px
-    }
-}
-
-
-
-.navbar-left {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-}
-
-.navbar-logo {
-    height: 80px;
-    width: auto;
-    object-fit: contain;
-    transition: transform 0.3s ease;
-}
-
-.navbar-logo:hover {
-    transform: scale(1.05);
-}
-
-.navbar-link {
-    font-size: 1.1rem;
-    font-weight: 600;
-     font-size: 1.1rem;
-    font-weight: 600;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-}
-
-.navbar-content {
-    justify-content: space-between; /* Modifica la propiedad existente */
-    width: 100%;
-    padding: 0 2rem;
-}
-
-.navbar-nav {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-}
-
-.navbar-link:hover {
-    text-decoration: underline; 
-    color: #667eea;
-}
-
-.nav-link {
-    color: #111111;
-    text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: 600;
-    padding: 0.3rem 0.7rem;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-}
-
-.nav-link:hover {
-    background-color: #667eea;
-    color: white;
-}
-
-[id] {
-    scroll-margin-top: 100px;
-} /*Con esto ajustamos el margen superior de modo que el navbar anclado no tapa el contenido al que llevan sus links*/
-
-/* 🔹 HEADER */
-header {
-    background-color: #9fdbf8;
-    text-align: center;
-    padding: 4rem;
-}
-
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.imagen_header {
-    height: 550px;
-    width: 1000px;
-    max-width: 100%; /* Asegura que la imagen no desborde en móvil */
-    height: auto;
-    border-radius: 10px; /* Estética moderna */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); /* Sombra añadida */
-    margin-top: 1.5rem;
-}
-
-/* 🔹 CONTENIDO PRINCIPAL */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
-}
-
-.container h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    color: #333;
-    text-align: center;
-}
-
-.specialties {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin: 3rem 0;
-}
-
-.specialty-card {
-    display: block;
-    background: white;
-    border-radius: 10px;
-    padding: 2rem;
-    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.027);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-decoration: none;
-    color: inherit;
-}
-
-.specialty-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada al hover */
-}
-
-.specialty-icon {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 1rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.specialty-card h3 {
-    color: #667eea;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.specialty-card p {
-    color: #666;
-    line-height: 1.8;
-    font-weight: normal; /* Texto de párrafo menos grueso */
-}
-
-.visita-virtual{
-    background-color: #9fdbf8;
-    text-align: center;
-    padding: 4rem;
-}
-
-/* 🔹 FOOTER */
-footer {
-    background: #9fdbf8;
-    color: rgb(0, 0, 0);
-    padding: 2rem 0; /* Padding vertical, se quita el horizontal para que el .social-copyright lo maneje */
-    margin-top: 3rem;
-    text-align: center;
-}
-
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem; /* Padding horizontal para el contenido principal */
-    display: grid;
-    grid-template-columns: 1fr; /* Default mobile: 1 columna */
-    gap: 2rem;
-    text-align: left; 
-}
-
-/* 💡 Desktop: Contactos (1fr) y Mapa (2fr) para hacerlo más ancho */
-@media (min-width: 1024px) {
-    .footer-content {
-        grid-template-columns: 1fr 2fr;
-        align-items: start;
-    }
-}
-
-.contactos {
-    font-size: 3rem;
-    text-align: center;
-    grid-column: 1 / -1; /* Ocupa todo el ancho en el grid */
-    margin-bottom: 1rem;
-    padding-bottom: 1rem;
-}
-
-/* 💡 Tarjetas de Contacto (NUEVO) */
-.contact-cards-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem; /* Espacio entre las tarjetas */
-}
-
-.contact-card {
-    background-color: white; /* Fondo blanco */
-    padding: 1.5rem;
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para el hover */
-}
-
-.contact-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-}
-
-.contact-icon {
-    font-size: 2.5rem; /* Icono más grande */
-    line-height: 1;
-}
-
-.contact-details {
-    display: flex;
-    flex-direction: column;
-}
-
-.contact-label {
-    font-size: 1.5rem; /* Texto "Teléfono" / "Email" más grande */
-    font-weight: bold;
-    color: #111111;
-    margin-bottom: 0.25rem;
-}
-
-.contact-link {
-    font-size: 1.1rem; /* El link o número */
-    color: #666;
-    text-decoration: none;
-    font-weight: normal;
-}
-
-/* 💡 FIX: Asegura que el iframe sea responsivo y no desborde */
-.footer-content iframe {
-    width: 100%; /* Ocupa el 100% del espacio de su celda de grid */
-    height: 450px;
-    display: block;
-    border: 0;
-    border-radius: 10px; /* Estética */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para el mapa */
-    overflow: hidden; /* Importante para el contenedor */
-}
-
-.titulo {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 2.5rem;
-}
-
-.subtitulo {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 2.0rem;
-}
-
-/* 🔹 SECCIONES DE REDES SOCIALES Y COPYRIGHT (Ahora con fondo blanco) */
-.social-copyright-wrapper {
-    background-color: white; /* FONDO BLANCO SOLICITADO */
-    padding: 1.5rem 1rem;
-    margin-top: 2rem;
-    width: 100%; /* Ocupa todo el ancho */
-}
-
-.social-copyright {
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.social-icon {
-    font-size: 2rem;
-    color: #111111;
-    transition: color 0.3s ease;
-}
-
-.social-icon:hover {
-    color: #667eea;
-}
-
-.copyright-text {
-    font-size: 0.875rem;
-    font-weight: normal;
-    line-height: 1.5;
-    color: #111111;
-}
-
-html {
+    color: var(--color-texto);
+    background-color: var(--color-fondo-principal);
     scroll-behavior: smooth;
 }
 
-/* 🔹 RESPONSIVE DESIGN */
+/* --- Navbar Sticky (Estilo Componente Oscuro) --- */
+.navbar {
+    background-color: var(--color-componente);
+    color: var(--color-texto);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--color-acento); /* Línea de acento inferior */
+    box-shadow: var(--box-shadow-tech);
+}
+
+.logo a {
+    color: var(--color-acento); /* Logo en color neón */
+    text-decoration: none;
+    font-size: 1.7rem;
+    font-family: 'Orbitron', sans-serif; /* Fuente futurista para el logo */
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--color-texto);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s, background-color 0.3s, text-shadow 0.3s;
+    border-radius: 4px;
+}
+
+.nav-links a:hover {
+    color: var(--color-acento-claro);
+    background-color: rgba(0, 255, 153, 0.1); /* Fondo sutil al pasar */
+    text-shadow: 0 0 5px var(--color-acento); /* Efecto de brillo */
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    user-select: none;
+    color: var(--color-acento);
+}
+
+/* --- Estructura General de Secciones --- */
+section {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.hero-section {
+    text-align: center; 
+    padding-top: 6rem; 
+    background: radial-gradient(circle, var(--color-componente) 0%, var(--color-fondo-principal) 100%);
+}
+
+h1 {
+    font-size: 3rem;
+    color: var(--color-acento);
+    text-shadow: 0 0 10px rgba(0, 255, 153, 0.6);
+    margin-bottom: 0.5rem;
+    font-family: 'Orbitron', sans-serif;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 4rem;
+    font-size: 2.5rem;
+    color: var(--color-acento);
+    text-shadow: 0 0 8px rgba(0, 255, 153, 0.5);
+    border-bottom: 2px solid var(--color-acento);
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: rgba(0, 255, 153, 0.1);
+    margin: 2rem auto;
+    width: 80%;
+}
+
+/* --- Cartas 3D de Especialidades (Con efecto Holográfico) --- */
+#especialidades {
+    background-color: var(--color-fondo-principal);
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    perspective: 1000px;
+}
+
+.specialty-card {
+    width: 100%;
+    height: 350px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease-out; /* Transición más rápida y moderna */
+    border-radius: 10px;
+    border: 1px solid rgba(0, 255, 153, 0.2); /* Borde sutil */
+    background-color: var(--color-componente);
+    box-shadow: 0 0 5px rgba(0, 255, 153, 0.1);
+    cursor: pointer;
+}
+
+.specialty-card:hover {
+    /* Efecto 3D Neón: Ligera rotación, elevación y aumento de brillo */
+    transform: translateY(-15px) rotateX(2deg) rotateY(2deg); 
+    box-shadow: 0 0 20px var(--color-acento), 0 0 40px rgba(0, 255, 153, 0.4);
+}
+
+.specialty-card a {
+    text-decoration: none;
+    color: white;
+    display: block; 
+    height: 100%;
+}
+
+.card-front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 25px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    transition: filter 0.5s;
+    /* Degradado oscuro para simular interfaz HUD/holográfica */
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.7); 
+}
+
+.specialty-card:hover .card-front {
+    filter: brightness(1.2) contrast(1.1); /* Imagen más brillante al hover */
+}
+
+/* Fondos de Especialidades (ejemplos) */
+.computacion {
+    background-image: url('/img/computacion.jpeg');
+}
+.mecanica {
+    background-image: url('/img/meca.jpg');
+}
+.electricidad {
+    background-image: url('/img/computacion.jpg');
+}
+
+.card-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-acento-claro);
+    text-shadow: 0 0 8px rgba(0, 255, 153, 0.8);
+    font-family: 'Orbitron', sans-serif;
+}
+.card-subtitle {
+    font-weight: 400;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    color: var(--color-texto);
+    margin-top: 5px;
+}
+
+
+/* --- Sección de Contacto y Formulario (Estilo Consola) --- */
+#contacto {
+    background-color: var(--color-fondo-principal);
+}
+.contact-content {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap; 
+}
+.contact-form, .contact-info {
+    flex: 1;
+    min-width: 300px;
+    background-color: var(--color-componente);
+    padding: 2.5rem;
+    border-radius: 10px;
+    border: 1px solid var(--color-acento);
+    box-shadow: var(--box-shadow-tech);
+}
+
+.contact-info h3 {
+    color: var(--color-acento);
+    margin-bottom: 1.5rem;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.contact-form label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: 700;
+    color: var(--color-acento); /* Etiquetas en neón */
+}
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    border: 1px solid var(--color-acento);
+    border-radius: 4px;
+    background-color: #111111; /* Fondo de campo de texto muy oscuro */
+    color: var(--color-acento-claro);
+    font-family: 'Roboto Mono', monospace;
+}
+.contact-form input:focus, .contact-form textarea:focus {
+    outline: none;
+    box-shadow: 0 0 5px var(--color-acento);
+}
+
+.contact-form button {
+    background-color: var(--color-acento);
+    color: var(--color-componente);
+    padding: 0.8rem 1.8rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+.contact-form button:hover {
+    background-color: var(--color-acento-claro);
+    color: black;
+    box-shadow: 0 0 15px var(--color-acento);
+}
+
+/* --- Sección de Ubicación y Mapa (HUD/Transparencia) --- */
+#ubicacion {
+    padding: 0 2rem 5rem;
+}
+.address-text {
+    text-align: center; 
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    color: var(--color-acento);
+}
+.map-container {
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid var(--color-acento);
+    box-shadow: var(--box-shadow-tech);
+    height: 450px;
+    background-color: #0d0d0d; /* Para cuando el mapa no carga */
+}
+.map-container iframe {
+    /* Nota: Google Maps no permite un control total sobre su estilo interno (colores), 
+       pero el contenedor tiene el estilo Tech. */
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #111111;
+    color: var(--color-acento);
+    font-size: 0.9rem;
+    border-top: 1px dashed var(--color-acento);
+}
+
+
+/* ============================== */
+/* Media Queries (Responsive)     */
+/* ============================== */
+
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
-    }
-
-    .imagen_header {
-        width: 100%;
-        height: auto;
-    }
-
+    
     .navbar {
-        height: auto;
-        padding: 0.5rem 0;
-    }
-
-    .navbar-left {
-        flex-direction: row;
-        justify-content: flex-start;
-        padding-left: 1rem;
-    }
-
-    .navbar-logo {
-        height: 40px;
-    }
-
-    .navbar-content {
-        flex-direction: column;
         padding: 1rem;
     }
 
-    .navbar-nav {
-        margin-top: 1rem;
-        gap: 1rem;
-        flex-wrap: wrap;
-        justify-content: center;
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 64px; 
+        left: 0;
+        background-color: var(--color-componente);
+        text-align: center;
+        box-shadow: var(--box-shadow-tech);
+        padding-bottom: 10px;
+    }
+    
+    .nav-links.active {
+        display: flex;
     }
 
-    .navbar-link {
-        font-size: 1rem;
-        padding: 0.3rem 0.8rem;
+    .nav-links a {
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid rgba(0, 255, 153, 0.1);
+    }
+    
+    .nav-links li:last-child a {
+        border-bottom: none;
     }
 
-    .footer-content iframe {
-        height: 300px; /* Reducir altura del mapa en móvil */
+    .menu-toggle {
+        display: block; 
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-content {
+        flex-direction: column;
+    }
+}
+
+/* Ajustes para tabletas */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
