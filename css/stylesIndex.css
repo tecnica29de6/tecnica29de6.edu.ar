@@ -1,91 +1,35 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", Arial, sans-serif;
-}
-
-body {
-  background-color: #f8fafd;
-  color: #1a1a1a;
-}
-
-/* NAVBAR */
-.barra-navegacion {
-  background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.contenedor-navegacion {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px 60px;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: 600;
-  color: #0a2342;
-}
-
-.logo img {
-  height: 45px;
-}
-
-.menu {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-}
-
-.menu a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-.menu a:hover,
-.menu a.activo {
-  color: #0a66d6;
-}
-
-.redes img {
-  height: 22px;
-  margin-left: 12px;
-}
 
 .seccion-principal {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center; 
   padding: 80px 100px;
   background-color: #f3f7ff;
+  background-image: url('/img/et29frente-1280x720.jpeg'); 
+  background-position: center; 
+  color: white; 
   flex-wrap: wrap;
 }
 
 .texto-principal {
   flex: 1;
   min-width: 280px;
-  margin-right: 40px;
+  margin: 0; 
+  padding: 20px; 
+  border-radius: 10px; 
 }
 
 .texto-principal h1 {
   font-size: 2.3rem;
-  color: #0a2342;
+  color: #f5f8fc;
   margin-bottom: 20px;
 }
 
 .texto-principal p {
-  color: #444;
+  color: #f7fcff;
   line-height: 1.6;
   margin-bottom: 30px;
+  font-weight: 600;
 }
 
 .botones-principales a {
@@ -103,7 +47,7 @@ body {
 
 .boton-secundario {
   border: 1.5px solid #0a66d6;
-  color: #0a66d6;
+  color: #f1f7ff;
 }
 
 .imagen-principal img {
@@ -206,61 +150,5 @@ body {
   margin-right: 10px;
 }
 
-/* FOOTER */
-.pie-de-pagina {
-  background-color: #0a2342;
-  color: #fff;
-  padding: 60px 100px 20px;
-}
 
-.contenedor-pie {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 40px;
-  margin-bottom: 30px;
-}
-
-.columna h3 {
-  margin-bottom: 10px;
-}
-
-.columna a {
-  color: #bcd6ff;
-  text-decoration: none;
-  display: block;
-  margin: 6px 0;
-}
-
-.columna a:hover {
-  text-decoration: underline;
-}
-
-.mapa iframe {
-  border-radius: 10px;
-}
-
-.texto-final {
-  text-align: center;
-  font-size: 0.9rem;
-  color: #bcd6ff;
-  margin-top: 20px;
-}
-
-.redes {
-  display: flex;
-  gap: 15px;
-  align-items: center;
-}
-
-.redes a {
-  color: #000;            
-  font-size: 1.4em;
-  transition: 0.3s;
-}
-
-.redes a:hover {
-  color: #0a66d6;      
-  transform: scale(1.2);
-}
 

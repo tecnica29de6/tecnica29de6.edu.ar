@@ -3,21 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Imagen centrada</title>
-  <link rel="stylesheet" href="/css/styles.css">
+  <title>Electricidad - E.T. N°29</title>
+  <link rel="stylesheet" href="/css/stylesGenerales.css">
+  <link rel="stylesheet" href="/css/stylesEspecs.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 
 <body>
-  <nav>
-    <div>
-      <div>
-        <img src="/img/logoet29.png" alt="Logo Técnica 29">
-        <a href="index.html">Escuela Técnica N°29 D.E. 6 <br>Reconquista de Buenos Aires</a>
-      </div>
+  <!-- NAVBAR -->
+  <nav class="barra-navegacion">
+  <div class="contenedor-navegacion">
+    <div class="logo">
+      <img src="/img/logoet29.png" alt="Logo Técnica 29" />
+      <a id = "linkInicio" href="/index.html">Escuela Técnica N°29<br>D.E. 6 Reconquista de Buenos Aires</a>
     </div>
-  </nav>
 
-  <div>
+    <ul class="menu">
+      <li class="dropdown">
+        <a href="#" class="dropbtn">Especialidades <i class="fa-solid fa-caret-down"></i></a>
+        <div class="dropdown-content">
+          <a href="compu.html">Computación</a>
+          <a href="electricidad.html">Electricidad</a>
+          <a href="mecanica.html">Mecánica</a>
+        </div>
+      </li>
+      <li><a href="#contactos">Contactos</a></li>
+    </ul>
+
+    <div class="redes">
+      <a href="https://www.facebook.com/et29de6" target="_blank" aria-label="Facebook">
+        <i class="fa-brands fa-facebook-f"></i>
+      </a>
+      <a href="https://www.instagram.com/et29de6" target="_blank" aria-label="Instagram">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+    </div>
+  </div>
+</nav>
+
+  <div class = "ig">
     <a href="https://www.instagram.com/electrum_29/">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
         <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.148 3.227-1.667 4.771-4.919 4.919-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.07-1.646-.07-4.85s.012-3.584.07-4.85c.148-3.227 1.667-4.771 4.919-4.919 1.266-.058 1.646.07 4.85.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.059 1.689.073 4.948.073s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059 1.281.073 1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/>
@@ -31,22 +55,38 @@
     <p>EN CONSTRUCCIÓN</p>
   </div>
 
-  <div>
-    <div>
-      <div>
-        <a href="https://www.instagram.com/et29de6" target="_blank">
-          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.148 3.227-1.667 4.771-4.919 4.919-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.07-1.646-.07-4.85s.012-3.584.07-4.85c.148-3.227 1.667-4.771 4.919-4.919 1.266-.058 1.646.07 4.85.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.059 1.689.073 4.948.073s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059 1.281.073 1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/>
-          </svg>
-        </a>
-        <a href="https://www.facebook.com/et29de6" target="_blank">
-          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
-          </svg>
-        </a>
+  <!-- FOOTER -->
+  <footer id="contactos" class="pie-de-pagina">
+    <div class="contenedor-pie">
+      <div class="columna">
+        <h3>Contactos</h3>
+        <p>Teléfono: <a href="tel:+541149572920">+54 011 4957-2920</a></p>
+        <p>Email: <a href="mailto:det_29_de6@bue.edu.ar">det_29_de6@bue.edu.ar</a></p>
       </div>
-      <p>Escuela técnica N° 29 D.E. 6 "Reconquista de Buenos Aires"<br>Sitio desarrollado por alumnos</p>
+
+      <div class="columna">
+        <h3>Enlaces</h3>
+        <a href="#inicio">Inicio</a>
+        <a href="#especialidades">Especialidades</a>
+        <a href="#visita-virtual">Visita Virtual</a>
+      </div>
+
+      <div class="columna mapa">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.3023294802247!2d-58.41885242351912!3d-34.62179947294788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccaf8b0c7ce0f%3A0x17ca663276a69e1b!2sEscuela%20T%C3%A9cnica%20N%C2%B0%2029%20-%20Reconquista%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1761158376874!5m2!1ses-419!2sar"
+          width="100%"
+          height="200"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+      </div>
     </div>
-  </div>
+
+    <p class="texto-final">
+      © 2025 Escuela Técnica N°29 D.E.6 - Reconquista de Buenos Aires. Sitio
+      desarrollado por alumnos.
+    </p>
+  </footer>
 </body>
 </html>

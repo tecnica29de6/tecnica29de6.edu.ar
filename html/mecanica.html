@@ -3,26 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Imagen centrada</title>
+  <title>Mecánica - E.T. N°29</title>
+  <link rel="stylesheet" href="/css/stylesGenerales.css">
+  <link rel="stylesheet" href="/css/stylesEspecs.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 
 <body>
-  <nav>
-    <img src="/img/logoet29.png" alt="Logo Técnica 29">
-    <a href="index.html">Escuela Técnica N°29 D.E. 6<br>Reconquista de Buenos Aires</a>
-  </nav>
+  <!-- NAVBAR -->
+  <nav class="barra-navegacion">
+  <div class="contenedor-navegacion">
+    <div class="logo">
+      <img src="/img/logoet29.png" alt="Logo Técnica 29" />
+      <a id = "linkInicio" href="/index.html">Escuela Técnica N°29<br>D.E. 6 Reconquista de Buenos Aires</a>
+    </div>
+
+    <ul class="menu">
+
+      <li class="dropdown">
+        <a href="#" class="dropbtn">Especialidades <i class="fa-solid fa-caret-down"></i></a>
+        <div class="dropdown-content">
+          <a href="compu.html">Computación</a>
+          <a href="electricidad.html">Electricidad</a>
+          <a href="mecanica.html">Mecánica</a>
+        </div>
+      </li>
+      <li><a href="#contactos">Contactos</a></li>
+    </ul>
+
+    <div class="redes">
+      <a href="https://www.facebook.com/et29de6" target="_blank" aria-label="Facebook">
+        <i class="fa-brands fa-facebook-f"></i>
+      </a>
+      <a href="https://www.instagram.com/et29de6" target="_blank" aria-label="Instagram">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+    </div>
+  </div>
+</nav>
 
   <main>
     <img src="/img/logoet29.png" alt="Imagen principal">
     <p>EN CONSTRUCCIÓN</p>
   </main>
 
-  <footer>
-    <a href="https://www.instagram.com/et29de6" target="_blank">Instagram</a>
-    <a href="https://www.facebook.com/et29de6" target="_blank">Facebook</a>
+  <!-- FOOTER -->
+  <footer id="contactos" class="pie-de-pagina">
+    <div class="contenedor-pie">
+      <div class="columna">
+        <h3>Contactos</h3>
+        <p>Teléfono: <a href="tel:+541149572920">+54 011 4957-2920</a></p>
+        <p>Email: <a href="mailto:det_29_de6@bue.edu.ar">det_29_de6@bue.edu.ar</a></p>
+      </div>
 
-    <p>Escuela Técnica N°29 D.E. 6 "Reconquista de Buenos Aires"<br>
-    Sitio desarrollado por alumnos</p>
+      <div class="columna">
+        <h3>Enlaces</h3>
+        <a href="#inicio">Inicio</a>
+        <a href="#especialidades">Especialidades</a>
+        <a href="#visita-virtual">Visita Virtual</a>
+      </div>
+
+      <div class="columna mapa">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.3023294802247!2d-58.41885242351912!3d-34.62179947294788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccaf8b0c7ce0f%3A0x17ca663276a69e1b!2sEscuela%20T%C3%A9cnica%20N%C2%B0%2029%20-%20Reconquista%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1761158376874!5m2!1ses-419!2sar"
+          width="100%"
+          height="200"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
+
+    <p class="texto-final">
+      © 2025 Escuela Técnica N°29 D.E.6 - Reconquista de Buenos Aires. Sitio
+      desarrollado por alumnos.
+    </p>
   </footer>
 </body>
 </html>
