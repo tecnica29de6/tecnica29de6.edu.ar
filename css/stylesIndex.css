@@ -5,7 +5,7 @@
   justify-content: center; 
   padding: 80px 100px;
   background-color: #f3f7ff;
-  background-image: url('/img/et29frente-1280x720.jpeg'); 
+  background-image: url('../img/et29frente-1280x720.jpeg'); 
   background-position: center; 
   color: white; 
   flex-wrap: wrap;
