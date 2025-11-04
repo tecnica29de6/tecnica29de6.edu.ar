@@ -1,1 +1,4 @@
 - Hay que cambiar la informacion del plan de estudio, el perfil tecnico en computacion y alguna data mas.
+
+MUY IMPORTANTE
+Cada vez que usen una ruta relativa, en vez de hacer "/" tienen que hacer "../" porque si no funciona localmente pero github sites no lo juna

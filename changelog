@@ -25,3 +25,5 @@ FRAN
 - Todos los problemas de enrutamiento ocasionados por la reorganización de carpetas fueron resueltas.  
 - se separaron los archivos css en una hoja de estilos general para todas las páginas, y las hojas específicas de cada página o conjunto.
 
+FRAN B
+- se solucionaron serios problemas con enrutamiento respecto de github pages. 
