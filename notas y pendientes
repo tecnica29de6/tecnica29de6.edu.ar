@@ -1,4 +1,4 @@
 - Hay que cambiar la informacion del plan de estudio, el perfil tecnico en computacion y alguna data mas.
-
+- Hay un boton llamdo Vistas de puerbas donde es un despegable de mas botones que cada uno de ellos te deberia de llevar a otras vistas mediante links que mas adelante haremos 
 MUY IMPORTANTE
 Cada vez que usen una ruta relativa, en vez de hacer "/" tienen que hacer "../" porque si no funciona localmente pero github sites no lo juna
