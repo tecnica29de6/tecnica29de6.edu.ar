@@ -1,0 +1,190 @@
+/* =================================
+   ESTILOS PÁGINA COMPUTACIÓN
+   ================================= */
+
+.content-wrapper {
+  display: flex;
+  max-width: 1200px;
+  margin: 40px auto;
+  gap: 30px;
+  padding: 0 20px;
+}
+
+.main-column {
+  flex: 3; /* Ocupa 3/4 del espacio */
+}
+
+.main-column h1 {
+  font-size: 2.5rem;
+  color: #0a2342;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #0a66d6;
+  padding-bottom: 10px;
+}
+
+aside {
+  flex: 1; /* Ocupa 1/4 del espacio */
+  padding-top: 95px; /* Alinea con el contenido de la derecha */
+}
+
+/* Video de presentación */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* Proporción 16:9 */
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Sistema de Pestañas (Tabs) */
+.tabs-container {
+  display: flex;
+  gap: 20px;
+}
+
+.tabs-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-basis: 200px; /* Ancho fijo para la navegación */
+  flex-shrink: 0;
+}
+
+.tabs-nav-button {
+  padding: 12px 18px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.tabs-nav-button:hover {
+  background-color: #e9ecef;
+  border-color: #aaa;
+}
+
+.tabs-nav-button.active {
+  background-color: #0a66d6;
+  color: white;
+  border-color: #0a66d6;
+  font-weight: 600;
+}
+
+.tabs-content {
+  flex-grow: 1;
+}
+
+.tabs-pane {
+  display: none; /* Oculto por defecto */
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.tabs-pane.active {
+  display: block; /* Visible cuando está activo */
+}
+
+.tabs-pane h2 {
+  display: none; /* El JS ya lo oculta, pero es buena práctica tenerlo en CSS */
+}
+
+.tabs-pane p, .tabs-pane ul {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.tabs-pane ul {
+  padding-left: 20px;
+}
+
+/* Barra lateral "Mala Señal" */
+.mala-señal {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.mala-señal p {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.mala-señal img {
+  max-width: 100%;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.mala-señal .social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Botones de redes en "Mala Señal" */
+.mala-señal .social-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #333;
+  background-color: #f0f0f0;
+  padding: 8px 15px;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+.mala-señal .social-links a:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.05);
+}
+
+/* =================================
+   ESTILOS GENERALES ESPECIALIDADES
+   ================================= */
+
+/* Botón superior de Instagram */
+.ig a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #eef5ff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #0a66d6;
+  font-size: 0.9rem;
+  font-weight: 500;
+  position: absolute;
+  top: 85px;
+  right: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.ig a:hover {
+  background-color: #dbe9fa;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transform: translateY(-1px);
+}
+
