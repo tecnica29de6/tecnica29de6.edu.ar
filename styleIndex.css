@@ -154,7 +154,7 @@ section h2:hover::after {
 
 /* --- HEADER --- */
 .header-hero {
-    height: 750px;
+    height: 593px;
     perspective: 1000px;
     display: flex;
     align-items: center;
