@@ -14,7 +14,7 @@
     --color-institutional-dark-blue: #152d56; /* Azul más oscuro para degradados */
     --color-accent-cyan: #00E0FF; /* Cian Tech para Computación */
     --color-accent-magenta: #FF00FF; /* Magenta Tech para Electricidad */
-    --color-accent-lime: #00FF00; /* Lima Tech para Mecánica */
+    --color-accent-lime: #ff6600; /* Lima Tech para Mecánica */
     --color-text-primary: #E6EFFF; /* Texto principal claro */
     --color-text-secondary: #A0C4FF; /* Texto secundario (subtítulos, descripciones) */
 
@@ -93,7 +93,7 @@ section h2:hover::after {
 }
 
 
-/* --- NAVBAR (ARREGLADO) --- */
+
 .navbar {
     position: sticky;
     top: 0;
@@ -167,7 +167,7 @@ section h2:hover::after {
 .header-hero-bg {
     position: absolute;
     inset: 0;
-    background: url('/img/et29frente-1280x720.jpeg') no-repeat center center/cover;
+    background: url('/img/fondo\ nuevo.jpg') no-repeat center center/cover;
     filter: brightness(.2) contrast(1.1) saturate(0.8);
     transform: scale(1.1);
     z-index: 0;
