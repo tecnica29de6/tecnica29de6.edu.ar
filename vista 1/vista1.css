@@ -42,7 +42,7 @@ body {
 .encabezado__logo-imagen {
     width: 50px;
     height: 50px;
-    background-image: url('/img/logo_et29.png');
+    background-image: url('/img/logoet29.png');
     background-size: cover;
     background-position: center;
     border-radius: 50%;
@@ -131,14 +131,14 @@ body {
 }
 
 .hero-imagen-fondo {
-    background-image: url('/img/foto_escuela.png');
+    background-image: url('/imgv1/foto_escuela.png');
     background-size: cover;
     background-position: center;
     z-index: 1;
 }
 
 .hero-imagen-superposicion {
-    background-image: url('img/degrade_colores.png');
+    background-image: url('/imgv1/degrade_colores.png');
     background-size: 100%;
     background-position: center;
     z-index: 2;
