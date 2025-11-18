@@ -49,3 +49,7 @@ FRAN
 - Se corrigió error de enrutamiento en las páginas de especialidades, el cual no devolvía un error si se quería acceder de una de éstas a otra.
 - Se añadieron imágenes de placeholder al carrusel de imágenes de la vista 1
 - Se corrigió el enrutamiento en todas las páginas de la vista 1
+- Se agregó un archivo de texto explicando cómo se deben enrutar los archivos apropiadamente
+
+FRAN 2
+- Se corrigió un error de enrutamiento, causa de no haber escrito ese archivo de texto antes.
