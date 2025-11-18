@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ET N°29 - Reconquista de Buenos Aires</title>
+    <link rel="stylesheet" href="vista1.css">
+</head>
+<body>
+
+    <!-- ========== ENCABEZADO ========== -->
+    <header class="encabezado">
+        
+        <a href="index.html" class="encabezado__logo-contenedor">
+            <div class="encabezado__logo-imagen"></div> 
+            <div class="encabezado__logo-texto">
+                <span>Escuela técnica N°29 de 6</span>
+                <span>Reconquista de Buenos Aires</span>
+            </div>
+        </a>
+
+        <nav class="encabezado__navegacion">
+            <ul class="encabezado__lista-enlaces">
+                <li><a href="#">Ciclo básico ▼</a></li>
+                <li><a href="#">Especialidades ▼</a></li>
+                <li><a href="#">Contactar</a></li>
+            </ul>
+        </nav>
+
+        <div class="encabezado__redes-sociales">
+            <a href="#">FB</a>
+            <a href="#">IG</a>
+        </div>
+        
+    </header>
+
+    <main class="contenido-principal">
+
+        <!-- ========== SECCIÓN HERO ========== -->
+        <section class="seccion-hero">
+            <div class="hero-imagen-fondo"></div> 
+            <div class="hero-imagen-superposicion"></div> 
+            
+            <div class="hero-contenido">
+                <h1>¡BIENVENIDO A LA N°29!</h1>
+                <p>Formando técnicos con vocación, innovación y compromiso con la sociedad.<br>Una institución educativa que impulsa el aprendizaje técnico desde la práctica.</p>
+                <div class="hero-botones">
+                    <a href="#" class="boton-llamada-accion">Ver especialidades</a>
+                    <a href="#" class="boton-llamada-accion">Contactar</a>
+                </div>
+            </div>
+        </section>
+
+        <h2 class="titulo-seccion">¿POR QUÉ ELEGIRNOS?</h2>
+        <section class="seccion-por-que-elegirnos-contenedor">
+            <div class="seccion-por-que-elegirnos">
+
+                <div class="contenedor-carrusel">
+                <button class="boton-carrusel boton-carrusel--anterior" id="prevBtn" aria-label="Anterior">◀</button>
+                <button class="boton-carrusel boton-carrusel--siguiente" id="nextBtn" aria-label="Siguiente">▶</button>
+                
+                <div class="carrusel-contenedor">
+                    <div class="carrusel-deslizador">
+
+                        <!-- SLIDE 1 -->
+                        <div class="carrusel-diapositiva">
+                            <div class="diapositiva-contenido">
+                                <h3>Formación Técnica de Excelencia</h3>
+                                <p>Elegir la Técnica N°29 es optar por una formación técnica de excelencia dentro del modelo de la "Secundaria del Futuro". Nuestra escuela ofrece títulos en Mecánica, Electricidad y Computación, brindando a los estudiantes una preparación sólida para el mundo laboral y académico.</p>
+                            </div>
+                            <div class="diapositiva-imagen" style="background-image: url(/img/imagen_prueba1.jpg);"></div>
+                        </div>
+
+                        <!-- SLIDE 2 -->
+                        <div class="carrusel-diapositiva">
+                            <div class="diapositiva-contenido">
+                                <h3>Compromiso y Aprendizaje Práctico</h3>
+                                <p>Contamos con un gran taller central y amplias aulas de computación que garantizan prácticas reales y un aprendizaje de calidad. Además, funcionamos con jornada completa y somos una "Escuela Consagrada" por nuestro compromiso con la educación ambiental y la formación integral de profesionales del futuro.</p>
+                            </div>
+                            <div class="diapositiva-imagen" style="background-image: url('https://via.placeholder.com/800x600/999999/ffffff?text=Imagen+Mecánica');"></div>
+                        </div>
+
+                        <!-- SLIDE 3 -->
+                        <div class="carrusel-diapositiva">
+                            <div class="diapositiva-contenido">
+                                <h3>Construí tu Futuro con Nosotros</h3>
+                                <p>En la Técnica N°29 formamos jóvenes con vocación, innovación y compromiso. Te invitamos a ser parte de una comunidad educativa que impulsa el crecimiento personal y profesional desde la práctica y la excelencia.</p>
+                            </div>
+                            <div class="diapositiva-imagen" style="background-image: url('https://via.placeholder.com/800x600/bbbbbb/888888?text=Imagen+Electricidad');"></div>
+                        </div>
+
+                    </div>
+                </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ========== SECCIÓN ESPECIALIDADES ========== -->
+        <h2 class="titulo-seccion-especialidades-externo">ESPECIALIDADES</h2>
+        <section class="seccion-especialidades-contenedor">
+            <div class="seccion-especialidades">
+                <div class="item-especialidad">
+                    <img src="/img/boton_compu.png" alt="Computación" class="img-especialidad">
+                    <h3>COMPUTACIÓN</h3>
+                    <p>Formación en programación, redes y hardware, integrando la tecnología al servicio del conocimiento.</p>
+                </div>
+
+                <div class="item-especialidad">
+                    <img src="/img/boton_meca.png" alt="Mecánica" class="img-especialidad">
+                    <h3>MECÁNICA</h3>
+                    <p>Diseño, operación y mantenimiento de sistemas mecánicos y herramientas industriales.</p>
+                </div>
+
+                <div class="item-especialidad">
+                    <img src="/img/boton_elec.png" alt="Electricidad" class="img-especialidad">
+                    <h3>ELECTRICIDAD</h3>
+                    <p>Capacitación en instalaciones, mantenimiento y proyectos eléctricos con orientación profesional.</p>
+                </div>
+            </div>
+        </section>
+
+    <footer class="pie-pagina">
+        <p>&copy; 2025 - Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="vista1.js"></script>
+</body>
+</html>
