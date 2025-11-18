@@ -33,10 +33,19 @@ FRAN
 - Agregados estilos generales a las páginas de especialidades + estilos de página de computación
 
 MARCO
-- Se agrego un boton despegable llamdo Vistas de pruebas 
+- Se agrego un boton despegable llamando Vistas de pruebas 
 
 10/11
 - Se arreglo botones de inicio 
 MARCO
 12/11
 - Se cambio el titulo del index
+
+18/11 
+MARCO
+- Se implementó en el sitio la primera vista con sus estilos y lógica de backend
+
+FRAN
+- Se corrigió error de enrutamiento en las páginas de especialidades, el cual no devolvía un error si se quería acceder de una de éstas a otra.
+- Se añadieron imágenes de placeholder al carrusel de imágenes de la vista 1
+- Se corrigió el enrutamiento en todas las páginas de la vista 1

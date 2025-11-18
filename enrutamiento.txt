@@ -1,0 +1,11 @@
+Cosas sobre el enrutamiento en pages
+
+Las rutas absolutas empiezan con ../ y como lo dice su nombre, se especifica la ruta desde arriba. Entonces si tu imagen está en principal/img/imagen.png, y lo querés enrutar desde otro directorio paralelo, lo enrutás con ../principal/imagen/img.png
+
+Las rutas relativas NO EMPIEZAN CON /
+Empiezan simplemente con el nombre del directorio al que nos dirigimos. Entonces si queremos acceder a un archivo en el mismo directorio en el que estamos trabajando, simplemente lo llamamos con archivo.png
+
+En el index hay una etiqueta que establece como base la página principal del sitio en el repositorio, para que el path base sea ese. Si tenemos eso activado cuando hagamos pruebas locales, todos los botones llevarán a la página de sites.
+Podemos dejar esa líne acomentada cada vez que querramos trabajar y hacer pruebas locales, pero antes del commit NO OLVIDAR DESCOMENTARLA.
+
+En local funciona sin que respetemos ninguna de ésas pautas, pero luego no se reflejará en el sitio web, por eso debemos verificar y respetar el enrutamiento de todas las páginas y otros archivos que referenciemos.
