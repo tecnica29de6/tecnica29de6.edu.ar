@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ET N° 29 - Vista 2</title>
+
+    <!-- CSS DE ESTA VISTA -->
+    <link rel="stylesheet" href="styleIndex.css">
+
+    <!-- FUENTE POPPINS -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="../index.html">ET N° 29 RECONQUISTA DE BS AS</a>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#especialidades">ESPECIALIDADES</a></li>
+            <li><a href="#proyectos">PROYECTOS</a></li>
+            <li><a href="#contacto">CONTACTOS</a></li>
+        </ul>
+        <div class="menu-toggle" id="menuToggle">☰</div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="header-hero" role="banner">
+        <div class="header-hero-bg" aria-hidden="true"></div>
+        <div class="hero-content">
+            <h1>ESCUELA TÉCNICA N.º 29 "RECONQUISTA DE BUENOS AIRES"</h1>
+            <p class="hero-sub">Formando la próxima generación de técnicos con visión de futuro en un entorno de vanguardia.</p>
+            <a class="btn-primary" href="#especialidades">EXPLORAR ÁREAS TÉCNICAS ></a>
+        </div>
+    </header>
+
+    <!-- ESPECIALIDADES -->
+    <main>
+        <section id="especialidades">
+            <h2>ESPECIALIDADES TÉCNICAS // SECTOR ACADÉMICO</h2>
+
+            <div class="card-container">
+
+                <a href="pagina-detallada-computacion.html" target="_blank" class="specialty-card">
+                    <img src="../img/computacion.jpeg" alt="Computación">
+                    <h3 class="card-title">COMPUTACIÓN</h3>
+                    <p class="card-subtitle">Desarrollo de Sistemas, Redes Avanzadas y Arquitectura de Hardware.</p>
+                </a>
+
+                <a href="pagina-detallada-electricidad.html" target="_blank" class="specialty-card">
+                    <img src="../img/electricidad.jpg" alt="Electricidad">
+                    <h3 class="card-title">ELECTRICIDAD</h3>
+                    <p class="card-subtitle">Diseño Eléctrico, Automatización Industrial y Energías Renovables.</p>
+                </a>
+
+                <a href="pagina-detallada-mecanica.html" target="_blank" class="specialty-card">
+                    <img src="../img/meca.jpg" alt="Mecánica">
+                    <h3 class="card-title">MECÁNICA</h3>
+                    <p class="card-subtitle">Mecánica, Fabricación Asistida y Robótica Aplicada.</p>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- PROYECTOS -->
+        <section id="proyectos" class="proyectos-section">
+            <h2>PROYECTOS DE ALUMNOS</h2>
+            <p class="proyectos-sub">Innovación aplicada: Soluciones técnicas reales diseñadas y construidas por nuestros estudiantes.</p>
+
+            <div class="projects-grid">
+
+                <article class="project-card">
+                    <img src="../img/proyecto1.jpg" alt="Tech-Room 29">
+                    <div class="project-info">
+                        <h3 class="project-title">Campus Virtual "Tech-Room 29"</h3>
+                        <p class="project-desc">Plataforma Educativa con Asistente virtual Alfred</p>
+                        <span class="project-badge">COMPUTACIÓN</span>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <img src="../img/proyecto2.jpg" alt="Preñol">
+                    <div class="project-info">
+                        <h3 class="project-title">Preñol</h3>
+                        <p class="project-desc">Inventario y Permisos del preñol</p>
+                        <span class="project-badge">COMPUTACIÓN</span>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="contacto">
+        <div class="footer-content">
+
+            <div class="footer-section">
+                <h3>INFORMACIÓN DE CONTACTO & LOCALIZACIÓN</h3>
+                <ul class="contact-list">
+                    <li><strong>DIRECCIÓN:</strong> Av. Boedo 760, C1218 CABA, Argentina</li>
+                    <li><strong>TELÉFONO:</strong> <a href="tel:+541149572920">+54 011 4957-2920</a></li>
+                    <li><strong>EMAIL:</strong> <a href="mailto:det_29_de6@bue.edu.ar">det_29_de6@bue.edu.ar</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.3025041347605!2d-58.41885242494265!3d-34.62179505845184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccaf8b0c7ce0f%3A0x17ca663276a69e1b!2sEscuela%20T%C3%A9cnica%20N%C2%B0%2029%20-%20Reconquista%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1762449957039!5m2!1ses!2sar" 
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-copy">
+            © 2025 ESCUELA TÉCNICA N.º 29 "RECONQUISTA DE BUENOS AIRES" // TODOS LOS DERECHOS RESERVADOS.
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script>
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            document.getElementById('navLinks').classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(item => {
+            item.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('active');
+            });
+        });
+    </script>
+
+</body>
+</html>

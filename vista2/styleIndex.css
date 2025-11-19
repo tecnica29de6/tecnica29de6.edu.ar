@@ -1,0 +1,618 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Variables de Color Institucionales y Tech */
+:root {
+    --color-bg-main: #0A0D11; /* Fondo principal oscuro */
+    --color-bg-secondary: #14181F; /* Fondo secundario para secciones/cards */
+    --color-institutional-blue: #1b3a6f; /* Azul institucional base */
+    --color-institutional-dark-blue: #152d56; /* Azul más oscuro para degradados */
+    --color-accent-cyan: #00E0FF; /* Cian Tech para Computación */
+    --color-accent-magenta: #FF00FF; /* Magenta Tech para Electricidad */
+    --color-accent-lime: #ff6600; /* Lima Tech para Mecánica */
+    --color-text-primary: #E6EFFF; /* Texto principal claro */
+    --color-text-secondary: #A0C4FF; /* Texto secundario (subtítulos, descripciones) */
+
+
+    /* Sombras para el efecto 3D y Glow */
+    --shadow-base: 0 4px 15px rgba(0, 0, 0, 0.4);
+   
+    /* Sombras de glow específicas para cada card */
+    --glow-cyan: 0 0 25px rgba(0, 224, 255, 0.7), inset 0 0 10px rgba(0, 224, 255, 0.4);
+    --glow-magenta: 0 0 25px rgba(255, 0, 255, 0.7), inset 0 0 10px rgba(255, 0, 255, 0.4);
+    --glow-lime: 0 0 25px rgba(0, 255, 0, 0.7), inset 0 0 10px rgba(0, 255, 0, 0.4);
+}
+
+
+body {
+    background: var(--color-bg-main);
+    color: var(--color-text-primary);
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+
+a {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+
+a:hover {
+    color: var(--color-accent-cyan);
+    text-shadow: 0 0 8px var(--color-accent-cyan);
+}
+
+
+/* --- TIPOGRAFÍA Y SECCIONES --- */
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+
+section {
+    padding: 100px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    color: white;
+    text-shadow: 0 0 10px var(--color-institutional-blue), 0 0 20px rgba(27, 58, 111, 0.5);
+    border-bottom: 3px solid var(--color-institutional-blue);
+    display: inline-block;
+    padding-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+}
+/* Efecto de "corte" en el underline para el look "roto" */
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--color-accent-cyan);
+    transform: skewX(-20deg);
+    transform-origin: bottom left;
+    transition: transform 0.4s ease-in-out;
+}
+section h2:hover::after {
+    transform: skewX(20deg);
+    background: var(--color-accent-magenta);
+}
+
+
+
+
+
+
+.navbar {
+    position: sticky;
+    top: 0;
+    background: linear-gradient(90deg, #101010, var(--color-institutional-blue), #101010);
+    backdrop-filter: blur(8px);
+    border-bottom: 2px solid var(--color-accent-cyan);
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.7);
+    padding: 18px 30px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.logo a {
+    color: white;
+    font-size: 1.35rem;
+    letter-spacing: 1.5px;
+    text-shadow: 0 0 8px var(--color-institutional-blue);
+    font-weight: 800;
+}
+
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+
+.nav-links a {
+    color: var(--color-text-primary);
+    padding: 10px 15px;
+    border: 1px solid var(--color-institutional-dark-blue);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    border-radius: 4px;
+}
+
+
+.nav-links a:hover {
+    background: var(--color-institutional-dark-blue);
+    color: var(--color-accent-cyan);
+    border-color: var(--color-accent-cyan);
+    box-shadow: 0 0 15px rgba(0, 224, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    color: var(--color-accent-cyan);
+    font-size: 30px;
+    text-shadow: 0 0 8px var(--color-accent-cyan);
+}
+
+
+/* --- HEADER --- */
+.header-hero {
+    height: 593px;
+    perspective: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.header-hero-bg {
+    position: absolute;
+    inset: 0;
+    background: url('../vista1/img/foto_escuela.png') no-repeat center center/cover;
+    filter: brightness(.2) contrast(1.1) saturate(0.8);
+    transform: scale(1.1);
+    z-index: 0;
+}
+
+
+.header-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        repeating-linear-gradient(45deg, rgba(27, 58, 111, 0.05), rgba(27, 58, 111, 0.05) 5px, transparent 5px, transparent 10px),
+        repeating-linear-gradient(-45deg, rgba(0, 224, 255, 0.03), rgba(0, 224, 255, 0.03) 5px, transparent 5px, transparent 10px);
+    z-index: 1;
+    opacity: 0.8;
+}
+
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px 40px;
+    border-radius: 8px;
+    border: 1px solid var(--color-institutional-blue);
+    box-shadow: 0 0 25px rgba(27, 58, 111, 0.7), inset 0 0 10px rgba(27, 58, 111, 0.4);
+    transform: rotateX(3deg) rotateY(-3deg) translateZ(30px);
+    transition: transform 0.5s ease;
+    max-width: 800px;
+    margin: 0 px;
+   
+}
+
+
+.hero-content:hover {
+    transform: rotateX(0deg) rotateY(0deg) translateZ(40px);
+}
+
+
+.hero-content h1 {
+    font-size: 2.8rem;
+    color: white;
+    text-shadow: 0 0 12px var(--color-institutional-blue), 0 0 25px rgba(27, 58, 111, 0.4);
+    letter-spacing: 1.8px;
+    margin-bottom: 10px;
+}
+
+
+.hero-sub {
+    color: var(--color-text-secondary);
+    font-size: 1.15rem;
+    margin: 15px 0 ;
+    opacity: 0.9;
+    line-height: 1.5;
+}
+
+
+.btn-primary {
+    background: var(--color-institutional-blue);
+    color: white;
+    padding: 14px 32px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all .3s ease;
+    display: inline-block;
+    letter-spacing: .8px;
+    border: 1px solid var(--color-institutional-blue);
+    box-shadow: 0 0 10px rgba(27, 58, 111, 0.4);
+}
+
+
+.btn-primary:hover {
+    background: #264b8a;
+    border-color: var(--color-accent-cyan);
+    box-shadow: 0 0 20px var(--color-accent-cyan), 0 0 30px rgba(0, 224, 255, 0.3);
+    transform: translateY(-3px) scale(1.02);
+}
+
+
+/* --- ESPECIALIDADES (Cards 3D con sombras de color) --- */
+#especialidades {
+    padding-top: 50px;
+}
+
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    perspective: 1000px;
+}
+
+
+.specialty-card {
+    width: 100%;
+    max-width: 320px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--color-bg-secondary);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+    text-align: center;
+    text-decoration: none;
+    color: var(--color-text-primary);
+    box-shadow: var(--shadow-base);
+    transform: translateZ(0);
+
+
+    /* Estilo "roto" / angular */
+    clip-path: polygon(0% 10%, 10% 0%, 100% 0%, 100% 90%, 90% 100%, 0% 100%);
+}
+
+
+.specialty-card:hover {
+    transform: translateY(-10px) rotateX(5deg) rotateY(-5deg) translateZ(20px);
+    border-color: white;
+}
+
+
+/* Sombras específicas para cada especialidad */
+.specialty-card:nth-child(1) { /* Computación */
+    border-left: 5px solid var(--color-accent-cyan);
+    border-right: 1px solid var(--color-accent-cyan);
+}
+.specialty-card:nth-child(1):hover {
+    box-shadow: var(--glow-cyan);
+}
+
+
+.specialty-card:nth-child(2) { /* Electricidad */
+    border-left: 5px solid #ffee00;
+    border-right: 1px solid #ffee00;
+}
+.specialty-card:nth-child(2):hover {
+    box-shadow: var(--glow-magenta);
+}
+
+
+.specialty-card:nth-child(3) { /* Mecánica */
+    border-left: 5px solid #ff4800;
+    border-right: 1px solid #ff4800;
+}
+.specialty-card:nth-child(3):hover {
+    box-shadow: var(--glow-lime);
+}
+
+
+.specialty-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    filter: brightness(0.7) contrast(1.1);
+    transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+
+.specialty-card:hover img {
+    filter: brightness(0.9) contrast(1.2);
+    transform: scale(1.05);
+}
+
+
+.card-title {
+    padding-top: 20px;
+    font-size: 1.6rem;
+    color: white;
+    letter-spacing: 1.2px;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+}
+
+
+.card-subtitle {
+    font-size: 1rem;
+    padding-bottom: 20px;
+    color: var(--color-text-secondary);
+    opacity: 0.9;
+}
+
+
+/* --- PROYECTOS --- */
+.proyectos-sub {
+    color: var(--color-text-secondary);
+    opacity: 0.9;
+    font-size: 1.05rem;
+    margin-bottom: 50px;
+}
+
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+
+.project-card {
+    background: var(--color-bg-secondary);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all .35s ease;
+    text-align: left;
+    box-shadow: var(--shadow-base);
+    position: relative;
+
+
+    /* Estilo "roto" en los bordes */
+    clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+}
+
+
+.project-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--color-institutional-blue);
+    box-shadow: 0 0 25px var(--color-institutional-blue), inset 0 0 10px rgba(27, 58, 111, 0.4);
+}
+
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    filter: brightness(0.6) contrast(1.1);
+    transition: filter 0.3s ease;
+}
+
+
+.project-card:hover img {
+    filter: brightness(0.8) contrast(1.2);
+}
+
+
+.project-info {
+    padding: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+.project-title {
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 1.3rem;
+    color: white;
+}
+
+
+.project-desc {
+    font-size: 0.95rem;
+    opacity: 0.8;
+    margin-bottom: 15px;
+}
+
+
+.project-badge {
+    display: inline-block;
+    background: var(--color-institutional-blue);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: 1px solid var(--color-institutional-blue);
+    transition: all 0.3s ease;
+}
+
+
+.project-badge:hover {
+    background: var(--color-institutional-dark-blue);
+    border-color: var(--color-accent-cyan);
+    box-shadow: 0 0 10px rgba(0, 224, 255, 0.3);
+}
+
+
+
+
+/* --- FOOTER (Contacto y Mapa) --- */
+footer {
+    background: var(--color-institutional-dark-blue);
+    padding: 50px 20px 25px;
+    margin-top: 100px;
+    color: var(--color-text-primary);
+    border-top: 4px double var(--color-accent-cyan);
+}
+
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+}
+
+
+.footer-section h3 {
+    color: white;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px var(--color-institutional-blue);
+}
+
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+}
+
+
+.contact-list li {
+    margin-bottom: 10px;
+    opacity: 0.9;
+    font-size: 1rem;
+}
+
+
+.contact-list strong {
+    color: var(--color-accent-cyan);
+    margin-right: 8px;
+}
+
+
+.map-container {
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid var(--color-accent-cyan);
+    box-shadow: 0 0 15px rgba(0, 224, 255, 0.4);
+    height: 350px;
+}
+
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+    filter: grayscale(80%) invert(5%) brightness(80%);
+}
+
+
+.footer-copy {
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    margin-top: 40px;
+    opacity: 0.7;
+    font-size: 0.9rem;
+    letter-spacing: 0.8px;
+}
+
+
+
+
+/* --- MEDIA QUERIES (RESPONSIVE) --- */
+
+
+/* Mobile Navigation Fix */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        background: var(--color-bg-secondary);
+        border-top: 2px solid var(--color-accent-cyan);
+        box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
+        padding: 10px 0;
+        text-align: center;
+    }
+
+
+    .nav-links.active {
+        display: flex;
+    }
+   
+    .nav-links li {
+        margin: 5px 0;
+    }
+
+
+    .nav-links a {
+        padding: 12px 20px;
+        width: 80%;
+        margin: 0 auto;
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+
+
+    .menu-toggle {
+        display: block;
+    }
+   
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+   
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .hero-content h1 {
+        font-size: 3.2rem;
+    }
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footer-content {
+        grid-template-columns: 1fr 2fr;
+        text-align: left;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .hero-content h1 {
+        font-size: 3.8rem;
+    }
+    .projects-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
