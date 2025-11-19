@@ -82,4 +82,23 @@ document.addEventListener('DOMContentLoaded', () => {
         tabsContent.children[0].classList.add('active');
     }
 
+    document.addEventListener('click', function(e) {
+    if (e.target.classList.contains('accordion-header')) {
+        const header = e.target;
+        const content = header.nextElementSibling;
+
+        // Cerrar otros
+        document.querySelectorAll('.accordion-content').forEach(c => {
+            if (c !== content) c.style.display = 'none';
+        });
+        document.querySelectorAll('.accordion-header').forEach(h => {
+            if (h !== header) h.classList.remove('active');
+        });
+
+        // Toggle del actual
+        const isOpen = content.style.display === 'block';
+        content.style.display = isOpen ? 'none' : 'block';
+        header.classList.toggle('active');
+    }
+});
 });
