@@ -188,3 +188,45 @@ aside {
   transform: translateY(-1px);
 }
 
+/* Acordeón del Plan de Estudios */
+.accordion {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #ddd;
+}
+
+.accordion-header {
+  width: 100%;
+  padding: 15px;
+  background: #e9e9e9;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-header .arrow {
+  transition: transform 0.3s;
+}
+
+.accordion-header.active .arrow {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  display: none;
+  padding: 15px 20px;
+  background: white;
+  animation: fade 0.3s ease;
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
