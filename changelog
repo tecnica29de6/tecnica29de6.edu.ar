@@ -67,4 +67,7 @@ Serie de correcciones pre-entrevista
 
 Index: Se redujo la cantidad de vistas en el menú desplegable de cuatro a 2, porque sólo tenemos 2. También se cambió la imagen de fondo en el hero con la nueva fachada de la escuela. 
 
-lol no llegué a anotar los demás cambios
+Vista 1: Se cambió la imagen de fondo del hero por una foto de la fachada de la escuela y se agregaron imágenes de gente trabajando (por fin conseguimos)
+
+Vista 2: Se corrigió el enrutamiento respecto de las páginas de especialidades, porque tenían un target blank que abría una nueva pestaña. 
+
