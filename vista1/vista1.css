@@ -15,7 +15,7 @@ body {
     flex-direction: column;
 
     /* AÑADE ESTAS PROPIEDADES PARA LA IMAGEN DE FONDO */
-    background-image: url('img/fondo_tuff.png'); /* Ruta a tu imagen */
+    background-image: url('../img/frenteCole.jpg'); /* Ruta a tu imagen */
     background-size: cover; /* Cubre todo el fondo sin repetirse */
     background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
     background-position: center center; /* Centra la imagen */
