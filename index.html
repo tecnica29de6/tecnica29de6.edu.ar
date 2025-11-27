@@ -1,145 +1,152 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Técnica N°29 - Reconquista de Buenos Aires</title>
-  <link rel="stylesheet" href="css/stylesIndex.css" />
-    <!--la etiqueta base fuerza a que el path base sea éste.
-    Ésta línea es para que funcione en el repositorio, pero la podemos dejar comentada para hacer pruebas locales.
-  <base href="https://tecnica29de6.github.io/tecnica29de6.edu.ar/" />-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-  <link rel="stylesheet" href="css/stylesGenerales.css">
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ET N°29 - Reconquista de Buenos Aires</title>
+    <link rel="stylesheet" href="css/stylesIndex.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
 <body>
-  <!-- NAVBAR -->
-  <nav class="barra-navegacion">
-  <div class="contenedor-navegacion">
-    <div class="logo">
-      <img src="img/logoet29.png" alt="Logo Técnica 29" />
-      <a id = "linkInicio" href="index.html">Escuela Técnica N°29<br>D.E. 6 Reconquista de Buenos Aires</a>
-    </div>
 
-    <ul class="menu">
-      <li><a href="#inicio" class="activo">Inicio</a></li>
-      <li class="dropdown">
-        <a href="#" class="dropbtn">Especialidades <i class="fa-solid fa-caret-down"></i></a>
-        <div class="dropdown-content">
-          <a href="html/compu.html">Computación</a>
-          <a href="html/electricidad.html">Electricidad</a>
-          <a href="html/mecanica.html">Mecánica</a>
+    <header class="encabezado">
+        
+        <a href="index.html" class="encabezado__logo-contenedor">
+            <div class="encabezado__logo-imagen"></div> 
+            <div class="encabezado__logo-texto">
+                <span>Escuela técnica N°29 de 6</span>
+                <span>Reconquista de Buenos Aires</span>
+            </div>
+        </a>
+
+        <nav class="encabezado__navegacion">
+            <ul class="encabezado__lista-enlaces">
+                <li><a href="#">Ciclo básico ▼</a></li>
+                <li><a href="#">Especialidades ▼</a></li>
+                <li><a href="#">Contactar</a></li>
+            </ul>
+        </nav>
+
+        <div class="encabezado__redes-sociales">
+            <a href="https://www.facebook.com/search/top?q=ET%2029%20De%206%20Reconquista%20de%20Buenos%20Aires" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/et29de6" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
         </div>
-      </li>
-      <li><a href="#contactos">Contactos</a></li>
-    </ul>
+        
+    </header>
 
-    <div class="redes">
-      <a href="https://www.facebook.com/et29de6" target="_blank" aria-label="Facebook">
-        <i class="fa-brands fa-facebook-f"></i>
-      </a>
-      <a href="https://www.instagram.com/et29de6" target="_blank" aria-label="Instagram">
-        <i class="fa-brands fa-instagram"></i>
-      </a>
-    </div>
-  </div>
-</nav>
+    <main class="contenido-principal">
 
+        <section class="seccion-hero">
+            <div class="hero-imagen-fondo"></div> 
+            <div class="hero-imagen-superposicion"></div> 
+            
+            <div class="hero-contenido">
+                <h1>¡BIENVENIDO A LA N°29!</h1>
+                <p>Formando técnicos con vocación, innovación y compromiso con la sociedad.<br>Una institución educativa que impulsa el aprendizaje técnico desde la práctica.</p>
+                <div class="hero-botones">
+                    <a href="#" class="boton-llamada-accion">Ver especialidades</a>
+                    <a href="#" class="boton-llamada-accion">Contactar</a>
+                </div>
+            </div>
+        </section>
 
-  <!-- HERO -->
-  <header id="inicio" class="seccion-principal">
-    <div class="texto-principal">
-      <h1>Bienvenidos a la Escuela Tecnica N° 29 D.E 6 <br><i>Reconquista de Buenos Aires</i></h1>
-      <p>
-        Formando técnicos con vocación, innovación y compromiso con la sociedad.
-        Una institución educativa que impulsa el aprendizaje técnico desde la práctica.
-      </p>
-      <div class="botones-principales">
-        <a href="#especialidades" class="boton-primario">Ver Especialidades</a>
-        <a href="#contactos" class="boton-primario">Contactar</a>
-        <li class="dropdown">
-        <a href="#" class="boton-primario">Vistas de prueba <i class="fa-solid fa-caret-down"></i></a>
-        <div class="dropdown-content">
-          <a href="vista1/vista1.html">Vista 1</a>
-          <a href="vista2/vista2.html">Vista 2</a>
-      </div>
-    </div>
-    <div class="imagen-principal">
-    </div>
-  </header>
+        <h2 class="titulo-seccion">¿POR QUÉ ELEGIRNOS?</h2>
+        <section class="seccion-por-que-elegirnos-contenedor">
+            <div class="seccion-por-que-elegirnos">
 
-  <!-- ESPECIALIDADES -->
-  <section id="especialidades" class="seccion-especialidades">
-    <h2>Nuestras Especialidades</h2>
-    <p>Formación técnica integral para los desafíos del futuro.</p>
+                <div class="contenedor-carrusel">
+                <button class="boton-carrusel boton-carrusel--anterior" id="prevBtn" aria-label="Anterior">◀</button>
+                <button class="boton-carrusel boton-carrusel--siguiente" id="nextBtn" aria-label="Siguiente">▶</button>
+                
+                <div class="carrusel-contenedor">
+                    <div class="carrusel-deslizador">
 
-    <div class="contenedor-especialidades">
-      <div class="tarjeta-especialidad">
-        <img src="img/computacion.jpeg" alt="Computación" />
-        <h3>Computación</h3>
-        <p>
-          Formación en programación, redes y hardware, integrando la tecnología
-          al servicio del conocimiento.
-        </p>
-        <a href="html/compu.html" class="enlace">Explorar</a>
-      </div>
+                        <div class="carrusel-diapositiva">
+                            <div class="diapositiva-contenido">
+                                <h3>Formación Técnica de Excelencia</h3>
+                                <p>Elegir la Técnica N°29 es optar por una formación técnica de excelencia dentro del modelo de la "Secundaria del Futuro". Nuestra escuela ofrece títulos en Mecánica, Electricidad y Computación, brindando a los estudiantes una preparación sólida para el mundo laboral y académico.</p>
+                            </div>
+                            <div class="diapositiva-imagen" style="background-image: url(img/imagen_prueba1.jpg);"></div>
+                        </div>
+                        <div class="carrusel-diapositiva">
+                            <div class="diapositiva-contenido">
+                                <h3>Compromiso y Aprendizaje Práctico</h3>
+                                <p>Contamos con un gran taller central y amplias aulas de computación que garantizan prácticas reales y un aprendizaje de calidad. Además, funcionamos con jornada completa y somos una "Escuela Consagrada" por nuestro compromiso con la educación ambiental y la formación integral de profesionales del futuro.</p>
+                            </div>
+                            <div class="diapositiva-imagen" style="background-image: url('img/compuWork.jpg');"></div>
+                        </div>
 
-      <div class="tarjeta-especialidad">
-        <img src="img/electricidad.jpg" alt="Electricidad" />
-        <h3>Electricidad</h3>
-        <p>
-          Capacitación en instalaciones, mantenimiento y proyectos eléctricos con
-          orientación profesional.
-        </p>
-        <a href="html/electricidad.html" class="enlace">Explorar</a>
-      </div>
+                        <div class="carrusel-diapositiva">
+                            <div class="diapositiva-contenido">
+                                <h3>Construí tu Futuro con Nosotros</h3>
+                                <p>En la Técnica N°29 formamos jóvenes con vocación, innovación y compromiso. Te invitamos a ser parte de una comunidad educativa que impulsa el crecimiento personal y profesional desde la práctica y la excelencia.</p>
+                            </div> 
+                            <div class="diapositiva-imagen" style="background-image: url('img/mecaWork.jpg');"></div>
+                        </div>
 
-      <div class="tarjeta-especialidad">
-        <img src="img/meca.jpg" alt="Mecánica" />
-        <h3>Mecánica</h3>
-        <p>
-          Diseño, operación y mantenimiento de sistemas mecánicos y herramientas
-          industriales.
-        </p>
-        <a href="html/mecanica.html" class="enlace">Explorar</a>
-      </div>
-    </div>
-  </section>
+                    </div>
+                </div>
+                </div>
 
+            </div>
 
-  <!-- FOOTER -->
-  <footer id="contactos" class="pie-de-pagina">
-    <div class="contenedor-pie">
-      <div class="columna">
-        <h3>Contactos</h3>
-        <p>Teléfono: <a href="tel:+541149572920">+54 011 4957-2920</a></p>
-        <p>Email: <a href="mailto:det_29_de6@bue.edu.ar">det_29_de6@bue.edu.ar</a></p>
-      </div>
+        </section>
 
-      <div class="columna">
-        <h3>Enlaces</h3>
-        <a href="#inicio">Inicio</a>
-        <a href="#especialidades">Especialidades</a>
-        <a href="#visita-virtual">Visita Virtual</a>
-      </div>
+        <h2 class="titulo-seccion-especialidades-externo">ESPECIALIDADES</h2>
+        <section class="seccion-especialidades-contenedor">
+            <div class="seccion-especialidades">
+                <div class="item-especialidad">
+                    <img src="img/boton_compu.png" alt="Computación" class="img-especialidad">
+                    <h3>COMPUTACIÓN</h3>
+                    <p>Formación en programación, redes y hardware, integrando la tecnología al servicio del conocimiento.</p>
+                </div>
 
-      <div class="columna mapa">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.3023294802247!2d-58.41885242351912!3d-34.62179947294788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccaf8b0c7ce0f%3A0x17ca663276a69e1b!2sEscuela%20T%C3%A9cnica%20N%C2%B0%2029%20-%20Reconquista%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1761158376874!5m2!1ses-419!2sar"
-          width="100%"
-          height="200"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy"
-        ></iframe>
-      </div>
-    </div>
+                <div class="item-especialidad">
+                    <img src="img/boton_meca.png" alt="Mecánica" class="img-especialidad">
+                    <h3>MECÁNICA</h3>
+                    <p>Diseño, operación y mantenimiento de sistemas mecánicos y herramientas industriales.</p>
+                </div>
 
-    <p class="texto-final">
-      © 2025 Escuela Técnica N°29 D.E.6 - Reconquista de Buenos Aires. Sitio
-      desarrollado por alumnos.
-    </p>
-  </footer>
+                <div class="item-especialidad">
+                    <img src="img/boton_elec.png" alt="Electricidad" class="img-especialidad">
+                    <h3>ELECTRICIDAD</h3>
+                    <p>Capacitación en instalaciones, mantenimiento y proyectos eléctricos con orientación profesional.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="pie-pagina-nuevo">
+        
+        <div class="pie-pagina__seccion pie-pagina__contactos">
+            <h3>CONTACTOS</h3>
+            <p>Teléfono: <strong>+54 011 4957-2920</strong></p>
+            <p>Email: <a href="mailto:det_29_de6@bue.edu.ar"><strong>det_29_de6@bue.edu.ar</strong></a></p>
+
+            <h3 class="pie-pagina__titulo-redes">REDES SOCIALES</h3>
+            <p>Instagram: <a href="https://www.instagram.com/et29de6" target="_blank">et29de6</a></p>
+            <p>Facebook: <a href="https://www.facebook.com/search/top?q=ET%2029%20De%206%20Reconquista%20de%20Buenos%20Aires" target="_blank">ET 29 De 6 Reconquista de Buenos Aires</a></p>
+        </div>
+
+        <div class="pie-pagina__seccion pie-pagina__enlaces">
+            <h3>ENLACES</h3>
+            <ul>
+                <li><a href="#">Especialidades</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#">Visita Virtual</a></li>
+            </ul>
+        </div>
+
+        <div class="pie-pagina__seccion pie-pagina__ubicacion">
+            <h3>UBICACIÓN</h3>
+            <div class="footer__mapa-contenedor">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.302504134705!2d-58.41885242413697!3d-34.62179505845324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccaf8b0c7ce0f%3A0x17ca663276a69e1b!2sEscuela%20T%C3%A9cnica%20N%C2%B0%2029%20-%20Reconquista%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1763526991967!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="js/index.js"></script>
 </body>
 </html>

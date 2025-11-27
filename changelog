@@ -71,3 +71,14 @@ Vista 1: Se cambió la imagen de fondo del hero por una foto de la fachada de la
 
 Vista 2: Se corrigió el enrutamiento respecto de las páginas de especialidades, porque tenían un target blank que abría una nueva pestaña. 
 
+-------------------------------------
+NUEVA RAMA DEV
+-------------------------------------
+
+En esta rama trabajamos y probamos los cambios antes de clonar cualquier zapallo a main. 
+Se trabaja en esta rama y se mergea con main una vez estemos seguros. 
+
+Rama creada el 27/11 por Fran
+Cambios realizados:
+Se eliminó el index original y la carpeta de vista 2
+Los directorios de vista 1 se movieron a la raíz del repositorio, de modo que ahora al acceder al sitio se accede directamente a este nuevo diseño. 
