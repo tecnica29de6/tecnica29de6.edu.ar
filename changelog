@@ -82,3 +82,10 @@ Rama creada el 27/11 por Fran
 Cambios realizados:
 Se eliminó el index original y la carpeta de vista 2
 Los directorios de vista 1 se movieron a la raíz del repositorio, de modo que ahora al acceder al sitio se accede directamente a este nuevo diseño. 
+
+5/3 Fran
+
+Se cambió el título para cumplir con la formalidad solicitada
+Se eliminó el subrayado del correo en el footer, pues no se veían los guíones bajos
+Editado el hipervínculo de facebook, pues no era un link de verdad
+Se agregó texto a los carruseles de computación para darle una estructura al contenido, aunque no son la versión final.

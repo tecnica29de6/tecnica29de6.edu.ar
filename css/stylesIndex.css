@@ -612,7 +612,7 @@ body {
 
 .pie-pagina__contactos a {
     color: #ffffff;
-    text-decoration: underline;
+    text-decoration: none;
     transition: opacity 0.3s;
 }
 
