@@ -1,8 +1,7 @@
-- Hay que cambiar la informacion del plan de estudio, el perfil tecnico en computacion y alguna data mas.
-- Hay un boton llamdo Vistas de puerbas donde es un despegable de mas botones que cada uno de ellos te deberia de llevar a otras vistas mediante links que mas adelante haremos 
 MUY IMPORTANTE
 Cada vez que usen una ruta relativa, en vez de hacer "/" tienen que hacer "../" porque si no funciona localmente pero github sites no lo juna
 
-- hay que confeccionar el plan de estudio y el perfil del técnico en computación con lo que dice la resolución.
-- los items de la barra de navegación y del título no sirven del index no sirven
-- hay que cambiar las fotos del index para que no se vean caras de menores. Podríamos hacer una jornada de fotografía de las instalaciones más decentes
+- los items de la barra de navegación y del título no sirven del index no sirven. Los botones de ver especialidades y contactar para en el frente, y los botones de ciclo básico, especialidades y contactar arriba. El de especialidades de arriba debería ser un desplegable en vez de un botón
+- algunos links del footer no sirven en ningún aspecto: no llevan a ningún lado, tampoco cumplen una función muy útil.
+- la onda del index se ve un poco invasiva, tapando un poco la foto de la fachada del colegio. Esta foto también tiene que mostrar la fachada más del centro, o directamente mostrar la fachada completa, que es lo que pidió el rector
+
