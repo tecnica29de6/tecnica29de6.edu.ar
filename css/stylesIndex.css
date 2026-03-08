@@ -15,11 +15,16 @@ body {
     flex-direction: column;
 
     /* AÑADE ESTAS PROPIEDADES PARA LA IMAGEN DE FONDO */
-    background-image: url('../img/fondo_tuff.png'); /* Ruta a tu imagen */
-    background-size: cover; /* Cubre todo el fondo sin repetirse */
-    background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
-    background-position: center center; /* Centra la imagen */
-    background-repeat: no-repeat; /* Asegura que no se repita */
+    background-image: url('../img/fondo_tuff.png');
+    /* Ruta a tu imagen */
+    background-size: cover;
+    /* Cubre todo el fondo sin repetirse */
+    background-attachment: fixed;
+    /* Mantiene la imagen fija al hacer scroll */
+    background-position: center center;
+    /* Centra la imagen */
+    background-repeat: no-repeat;
+    /* Asegura que no se repita */
 }
 
 /* ========================================
@@ -63,7 +68,8 @@ body {
     color: #333;
     gap: 0.2rem;
 }
-.encabezado__logo-texto a:hover{
+
+.encabezado__logo-texto a:hover {
     color: #004E8E;
     transform: scale(1.05);
     transition: color 0.3s ease;
@@ -95,6 +101,79 @@ body {
     color: #004E8E;
 }
 
+/* ── DROPDOWN ESPECIALIDADES ── */
+.nav-desplegable {
+    position: relative;
+}
+
+.nav-desplegable__menu {
+    list-style: none;
+    position: absolute;
+    top: calc(100% + 0.8rem);
+    left: 50%;
+    transform: translateX(-50%) translateY(-6px);
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13);
+    min-width: 190px;
+    padding: 0.4rem 0;
+    z-index: 200;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s;
+}
+
+/* Pequeña flecha decorativa arriba del menú */
+.nav-desplegable__menu::before {
+    content: '';
+    position: absolute;
+    top: -7px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 0 7px 7px 7px;
+    border-style: solid;
+    border-color: transparent transparent #e0e0e0 transparent;
+}
+
+.nav-desplegable__menu::after {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 0 6px 6px 6px;
+    border-style: solid;
+    border-color: transparent transparent #ffffff transparent;
+}
+
+/* Abre al hacer hover */
+.nav-desplegable:hover .nav-desplegable__menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Cada link del dropdown */
+.nav-desplegable__menu li a {
+    display: block;
+    padding: 0.7rem 1.3rem;
+    font-size: 1rem !important;
+    color: #444;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.18s ease, color 0.18s ease, padding-left 0.18s ease;
+    white-space: nowrap;
+    border-radius: 6px;
+    margin: 2px 6px;
+}
+
+.nav-desplegable__menu li a:hover {
+    background-color: #e8f4ff;
+    color: #004E8E;
+    padding-left: 1.6rem;
+}
+
 /* Redes Sociales */
 .encabezado__redes-sociales {
     padding-right: 30px;
@@ -105,9 +184,10 @@ body {
 .encabezado__redes-sociales a {
     text-decoration: none;
     color: #333;
-    font-size: 2.2rem; /* Ajuste para el tamaño del ícono */
+    font-size: 2.2rem;
+    /* Ajuste para el tamaño del ícono */
     padding-left: 10px;
-    font-weight: normal; 
+    font-weight: normal;
     transition: color 0.3s ease;
 }
 
@@ -117,6 +197,7 @@ body {
     transform: scale(1.1);
     transition: transform 0.3s ease, color 0.3s ease;
 }
+
 /* ========================================
    CONTENIDO PRINCIPAL
    ======================================== */
@@ -257,6 +338,7 @@ body {
         gap: 1rem;
     }
 }
+
 /* ========================================
    SECCIÓN ¿POR QUÉ ELEGIRNOS?
    ======================================== */
@@ -272,12 +354,12 @@ body {
     font-weight: 700;
     color: #333;
     background-color: #e0f4ff;
-        padding: 0.75rem 2.5rem 0.75rem 0.75rem;
-        display: block;
-        margin-bottom: 2rem;
-        margin-left: 0;
-        border-radius: 0 16px 16px 0;
-        max-width: 420px;
+    padding: 0.75rem 2.5rem 0.75rem 0.75rem;
+    display: block;
+    margin-bottom: 2rem;
+    margin-left: 0;
+    border-radius: 0 16px 16px 0;
+    max-width: 420px;
 }
 
 .seccion-por-que-elegirnos {
@@ -453,7 +535,7 @@ body {
 .seccion-especialidades-contenedor {
     background-color: #ffffff;
     width: 100%;
-    margin-bottom: 4rem; 
+    margin-bottom: 4rem;
 }
 
 .titulo-seccion-especialidades-externo {
@@ -462,12 +544,12 @@ body {
     font-weight: 700;
     color: #333;
     background-color: #e0f4ff;
-        padding: 0.75rem 2.5rem 0.75rem 0.75rem;
-        display: block;
-        margin-bottom: 2rem;
-        margin-left: 0;
-        border-radius: 0 16px 16px 0;
-        max-width: 420px;
+    padding: 0.75rem 2.5rem 0.75rem 0.75rem;
+    display: block;
+    margin-bottom: 2rem;
+    margin-left: 0;
+    border-radius: 0 16px 16px 0;
+    max-width: 420px;
 }
 
 .seccion-especialidades {
@@ -481,7 +563,7 @@ body {
     margin-right: -50vw;
     display: flex;
     justify-content: center;
-        gap: 14rem;
+    gap: 14rem;
     flex-wrap: nowrap;
 }
 
@@ -654,11 +736,12 @@ body {
     position: relative;
     width: 100%;
     /* Relación de aspecto del mapa */
-    padding-bottom: 60%; 
+    padding-bottom: 60%;
     height: 0;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra para resaltar el mapa */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    /* Sombra para resaltar el mapa */
 }
 
 /* Estilo para el placeholder del mapa (simulación visual) */
@@ -668,7 +751,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #e0e0e0; 
+    background-color: #e0e0e0;
     background-image: url('https://placehold.co/400x250/A6D3EE/404040?text=Mapa+Placeholder');
     background-size: cover;
     background-position: center;
@@ -689,7 +772,7 @@ body {
     background-color: white;
     padding: 8px 12px;
     border-radius: 4px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     font-size: 0.85rem;
     color: #333;
     z-index: 10;
@@ -711,7 +794,7 @@ body {
     border-radius: 50%;
     border: 3px solid white;
     transform: translate(-50%, -50%);
-    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     z-index: 9;
 }
 
