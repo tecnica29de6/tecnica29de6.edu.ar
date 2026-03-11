@@ -6,6 +6,27 @@ document.addEventListener('DOMContentLoaded', () => {
     const botonAnterior = document.getElementById('prevBtn');
     const botonSiguiente = document.getElementById('nextBtn');
     
+    //  Dropdown Móvil
+    const menuHamburger = document.getElementById('menu-hamburger');
+    const navegacion = document.getElementById('navegacion');
+    const navDesplegableToggle = document.querySelector('.nav-desplegable__toggle');
+
+    if (menuHamburger && navegacion) {
+        menuHamburger.addEventListener('click', () => {
+            navegacion.classList.toggle('activo');
+        });
+    }
+
+    if (navDesplegableToggle) {
+        navDesplegableToggle.addEventListener('click', (e) => {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                const navDesplegable = navDesplegableToggle.parentElement;
+                navDesplegable.classList.toggle('activo');
+            }
+        });
+    }
+
     // Verifica si los elementos existen en la página
     if (deslizador && botonAnterior && botonSiguiente) {
 

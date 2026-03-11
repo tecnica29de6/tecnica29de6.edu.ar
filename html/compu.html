@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,40 +13,45 @@
 <body>
   <!-- NAVBAR -->
   <nav class="barra-navegacion">
-  <div class="contenedor-navegacion">
-    <div class="logo">
-      <img src="../img/logoet29.png" alt="Logo Técnica 29" />
-      <a id = "linkInicio" href="../index.html">Escuela Técnica N°29<br>D.E. 6 Reconquista de Buenos Aires</a>
+    <div class="contenedor-navegacion">
+      <div class="logo">
+        <img src="../img/logoet29.png" alt="Logo Técnica 29" />
+        <a id="linkInicio" href="../index.html">Escuela Técnica N°29<br>D.E. 6 Reconquista de Buenos Aires</a>
+      </div>
+
+      <div class="menu-hamburger" id="menu-hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <ul class="menu">
+        <li><a href="#inicio" class="activo">Inicio</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Especialidades <i class="fa-solid fa-caret-down"></i></a>
+          <div class="dropdown-content">
+            <a href="compu.html">Computación</a>
+            <a href="electricidad.html">Electricidad</a>
+            <a href="mecanica.html">Mecánica</a>
+          </div>
+        </li>
+        <li><a href="#contactos">Contactos</a></li>
+      </ul>
+
+      <div class="redes">
+        <a href="https://www.facebook.com/et29de6" target="_blank" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/et29de6" target="_blank" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
     </div>
+  </nav>
 
-    <ul class="menu">
-      <li><a href="#inicio" class="activo">Inicio</a></li>
-      <li class="dropdown">
-        <a href="#" class="dropbtn">Especialidades <i class="fa-solid fa-caret-down"></i></a>
-        <div class="dropdown-content">
-          <a href="compu.html">Computación</a>
-          <a href="electricidad.html">Electricidad</a>
-          <a href="mecanica.html">Mecánica</a>
-        </div>
-      </li>
-      <li><a href="#contactos">Contactos</a></li>
-    </ul>
-
-    <div class="redes">
-      <a href="https://www.facebook.com/et29de6" target="_blank" aria-label="Facebook">
-        <i class="fa-brands fa-facebook-f"></i>
-      </a>
-      <a href="https://www.instagram.com/et29de6" target="_blank" aria-label="Instagram">
-        <i class="fa-brands fa-instagram"></i>
-      </a>
-    </div>
-  </div>
-</nav>
-
-  <div class = "ig">
+  <div class="ig">
     <a href="https://www.instagram.com/et29de6_computacion/" aria-label="Instagram del Área de Computación">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.148 3.227-1.667 4.771-4.919 4.919-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.07-1.646-.07-4.85s.012-3.584.07-4.85c.148-3.227 1.667-4.771 4.919-4.919 1.266-.058 1.646.07 4.85.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.059 1.689.073 4.948.073s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059 1.281.073 1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/>
+        <path
+          d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.148 3.227-1.667 4.771-4.919 4.919-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.07-1.646-.07-4.85s.012-3.584.07-4.85c.148-3.227 1.667-4.771 4.919-4.919 1.266-.058 1.646.07 4.85.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.059 1.689.073 4.948.073s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059 1.281.073 1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z" />
       </svg>
       Seguí las novedades del Área en Instagram
     </a>
@@ -57,30 +63,40 @@
   <div class="content-wrapper">
     <main class="main-column">
       <h1>Área de Computación</h1>
-      <p>El área de computación es la más amplia de la escuela, estando presente en los 3 turnos de la escuela. Tiene su propio piso, dentro del cual hay 4 laboratorios equipados, más dos carritos con computadoras portátiles [insert fotos]</p> <!--Este p no tiene style lol-->
+      <p>El área de computación es la más amplia de la escuela, estando presente en los 3 turnos de la escuela. Tiene su
+        propio piso, dentro del cual hay 4 laboratorios equipados, más dos carritos con computadoras portátiles [insert
+        fotos]</p> <!--Este p no tiene style lol-->
       <!--Este p se supone que va abajo del video, pero no pude ponerlo. También vamos a incluir imágenes -->
       <div class="video-container">
-        <iframe 
-          src="https://www.youtube.com/embed/ugLx3llSC10"
-          title="Video Área de Computación"
-          frameborder="0"
+        <iframe src="https://www.youtube.com/embed/ugLx3llSC10" title="Video Área de Computación" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen>
         </iframe>
       </div>
-      
+
 
       <div class="content-section">
         <h2>Perfil del Técnico en Computación</h2>
-        <p>La incumbencia profesional del título el plan establece: “Que el técnico en computación cuenta con una preparación que lo habilita para asistir eficazmente al profesional en la mayoría de las resoluciones de programas, fundamentalmente de tipo administrativo, contable y científico. <br>
-En la actualidad el perfil del Técnico en Computación se van actualizado del plan original en función de las innovaciones que se producen en los campos tecnológicos y ocupacionales. Las innovaciones mayores fueron realizadas en la programación de contenidos de las distintas asignaturas. Esta estrategia de innovación tuvo como efecto que cada establecimiento definió la pertinencia de ciertos contenidos sobre otros en función de cada proyecto institucional particular. 
-La consecuencia sobre el perfil formativo y profesional es la definición de trayectorias heterogéneas de formación y diferencias de perfil formativo.</p>
+        <p>La incumbencia profesional del título el plan establece: “Que el técnico en computación cuenta con una
+          preparación que lo habilita para asistir eficazmente al profesional en la mayoría de las resoluciones de
+          programas, fundamentalmente de tipo administrativo, contable y científico. <br>
+          En la actualidad el perfil del Técnico en Computación se van actualizado del plan original en función de las
+          innovaciones que se producen en los campos tecnológicos y ocupacionales. Las innovaciones mayores fueron
+          realizadas en la programación de contenidos de las distintas asignaturas. Esta estrategia de innovación tuvo
+          como efecto que cada establecimiento definió la pertinencia de ciertos contenidos sobre otros en función de
+          cada proyecto institucional particular.
+          La consecuencia sobre el perfil formativo y profesional es la definición de trayectorias heterogéneas de
+          formación y diferencias de perfil formativo.</p>
         <p>En resumen del <strong>Técnico de Computación</strong> es el siguiente</p>
         <ul>
-          <li>Estará capacitado para proyectar, producir, adaptar, implementar y mantener aplicaciones informáticas.</li>
-          <li>Proyectar, instalar, configurar y mantener sistemas informáticos; realizando la documentación técnica y de usuarios de acuerdo con los requerimientos funcionales y técnicos de las aplicaciones y sistemas.</li>
-          <li>Asistirá y asesorará a los usuarios para la elección, adquisición, instalación y personalización de aplicaciones de equipos y sistemas; actuando en todos los casos bajo las normativas vigentes; 
-            pudiendo desempeñarse en relación de dependencia o mediante emprendimientos individuales y/o asociativos.</li>
+          <li>Estará capacitado para proyectar, producir, adaptar, implementar y mantener aplicaciones informáticas.
+          </li>
+          <li>Proyectar, instalar, configurar y mantener sistemas informáticos; realizando la documentación técnica y de
+            usuarios de acuerdo con los requerimientos funcionales y técnicos de las aplicaciones y sistemas.</li>
+          <li>Asistirá y asesorará a los usuarios para la elección, adquisición, instalación y personalización de
+            aplicaciones de equipos y sistemas; actuando en todos los casos bajo las normativas vigentes;
+            pudiendo desempeñarse en relación de dependencia o mediante emprendimientos individuales y/o asociativos.
+          </li>
         </ul>
       </div>
 
@@ -88,116 +104,123 @@ La consecuencia sobre el perfil formativo y profesional es la definición de tra
       Habría que incluir también las materias no técnicas en los planes de estudio-->
       <div class="content-section">
         <h2>Plan de estudios</h2>
-          <div class="accordion-item">
-              <button class="accordion-header">TERCER AÑO<span class="arrow">▼</span></button>
-              <div class="accordion-content">
-                <p>Tercer año de computación introduce a los conceptos básicos de la especialidad por medio de sus talleres:</p>
-                <ul>
-                  <li>Programación: Introducción a los conceptos básicos de creación de algoritmos.</li>
-                  <li>Tecnología de Control: Introducción a los distintos sistemas de control, con enfoque en electrónica.</li>
-                  <li>Diseño Multimedial: Introducción a diversas herramientas de representación audiovisual.</li>
-                </ul>
-                <p>En la jornada habitual se presentan las siguientes materias semanalmente:</p>
-                <ul>
-                  <li>Matemática: 5 horas cátedra</li>
-                  <li>Lengua y Literatura: 4 horas cátedra</li>
-                  <li>Tecnología de la Representación: 4 horas cátedra</li>
-                  <li>Geografía: 3 horas cátedra</li>
-                  <li>Historia: 3 horas cátedra</li>
-                  <li>Educación Física: 3 horas cátedra</li>
-                  <li>Inglés: 3 horas cátedra</li>
-                  <li>Física: 3 horas cátedra</li>
-                  <li>Química: 3 horas cátedra</li>
-                  <li>Educación Ciudadana: 2 horas cátedra</li>
-                </ul>
-              </div>
+        <div class="accordion-item">
+          <button class="accordion-header">TERCER AÑO<span class="arrow">▼</span></button>
+          <div class="accordion-content">
+            <p>Tercer año de computación introduce a los conceptos básicos de la especialidad por medio de sus talleres:
+            </p>
+            <ul>
+              <li>Programación: Introducción a los conceptos básicos de creación de algoritmos.</li>
+              <li>Tecnología de Control: Introducción a los distintos sistemas de control, con enfoque en electrónica.
+              </li>
+              <li>Diseño Multimedial: Introducción a diversas herramientas de representación audiovisual.</li>
+            </ul>
+            <p>En la jornada habitual se presentan las siguientes materias semanalmente:</p>
+            <ul>
+              <li>Matemática: 5 horas cátedra</li>
+              <li>Lengua y Literatura: 4 horas cátedra</li>
+              <li>Tecnología de la Representación: 4 horas cátedra</li>
+              <li>Geografía: 3 horas cátedra</li>
+              <li>Historia: 3 horas cátedra</li>
+              <li>Educación Física: 3 horas cátedra</li>
+              <li>Inglés: 3 horas cátedra</li>
+              <li>Física: 3 horas cátedra</li>
+              <li>Química: 3 horas cátedra</li>
+              <li>Educación Ciudadana: 2 horas cátedra</li>
+            </ul>
           </div>
-          <div class="accordion-item">
-              <button class="accordion-header">CUARTO AÑO <span class="arrow">▼</span></button>
-              <div class="accordion-content">
-              <p>Cuarto año comienza con la profundización de los conceptos de la especialidad por medio de sus materias, con una carga horaria considerable:</p>
-                <ul>
-                  <li>Laboratorio de Algoritmos y Estructura de Datos: 9 horas cátedra</li>
-                  <li>Organización de las computadoras: 7 horas cátedra</li>
-                  <li>Base de Datos: 6 horas cátedra</li>
-                  <li>Proyecto Informático I: 4 horas cátedra</li>
-                  <li>Lógica Computacional: 3 horas cátedra</li>
-                </ul>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header">CUARTO AÑO <span class="arrow">▼</span></button>
+          <div class="accordion-content">
+            <p>Cuarto año comienza con la profundización de los conceptos de la especialidad por medio de sus materias,
+              con una carga horaria considerable:</p>
+            <ul>
+              <li>Laboratorio de Algoritmos y Estructura de Datos: 9 horas cátedra</li>
+              <li>Organización de las computadoras: 7 horas cátedra</li>
+              <li>Base de Datos: 6 horas cátedra</li>
+              <li>Proyecto Informático I: 4 horas cátedra</li>
+              <li>Lógica Computacional: 3 horas cátedra</li>
+            </ul>
 
-              <p>También se trabajan las siguientes materias en el aula:</p>
-              <ul>
-                <li>Matemática: 4 horas cátedra</li>
-                <li>Lengua y Literatura: 3 horas cátedra</li>
-                <li>Inglés: 3 horas cátedra</li>
-                <li>Educación Física: 3 horas cátedra</li>
-                <li>Historia: 2 horas cátedra</li>
-                <li>Geografía: 2 horas cátedra</li>
-              </ul>
-              </div>
+            <p>También se trabajan las siguientes materias en el aula:</p>
+            <ul>
+              <li>Matemática: 4 horas cátedra</li>
+              <li>Lengua y Literatura: 3 horas cátedra</li>
+              <li>Inglés: 3 horas cátedra</li>
+              <li>Educación Física: 3 horas cátedra</li>
+              <li>Historia: 2 horas cátedra</li>
+              <li>Geografía: 2 horas cátedra</li>
+            </ul>
           </div>
-          <div class="accordion-item">
-              <button class="accordion-header">QUINTO AÑO <span class="arrow">▼</span></button>
-              <div class="accordion-content">
-              <p>En quinto año se profundizan y consolidan los conocimientos impartidos en cuarto año, con muchas materias correlativas</p>
-                <ul>
-                  <li>Laboratorio de Programación Orientada a Objetos: 9 horas cátedra</li>
-                  <li>Redes: 7 horas cátedra</li>
-                  <li>Administración y Gestión de Bases de Datos: 6 horas cátedra</li>
-                  <li>Proyecto Informático II: 4 horas cátedra</li>
-                  <li>Análisis de Sistemas: 4 horas cátedra</li>
-                </ul>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header">QUINTO AÑO <span class="arrow">▼</span></button>
+          <div class="accordion-content">
+            <p>En quinto año se profundizan y consolidan los conocimientos impartidos en cuarto año, con muchas materias
+              correlativas</p>
+            <ul>
+              <li>Laboratorio de Programación Orientada a Objetos: 9 horas cátedra</li>
+              <li>Redes: 7 horas cátedra</li>
+              <li>Administración y Gestión de Bases de Datos: 6 horas cátedra</li>
+              <li>Proyecto Informático II: 4 horas cátedra</li>
+              <li>Análisis de Sistemas: 4 horas cátedra</li>
+            </ul>
 
-              <p>También se trabajan las siguientes materias en el aula:</p>
-              <ul>
-                <li>Matemática: 4 horas cátedra</li>
-                <li>Lengua y Literatura: 3 horas cátedra</li>
-                <li>Inglés: 3 horas cátedra</li>
-                <li>Educación Física: 3 horas cátedra</li>
-                <li>Economía y Gestión de las Organizaciones: 3 horas cátedra</li>
-              </ul>
-              </div>
+            <p>También se trabajan las siguientes materias en el aula:</p>
+            <ul>
+              <li>Matemática: 4 horas cátedra</li>
+              <li>Lengua y Literatura: 3 horas cátedra</li>
+              <li>Inglés: 3 horas cátedra</li>
+              <li>Educación Física: 3 horas cátedra</li>
+              <li>Economía y Gestión de las Organizaciones: 3 horas cátedra</li>
+            </ul>
           </div>
-          <div class="accordion-item">
-              <button class="accordion-header">SEXTO AÑO <span class="arrow">▼</span></button>
-              <div class="accordion-content">
-              <p>Sexto año, además de reforzar los contenidos vistos a lo largo de las carreras, viene con más herramientas de cara a la inserción al mundo laboral.</p>
-                <ul>
-                  <li>Prácticas Profesionalizantes: 9 horas cátedra</li>
-                  <li>Administración de Redes: 7 horas cátedra</li>
-                  <li>Desarrollo de Sistemas: 6 horas cátedra</li>
-                  <li>Programación sobre Redes: 6 horas cátedra</li>
-                </ul>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header">SEXTO AÑO <span class="arrow">▼</span></button>
+          <div class="accordion-content">
+            <p>Sexto año, además de reforzar los contenidos vistos a lo largo de las carreras, viene con más
+              herramientas de cara a la inserción al mundo laboral.</p>
+            <ul>
+              <li>Prácticas Profesionalizantes: 9 horas cátedra</li>
+              <li>Administración de Redes: 7 horas cátedra</li>
+              <li>Desarrollo de Sistemas: 6 horas cátedra</li>
+              <li>Programación sobre Redes: 6 horas cátedra</li>
+            </ul>
 
-              <p>Las materias de la especialidad son acompañadas por las siguientes:</p>
-                <ul>
-                  <li>Gestión de los Procesos Productivos: 4 horas cátedra</li>
-                  <li>Matemática: 4 horas cátedra</li>
-                  <li>Inglés: 3 horas cátedra</li>
-                  <li>Ciencia y Tecnología: 2 horas cátedra</li>
-                  <li>Ciudadanía y trabajo: 2 horas cátedra</li>
-                  <li>Educación física: 3 horas cátedra</li>
-                </ul>
-              </div>
+            <p>Las materias de la especialidad son acompañadas por las siguientes:</p>
+            <ul>
+              <li>Gestión de los Procesos Productivos: 4 horas cátedra</li>
+              <li>Matemática: 4 horas cátedra</li>
+              <li>Inglés: 3 horas cátedra</li>
+              <li>Ciencia y Tecnología: 2 horas cátedra</li>
+              <li>Ciudadanía y trabajo: 2 horas cátedra</li>
+              <li>Educación física: 3 horas cátedra</li>
+            </ul>
           </div>
+        </div>
 
       </div>
     </main>
 
     <aside>
-      <div class = "mala-señal">
+      <div class="mala-señal">
         <p>Proyecto de Streaming</p>
         <img src="../img/malasenal.jpg" alt="Mala señal">
-        
+
         <div class="social-links">
           <a href="https://www.instagram.com/malasenal.29/" target="_blank" aria-label="Instagram">
             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.148 3.227-1.667 4.771-4.919 4.919-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.07-1.646-.07-4.85s.012-3.584.07-4.85c.148-3.227 1.667-4.771 4.919-4.919 1.266-.058 1.646.07 4.85.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.059 1.689.073 4.948.073s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059 1.281.073 1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/>
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.148 3.227-1.667 4.771-4.919 4.919-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.07-1.646-.07-4.85s.012-3.584.07-4.85c.148-3.227 1.667-4.771 4.919-4.919 1.266-.058 1.646.07 4.85.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.059 1.689.073 4.948.073s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059 1.281.073 1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z" />
             </svg>
             Instagram
           </a>
           <a href="http://youtube.com/@MalaSenal.ET29" target="_blank" aria-label="Youtube">
             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M21.582,6.186c-0.23-0.854-0.908-1.532-1.762-1.762C18.254,4,12,4,12,4S5.746,4,4.179,4.424c-0.854,0.23-1.532,0.908-1.762,1.762C2,7.754,2,12,2,12s0,4.246,0.417,5.814c0.23,0.854,0.908,1.532,1.762,1.762C5.746,20,12,20,12,20s6.254,0,7.821-0.424c0.854-0.23,1.532-0.908,1.762-1.762C22,16.246,22,12,22,12S22,7.754,21.582,6.186z M10,15.5V8.5l6,3.5L10,15.5z"/>
+              <path
+                d="M21.582,6.186c-0.23-0.854-0.908-1.532-1.762-1.762C18.254,4,12,4,12,4S5.746,4,4.179,4.424c-0.854,0.23-1.532,0.908-1.762,1.762C2,7.754,2,12,2,12s0,4.246,0.417,5.814c0.23,0.854,0.908,1.532,1.762,1.762C5.746,20,12,20,12,20s6.254,0,7.821-0.424c0.854-0.23,1.532-0.908,1.762-1.762C22,16.246,22,12,22,12S22,7.754,21.582,6.186z M10,15.5V8.5l6,3.5L10,15.5z" />
             </svg>
             Youtube
           </a>
@@ -225,12 +248,7 @@ La consecuencia sobre el perfil formativo y profesional es la definición de tra
       <div class="columna mapa">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.3023294802247!2d-58.41885242351912!3d-34.62179947294788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccaf8b0c7ce0f%3A0x17ca663276a69e1b!2sEscuela%20T%C3%A9cnica%20N%C2%B0%2029%20-%20Reconquista%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1761158376874!5m2!1ses-419!2sar"
-          width="100%"
-          height="200"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy"
-        ></iframe>
+          width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
       </div>
     </div>
 
@@ -242,4 +260,5 @@ La consecuencia sobre el perfil formativo y profesional es la definición de tra
 
   <script src="../js/tabs.js" defer></script>
 </body>
+
 </html>
