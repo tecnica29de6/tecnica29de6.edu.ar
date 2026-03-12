@@ -180,6 +180,179 @@ body {
 }
 
 /* ========================================
+   RESPONSIVIDAD DEL ENCABEZADO
+   ======================================== */
+
+.encabezado__menu-hamburger {
+    display: none;
+    font-size: 2rem;
+    color: #333;
+    cursor: pointer;
+    margin-left: auto;
+    padding: 0.3rem 0.5rem;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+
+.encabezado__menu-hamburger:hover {
+    background-color: #f0f0f0;
+}
+
+/* ── Tablet Grande ── */
+@media (max-width: 1024px) {
+    .encabezado {
+        padding: 0.8rem 1.5rem;
+    }
+
+    .encabezado__navegacion {
+        margin-left: 1.5rem;
+    }
+
+    .encabezado__lista-enlaces {
+        gap: 1.5rem;
+    }
+
+    .encabezado__lista-enlaces a {
+        font-size: 1.1rem;
+    }
+
+    .encabezado__redes-sociales a {
+        font-size: 1.8rem;
+    }
+}
+
+/* ── Tablet Chica / Móvil ── */
+@media (max-width: 768px) {
+    .encabezado {
+        flex-wrap: wrap;
+        padding: 0.8rem 1rem;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .encabezado__logo-imagen {
+        width: 55px;
+        height: 55px;
+    }
+
+    .encabezado__logo-texto {
+        font-size: 1rem;
+    }
+
+    .encabezado__menu-hamburger {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .encabezado__navegacion {
+        display: none;
+        width: 100%;
+        margin-left: 0;
+        margin-top: 0.8rem;
+        flex-basis: 100%;
+        border-top: 1px solid #e8e8e8;
+        padding-top: 0.5rem;
+    }
+
+    .encabezado__navegacion.activo {
+        display: block;
+    }
+
+    .encabezado__lista-enlaces {
+        flex-direction: column;
+        gap: 0;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        text-align: center;
+        padding: 0.5rem;
+    }
+
+    .encabezado__lista-enlaces li {
+        border-bottom: 1px solid #ececec;
+    }
+
+    .encabezado__lista-enlaces li:last-child {
+        border-bottom: none;
+    }
+
+    .encabezado__lista-enlaces a {
+        display: block;
+        padding: 0.8rem 1rem;
+        font-size: 1.05rem;
+        border-radius: 7px;
+        transition: background-color 0.2s ease;
+    }
+
+    .encabezado__lista-enlaces a:hover {
+        background-color: #e8f4ff;
+    }
+
+    .encabezado__redes-sociales {
+        display: none;
+    }
+
+    /* Configuración Dropdown Móvil */
+    .nav-desplegable__menu {
+        position: static;
+        transform: none;
+        opacity: 0;
+        visibility: hidden;
+        box-shadow: none;
+        border: none;
+        background-color: transparent;
+        padding: 0;
+        min-width: 100%;
+        display: none;
+        transition: none;
+    }
+
+    .nav-desplegable.activo .nav-desplegable__menu {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        padding: 0.3rem 0.5rem 0.5rem;
+    }
+
+    .nav-desplegable__menu::before,
+    .nav-desplegable__menu::after {
+        display: none;
+    }
+
+    .nav-desplegable__menu li a {
+        text-align: center;
+        background-color: #ffffff;
+        margin-bottom: 4px;
+        border: 1px solid #eee;
+        border-radius: 6px;
+        font-size: 0.95rem !important;
+        padding: 0.55rem 1rem;
+    }
+}
+
+/* ── Móvil Pequeño ── */
+@media (max-width: 480px) {
+    .encabezado {
+        padding: 0.7rem 0.8rem;
+    }
+
+    .encabezado__logo-imagen {
+        width: 45px;
+        height: 45px;
+    }
+
+    .encabezado__logo-texto {
+        font-size: 0.85rem;
+    }
+
+    .encabezado__menu-hamburger {
+        font-size: 1.7rem;
+    }
+}
+
+/* ========================================
    3. HERO SECTION
    ======================================== */
 .contenido-principal {
@@ -191,7 +364,8 @@ body {
     display: flex;
     align-items: center;
     width: 100%;
-    height: 60vh;
+    min-height: 60vh;
+    padding: 6rem 0;
     overflow: hidden;
 }
 
@@ -326,6 +500,32 @@ body {
 
 .boton-llamada-accion--secundario:hover {
     background-color: rgba(255, 255, 255, 0.2);
+    border-color: #ffffff;
+    transform: scale(1.05);
+}
+
+/* Media Query Hero */
+@media (max-width: 768px) {
+    .hero-contenido {
+        padding-left: 5%;
+        padding-right: 5%;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .hero-contenido h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-contenido p {
+        font-size: 1rem;
+    }
+
+    .hero-botones {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
 }
 
 /* ========================================
@@ -443,8 +643,55 @@ body {
     transform: translateY(-50%) scale(1.1);
 }
 
-.boton-carrusel--anterior { left: 1.5rem; }
-.boton-carrusel--siguiente { right: 1.5rem; }
+.boton-carrusel--anterior {
+    left: 1.5rem;
+}
+
+.boton-carrusel--siguiente {
+    right: 1.5rem;
+}
+
+/* Media Query Carrusel */
+@media (max-width: 800px) {
+    .carrusel-diapositiva {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        height: auto;
+    }
+
+    .diapositiva-contenido {
+        clip-path: none;
+        margin-right: 0;
+        padding: 2rem;
+        text-align: center;
+        order: 2;
+    }
+
+    .diapositiva-imagen {
+        height: 250px;
+        width: 100%;
+        order: 1;
+    }
+
+    .diapositiva-contenido h3 {
+        font-size: 2rem;
+    }
+
+    .boton-carrusel {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+        top: 35%;
+    }
+
+    .boton-carrusel--anterior {
+        left: 1rem;
+    }
+
+    .boton-carrusel--siguiente {
+        right: 1rem;
+    }
+}
 
 /* ========================================
    5. SECCIÓN ESPECIALIDADES (BLOQUES AZULES)
@@ -529,20 +776,62 @@ body {
 
 .item-especialidad:hover p {
     max-height: 150px;
-    opacity: 1;
+}
+
+@media (max-width: 1024px) {
+    .seccion-especialidades {
+        gap: 3rem;
+    }
+
+    .img-especialidad {
+        width: 200px;
+        height: 200px;
+    }
+
+    .item-especialidad p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .seccion-especialidades {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        padding: 2rem 1rem;
+    }
+
+    .item-especialidad {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .img-especialidad {
+        width: 180px;
+        height: 180px;
+    }
+
+    .titulo-seccion-especialidades-externo {
+        font-size: 1.3rem;
+    }
+
+    .item-especialidad p {
+        max-width: 100%;
+    }
 }
 
 /* ========================================
    6. FOOTER
    ======================================== */
 .pie-pagina-nuevo {
+    background-color: #0085C8;
+    color: #ffffff;
+    padding: 3rem 5%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around; /* Cambiado de space-between para acercar las dos secciones */
     align-items: flex-start;
     gap: 3rem;
-    padding: 3rem 5%;
-    color: #ffffff;
-    background-color: #0085C8;
+    gap: 3rem;
 }
 
 .pie-pagina__seccion {
@@ -551,6 +840,8 @@ body {
 }
 
 .pie-pagina__seccion h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
     margin-bottom: 1.5rem;
     color: #ffffff;
     font-weight: 700;
@@ -558,8 +849,8 @@ body {
 }
 
 .pie-pagina__contactos p {
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
+    margin-bottom: 0.3rem;
+    font-size: 0.95rem;
 }
 
 .pie-pagina__contactos a {
@@ -576,18 +867,22 @@ body {
 }
 
 .pie-pagina__enlaces ul {
+    list-style: none;
+    padding: 0;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    padding: 0;
-    list-style: none;
 }
 
 .pie-pagina__enlaces a {
     color: #ffffff;
-    font-size: 1rem;
     text-decoration: none;
+    font-size: 1rem;
     transition: opacity 0.3s;
+}
+
+.pie-pagina__enlaces a:hover {
+    opacity: 0.8;
 }
 
 .pie-pagina__ubicacion {
@@ -599,10 +894,9 @@ body {
 .footer__mapa-contenedor {
     position: relative;
     width: 100%;
-    height: 0;
-    margin-top: 1rem;
+    /* Relación de aspecto del mapa */
     padding-bottom: 60%;
-    overflow: hidden;
+    height: 0;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
@@ -661,17 +955,12 @@ body {
     }
 }
 
-/* Especialidades Adaptación */
+/* Media Queries para Responsividad (Asegurar que se ve bien en móviles) */
 @media (max-width: 1024px) {
-    .seccion-especialidades { gap: 3rem; }
-    .img-especialidad { width: 200px; height: 200px; }
-}
-
-@media (max-width: 768px) {
-    .seccion-especialidades {
-        flex-direction: column;
-        align-items: center;
-        gap: 2rem;
+    .pie-pagina-nuevo {
+        padding: 3rem 2rem;
+        flex-wrap: wrap;
+        justify-content: space-around;
     }
 }
 
@@ -681,6 +970,21 @@ body {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        gap: 2rem;
     }
-    .pie-pagina__seccion { align-items: center; }
+
+    .pie-pagina__seccion {
+        width: 100%;
+        max-width: 350px;
+        align-items: center;
+    }
+
+    .pie-pagina__enlaces ul {
+        align-items: center;
+    }
+
+    .pie-pagina__ubicacion {
+        max-width: 90%;
+        min-width: 90%;
+    }
 }
