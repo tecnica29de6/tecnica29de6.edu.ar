@@ -1021,11 +1021,11 @@ body {
 .pie-pagina-nuevo {
     background-color: #0085C8;
     color: #ffffff;
-    padding: 3rem 5%;
+    padding: 1.5rem 2%;
     display: flex;
     justify-content: space-around; /* Cambiado de space-between para acercar las dos secciones */
     align-items: flex-start;
-    gap: 3rem;
+    gap: 1.5rem;
 }
 
 .pie-pagina__seccion {
@@ -1034,15 +1034,15 @@ body {
 }
 
 .pie-pagina__seccion h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 700;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.8rem;
     color: #ffffff;
 }
 
 .pie-pagina__contactos p {
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
+    margin-bottom: 0.3rem;
+    font-size: 0.95rem;
 }
 
 .pie-pagina__contactos a {
@@ -1056,8 +1056,8 @@ body {
 }
 
 .pie-pagina__titulo-redes {
-    margin-top: 2rem;
-    margin-bottom: 1.5rem !important;
+    margin-top: 1rem;
+    margin-bottom: 0.8rem !important;
 }
 
 .pie-pagina__ubicacion {
@@ -1069,9 +1069,9 @@ body {
 .footer__mapa-contenedor {
     position: relative;
     width: 100%;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     /* Relación de aspecto del mapa */
-    padding-bottom: 60%;
+    padding-bottom: 45%;
     height: 0;
     border-radius: 8px;
     overflow: hidden;
@@ -1136,10 +1136,10 @@ body {
 /* ── Media Queries Footer ── */
 @media (max-width: 1024px) {
     .pie-pagina-nuevo {
-        padding: 2.5rem 2rem;
+        padding: 1.5rem 1rem;
         flex-wrap: wrap;
         justify-content: space-around;
-        gap: 2rem;
+        gap: 1rem;
     }
 
     .pie-pagina__seccion h3 {
@@ -1152,8 +1152,8 @@ body {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        gap: 2rem;
-        padding: 2rem 1.5rem;
+        gap: 1rem;
+        padding: 1.5rem 1rem;
     }
 
     .pie-pagina__seccion {
@@ -1169,27 +1169,27 @@ body {
     }
 
     .footer__mapa-contenedor {
-        padding-bottom: 70%;
+        padding-bottom: 55%;
     }
 }
 
 @media (max-width: 480px) {
     .pie-pagina-nuevo {
-        padding: 1.5rem 1rem;
-        gap: 1.5rem;
+        padding: 1.2rem 1rem;
+        gap: 1rem;
     }
 
     .pie-pagina__seccion h3 {
         font-size: 1.1rem;
-        margin-bottom: 1rem;
+        margin-bottom: 0.8rem;
     }
 
     .pie-pagina__contactos p {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
     }
 
     .footer__mapa-contenedor {
-        padding-bottom: 80%;
+        padding-bottom: 50%;
         border-radius: 8px;
     }
 
