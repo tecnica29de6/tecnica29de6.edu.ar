@@ -1,4 +1,3 @@
-
 /* 1. SECCIÓN CARRUSEL (POR QUÉ ELEGIRNOS) */
 .titulo-seccion {
     display: block;
@@ -103,6 +102,14 @@
     transition: all 0.3s ease;
 }
 
+.boton-carrusel--anterior {
+    left: 0px;
+}
+
+.boton-carrusel--siguiente {
+    right: 0px;
+}
+
 /* 2. SECCIÓN ESPECIALIDADES (BLOQUES AZULES CON CÍRCULOS) */
 .seccion-especialidades-contenedor {
     width: 100%;
@@ -143,6 +150,11 @@
     gap: 1.2rem;
     flex: 0 0 auto;
     text-align: center;
+    color: #ffffff;
+}
+
+.item-especialidad h3 {
+    color: #ffffff;
 }
 
 .img-especialidad {
@@ -207,8 +219,8 @@
 }
 
 .item-especialidad:hover p {
-    max-height: 150px; 
-    opacity: 1;        
+    max-height: 150px;
+    opacity: 1;
     margin-top: 1rem;
 }
 
@@ -220,4 +232,90 @@
     color: #004E8E;
     transform: scale(1.05);
     transition: all 0.3s ease;
+}
+
+/* 3. RESPONSIVIDAD ESPECÍFICA DE LA HOME */
+
+@media (max-width: 1024px) {
+    .seccion-especialidades {
+        gap: 5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .carrusel-diapositiva {
+        grid-template-columns: 100%;
+        height: auto;
+    }
+
+    .diapositiva-contenido {
+        margin-right: 0;
+        padding: 2rem;
+        clip-path: none;
+        text-align: center;
+    }
+
+    .diapositiva-contenido h3 {
+        font-size: 1.8rem;
+    }
+
+    .diapositiva-imagen {
+        height: 250px;
+    }
+
+    .boton-carrusel {
+        width: 40px;
+        height: 40px;
+        font-size: 1.25rem;
+    }
+
+    .boton-carrusel--anterior {
+        left: 10px;
+    }
+
+    .boton-carrusel--siguiente {
+        right: 10px;
+    }
+
+    .seccion-especialidades {
+        flex-direction: column;
+        gap: 3rem;
+        padding: 4rem 1rem;
+    }
+
+    .img-especialidad {
+        width: 180px;
+        height: 180px;
+    }
+
+    .item-especialidad p {
+        max-height: none;
+        opacity: 1;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .titulo-seccion,
+    .titulo-seccion-especialidades-externo {
+        font-size: 1.2rem;
+        padding: 0.6rem 1.5rem 0.6rem 0.6rem;
+        max-width: 300px;
+    }
+
+    .hero-contenido h1 {
+        font-size: 2rem;
+    }
+
+    .hero-botones {
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .boton-llamada-accion {
+        width: 100%;
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
 }

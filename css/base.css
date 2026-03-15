@@ -155,7 +155,22 @@ body {
     background-color: #e8f4ff;
 }
 
-/* Header Redes */
+.encabezado__redes-sociales-movil {
+    display: none;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem 0;
+    margin-top: 0.5rem;
+    border-top: 1px solid #ececec;
+}
+
+.encabezado__redes-sociales-movil a {
+    color: #333;
+    font-size: 2rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
 .encabezado__redes-sociales {
     display: flex;
     gap: 1rem;
@@ -255,6 +270,10 @@ body {
 
     .encabezado__navegacion.activo {
         display: block;
+    }
+
+    .encabezado__redes-sociales-movil {
+        display: flex;
     }
 
     .encabezado__lista-enlaces {
@@ -373,8 +392,9 @@ body {
     height: 100%;
     z-index: 1;
     background-image: url('../img/frenteCole.jpg');
-    background-size: 53%;
-    background-position: left;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .hero-images-container {
@@ -390,9 +410,9 @@ body {
 .hero-elipse {
     position: absolute;
     top: 0;
-    width: 80%;
-    height: auto;
-    opacity: 1; 
+    width: 100%;
+    height: 110%;
+    object-fit: cover;
     transform: translateX(-110%); 
     animation: slideIn 0.3s ease-out forwards;
 }
@@ -402,20 +422,26 @@ body {
     left: -420px;
     top: -85px;
     z-index: 5;
+    width: 105%;
+    opacity: 0.85;
     animation-delay: 0s;
 }
 
 .hero-elipse:nth-child(2) { 
     left: -320px; 
     z-index: 4; 
-    top:-30px;
+    top: -30px;
+    width: 105%;
+    opacity: 0.65;
     animation-delay: 0.1s;
 }
 
 .hero-elipse:nth-child(3) { 
     left: -220px; 
     z-index: 3; 
-    top:-10px;
+    top: -10px;
+    width: 105%;
+    opacity: 0.4;
     animation-delay: 0.2s; 
 }
 
@@ -499,6 +525,18 @@ body {
         align-items: center;
         gap: 1rem;
     }
+
+    /* Ajuste de olas en móvil */
+    .hero-elipse {
+        width: 140%; /* Ajustado para mejor visibilidad */
+        height: 110%; /* Un poco más alto */
+        left: -20% !important;
+        transform: translateX(-110%);
+    }
+
+    .hero-elipse:nth-child(1) { left: -25% !important; z-index: 5; }
+    .hero-elipse:nth-child(2) { left: -15% !important; z-index: 4; }
+    .hero-elipse:nth-child(3) { left: -5% !important; z-index: 3; }
 }
 
 /* ========================================
@@ -511,7 +549,9 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
-    gap: 3rem;
+    gap: 4rem;
+    margin-top: 0;
+    border-top: 4px solid #005682;
 }
 
 .pie-pagina__seccion {
@@ -524,11 +564,14 @@ body {
     font-weight: 700;
     margin-bottom: 1.5rem;
     color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .pie-pagina__contactos p {
-    margin-bottom: 0.3rem;
-    font-size: 0.95rem;
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+    line-height: 1.4;
 }
 
 .pie-pagina__contactos a {
@@ -541,7 +584,7 @@ body {
 
 .pie-pagina__titulo-redes {
     margin-top: 2rem;
-    margin-bottom: 1.5rem !important;
+    margin-bottom: 1rem !important;
 }
 
 .pie-pagina__ubicacion {
@@ -553,10 +596,13 @@ body {
 .footer__mapa-contenedor {
     position: relative;
     width: 100%;
-    padding-bottom: 60%;
+    padding-bottom: 50%;
     height: 0;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    margin-top: 1rem;
+    border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer__mapa-contenedor iframe {
@@ -573,9 +619,10 @@ body {
 
 @media (max-width: 1024px) {
     .pie-pagina-nuevo {
-        padding: 3rem 2rem;
+        padding: 2.5rem 2rem;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: space-between;
+        gap: 2rem;
     }
 }
 
@@ -585,7 +632,8 @@ body {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        gap: 2rem;
+        gap: 3rem;
+        padding: 3rem 1.5rem;
     }
 
     .pie-pagina__seccion {
