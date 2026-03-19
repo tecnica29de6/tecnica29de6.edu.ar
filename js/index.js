@@ -14,18 +14,32 @@ document.addEventListener('DOMContentLoaded', () => {
     if (menuHamburger && navegacion) {
         menuHamburger.addEventListener('click', () => {
             navegacion.classList.toggle('activo');
+            menuHamburger.classList.toggle('activo');
+            
+            const icon = menuHamburger.querySelector('i');
+            if (navegacion.classList.contains('activo')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Cerrar el menú al hacer clic en un enlace (excepto el toggle del dropdown)
+        const enlaces = navegacion.querySelectorAll('a:not(.nav-desplegable__toggle)');
+        enlaces.forEach(enlace => {
+            enlace.addEventListener('click', () => {
+                navegacion.classList.remove('activo');
+                menuHamburger.classList.remove('activo');
+                const icon = menuHamburger.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
         });
     }
 
-    if (navDesplegableToggle) {
-        navDesplegableToggle.addEventListener('click', (e) => {
-            if (window.innerWidth <= 768) {
-                e.preventDefault();
-                const navDesplegable = navDesplegableToggle.parentElement;
-                navDesplegable.classList.toggle('activo');
-            }
-        });
-    }
+    // Logic for dropdown removed as links are now flat
 
     // Verifica si los elementos existen en la página
     if (deslizador && botonAnterior && botonSiguiente) {

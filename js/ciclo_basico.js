@@ -1,18 +1,29 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const tabButtons = document.querySelectorAll('.cb-tab-btn');
-    const tabContents = document.querySelectorAll('.cb-tab-content');
+    // Original Tab System Logic
+    const tabHeaders = document.querySelectorAll('.cb-tabs-header');
 
-    tabButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const tabId = button.getAttribute('data-tab');
+    tabHeaders.forEach(header => {
+        const container = header.closest('.cb-tabs-container');
+        const buttons = header.querySelectorAll('.cb-tab-btn');
+        
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                const tabId = button.getAttribute('data-tab');
+                const contents = container.querySelectorAll('.cb-tab-content');
 
-            // Remove active class from all buttons and contents
-            tabButtons.forEach(btn => btn.classList.remove('active'));
-            tabContents.forEach(content => content.classList.remove('active'));
+                // Remove active class from buttons in THIS header
+                buttons.forEach(btn => btn.classList.remove('active'));
+                
+                // Remove active class from contents in THIS container
+                contents.forEach(content => content.classList.remove('active'));
 
-            // Add active class to current button and content
-            button.classList.add('active');
-            document.getElementById(tabId).classList.add('active');
+                // Add active class to current button and content
+                button.classList.add('active');
+                const targetTab = document.getElementById(tabId);
+                if (targetTab) {
+                    targetTab.classList.add('active');
+                }
+            });
         });
     });
 
@@ -45,13 +56,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Mobile menu toggle
-    const hamburger = document.getElementById('menu-hamburger');
-    const nav = document.getElementById('navegacion');
-
-    if (hamburger && nav) {
-        hamburger.addEventListener('click', () => {
-            nav.classList.toggle('activo');
-        });
-    }
+    // (Mobile menu toggle moved to index.js to handle it globally)
 });

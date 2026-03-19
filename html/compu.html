@@ -6,46 +6,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/stylesGenerales.css">
   <link rel="stylesheet" href="../css/stylesEspecs.css">
+  <link rel="stylesheet" href="../css/base.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <title>Computación - E.T. N°29</title>
 </head>
 
 <body>
-  <!-- NAVBAR -->
-  <nav class="barra-navegacion">
-    <div class="contenedor-navegacion">
-      <div class="logo">
-        <img src="../img/logoet29.png" alt="Logo Técnica 29" />
-        <a id="linkInicio" href="../index.html">Escuela Técnica N°29<br>D.E. 6 Reconquista de Buenos Aires</a>
-      </div>
-
-      <div class="menu-hamburger" id="menu-hamburger">
-        <i class="fas fa-bars"></i>
-      </div>
-
-      <ul class="menu">
-        <li><a href="#inicio" class="activo">Inicio</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropbtn">Especialidades <i class="fa-solid fa-caret-down"></i></a>
-          <div class="dropdown-content">
-            <a href="compu.html">Computación</a>
-            <a href="electricidad.html">Electricidad</a>
-            <a href="mecanica.html">Mecánica</a>
-          </div>
-        </li>
-        <li><a href="#contactos">Contactos</a></li>
-      </ul>
-
-      <div class="redes">
-        <a href="https://www.facebook.com/et29de6" target="_blank" aria-label="Facebook">
-          <i class="fa-brands fa-facebook-f"></i>
+    <header class="encabezado">
+        <a href="../index.html" class="encabezado__logo-contenedor">
+            <div class="encabezado__logo-imagen"></div>
+            <div class="encabezado__logo-texto">
+                <span>Escuela técnica N°29 de 6</span>
+                <span>Reconquista de Buenos Aires</span>
+            </div>
         </a>
-        <a href="https://www.instagram.com/et29de6" target="_blank" aria-label="Instagram">
-          <i class="fa-brands fa-instagram"></i>
-        </a>
-      </div>
-    </div>
-  </nav>
+
+        <div class="encabezado__menu-hamburger" id="menu-hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <nav class="encabezado__navegacion" id="navegacion">
+            <ul class="encabezado__lista-enlaces">
+                <li><a href="ciclo_basico.html">Ciclo básico</a></li>
+                <li class="nav-desplegable nav-escritorio">
+                    <a href="#especialidades" class="nav-desplegable__toggle">Especialidades ▼</a>
+                    <ul class="nav-desplegable__menu">
+                        <li><a href="compu.html">Computación</a></li>
+                        <li><a href="mecanica.html">Mecánica</a></li>
+                        <li><a href="electricidad.html">Electricidad</a></li>
+                    </ul>
+                </li>
+                <li class="nav-movil"><a href="compu.html">Computación</a></li>
+                <li class="nav-movil"><a href="mecanica.html">Mecánica</a></li>
+                <li class="nav-movil"><a href="electricidad.html">Electricidad</a></li>
+                <li><a href="#contactos">Contactar</a></li>
+            </ul>
+            <div class="encabezado__redes-sociales-movil">
+                <a href="https://www.facebook.com/search/top?q=ET%2029%20De%206%20Reconquista%20de%20Buenos%20Aires"
+                    target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/et29de6" target="_blank" aria-label="Instagram"><i
+                        class="fab fa-instagram"></i></a>
+            </div>
+        </nav>
+
+        <div class="encabezado__redes-sociales">
+            <a href="https://www.facebook.com/search/top?q=ET%2029%20De%206%20Reconquista%20de%20Buenos%20Aires"
+                target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/et29de6" target="_blank" aria-label="Instagram"><i
+                    class="fab fa-instagram"></i></a>
+        </div>
+    </header>
 
   <div class="ig">
     <a href="https://www.instagram.com/et29de6_computacion/" aria-label="Instagram del Área de Computación">
@@ -120,65 +130,186 @@
         <div class="accordion-item">
           <button class="accordion-header">TERCER AÑO<span class="arrow">▼</span></button>
           <div class="accordion-content">
-            <p>Tercer año de computación introduce a los conceptos básicos de la especialidad por medio de sus talleres:
-            </p>
-            <ul>
-              <li>Programación: Introducción a los conceptos básicos de creación de algoritmos.</li>
-              <li>Tecnología de Control: Introducción a los distintos sistemas de control, con enfoque en electrónica.
-              </li>
-              <li>Diseño Multimedial: Introducción a diversas herramientas de representación audiovisual.</li>
-            </ul>
+            <p>Tercer año de computación introduce a los conceptos básicos de la especialidad por medio de sus talleres:</p>
+            <div class="cb-curriculum-grid">
+                <div class="cb-card" data-hours="Programas">
+                    <div class="cb-card__header">
+                        <span class="cb-card__title">Laboratorio de Programación I</span>
+                        <i class="fas fa-chevron-down cb-card__icon"></i>
+                    </div>
+                    <div class="cb-card__drawer">
+                        <div class="cb-card__content">
+                            <p class="cb-card__description">Introducción a los conceptos básicos de creación de algoritmos, lógica de programación y resolución de problemas mediante código.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cb-card" data-hours="Control">
+                    <div class="cb-card__header">
+                        <span class="cb-card__title">Tecnología de Control</span>
+                        <i class="fas fa-chevron-down cb-card__icon"></i>
+                    </div>
+                    <div class="cb-card__drawer">
+                        <div class="cb-card__content">
+                            <p class="cb-card__description">Introducción a los distintos sistemas de control, con un fuerte enfoque en electrónica básica y automatismos sencillos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cb-card" data-hours="Diseño">
+                    <div class="cb-card__header">
+                        <span class="cb-card__title">Diseño Multimedial</span>
+                        <i class="fas fa-chevron-down cb-card__icon"></i>
+                    </div>
+                    <div class="cb-card__drawer">
+                        <div class="cb-card__content">
+                            <p class="cb-card__description">Aprendizaje de diversas herramientas de representación audiovisual, edición de imagen y diseño para medios digitales.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <p>En la jornada habitual se presentan las siguientes materias semanalmente:</p>
-            <ul>
-              <li>Matemática: 5 horas cátedra</li>
-              <li>Lengua y Literatura: 4 horas cátedra</li>
-              <li>Tecnología de la Representación: 4 horas cátedra</li>
-              <li>Geografía: 3 horas cátedra</li>
-              <li>Historia: 3 horas cátedra</li>
-              <li>Educación Física: 3 horas cátedra</li>
-              <li>Inglés: 3 horas cátedra</li>
-              <li>Física: 3 horas cátedra</li>
-              <li>Química: 3 horas cátedra</li>
-              <li>Educación Ciudadana: 2 horas cátedra</li>
-            </ul>
+            <div class="cb-curriculum-grid">
+                <div class="cb-card" data-hours="5hs">
+                    <div class="cb-card__header">
+                        <span class="cb-card__title">Matemática</span>
+                        <i class="fas fa-chevron-down cb-card__icon"></i>
+                    </div>
+                    <div class="cb-card__drawer">
+                        <div class="cb-card__content">
+                            <p class="cb-card__description">Análisis de funciones, álgebra y resolución de problemas aplicados a la computación.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cb-card" data-hours="4hs">
+                    <div class="cb-card__header">
+                        <span class="cb-card__title">Tec. de la Representación</span>
+                        <i class="fas fa-chevron-down cb-card__icon"></i>
+                    </div>
+                    <div class="cb-card__drawer">
+                        <div class="cb-card__content">
+                            <p class="cb-card__description">Lenguaje visual y normas de dibujo técnico para la documentación de proyectos informáticos y de hardware.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cb-card" data-hours="4hs">
+                    <div class="cb-card__header">
+                        <span class="cb-card__title">Lengua y Literatura</span>
+                        <i class="fas fa-chevron-down cb-card__icon"></i>
+                    </div>
+                    <div class="cb-card__drawer">
+                        <div class="cb-card__content">
+                            <p class="cb-card__description">Desarrollo de habilidades comunicativas y análisis de textos literarios y expositivos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
           </div>
         </div>
         <div class="accordion-item">
           <button class="accordion-header">CUARTO AÑO <span class="arrow">▼</span></button>
           <div class="accordion-content">
-            <p>Cuarto año comienza con la profundización de los conceptos de la especialidad por medio de sus materias,
-              con una carga horaria considerable:</p>
-            <ul>
-              <li>Laboratorio de Algoritmos y Estructura de Datos: 9 horas cátedra</li>
-              <li>Organización de las computadoras: 7 horas cátedra</li>
-              <li>Base de Datos: 6 horas cátedra</li>
-              <li>Proyecto Informático I: 4 horas cátedra</li>
-              <li>Lógica Computacional: 3 horas cátedra</li>
-            </ul>
+            <p>Cuarto año comienza con la profundización de los conceptos de la especialidad por medio de sus materias:</p>
+            <div class="cb-curriculum-grid">
+                <div class="cb-card" data-hours="9hs">
+                    <div class="cb-card__header">
+                        <span class="cb-card__title">Lab. de Algoritmos y Estructura de Datos</span>
+                        <i class="fas fa-chevron-down cb-card__icon"></i>
+                    </div>
+                    <div class="cb-card__drawer">
+                        <div class="cb-card__content">
+                            <p class="cb-card__description">Estudio avanzado de estructuras de datos y algoritmos de optimización para el desarrollo de software eficiente.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cb-card" data-hours="6hs">
+                    <div class="cb-card__header">
+                        <span class="cb-card__title">Base de Datos</span>
+                        <i class="fas fa-chevron-down cb-card__icon"></i>
+                    </div>
+                    <div class="cb-card__drawer">
+                        <div class="cb-card__content">
+                            <p class="cb-card__description">Diseño y normalización de bases de datos relacionales, lenguaje SQL y gestión de información estructurada.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cb-card" data-hours="4hs">
+                    <div class="cb-card__header">
+                        <span class="cb-card__title">Proyecto Informático I</span>
+                        <i class="fas fa-chevron-down cb-card__icon"></i>
+                    </div>
+                    <div class="cb-card__drawer">
+                        <div class="cb-card__content">
+                            <p class="cb-card__description">Integración de conocimientos para el desarrollo de una solución informática completa, desde el relevamiento hasta la implementación inicial.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cb-card" data-hours="7hs">
+                    <div class="cb-card__header">
+                        <span class="cb-card__title">Organización de las computadoras</span>
+                        <i class="fas fa-chevron-down cb-card__icon"></i>
+                    </div>
+                    <div class="cb-card__drawer">
+                        <div class="cb-card__content">
+                            <p class="cb-card__description">Análisis de la arquitectura de sistemas informáticos, desde el hardware hasta el sistema operativo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <p>También se trabajan las siguientes materias en el aula:</p>
-            <ul>
-              <li>Matemática: 4 horas cátedra</li>
-              <li>Lengua y Literatura: 3 horas cátedra</li>
-              <li>Inglés: 3 horas cátedra</li>
-              <li>Educación Física: 3 horas cátedra</li>
-              <li>Historia: 2 horas cátedra</li>
-              <li>Geografía: 2 horas cátedra</li>
-            </ul>
+            <div class="cb-curriculum-grid">
+                <div class="cb-card" data-hours="4hs">
+                    <div class="cb-card__header">
+                        <span class="cb-card__title">Matemática</span>
+                        <i class="fas fa-chevron-down cb-card__icon"></i>
+                    </div>
+                    <div class="cb-card__drawer">
+                        <div class="cb-card__content">
+                            <p class="cb-card__description">Estudio de geometría analítica y fundamentos de análisis matemático.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cb-card" data-hours="3hs">
+                    <div class="cb-card__header">
+                        <span class="cb-card__title">Inglés</span>
+                        <i class="fas fa-chevron-down cb-card__icon"></i>
+                    </div>
+                    <div class="cb-card__drawer">
+                        <div class="cb-card__content">
+                            <p class="cb-card__description">Inglés técnico orientado a la lectura de manuales y documentación de software.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
           </div>
         </div>
         <div class="accordion-item">
           <button class="accordion-header">QUINTO AÑO <span class="arrow">▼</span></button>
           <div class="accordion-content">
-            <p>En quinto año se profundizan y consolidan los conocimientos impartidos en cuarto año, con muchas materias
-              correlativas</p>
-            <ul>
-              <li>Laboratorio de Programación Orientada a Objetos: 9 horas cátedra</li>
-              <li>Redes: 7 horas cátedra</li>
-              <li>Administración y Gestión de Bases de Datos: 6 horas cátedra</li>
-              <li>Proyecto Informático II: 4 horas cátedra</li>
-              <li>Análisis de Sistemas: 4 horas cátedra</li>
-            </ul>
+            <p>En quinto año se profundizan y consolidan los conocimientos impartidos en cuarto año:</p>
+            <div class="cb-curriculum-grid">
+                <div class="cb-card" data-hours="9hs">
+                    <div class="cb-card__header">
+                        <span class="cb-card__title">Lab. de Programación Orientada a Objetos</span>
+                        <i class="fas fa-chevron-down cb-card__icon"></i>
+                    </div>
+                    <div class="cb-card__drawer">
+                        <div class="cb-card__content">
+                            <p class="cb-card__description">Dominio del paradigma de objetos, patrones de diseño y desarrollo de aplicaciones robustas y escalables.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cb-card" data-hours="7hs">
+                    <div class="cb-card__header">
+                        <span class="cb-card__title">Redes</span>
+                        <i class="fas fa-chevron-down cb-card__icon"></i>
+                    </div>
+                    <div class="cb-card__drawer">
+                        <div class="cb-card__content">
+                            <p class="cb-card__description">Configuración, administración y mantenimiento de redes informáticas, seguridad y protocolos de comunicación.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <p>También se trabajan las siguientes materias en el aula:</p>
             <ul>
@@ -193,14 +324,31 @@
         <div class="accordion-item">
           <button class="accordion-header">SEXTO AÑO <span class="arrow">▼</span></button>
           <div class="accordion-content">
-            <p>Sexto año, además de reforzar los contenidos vistos a lo largo de las carreras, viene con más
-              herramientas de cara a la inserción al mundo laboral.</p>
-            <ul>
-              <li>Prácticas Profesionalizantes: 9 horas cátedra</li>
-              <li>Administración de Redes: 7 horas cátedra</li>
-              <li>Desarrollo de Sistemas: 6 horas cátedra</li>
-              <li>Programación sobre Redes: 6 horas cátedra</li>
-            </ul>
+            <p>Sexto año se enfoca en la inserción profesional y proyectos finales:</p>
+            <div class="cb-curriculum-grid">
+                <div class="cb-card" data-hours="9hs">
+                    <div class="cb-card__header">
+                        <span class="cb-card__title">Prácticas Profesionalizantes</span>
+                        <i class="fas fa-chevron-down cb-card__icon"></i>
+                    </div>
+                    <div class="cb-card__drawer">
+                        <div class="cb-card__content">
+                            <p class="cb-card__description">Experiencias reales de trabajo en empresas u organismos, aplicando todos los conocimientos técnicos adquiridos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cb-card" data-hours="7hs">
+                    <div class="cb-card__header">
+                        <span class="cb-card__title">Administración de Redes</span>
+                        <i class="fas fa-chevron-down cb-card__icon"></i>
+                    </div>
+                    <div class="cb-card__drawer">
+                        <div class="cb-card__content">
+                            <p class="cb-card__description">Gestión avanzada de servidores, servicios de red y seguridad perimetral para infraestructuras corporativas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <p>Las materias de la especialidad son acompañadas por las siguientes:</p>
             <ul>
@@ -266,6 +414,8 @@
     </p>
   </footer>
 
+  <script src="../js/index.js"></script>
+  <script src="../js/acordeon.js"></script>
   <script src="../js/tabs.js" defer></script>
 </body>
 

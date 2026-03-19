@@ -7,51 +7,99 @@
   <title>Mecánica - E.T. N°29</title>
   <link rel="stylesheet" href="../css/stylesGenerales.css">
   <link rel="stylesheet" href="../css/stylesEspecs.css">
+  <link rel="stylesheet" href="../css/base.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 
 <body>
-  <!-- NAVBAR -->
-  <nav class="barra-navegacion">
-    <div class="contenedor-navegacion">
-      <div class="logo">
-        <img src="../img/logoet29.png" alt="Logo Técnica 29" />
-        <a id="linkInicio" href="../index.html">Escuela Técnica N°29<br>D.E. 6 Reconquista de Buenos Aires</a>
-      </div>
-
-      <div class="menu-hamburger" id="menu-hamburger">
-        <i class="fas fa-bars"></i>
-      </div>
-
-      <ul class="menu">
-        <li><a href="#inicio" class="activo">Inicio</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropbtn">Especialidades <i class="fa-solid fa-caret-down"></i></a>
-          <div class="dropdown-content">
-            <a href="compu.html">Computación</a>
-            <a href="electricidad.html">Electricidad</a>
-            <a href="mecanica.html">Mecánica</a>
-          </div>
-        </li>
-        <li><a href="#contactos">Contactos</a></li>
-      </ul>
-
-      <div class="redes">
-        <a href="https://www.facebook.com/et29de6" target="_blank" aria-label="Facebook">
-          <i class="fa-brands fa-facebook-f"></i>
+    <header class="encabezado">
+        <a href="../index.html" class="encabezado__logo-contenedor">
+            <div class="encabezado__logo-imagen"></div>
+            <div class="encabezado__logo-texto">
+                <span>Escuela técnica N°29 de 6</span>
+                <span>Reconquista de Buenos Aires</span>
+            </div>
         </a>
-        <a href="https://www.instagram.com/et29de6" target="_blank" aria-label="Instagram">
-          <i class="fa-brands fa-instagram"></i>
-        </a>
-      </div>
-    </div>
-  </nav>
+
+        <div class="encabezado__menu-hamburger" id="menu-hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <nav class="encabezado__navegacion" id="navegacion">
+            <ul class="encabezado__lista-enlaces">
+                <li><a href="ciclo_basico.html">Ciclo básico</a></li>
+                <li class="nav-desplegable nav-escritorio">
+                    <a href="#especialidades" class="nav-desplegable__toggle">Especialidades ▼</a>
+                    <ul class="nav-desplegable__menu">
+                        <li><a href="compu.html">Computación</a></li>
+                        <li><a href="mecanica.html">Mecánica</a></li>
+                        <li><a href="electricidad.html">Electricidad</a></li>
+                    </ul>
+                </li>
+                <li class="nav-movil"><a href="compu.html">Computación</a></li>
+                <li class="nav-movil"><a href="mecanica.html">Mecánica</a></li>
+                <li class="nav-movil"><a href="electricidad.html">Electricidad</a></li>
+                <li><a href="#contactos">Contactar</a></li>
+            </ul>
+            <div class="encabezado__redes-sociales-movil">
+                <a href="https://www.facebook.com/search/top?q=ET%2029%20De%206%20Reconquista%20de%20Buenos%20Aires"
+                    target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/et29de6" target="_blank" aria-label="Instagram"><i
+                        class="fab fa-instagram"></i></a>
+            </div>
+        </nav>
+
+        <div class="encabezado__redes-sociales">
+            <a href="https://www.facebook.com/search/top?q=ET%2029%20De%206%20Reconquista%20de%20Buenos%20Aires"
+                target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/et29de6" target="_blank" aria-label="Instagram"><i
+                    class="fab fa-instagram"></i></a>
+        </div>
+    </header>
 
   <div class="content-wrapper">
     <main class="main-column">
       <h1>Área de Mecánica</h1>
+      <p>La especialidad de Mecánica prepara a los alumnos en el diseño, fabricación y reparación de componentes mecánicos y maquinaria industrial.</p>
 
-      <p>Este sitio aún se encuentra en construcción.</p>
+      <div class="content-section">
+        <h2>Plan de estudios</h2>
+        <div class="cb-curriculum-grid">
+            <div class="cb-card" data-hours="10hs">
+                <div class="cb-card__header">
+                    <span class="cb-card__title">Tecnología de Fabricación</span>
+                    <i class="fas fa-chevron-down cb-card__icon"></i>
+                </div>
+                <div class="cb-card__drawer">
+                    <div class="cb-card__content">
+                        <p class="cb-card__description">Estudio de procesos de mecanizado por arranque de viruta (torno, fresa) y conformado de metales.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cb-card" data-hours="8hs">
+                <div class="cb-card__header">
+                    <span class="cb-card__title">Mecánica Técnica</span>
+                    <i class="fas fa-chevron-down cb-card__icon"></i>
+                </div>
+                <div class="cb-card__drawer">
+                    <div class="cb-card__content">
+                        <p class="cb-card__description">Análisis de fuerzas, estática y resistencia de materiales aplicados al diseño de estructuras mecánicas.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cb-card" data-hours="6hs">
+                <div class="cb-card__header">
+                    <span class="cb-card__title">Sistemas Neumáticos e Hidráulicos</span>
+                    <i class="fas fa-chevron-down cb-card__icon"></i>
+                </div>
+                <div class="cb-card__drawer">
+                    <div class="cb-card__content">
+                        <p class="cb-card__description">Principios de transmisión de potencia mediante fluidos, diseño de circuitos y mantenimiento de componentes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
     </main>
   </div>
 
@@ -78,6 +126,8 @@
       desarrollado por alumnos.
     </p>
   </footer>
+    <script src="../js/index.js"></script>
+    <script src="../js/accordion.js"></script>
 </body>
 
 </html>

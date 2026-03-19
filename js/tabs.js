@@ -82,44 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
         tabsContent.children[0].classList.add('active');
     }
 
-    document.addEventListener('click', function (e) {
-        if (e.target.classList.contains('accordion-header')) {
-            const header = e.target;
-            const content = header.nextElementSibling;
-
-            // Cerrar otros
-            document.querySelectorAll('.accordion-content').forEach(c => {
-                if (c !== content) c.style.display = 'none';
-            });
-            document.querySelectorAll('.accordion-header').forEach(h => {
-                if (h !== header) h.classList.remove('active');
-            });
-
-            // Toggle del actual
-            const isOpen = content.style.display === 'block';
-            content.style.display = isOpen ? 'none' : 'block';
-            header.classList.toggle('active');
-        }
-    });
-    //  Dropdown Móvil
-    const menuHamburger = document.getElementById('menu-hamburger');
-    const menu = document.querySelector('.menu');
-    const dropdownToggle = document.querySelector('.dropbtn');
-
-    if (menuHamburger && menu) {
-        menuHamburger.addEventListener('click', () => {
-            menu.classList.toggle('activo');
-        });
-    }
-
-    if (dropdownToggle) {
-        dropdownToggle.addEventListener('click', (e) => {
-            if (window.innerWidth <= 768) {
-                e.preventDefault();
-                const dropdown = dropdownToggle.parentElement;
-                dropdown.classList.toggle('activo');
-            }
-        });
-    }
-
+    /* Legacy accordion and mobile menu logic removed to avoid conflict with accordion.js and index.js */
 });
+
+

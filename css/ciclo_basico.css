@@ -109,6 +109,12 @@ body.cb-body::before {
 }
 
 /* GENERAL SECTION LAYOUT */
+.cb-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
 .cb-section {
     padding: 0 0 6rem;
     background-color: transparent;
@@ -144,6 +150,13 @@ body.cb-body::before {
 
 .cb-intro-container .cb-section__text {
     color: white;
+}
+
+/* Wavy divider at the bottom of intro if needed */
+.cb-intro-container + .cb-container {
+    margin-top: -3rem;
+    position: relative;
+    z-index: 2;
 }
 
 /* Mockup background stripes effect */
@@ -233,6 +246,7 @@ body.cb-body::before {
     box-shadow: 0 8px 15px rgba(0,0,0,0.2);
     width: 100%;
     max-width: 500px;
+    margin-bottom: 2rem; /* Separación con el contenido */
 }
 
 .cb-plan-de-title {
@@ -244,26 +258,40 @@ body.cb-body::before {
 }
 
 .cb-tabs-header {
-    background-color: #00A3FF;
+    background-color: rgba(0, 163, 255, 0.4);
     display: flex;
-    border-radius: 8px;
-    overflow: hidden;
+    padding: 6px;
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .cb-tab-btn {
     flex: 1;
-    padding: 0.8rem 1rem;
+    padding: 0.8rem 1.5rem;
     border: none;
     background: transparent;
     color: white;
     font-weight: 700;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     font-size: 1.1rem;
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cb-tab-btn:hover:not(.active) {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-1px);
 }
 
 .cb-tab-btn.active {
-    background-color: #003D73;
+    background-color: white;
+    color: var(--cb-blue-dark);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transform: scale(1.02);
 }
 
 .cb-tab-content {
@@ -467,10 +495,46 @@ body.cb-body::before {
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-    .cb-grid-2 { grid-template-columns: 1fr; gap: 2rem; }
-    .cb-illustration { order: -1; }
-    .cb-section { padding: 3rem 5%; }
-    .cb-curriculum-grid { grid-template-columns: 1fr; }
+    .cb-grid-2 { 
+        grid-template-columns: 1fr; 
+        gap: 2rem; 
+    }
+    
+    .cb-illustration { 
+        order: -1; 
+        border-radius: 20px;
+        aspect-ratio: 4/3;
+    }
+    
+    .cb-intro-container {
+        padding: 3rem 0;
+        margin-left: -5%;
+        margin-right: -5%;
+        width: 110%;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .cb-intro-container .cb-grid-2 {
+        padding: 0 10%;
+    }
+
+    .cb-section { padding: 3rem 0; }
+    
+    .cb-curriculum-grid { 
+        grid-template-columns: 1fr; 
+        gap: 1rem;
+    }
+    
+    .cb-card {
+        min-height: 60px;
+        font-size: 1rem;
+    }
+
     .cb-footer__container { flex-direction: column; align-items: center; text-align: center; }
     .cb-footer__mapa { width: 100%; }
+
+    .cb-plan-de-box {
+        max-width: 90%;
+    }
 }

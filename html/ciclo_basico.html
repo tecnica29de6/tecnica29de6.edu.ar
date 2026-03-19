@@ -31,7 +31,7 @@
         <nav class="encabezado__navegacion" id="navegacion">
             <ul class="encabezado__lista-enlaces">
                 <li><a href="ciclo_basico.html">Ciclo básico</a></li>
-                <li class="nav-desplegable">
+                <li class="nav-desplegable nav-escritorio">
                     <a href="#especialidades" class="nav-desplegable__toggle">Especialidades ▼</a>
                     <ul class="nav-desplegable__menu">
                         <li><a href="compu.html">Computación</a></li>
@@ -39,6 +39,9 @@
                         <li><a href="electricidad.html">Electricidad</a></li>
                     </ul>
                 </li>
+                <li class="nav-movil"><a href="compu.html">Computación</a></li>
+                <li class="nav-movil"><a href="mecanica.html">Mecánica</a></li>
+                <li class="nav-movil"><a href="electricidad.html">Electricidad</a></li>
                 <li><a href="#pie-pagina-nuevo">Contactar</a></li>
             </ul>
             <div class="encabezado__redes-sociales-movil">
@@ -83,10 +86,11 @@
         </section>
 
         <div class="section-transition-bar" onclick="document.getElementById('materias').scrollIntoView({behavior: 'smooth'})">
-            <span class="section-label-mockup">PLAN DE ESTUDIO <i class="fas fa-chevron-right" style="margin-left: 10px; font-size: 0.8em;"></i></span>
+            <span class="section-label-mockup">PLAN DE ESTUDIOS <i class="fas fa-chevron-right" style="margin-left: 10px; font-size: 0.8em;"></i></span>
         </div>
 
-        <section class="cb-section">
+        <section class="cb-section" id="materias">
+            <div class="cb-wave-divider cb-wave-divider--top"></div>
             <div class="cb-intro-container">
                 <div class="cb-grid-2">
                     <div class="cb-illustration">
@@ -100,42 +104,266 @@
                 </div>
             </div>
 
-            <div class="cb-tabs-container" id="materias">
-                <div class="cb-plan-de-box">
-                    <div class="cb-plan-de-title">PLAN DE:</div>
-                    <div class="cb-tabs-header">
-                        <button class="cb-tab-btn active" data-tab="year1">PRIMER AÑO</button>
-                        <button class="cb-tab-btn" data-tab="year2">SEGUNDO AÑO</button>
+            <div class="cb-container">
+                <div class="cb-tabs-container">
+                    <div class="cb-plan-de-box">
+                        <div class="cb-plan-de-title">PLAN DE:</div>
+                        <div class="cb-tabs-header">
+                            <button class="cb-tab-btn active" data-tab="materia-year1">PRIMER AÑO</button>
+                            <button class="cb-tab-btn" data-tab="materia-year2">SEGUNDO AÑO</button>
+                        </div>
                     </div>
-                </div>
 
-                <div id="year1" class="cb-tab-content active">
-                    <h2 class="cb-section-title">MATERIAS</h2>
-                    <div class="cb-curriculum-grid">
-                        <div class="cb-card" data-hours="6hs">Lengua y Literatura</div>
-                        <div class="cb-card" data-hours="4hs">Historia</div>
-                        <div class="cb-card" data-hours="5hs">Matemática</div>
-                        <div class="cb-card" data-hours="4hs">Tec. de la Repres.</div>
-                        <div class="cb-card cb-card--hours-display" id="carga-horaria-materias">Carga horaria: 6hs</div>
-                        <div class="cb-card" data-hours="3hs">Biología</div>
-                        <div class="cb-card" data-hours="2hs">Ed. Ciudadana</div>
-                        <div class="cb-card" data-hours="3hs">Ed. Física</div>
-                        <div class="cb-card" data-hours="3hs">Ed. Artística</div>
+                    <div id="materia-year1" class="cb-tab-content active">
+                        <h2 class="cb-section-title">MATERIAS - PRIMER AÑO</h2>
+                        <div class="cb-curriculum-grid">
+                            <div class="cb-card">
+                                <div class="cb-card__header">
+                                    <span class="cb-card__title">Lengua y Literatura</span>
+                                    <i class="fas fa-chevron-down cb-card__icon"></i>
+                                </div>
+                                <div class="cb-card__drawer">
+                                    <div class="cb-card__content">
+                                        <span class="cb-card__hours">Carga horaria: 6hs</span>
+                                        <p class="cb-card__description">En esta materia se exploran las formas de expresión escrita y verbal, analizando obras clásicas y contemporáneas para desarrollar habilidades críticas y creativas.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cb-card">
+                                <div class="cb-card__header">
+                                    <span class="cb-card__title">Historia</span>
+                                    <i class="fas fa-chevron-down cb-card__icon"></i>
+                                </div>
+                                <div class="cb-card__drawer">
+                                    <div class="cb-card__content">
+                                        <span class="cb-card__hours">Carga horaria: 4hs</span>
+                                        <p class="cb-card__description">Un recorrido por los hitos que dieron forma a nuestra sociedad actual, analizando procesos políticos, económicos y sociales desde una perspectiva global y local.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cb-card">
+                                <div class="cb-card__header">
+                                    <span class="cb-card__title">Geografía</span>
+                                    <i class="fas fa-chevron-down cb-card__icon"></i>
+                                </div>
+                                <div class="cb-card__drawer">
+                                    <div class="cb-card__content">
+                                        <span class="cb-card__hours">Carga horaria: 3hs</span>
+                                        <p class="cb-card__description">Estudio del espacio geográfico, los recursos naturales y la organización del territorio a nivel nacional y mundial.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cb-card">
+                                <div class="cb-card__header">
+                                    <span class="cb-card__title">Matemática</span>
+                                    <i class="fas fa-chevron-down cb-card__icon"></i>
+                                </div>
+                                <div class="cb-card__drawer">
+                                    <div class="cb-card__content">
+                                        <span class="cb-card__hours">Carga horaria: 5hs</span>
+                                        <p class="cb-card__description">Desarrollo del razonamiento lógico mediante el estudio de álgebra, geometría y funciones, fundamentales para la resolución de problemas técnicos complejos.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cb-card">
+                                <div class="cb-card__header">
+                                    <span class="cb-card__title">Tec. de la Repres.</span>
+                                    <i class="fas fa-chevron-down cb-card__icon"></i>
+                                </div>
+                                <div class="cb-card__drawer">
+                                    <div class="cb-card__content">
+                                        <span class="cb-card__hours">Carga horaria: 4hs</span>
+                                        <p class="cb-card__description">Introducción al lenguaje visual y técnico, aprendiendo normativas de dibujo y representación gráfica para proyectos de ingeniería y arquitectura.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cb-card">
+                                <div class="cb-card__header">
+                                    <span class="cb-card__title">Biología</span>
+                                    <i class="fas fa-chevron-down cb-card__icon"></i>
+                                </div>
+                                <div class="cb-card__drawer">
+                                    <div class="cb-card__content">
+                                        <span class="cb-card__hours">Carga horaria: 3hs</span>
+                                        <p class="cb-card__description">Estudio de los sistemas vivos, la biodiversidad y el impacto humano en el medio ambiente, promoviendo una conciencia científica y ecológica.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cb-card">
+                                <div class="cb-card__header">
+                                    <span class="cb-card__title">Ed. Ciudadana</span>
+                                    <i class="fas fa-chevron-down cb-card__icon"></i>
+                                </div>
+                                <div class="cb-card__drawer">
+                                    <div class="cb-card__content">
+                                        <span class="cb-card__hours">Carga horaria: 2hs</span>
+                                        <p class="cb-card__description">Análisis de derechos, deberes y la participación democrática en la sociedad, fomentando ciudadanos críticos, éticos y responsables.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cb-card">
+                                <div class="cb-card__header">
+                                    <span class="cb-card__title">Ed. Física</span>
+                                    <i class="fas fa-chevron-down cb-card__icon"></i>
+                                </div>
+                                <div class="cb-card__drawer">
+                                    <div class="cb-card__content">
+                                        <span class="cb-card__hours">Carga horaria: 3hs</span>
+                                        <p class="cb-card__description">Promoción de la salud y el bienestar a través del deporte, el trabajo en equipo y el desarrollo de habilidades motrices fundamentales.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cb-card">
+                                <div class="cb-card__header">
+                                    <span class="cb-card__title">Ed. Artística</span>
+                                    <i class="fas fa-chevron-down cb-card__icon"></i>
+                                </div>
+                                <div class="cb-card__drawer">
+                                    <div class="cb-card__content">
+                                        <span class="cb-card__hours">Carga horaria: 3hs</span>
+                                        <p class="cb-card__description">Exploración de diversos lenguajes estéticos (plástica, música o teatro) para fomentar la apreciación cultural y la creatividad personal.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cb-card">
+                                <div class="cb-card__header">
+                                    <span class="cb-card__title">Inglés</span>
+                                    <i class="fas fa-chevron-down cb-card__icon"></i>
+                                </div>
+                                <div class="cb-card__drawer">
+                                    <div class="cb-card__content">
+                                        <span class="cb-card__hours">Carga horaria: 2hs</span>
+                                        <p class="cb-card__description">Introducción al idioma inglés técnico, desarrollando habilidades básicas de lectura, escritura y comprensión auditiva en contextos tecnológicos.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <div id="year2" class="cb-tab-content">
-                    <h2 class="cb-section-title">MATERIAS</h2>
-                    <div class="cb-curriculum-grid">
-                        <div class="cb-card" data-hours="6hs">Lengua y Literatura</div>
-                        <div class="cb-card" data-hours="4hs">Historia</div>
-                        <div class="cb-card" data-hours="5hs">Matemática</div>
-                        <div class="cb-card" data-hours="4hs">Física</div>
-                        <div class="cb-card cb-card--hours-display">Carga horaria: 8hs</div>
-                        <div class="cb-card" data-hours="3hs">Química</div>
-                        <div class="cb-card" data-hours="4hs">Tecno. de Control</div>
-                        <div class="cb-card" data-hours="3hs">Ed. Física</div>
-                        <div class="cb-card" data-hours="3hs">Ingles</div>
+                    <div id="materia-year2" class="cb-tab-content">
+                        <h2 class="cb-section-title">MATERIAS - SEGUNDO AÑO</h2>
+                        <div class="cb-curriculum-grid">
+                            <div class="cb-card">
+                                <div class="cb-card__header">
+                                    <span class="cb-card__title">Lengua y Literatura</span>
+                                    <i class="fas fa-chevron-down cb-card__icon"></i>
+                                </div>
+                                <div class="cb-card__drawer">
+                                    <div class="cb-card__content">
+                                        <span class="cb-card__hours">Carga horaria: 6hs</span>
+                                        <p class="cb-card__description">Profundización en el análisis literario y la producción de textos complejos, fomentando el pensamiento crítico a través de la narrativa y el ensayo.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cb-card">
+                                <div class="cb-card__header">
+                                    <span class="cb-card__title">Historia</span>
+                                    <i class="fas fa-chevron-down cb-card__icon"></i>
+                                </div>
+                                <div class="cb-card__drawer">
+                                    <div class="cb-card__content">
+                                        <span class="cb-card__hours">Carga horaria: 4hs</span>
+                                        <p class="cb-card__description">Estudio de los procesos históricos contemporáneos, analizando las causas y consecuencias de los grandes cambios sociales en Argentina y el mundo.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cb-card">
+                                <div class="cb-card__header">
+                                    <span class="cb-card__title">Geografía</span>
+                                    <i class="fas fa-chevron-down cb-card__icon"></i>
+                                </div>
+                                <div class="cb-card__drawer">
+                                    <div class="cb-card__content">
+                                        <span class="cb-card__hours">Carga horaria: 3hs</span>
+                                        <p class="cb-card__description">Análisis de la organización del espacio geográfico contemporáneo, considerando aspectos económicos, sociales y ambientales en contextos locales y globales.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cb-card">
+                                <div class="cb-card__header">
+                                    <span class="cb-card__title">Matemática</span>
+                                    <i class="fas fa-chevron-down cb-card__icon"></i>
+                                </div>
+                                <div class="cb-card__drawer">
+                                    <div class="cb-card__content">
+                                        <span class="cb-card__hours">Carga horaria: 5hs</span>
+                                        <p class="cb-card__description">Introducción al análisis matemático y funciones avanzadas, herramientas clave para la modelización de fenómenos físicos y técnicos.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cb-card">
+                                <div class="cb-card__header">
+                                    <span class="cb-card__title">Física</span>
+                                    <i class="fas fa-chevron-down cb-card__icon"></i>
+                                </div>
+                                <div class="cb-card__drawer">
+                                    <div class="cb-card__content">
+                                        <span class="cb-card__hours">Carga horaria: 4hs</span>
+                                        <p class="cb-card__description">Principios de mecánica clásica, energía y movimiento, fundamentales para comprender el funcionamiento de máquinas y estructuras.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cb-card">
+                                <div class="cb-card__header">
+                                    <span class="cb-card__title">Biología</span>
+                                    <i class="fas fa-chevron-down cb-card__icon"></i>
+                                </div>
+                                <div class="cb-card__drawer">
+                                    <div class="cb-card__content">
+                                        <span class="cb-card__hours">Carga horaria: 3hs</span>
+                                        <p class="cb-card__description">Continuación del estudio de los sistemas biológicos, con enfoque en la genética, la evolución y la salud humana en relación con el medio ambiente.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cb-card">
+                                <div class="cb-card__header">
+                                    <span class="cb-card__title">Tec. de la Representación</span>
+                                    <i class="fas fa-chevron-down cb-card__icon"></i>
+                                </div>
+                                <div class="cb-card__drawer">
+                                    <div class="cb-card__content">
+                                        <span class="cb-card__hours">Carga horaria: 4hs</span>
+                                        <p class="cb-card__description">Profundización en el dibujo técnico, introduciendo normas avanzadas y representación de conjuntos y piezas mecánicas complejas.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cb-card">
+                                <div class="cb-card__header">
+                                    <span class="cb-card__title">Educación Ciudadana</span>
+                                    <i class="fas fa-chevron-down cb-card__icon"></i>
+                                </div>
+                                <div class="cb-card__drawer">
+                                    <div class="cb-card__content">
+                                        <span class="cb-card__hours">Carga horaria: 2hs</span>
+                                        <p class="cb-card__description">Análisis de la estructura del State, los derechos constitucionales y la participación política responsable en la sociedad democrática.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cb-card">
+                                <div class="cb-card__header">
+                                    <span class="cb-card__title">Ed. Física</span>
+                                    <i class="fas fa-chevron-down cb-card__icon"></i>
+                                </div>
+                                <div class="cb-card__drawer">
+                                    <div class="cb-card__content">
+                                        <span class="cb-card__hours">Carga horaria: 3hs</span>
+                                        <p class="cb-card__description">Entrenamiento físico orientado a la resistencia, el trabajo en equipo y el desarrollo de habilidades deportivas competitivas.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cb-card">
+                                <div class="cb-card__header">
+                                    <span class="cb-card__title">Inglés</span>
+                                    <i class="fas fa-chevron-down cb-card__icon"></i>
+                                </div>
+                                <div class="cb-card__drawer">
+                                    <div class="cb-card__content">
+                                        <span class="cb-card__hours">Carga horaria: 3hs</span>
+                                        <p class="cb-card__description">Consolidación de habilidades de comunicación en idioma inglés, enfocándose en vocabulario técnico y comprensión de textos informativos.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -144,7 +372,7 @@
         <div class="section-transition-bar" onclick="document.getElementById('talleres').scrollIntoView({behavior: 'smooth'})">
             <span class="section-label-mockup section-label-mockup--left"><i class="fas fa-tools" style="margin-right: 10px;"></i> TALLERES</span>
             <div class="cb-year-badge">
-                PRIMER AÑO <i class="fas fa-sync-alt" style="margin-left: 8px;"></i>
+                CICLO BÁSICO <i class="fas fa-sync-alt" style="margin-left: 8px;"></i>
             </div>
         </div>
 
@@ -153,9 +381,8 @@
             <div class="cb-intro-container cb-intro-container--blue">
                 <div class="cb-grid-2">
                     <div class="cb-section__text">
-                        <p>A continuación, se presenta el plan de estudios correspondiente al primer y segundo año de la
-                            carrera. Este bloque inicial sienta las bases teóricas y prácticas fundamentales para tu
-                            formación profesional.</p>
+                        <p>A continuación, se presentan los talleres correspondientes al primer y segundo año de la
+                            carrera. Estas prácticas en el taller son fundamentales para tu formación técnica inicial.</p>
                     </div>
                     <div class="cb-illustration cb-illustration--right">
                         <img src="../img/ciclo_basico_workshop.png" alt="Estudiantes en talleres"
@@ -164,90 +391,185 @@
                 </div>
             </div>
 
-            <h2 class="cb-section-title" style="text-align: center;">TALLERES</h2>
+            <div class="cb-container">
+                <div class="cb-tabs-container">
+                    <div class="cb-plan-de-box">
+                        <div class="cb-plan-de-title">PLAN DE:</div>
+                        <div class="cb-tabs-header">
+                            <button class="cb-tab-btn active" data-tab="workshop-year1">PRIMER AÑO</button>
+                            <button class="cb-tab-btn" data-tab="workshop-year2">SEGUNDO AÑO</button>
+                        </div>
+                    </div>
 
-            <div class="cb-curriculum-grid cb-curriculum-grid--talleres">
-                <div class="cb-card" data-hours="3hs">Electricidad</div>
-                <div class="cb-card cb-card--hours-display" id="carga-horaria-talleres">Carga horaria: 3hs</div>
-                <div class="cb-card" data-hours="3hs">Informática</div>
-                <div class="cb-card" data-hours="3hs">Ajuste</div>
-                <div class="cb-card" data-hours="3hs">Hojalatería</div>
-                <div class="cb-card" data-hours="3hs">Carpintería</div>
-            </div>
+                    <div id="workshop-year1" class="cb-tab-content active">
+                        <h2 class="cb-section-title" style="text-align: center; margin-bottom: 30px;">TALLERES - PRIMER AÑO</h2>
+                        <div class="cb-curriculum-grid cb-curriculum-grid--talleres">
+                            <div class="cb-card">
+                                <div class="cb-card__header">
+                                    <span class="cb-card__title">Electricidad</span>
+                                    <i class="fas fa-chevron-down cb-card__icon"></i>
+                                </div>
+                                <div class="cb-card__drawer">
+                                    <div class="cb-card__content">
+                                        <span class="cb-card__hours">Carga horaria: 3hs</span>
+                                        <p class="cb-card__description">Prácticas iniciales con circuitos básicos, seguridad eléctrica y uso de herramientas de medición en el laboratorio.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cb-card">
+                                <div class="cb-card__header">
+                                    <span class="cb-card__title">Electrónica</span>
+                                    <i class="fas fa-chevron-down cb-card__icon"></i>
+                                </div>
+                                <div class="cb-card__drawer">
+                                    <div class="cb-card__content">
+                                        <span class="cb-card__hours">Carga horaria: 3hs</span>
+                                        <p class="cb-card__description">Introducción a componentes básicos, soldadura y ensamblado de circuitos electrónicos simples.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cb-card">
+                                <div class="cb-card__header">
+                                    <span class="cb-card__title">Informática</span>
+                                    <i class="fas fa-chevron-down cb-card__icon"></i>
+                                </div>
+                                <div class="cb-card__drawer">
+                                    <div class="cb-card__content">
+                                        <span class="cb-card__hours">Carga horaria: 3hs</span>
+                                        <p class="cb-card__description">Introducción al hardware, sistemas operativos y herramientas de ofimática esenciales para el desarrollo técnico.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cb-card">
+                                <div class="cb-card__header">
+                                    <span class="cb-card__title">Ajuste</span>
+                                    <i class="fas fa-chevron-down cb-card__icon"></i>
+                                </div>
+                                <div class="cb-card__drawer">
+                                    <div class="cb-card__content">
+                                        <span class="cb-card__hours">Carga horaria: 3hs</span>
+                                        <p class="cb-card__description">Taller de mecánica manual donde se aprenden procesos de limado, trazado y uso de instrumentos de precisión.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cb-card">
+                                <div class="cb-card__header">
+                                    <span class="cb-card__title">Hojalatería</span>
+                                    <i class="fas fa-chevron-down cb-card__icon"></i>
+                                </div>
+                                <div class="cb-card__drawer">
+                                    <div class="cb-card__content">
+                                        <span class="cb-card__hours">Carga horaria: 3hs</span>
+                                        <p class="cb-card__description">Trabajo con chapas y metales delgados, desarrollando habilidades de corte, plegado y soldadura básica.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cb-card">
+                                <div class="cb-card__header">
+                                    <span class="cb-card__title">Carpintería</span>
+                                    <i class="fas fa-chevron-down cb-card__icon"></i>
+                                </div>
+                                <div class="cb-card__drawer">
+                                    <div class="cb-card__content">
+                                        <span class="cb-card__hours">Carga horaria: 3hs</span>
+                                        <p class="cb-card__description">Introducción al trabajo con madera, conociendo diferentes tipos de materiales, uniones y acabados artesanales.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-            <!-- Syllabus detail dropdown section -->
-            <div id="syllabus-detail" class="syllabus-detail">
-                <div class="syllabus-detail__content">
-                    <h3 class="syllabus-detail__title">Plan de Estudio Detallado</h3>
-                    <div class="syllabus-detail__grid">
-                        <div class="syllabus-detail__item">
-                            <h4>Ciencias Sociales</h4>
-                            <p>Historia, Geografía y Educación Ciudadana.</p>
-                        </div>
-                        <div class="syllabus-detail__item">
-                            <h4>Ciencias Exactas</h4>
-                            <p>Matemática, Física y Química con enfoque técnico.</p>
-                        </div>
-                        <div class="syllabus-detail__item">
-                            <h4>Comunicación y Expresión</h4>
-                            <p>Lengua, Literatura, Inglés y Educación Artística.</p>
-                        </div>
-                        <div class="syllabus-detail__item">
-                            <h4>Formación Técnica Especializada</h4>
-                            <p>Tecnología de la Representación, Tecnología de Control e Informática.</p>
-                        </div>
-                        <div class="syllabus-detail__item">
-                            <h4>Talleres de Primer Ciclo</h4>
-                            <p>Electricidad, Ajuste, Carpintería y Hojalatería.</p>
-                        </div>
-                        <div class="syllabus-detail__item">
-                            <h4>Educación Física</h4>
-                            <p>Desarrollo físico y deportivo integral.</p>
+                    <div id="workshop-year2" class="cb-tab-content">
+                        <h2 class="cb-section-title" style="text-align: center; margin-bottom: 30px;">TALLERES - SEGUNDO AÑO</h2>
+                        <div class="cb-curriculum-grid cb-curriculum-grid--talleres">
+                            <div class="cb-card">
+                                <div class="cb-card__header">
+                                    <span class="cb-card__title">Electricidad</span>
+                                    <i class="fas fa-chevron-down cb-card__icon"></i>
+                                </div>
+                                <div class="cb-card__drawer">
+                                    <div class="cb-card__content">
+                                        <span class="cb-card__hours">Carga horaria: 3hs</span>
+                                        <p class="cb-card__description">Profundización en instalaciones eléctricas domiciliarias, normativas de seguridad y circuitos de control básicos.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cb-card">
+                                <div class="cb-card__header">
+                                    <span class="cb-card__title">Informática</span>
+                                    <i class="fas fa-chevron-down cb-card__icon"></i>
+                                </div>
+                                <div class="cb-card__drawer">
+                                    <div class="cb-card__content">
+                                        <span class="cb-card__hours">Carga horaria: 3hs</span>
+                                        <p class="cb-card__description">Desarrollo de habilidades en redes, resolución de problemas de software y herramientas de productividad técnica avanzada.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cb-card">
+                                <div class="cb-card__header">
+                                    <span class="cb-card__title">Ajuste</span>
+                                    <i class="fas fa-chevron-down cb-card__icon"></i>
+                                </div>
+                                <div class="cb-card__drawer">
+                                    <div class="cb-card__content">
+                                        <span class="cb-card__hours">Carga horaria: 3hs</span>
+                                        <p class="cb-card__description">Uso de máquinas herramienta manuales, técnicas de precisión avanzada y control de calidad en piezas mecánicas.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cb-card">
+                                <div class="cb-card__header">
+                                    <span class="cb-card__title">Herrería</span>
+                                    <i class="fas fa-chevron-down cb-card__icon"></i>
+                                </div>
+                                <div class="cb-card__drawer">
+                                    <div class="cb-card__content">
+                                        <span class="cb-card__hours">Carga horaria: 3hs</span>
+                                        <p class="cb-card__description">Introducción a la forja, soldadura por arco y construcción de estructuras metálicas básicas.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-    </main>
+        <footer class="pie-pagina-nuevo" id="pie-pagina-nuevo">
 
+            <div class="pie-pagina__seccion pie-pagina__contactos">
+                <h3>CONTACTOS</h3>
+                <p>Teléfono: <strong>+54 011 4957-2920</strong></p>
+                <p>Email: <a
+                        href="https://mail.google.com/mail/?view=cm&fs=1&to=det_29_de6@bue.edu.ar&su=Consulta%20T%C3%A9cnica%20N29"
+                        target="_blank"><strong>det_29_de6@bue.edu.ar</strong></a></p>
 
-
-    <footer class="pie-pagina-nuevo" id="pie-pagina-nuevo">
-
-        <div class="pie-pagina__seccion pie-pagina__contactos">
-            <h3>CONTACTOS</h3>
-            <p>Teléfono: <strong>+54 011 4957-2920</strong></p>
-            <p>Email: <a
-                    href="https://mail.google.com/mail/?view=cm&fs=1&to=det_29_de6@bue.edu.ar&su=Consulta%20T%C3%A9cnica%20N29"
-                    target="_blank"><strong>det_29_de6@bue.edu.ar</strong></a></p>
-
-            <h3 class="pie-pagina__titulo-redes">REDES SOCIALES</h3>
-            <p>Instagram: <a href="https://www.instagram.com/et29de6" target="_blank">@et29de6</a></p>
-            <p>Facebook: <a href="https://www.facebook.com/et29de6" target="_blank">ET 29 De 6 Reconquista de Buenos
-                    Aires</a></p>
-        </div>
-
-
-
-        <div class="pie-pagina__seccion pie-pagina__ubicacion">
-            <h3>UBICACIÓN</h3>
-            <p>Avenida Boedo 760, Comuna 5, Buenos Aires</p>
-            <p>Líneas de colectivo: 7, 31, 32, 41, 53, 56, 84, 88, 96, 97, 101, 115, 126, 127, 128, 160, 164, 180</p>
-            <p>Subte Línea E: Estación Boedo</p>
-            <!--Estilo acá por favor-->
-            <div class="footer__mapa-contenedor">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.302504134705!2d-58.41885242413697!3d-34.62179505845324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccaf8b0c7ce0f%3A0x17ca663276a69e1b!2sEscuela%20T%C3%A9cnica%20N%C2%B0%2029%20-%20Reconquista%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1763526991967!5m2!1ses-419!2sar"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <h3 class="pie-pagina__titulo-redes">REDES SOCIALES</h3>
+                <p>Instagram: <a href="https://www.instagram.com/et29de6" target="_blank">@et29de6</a></p>
+                <p>Facebook: <a href="https://www.facebook.com/et29de6" target="_blank">ET 29 De 6 Reconquista de Buenos
+                        Aires</a></p>
             </div>
-        </div>
 
-    </footer>
+            <div class="pie-pagina__seccion pie-pagina__ubicacion">
+                <h3>UBICACIÓN</h3>
+                <p>Avenida Boedo 760, Comuna 5, Buenos Aires</p>
+                <p>Líneas de colectivo: 7, 31, 32, 41, 53, 56, 84, 88, 96, 97, 101, 115, 126, 127, 128, 160, 164, 180</p>
+                <p>Subte Línea E: Estación Boedo</p>
+                <div class="footer__mapa-contenedor">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.302504134705!2d-58.41885242413697!3d-34.62179505845324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccaf8b0c7ce0f%3A0x17ca663276a69e1b!2sEscuela%20T%C3%A9cnica%20N%C2%B0%2029%20-%20Reconquista%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1763526991967!5m2!1ses-419!2sar"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
 
-    <script src="../js/index.js"></script>
-    <script src="../js/ciclo_basico.js"></script>
+        </footer>
+
+        <script src="../js/index.js"></script>
+        <script src="../js/ciclo_basico.js"></script>
+        <script src="../js/acordeon.js"></script>
+    </main>
 </body>
 
 </html>

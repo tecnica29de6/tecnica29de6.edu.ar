@@ -228,11 +228,7 @@
     transition: opacity 0.4s ease, max-height 0.6s ease, margin 0.3s ease;
 }
 
-.encabezado__logo-texto a:hover {
-    color: #004E8E;
-    transform: scale(1.05);
-    transition: all 0.3s ease;
-}
+/* Logo hover removed to prevent layout jitter as it was redundant and misconfigured */
 
 /* 3. RESPONSIVIDAD ESPECÍFICA DE LA HOME */
 
