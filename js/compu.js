@@ -26,6 +26,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
 
+            // Actualizar título dinámico
+            const yearNames = { '3': 'TERCER AÑO', '4': 'CUARTO AÑO', '5': 'QUINTO AÑO', '6': 'SEXTO AÑO' };
+            const compuTitle = document.getElementById('compu-year-title');
+            if (compuTitle && yearNames[selectedYear]) {
+                compuTitle.textContent = 'PLAN DE ESTUDIOS - ' + yearNames[selectedYear];
+            }
+
             const planGrid = document.querySelector('.plan-grid');
             if (planGrid) planGrid.classList.remove('panel-open');
         });
