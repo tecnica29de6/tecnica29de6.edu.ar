@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ET N°29 - Reconquista de Buenos Aires</title>
+    <link rel="stylesheet" href="../css/ciclo_basico.css">
+    <link rel="stylesheet" href="../css/compu.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="cb-body">
+
+    <header class="encabezado">
+
+        <a href="../index.html" class="encabezado__logo-contenedor">
+            <div class="encabezado__logo-imagen"></div>
+            <div class="encabezado__logo-texto">
+                <span>Escuela técnica N°29 de 6</span>
+                <span>Reconquista de Buenos Aires</span>
+            </div>
+        </a>
+
+        <div class="encabezado__menu-hamburger" id="menu-hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <nav class="encabezado__navegacion" id="navegacion">
+            <ul class="encabezado__lista-enlaces">
+                <li><a href="ciclo_basico.html">Ciclo básico</a></li>
+                <li class="nav-desplegable nav-escritorio">
+                    <a href="#especialidades" class="nav-desplegable__toggle">Especialidades ▼</a>
+                    <ul class="nav-desplegable__menu">
+                        <li><a href="compu.html">Computación</a></li>
+                        <li><a href="mecanica.html">Mecánica</a></li>
+                        <li><a href="electricidad.html">Electricidad</a></li>
+                    </ul>
+                </li>
+                <li class="nav-movil"><a href="compu.html">Computación</a></li>
+                <li class="nav-movil"><a href="mecanica.html">Mecánica</a></li>
+                <li class="nav-movil"><a href="electricidad.html">Electricidad</a></li>
+                <li><a href="#pie-pagina-nuevo">Contactar</a></li>
+            </ul>
+            <div class="encabezado__redes-sociales-movil">
+                <a href="https://www.facebook.com/search/top?q=ET%2029%20De%206%20Reconquista%20de%20Buenos%20Aires"
+                    target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/et29de6" target="_blank" aria-label="Instagram"><i
+                        class="fab fa-instagram"></i></a>
+            </div>
+        </nav>
+
+        <div class="encabezado__redes-sociales">
+            <a href="https://www.facebook.com/search/top?q=ET%2029%20De%206%20Reconquista%20de%20Buenos%20Aires"
+                target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/et29de6" target="_blank" aria-label="Instagram"><i
+                        class="fab fa-instagram"></i></a>
+        </div>
+
+    </header>
+
+    <main class="contenido-principal">
+
+        <section class="seccion-hero">
+            <div class="hero-imagen-fondo"></div>
+            <div class="hero-images-container">
+                <img src="../img/elipses/Ellipse_1.png" alt="" class="hero-elipse">
+                <img src="../img/elipses/Ellipse_2.png" alt="" class="hero-elipse">
+                <img src="../img/elipses/Ellipse_3.png" alt="" class="hero-elipse">
+            </div>
+
+            <div class="hero-contenido">
+                <h1>CICLO BÁSICO</h1>
+                <h2>RECONQUISTA DE BUENOS AIRES</h2>
+                <p>
+                    Los primeros dos años de escuela técnica conforman el ciclo básico. Aquí se introduce a los alumnos tanto a materias teóricas del secundario (como Matemática y Lengua y Literatura), como a los talleres, donde se aprende trabajando por medio de actividades prácticas con el objetivo de desarrollar conocimientos, técnicas y experiencia en primera persona.
+                </p>
+                <div class="hero-botones">
+                    <a href="#materias" class="boton-llamada-accion">Ver materias</a>
+                    <a href="#talleres" class="boton-llamada-accion">Ver talleres</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="cb-section" id="materias">
+            <div class="cb-wave-divider cb-wave-divider--top"></div>
+
+            <div class="cb-container">
+                <div class="cb-tabs-container">
+                    <div class="cb-plan-de-box">
+                        <div class="cb-plan-de-title">PLAN DE ESTUDIOS</div>
+                        <div class="cb-tabs-header">
+                            <button class="cb-tab-btn active" data-year="1">PRIMER AÑO</button>
+                            <button class="cb-tab-btn" data-year="2">SEGUNDO AÑO</button>
+                        </div>
+                    </div>
+
+                    <h2 class="cb-section-title" id="materias-year-title" style="text-align:center; margin: 1.5rem 0 1rem;">PLAN DE ESTUDIOS - PRIMER AÑO</h2>
+
+                    <div class="plan-grid">
+                        <div class="cb-curriculum-grid subjects-grid" id="subjects-grid">
+                            <!-- PRIMER AÑO -->
+                            <div class="cb-card" data-year="1">
+                                <div class="cb-card__header">
+                                    <i class="fas fa-book cb-card__subject-icon"></i>
+                                    <span class="cb-card__title">Lengua y Literatura</span>
+                                    <span class="cb-card__hours">6hs</span>
+                                </div>
+                            </div>
+                            <div class="cb-card" data-year="1">
+                                <div class="cb-card__header">
+                                    <i class="fas fa-landmark cb-card__subject-icon"></i>
+                                    <span class="cb-card__title">Historia</span>
+                                    <span class="cb-card__hours">4hs</span>
+                                </div>
+                            </div>
+                            <div class="cb-card" data-year="1">
+                                <div class="cb-card__header">
+                                    <i class="fas fa-globe-americas cb-card__subject-icon"></i>
+                                    <span class="cb-card__title">Geografía</span>
+                                    <span class="cb-card__hours">3hs</span>
+                                </div>
+                            </div>
+                            <div class="cb-card" data-year="1">
+                                <div class="cb-card__header">
+                                    <i class="fas fa-calculator cb-card__subject-icon"></i>
+                                    <span class="cb-card__title">Matemática</span>
+                                    <span class="cb-card__hours">5hs</span>
+                                </div>
+                            </div>
+                            <div class="cb-card" data-year="1">
+                                <div class="cb-card__header">
+                                    <i class="fas fa-pencil-ruler cb-card__subject-icon"></i>
+                                    <span class="cb-card__title">Tec. de la Representación (Dibujo Técnico)</span>
+                                    <span class="cb-card__hours">4hs</span>
+                                </div>
+                            </div>
+                            <div class="cb-card" data-year="1">
+                                <div class="cb-card__header">
+                                    <i class="fas fa-microscope cb-card__subject-icon"></i>
+                                    <span class="cb-card__title">Biología</span>
+                                    <span class="cb-card__hours">3hs</span>
+                                </div>
+                            </div>
+                            <div class="cb-card" data-year="1">
+                                <div class="cb-card__header">
+                                    <i class="fas fa-users cb-card__subject-icon"></i>
+                                    <span class="cb-card__title">Ed. Ciudadana</span>
+                                    <span class="cb-card__hours">2hs</span>
+                                </div>
+                            </div>
+                            <div class="cb-card" data-year="1">
+                                <div class="cb-card__header">
+                                    <i class="fas fa-running cb-card__subject-icon"></i>
+                                    <span class="cb-card__title">Ed. Física</span>
+                                    <span class="cb-card__hours">3hs</span>
+                                </div>
+                            </div>
+                            <div class="cb-card" data-year="1">
+                                <div class="cb-card__header">
+                                    <i class="fas fa-palette cb-card__subject-icon"></i>
+                                    <span class="cb-card__title">Ed. Artística (Teatro)</span>
+                                    <span class="cb-card__hours">3hs</span>
+                                </div>
+                            </div>
+                            <div class="cb-card" data-year="1">
+                                <div class="cb-card__header">
+                                    <i class="fas fa-language cb-card__subject-icon"></i>
+                                    <span class="cb-card__title">Inglés</span>
+                                    <span class="cb-card__hours">2hs</span>
+                                </div>
+                            </div>
+
+                            <!-- SEGUNDO AÑO -->
+                            <div class="cb-card" data-year="2">
+                                <div class="cb-card__header">
+                                    <i class="fas fa-book cb-card__subject-icon"></i>
+                                    <span class="cb-card__title">Lengua y Literatura</span>
+                                    <span class="cb-card__hours">6hs</span>
+                                </div>
+                            </div>
+                            <div class="cb-card" data-year="2">
+                                <div class="cb-card__header">
+                                    <i class="fas fa-landmark cb-card__subject-icon"></i>
+                                    <span class="cb-card__title">Historia</span>
+                                    <span class="cb-card__hours">4hs</span>
+                                </div>
+                            </div>
+                            <div class="cb-card" data-year="2">
+                                <div class="cb-card__header">
+                                    <i class="fas fa-globe-americas cb-card__subject-icon"></i>
+                                    <span class="cb-card__title">Geografía</span>
+                                    <span class="cb-card__hours">3hs</span>
+                                </div>
+                            </div>
+                            <div class="cb-card" data-year="2">
+                                <div class="cb-card__header">
+                                    <i class="fas fa-calculator cb-card__subject-icon"></i>
+                                    <span class="cb-card__title">Matemática</span>
+                                    <span class="cb-card__hours">5hs</span>
+                                </div>
+                            </div>
+                            <div class="cb-card" data-year="2">
+                                <div class="cb-card__header">
+                                    <i class="fas fa-atom cb-card__subject-icon"></i>
+                                    <span class="cb-card__title">Física</span>
+                                    <span class="cb-card__hours">4hs</span>
+                                </div>
+                            </div>
+                            <div class="cb-card" data-year="2">
+                                <div class="cb-card__header">
+                                    <i class="fas fa-microscope cb-card__subject-icon"></i>
+                                    <span class="cb-card__title">Biología</span>
+                                    <span class="cb-card__hours">3hs</span>
+                                </div>
+                            </div>
+                            <div class="cb-card" data-year="2">
+                                <div class="cb-card__header">
+                                    <i class="fas fa-pencil-ruler cb-card__subject-icon"></i>
+                                    <span class="cb-card__title">Tec. de la Representación (Dibujo Técnico)</span>
+                                    <span class="cb-card__hours">4hs</span>
+                                </div>
+                            </div>
+                            <div class="cb-card" data-year="2">
+                                <div class="cb-card__header">
+                                    <i class="fas fa-users cb-card__subject-icon"></i>
+                                    <span class="cb-card__title">Educación Ciudadana</span>
+                                    <span class="cb-card__hours">2hs</span>
+                                </div>
+                            </div>
+                            <div class="cb-card" data-year="2">
+                                <div class="cb-card__header">
+                                    <i class="fas fa-running cb-card__subject-icon"></i>
+                                    <span class="cb-card__title">Ed. Física</span>
+                                    <span class="cb-card__hours">3hs</span>
+                                </div>
+                            </div>
+                            <div class="cb-card" data-year="2">
+                                <div class="cb-card__header">
+                                    <i class="fas fa-language cb-card__subject-icon"></i>
+                                    <span class="cb-card__title">Inglés</span>
+                                    <span class="cb-card__hours">3hs</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="cb-section" id="talleres">
+            <div class="cb-wave-divider cb-wave-divider--top"></div>
+            <div class="cb-intro-container cb-intro-container--blue">
+                <div class="cb-grid-2">
+                    <div class="cb-section__text">
+                        <h2>El Taller</h2>
+                        <p>Hasta tercer año, todos los cursos de todas las Especialidades asisten al taller en el contraturno dos veces por semana (en la misma jornada en el caso del turno noche).</p>
+                        <P>Taller es una materia más del diseño curricular, por ende es de carácter obligatorio. A lo largo del año, los alumnos asisten en rotaciones a los distintos sectores del mismo. Estas rotaciones varían con los años. En el caso de tercero, también varían con la especialidad del curso.</P>
+                    </div>
+                    <div class="cb-illustration cb-illustration--right">
+                        <img src="../img/ciclo_basico_workshop.png" alt="Estudiantes en talleres"
+                            style="filter: hue-rotate(45deg);">
+                    </div>
+                </div>
+            </div>
+
+            <div class="cb-container">
+                <div class="cb-tabs-container">
+                    <div class="cb-plan-de-box">
+                        <div class="cb-plan-de-title">TALLERES</div>
+                        <div class="cb-tabs-header">
+                            <button class="cb-tab-btn active" data-year-talleres="1">PRIMER AÑO</button>
+                            <button class="cb-tab-btn" data-year-talleres="2">SEGUNDO AÑO</button>
+                        </div>
+                    </div>
+
+                    <h2 class="cb-section-title" id="talleres-year-title" style="text-align:center; margin: 1.5rem 0 1rem;">TALLERES - PRIMER AÑO</h2>
+
+                    <div class="plan-grid">
+                        <div class="cb-curriculum-grid subjects-grid" id="talleres-grid">
+                            <!-- PRIMER AÑO -->
+                            <div class="cb-card" data-year-talleres="1">
+                                <div class="cb-card__header">
+                                    <i class="fas fa-bolt cb-card__subject-icon"></i>
+                                    <span class="cb-card__title">Electricidad</span>
+                                    <span class="cb-card__hours">3hs</span>
+                                </div>
+                            </div>
+                            <div class="cb-card" data-year-talleres="1">
+                                <div class="cb-card__header">
+                                    <i class="fas fa-microchip cb-card__subject-icon"></i>
+                                    <span class="cb-card__title">Electrónica</span>
+                                    <span class="cb-card__hours">3hs</span>
+                                </div>
+                            </div>
+                            <div class="cb-card" data-year-talleres="1">
+                                <div class="cb-card__header">
+                                    <i class="fas fa-desktop cb-card__subject-icon"></i>
+                                    <span class="cb-card__title">Informática</span>
+                                    <span class="cb-card__hours">3hs</span>
+                                </div>
+                            </div>
+                            <div class="cb-card" data-year-talleres="1">
+                                <div class="cb-card__header">
+                                    <i class="fas fa-wrench cb-card__subject-icon"></i>
+                                    <span class="cb-card__title">Ajuste</span>
+                                    <span class="cb-card__hours">3hs</span>
+                                </div>
+                            </div>
+                            <div class="cb-card" data-year-talleres="1">
+                                <div class="cb-card__header">
+                                    <i class="fas fa-cut cb-card__subject-icon"></i>
+                                    <span class="cb-card__title">Hojalatería</span>
+                                    <span class="cb-card__hours">3hs</span>
+                                </div>
+                            </div>
+                            <div class="cb-card" data-year-talleres="1">
+                                <div class="cb-card__header">
+                                    <i class="fas fa-hammer cb-card__subject-icon"></i>
+                                    <span class="cb-card__title">Carpintería</span>
+                                    <span class="cb-card__hours">3hs</span>
+                                </div>
+                            </div>
+
+                            <!-- SEGUNDO AÑO -->
+                            <div class="cb-card" data-year-talleres="2">
+                                <div class="cb-card__header">
+                                    <i class="fas fa-bolt cb-card__subject-icon"></i>
+                                    <span class="cb-card__title">Electricidad</span>
+                                    <span class="cb-card__hours">3hs</span>
+                                </div>
+                            </div>
+                            <div class="cb-card" data-year-talleres="2">
+                                <div class="cb-card__header">
+                                    <i class="fas fa-desktop cb-card__subject-icon"></i>
+                                    <span class="cb-card__title">Informática</span>
+                                    <span class="cb-card__hours">3hs</span>
+                                </div>
+                            </div>
+                            <div class="cb-card" data-year-talleres="2">
+                                <div class="cb-card__header">
+                                    <i class="fas fa-wrench cb-card__subject-icon"></i>
+                                    <span class="cb-card__title">Ajuste</span>
+                                    <span class="cb-card__hours">3hs</span>
+                                </div>
+                            </div>
+                            <div class="cb-card" data-year-talleres="2">
+                                <div class="cb-card__header">
+                                    <i class="fas fa-fire cb-card__subject-icon"></i>
+                                    <span class="cb-card__title">Herrería</span>
+                                    <span class="cb-card__hours">3hs</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="cb-wave-divider cb-wave-divider--top"></div>
+            <div class="cb-intro-container cb-intro-container--blue">
+                <div class="cb-grid-2">
+                    <div class="cb-section__text">
+                        <h2>Período <strong>EPA</strong>: Empezando Primer Año</h2>
+                        <p>Los últimos tres días hábiles antes de empezar las clases, los alumnos ingresantes asisten a la escuela para el período EPA, el cual busca amenizar su introducción a la escuela secundaria, con tres materias: Metodología de investigación, Lengua y Literatura y Matemática.</p>
+                        <P>En este período los alumnos y sus padres pueden conocer las instalaciones de la escuela por medio de recorridos guiados por las autoridades.</P>
+                    </div>
+                    <div class="cb-illustration cb-illustration--right">
+                        <img src="../img/ciclo_basico_workshop.png" alt="Estudiantes en talleres"
+                            style="filter: hue-rotate(45deg);">
+                    </div>
+                </div>
+            </div>
+
+        <footer class="pie-pagina-nuevo" id="pie-pagina-nuevo">
+
+            <div class="pie-pagina__seccion pie-pagina__contactos">
+                <h3>CONTACTOS</h3>
+                <p>Teléfono: <strong>+54 011 4957-2920</strong></p>
+                <p>Email: <a
+                        href="https://mail.google.com/mail/?view=cm&fs=1&to=det_29_de6@bue.edu.ar&su=Consulta%20T%C3%A9cnica%20N29"
+                        target="_blank"><strong>det_29_de6@bue.edu.ar</strong></a></p>
+
+                <h3 class="pie-pagina__titulo-redes">REDES SOCIALES</h3>
+                <p>Instagram: <a href="https://www.instagram.com/et29de6" target="_blank">@et29de6</a></p>
+                <p>Facebook: <a href="https://www.facebook.com/et29de6" target="_blank">ET 29 De 6 Reconquista de Buenos
+                        Aires</a></p>
+            </div>
+
+            <div class="pie-pagina__seccion pie-pagina__ubicacion">
+                <h3>UBICACIÓN</h3>
+                <p>Avenida Boedo 760, Comuna 5, Buenos Aires</p>
+                <p>Líneas de colectivo: 7, 31, 32, 41, 53, 56, 84, 88, 96, 97, 101, 115, 126, 127, 128, 160, 164, 180</p>
+                <p>Subte Línea E: Estación Boedo</p>
+                <div class="footer__mapa-contenedor">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.302504134705!2d-58.41885242413697!3d-34.62179505845324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccaf8b0c7ce0f%3A0x17ca663276a69e1b!2sEscuela%20T%C3%A9cnica%20N%C2%B0%2029%20-%20Reconquista%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1763526991967!5m2!1ses-419!2sar"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+        </footer>
+
+        <script src="../js/index.js"></script>
+        <script src="../js/ciclo_basico.js"></script>
+        <script src="../js/acordeon.js"></script>
+    </main>
+</body>
+
+</html>

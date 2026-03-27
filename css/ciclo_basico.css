@@ -1,0 +1,540 @@
+body.cb-body {
+    background-image: url('../img/fondo_tuff.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/* The "ola" (wave) effect for the whole body background */
+body.cb-body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%230085C8' fill-opacity='0.5' d='M0,160L80,176C160,192,320,224,480,213.3C640,203,800,149,960,144C1120,139,1280,181,1360,202.7L1440,224L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+    background-size: cover;
+    background-position: center bottom;
+    pointer-events: none;
+    z-index: -1;
+}
+
+:root {
+    --cb-blue-primary: #0085C8;
+    --cb-blue-dark: #003D73;
+    --cb-blue-light: #E3F2FD;
+    --cb-white: #ffffff;
+    --cb-bg-gray: #f8f9fa;
+}
+
+/* Aumento de tamaño del Hero para Ciclo Básico */
+.seccion-hero {
+    min-height: 70vh !important;
+    padding: 6rem 0 !important;
+}
+
+.hero-contenido h1 {
+    font-size: 5rem !important;
+}
+
+.hero-contenido p {
+    font-size: 1.5rem !important;
+    margin-bottom: 2.5rem !important;
+}
+
+.hero-elipse {
+    height: 110% !important;
+}
+
+/* Wavy Separator (between sections) */
+.cb-wave-divider {
+    position: relative;
+    width: 100%;
+    line-height: 0;
+    z-index: 2;
+}
+
+.cb-wave-divider svg {
+    display: block;
+    width: 100%;
+    height: 80px;
+}
+
+.cb-wave-divider--bottom {
+    margin-top: -1px;
+}
+
+.cb-wave-divider--top {
+    transform: rotate(180deg);
+    margin-bottom: -1px;
+}
+
+.section-transition-bar {
+    background-color: transparent; /* Totally clear to see the body wave */
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+    margin-top: 20px; /* Separado del hero */
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.section-label-mockup {
+    background-color: #0085C8;
+    color: #ffffff;
+    padding: 1rem 4rem;
+    border-radius: 50px 0 0 50px;
+    font-weight: 800;
+    text-transform: uppercase;
+    box-shadow: -10px 5px 20px rgba(0,0,0,0.15);
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    letter-spacing: 2px;
+}
+
+.section-label-mockup--left {
+    right: auto;
+    left: 0;
+    border-radius: 0 50px 50px 0;
+    box-shadow: 10px 5px 20px rgba(0,0,0,0.15);
+}
+
+/* GENERAL SECTION LAYOUT */
+.cb-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.cb-section {
+    padding: 0 0 6rem;
+    background-color: transparent;
+    position: relative;
+    z-index: 1;
+}
+
+.cb-intro-container {
+    background: #0085C8;
+    color: white;
+    padding: 6rem 10%;
+    margin-bottom: 5rem;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    overflow: hidden;
+}
+
+.cb-intro-container::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    right: -100px;
+    width: 600px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    transform: rotate(15deg);
+}
+
+.cb-intro-container--blue {
+    background-color: #0085C8;
+}
+
+.cb-intro-container .cb-section__text {
+    color: white;
+}
+
+/* Wavy divider at the bottom of intro if needed */
+.cb-intro-container + .cb-container {
+    margin-top: -3rem;
+    position: relative;
+    z-index: 2;
+}
+
+/* Mockup background stripes effect */
+.cb-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        -45deg,
+        rgba(0, 133, 200, 0.03),
+        rgba(0, 133, 200, 0.03) 100px,
+        transparent 100px,
+        transparent 200px
+    );
+    pointer-events: none;
+    z-index: 0;
+}
+
+.cb-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.cb-illustration {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 100px 500px 500px 100px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    overflow: hidden;
+    position: relative;
+}
+
+.cb-illustration--right {
+    border-radius: 500px 100px 100px 500px;
+}
+
+.cb-illustration img {
+    width: 100%;
+    display: block;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cb-year-badge {
+    margin-left: auto;
+    margin-right: 10%;
+    background: #003D73;
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border-radius: 12px;
+    font-weight: 800;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: background 0.3s;
+}
+
+.cb-year-badge:hover {
+    background: #005A8C;
+}
+
+.cb-section__text {
+    font-size: 1.35rem;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+/* TABS SYSTEM */
+.cb-tabs-container {
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.cb-plan-de-box {
+    background-color: #0085C8;
+    display: inline-block;
+    padding: 0.5rem 1rem 1rem 1rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 2rem; /* Separación con el contenido */
+}
+
+.cb-plan-de-title {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.cb-tabs-header {
+    background-color: rgba(0, 163, 255, 0.4);
+    display: flex;
+    padding: 6px;
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.cb-tab-btn {
+    flex: 1;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    background: transparent;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    font-size: 1.1rem;
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cb-tab-btn:hover:not(.active) {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-1px);
+}
+
+.cb-tab-btn.active {
+    background-color: white;
+    color: var(--cb-blue-dark);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transform: scale(1.02);
+}
+
+.cb-tab-content {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.cb-tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* CURRICULUM GRID */
+.cb-section-title {
+    font-size: 2.5rem;
+    color: #444;
+    margin: 3rem 0;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.cb-curriculum-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 1.2rem;
+    margin-top: 2rem;
+}
+
+.cb-curriculum-grid--talleres {
+    grid-template-rows: repeat(2, auto);
+}
+
+.cb-card {
+    background-color: #E3F2FD;
+    padding: 1.2rem;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 600;
+    color: #444;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 75px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cb-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+}
+
+.cb-card--hours-display {
+    background-color: #003D73;
+    color: white;
+    font-weight: 700;
+    font-size: 1.2rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    cursor: default;
+}
+
+.cb-card--hours-display:hover {
+    transform: none;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Syllabus Detail Section */
+.syllabus-detail {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: #f1f8ff;
+    border-radius: 20px;
+    margin: 2rem 10% 0;
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.syllabus-detail.active {
+    max-height: 2000px;
+    padding: 3rem;
+    opacity: 1;
+    transform: translateY(0);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    border: 2px solid #e1effe;
+}
+
+.syllabus-detail__content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.syllabus-detail__title {
+    color: var(--cb-blue-dark);
+    margin-bottom: 2.5rem;
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 800;
+}
+
+.syllabus-detail__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.syllabus-detail__item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.syllabus-detail__item:hover {
+    transform: translateY(-5px);
+}
+
+.syllabus-detail__item h4 {
+    color: var(--cb-blue-primary);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.syllabus-detail__item p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 1.05rem;
+}
+
+/* FOOTER UPDATES (PREMIUM) */
+
+.cb-footer {
+    background-color: var(--cb-blue-primary);
+    color: white;
+    padding: 4rem 10% 2rem;
+}
+
+.cb-footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 4rem;
+}
+
+.cb-footer__links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.cb-footer__links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: opacity 0.3s;
+}
+
+.cb-footer__links a:hover {
+    opacity: 0.7;
+}
+
+.cb-footer__redes {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    font-size: 1.8rem;
+}
+
+.cb-footer__mapa {
+    flex-grow: 1;
+    max-width: 450px;
+    height: 200px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.cb-footer__mapa iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.cb-footer__bottom {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    text-align: center;
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .cb-grid-2 { 
+        grid-template-columns: 1fr; 
+        gap: 2rem; 
+    }
+    
+    .cb-illustration { 
+        order: -1; 
+        border-radius: 20px;
+        aspect-ratio: 4/3;
+    }
+    
+    .cb-intro-container {
+        padding: 3rem 0;
+        margin-left: -5%;
+        margin-right: -5%;
+        width: 110%;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .cb-intro-container .cb-grid-2 {
+        padding: 0 10%;
+    }
+
+    .cb-section { padding: 3rem 0; }
+    
+    .cb-curriculum-grid { 
+        grid-template-columns: 1fr; 
+        gap: 1rem;
+    }
+    
+    .cb-card {
+        min-height: 60px;
+        font-size: 1rem;
+    }
+
+    .cb-footer__container { flex-direction: column; align-items: center; text-align: center; }
+    .cb-footer__mapa { width: 100%; }
+
+    .cb-plan-de-box {
+        max-width: 90%;
+    }
+}

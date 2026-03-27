@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 2. Encontrar el video (para insertar las pestañas *después* de él)
     const videoContainer = mainColumn.querySelector('.video-container');
     if (!videoContainer) return;
-    
+
     // 3. Encontrar todas las secciones de contenido que se convertirán en pestañas
     const contentSections = mainColumn.querySelectorAll('.content-section');
     if (contentSections.length < 1) {
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
         section.id = paneId;
         section.classList.add('tabs-pane'); // Añadimos clase para estilos
         h2.style.display = 'none'; // Ocultamos el H2 original (ya está en el botón)
-        
+
         // Movemos la sección (ahora un panel) al contenedor de contenido
         tabsContent.appendChild(section);
 
@@ -82,23 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
         tabsContent.children[0].classList.add('active');
     }
 
-    document.addEventListener('click', function(e) {
-    if (e.target.classList.contains('accordion-header')) {
-        const header = e.target;
-        const content = header.nextElementSibling;
-
-        // Cerrar otros
-        document.querySelectorAll('.accordion-content').forEach(c => {
-            if (c !== content) c.style.display = 'none';
-        });
-        document.querySelectorAll('.accordion-header').forEach(h => {
-            if (h !== header) h.classList.remove('active');
-        });
-
-        // Toggle del actual
-        const isOpen = content.style.display === 'block';
-        content.style.display = isOpen ? 'none' : 'block';
-        header.classList.toggle('active');
-    }
+    /* Legacy accordion and mobile menu logic removed to avoid conflict with accordion.js and index.js */
 });
-});
+
+

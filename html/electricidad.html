@@ -1,63 +1,117 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Electricidad - E.T. N°29</title>
   <link rel="stylesheet" href="../css/stylesGenerales.css">
   <link rel="stylesheet" href="../css/stylesEspecs.css">
+  <link rel="stylesheet" href="../css/base.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 
 <body>
-  <!-- NAVBAR -->
-  <nav class="barra-navegacion">
-  <div class="contenedor-navegacion">
-    <div class="logo">
-      <img src="../img/logoet29.png" alt="Logo Técnica 29" />
-      <a id = "linkInicio" href="../index.html">Escuela Técnica N°29<br>D.E. 6 Reconquista de Buenos Aires</a>
-    </div>
+    <header class="encabezado">
+        <a href="../index.html" class="encabezado__logo-contenedor">
+            <div class="encabezado__logo-imagen"></div>
+            <div class="encabezado__logo-texto">
+                <span>Escuela técnica N°29 de 6</span>
+                <span>Reconquista de Buenos Aires</span>
+            </div>
+        </a>
 
-    <ul class="menu">
-      <li><a href="#inicio" class="activo">Inicio</a></li>
-      <li class="dropdown">
-        <a href="#" class="dropbtn">Especialidades <i class="fa-solid fa-caret-down"></i></a>
-        <div class="dropdown-content">
-          <a href="compu.html">Computación</a>
-          <a href="electricidad.html">Electricidad</a>
-          <a href="mecanica.html">Mecánica</a>
+        <div class="encabezado__menu-hamburger" id="menu-hamburger">
+            <i class="fas fa-bars"></i>
         </div>
-      </li>
-      <li><a href="#contactos">Contactos</a></li>
-    </ul>
 
-    <div class="redes">
-      <a href="https://www.facebook.com/et29de6" target="_blank" aria-label="Facebook">
-        <i class="fa-brands fa-facebook-f"></i>
-      </a>
-      <a href="https://www.instagram.com/et29de6" target="_blank" aria-label="Instagram">
-        <i class="fa-brands fa-instagram"></i>
-      </a>
-    </div>
-  </div>
-</nav>
+        <nav class="encabezado__navegacion" id="navegacion">
+            <ul class="encabezado__lista-enlaces">
+                <li><a href="ciclo_basico.html">Ciclo básico</a></li>
+                <li class="nav-desplegable nav-escritorio">
+                    <a href="#especialidades" class="nav-desplegable__toggle">Especialidades ▼</a>
+                    <ul class="nav-desplegable__menu">
+                        <li><a href="compu.html">Computación</a></li>
+                        <li><a href="mecanica.html">Mecánica</a></li>
+                        <li><a href="electricidad.html">Electricidad</a></li>
+                    </ul>
+                </li>
+                <li class="nav-movil"><a href="compu.html">Computación</a></li>
+                <li class="nav-movil"><a href="mecanica.html">Mecánica</a></li>
+                <li class="nav-movil"><a href="electricidad.html">Electricidad</a></li>
+                <li><a href="#contactos">Contactar</a></li>
+            </ul>
+            <div class="encabezado__redes-sociales-movil">
+                <a href="https://www.facebook.com/search/top?q=ET%2029%20De%206%20Reconquista%20de%20Buenos%20Aires"
+                    target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/et29de6" target="_blank" aria-label="Instagram"><i
+                        class="fab fa-instagram"></i></a>
+            </div>
+        </nav>
 
-  <div class = "ig">
+        <div class="encabezado__redes-sociales">
+            <a href="https://www.facebook.com/search/top?q=ET%2029%20De%206%20Reconquista%20de%20Buenos%20Aires"
+                target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/et29de6" target="_blank" aria-label="Instagram"><i
+                    class="fab fa-instagram"></i></a>
+        </div>
+    </header>
+
+  <div class="ig">
     <a href="https://www.instagram.com/electrum_29/">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.148 3.227-1.667 4.771-4.919 4.919-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.07-1.646-.07-4.85s.012-3.584.07-4.85c.148-3.227 1.667-4.771 4.919-4.919 1.266-.058 1.646.07 4.85.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.059 1.689.073 4.948.073s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059 1.281.073 1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/>
+        <path
+          d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.148 3.227-1.667 4.771-4.919 4.919-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.07-1.646-.07-4.85s.012-3.584.07-4.85c.148-3.227 1.667-4.771 4.919-4.919 1.266-.058 1.646.07 4.85.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.059 1.689.073 4.948.073s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059 1.281.073 1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z" />
       </svg>
       Seguí las novedades del Área en Instagram
     </a>
   </div>
 
-<div class = "content-wrapper">
-  <main class = "main-column">
-    <h1>Área de Electricidad</h1>
-
-    <p>Este sitio aún se encuentra en construcción.</p>
-  </main>
-</div>
+  <div class="content-wrapper">
+    <main class="main-column">
+      <h1>Área de Electricidad</h1>
+      <p>La especialidad de Electricidad forma técnicos capacitados para el diseño, montaje y mantenimiento de instalaciones eléctricas industriales y residenciales.</p>
+      
+      <div class="content-section">
+        <h2>Plan de estudios</h2>
+        <div class="cb-curriculum-grid">
+            <div class="cb-card" data-hours="10hs">
+                <div class="cb-card__header">
+                    <span class="cb-card__title">Instalaciones Eléctricas I</span>
+                    <i class="fas fa-chevron-down cb-card__icon"></i>
+                </div>
+                <div class="cb-card__drawer">
+                    <div class="cb-card__content">
+                        <p class="cb-card__description">Fundamentos del montaje de instalaciones en baja tensión, normativas de seguridad y uso de herramientas específicas.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cb-card" data-hours="8hs">
+                <div class="cb-card__header">
+                    <span class="cb-card__title">Máquinas Eléctricas</span>
+                    <i class="fas fa-chevron-down cb-card__icon"></i>
+                </div>
+                <div class="cb-card__drawer">
+                    <div class="cb-card__content">
+                        <p class="cb-card__description">Estudio de motores, transformadores y generadores: principios de funcionamiento, conexión y mantenimiento preventivo.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cb-card" data-hours="6hs">
+                <div class="cb-card__header">
+                    <span class="cb-card__title">Automatización Industrial</span>
+                    <i class="fas fa-chevron-down cb-card__icon"></i>
+                </div>
+                <div class="cb-card__drawer">
+                    <div class="cb-card__content">
+                        <p class="cb-card__description">Introducción a la lógica de contactores y controladores programables (PLC) para el control de procesos productivos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </main>
+  </div>
 
 
 
@@ -67,25 +121,15 @@
       <div class="columna">
         <h3>Contactos</h3>
         <p>Teléfono: <a href="tel:+541149572920">+54 011 4957-2920</a></p>
-        <p>Email: <a href="mailto:det_29_de6@bue.edu.ar">det_29_de6@bue.edu.ar</a></p>
+        <p>Email: <a href="https://mail.google.com/mail/?view=cm&fs=1&to=det_29_de6@bue.edu.ar&su=Consulta%20T%C3%A9cnica%20N29" target="_blank">det_29_de6@bue.edu.ar</a></p>
       </div>
 
-      <div class="columna">
-        <h3>Enlaces</h3>
-        <a href="#inicio">Inicio</a>
-        <a href="#especialidades">Especialidades</a>
-        <a href="#visita-virtual">Visita Virtual</a>
-      </div>
+
 
       <div class="columna mapa">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.3023294802247!2d-58.41885242351912!3d-34.62179947294788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccaf8b0c7ce0f%3A0x17ca663276a69e1b!2sEscuela%20T%C3%A9cnica%20N%C2%B0%2029%20-%20Reconquista%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1761158376874!5m2!1ses-419!2sar"
-          width="100%"
-          height="200"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy"
-        ></iframe>
+          width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
       </div>
     </div>
 
@@ -94,5 +138,8 @@
       desarrollado por alumnos.
     </p>
   </footer>
+    <script src="../js/index.js"></script>
+    <script src="../js/accordion.js"></script>
 </body>
+
 </html>

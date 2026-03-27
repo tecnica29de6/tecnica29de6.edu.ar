@@ -1,3 +1,45 @@
+23/03/2023
+FELIPE
+- Se corrigio el maquetado de computacion
+
+21/03/2026
+FELIPE
+- Maquetado de computacion
+
+19/03/2026
+FELIPE
+- Se corrigio el responsive del navbar
+- Se agrego un acordeon del plan de estudios a las materias y talleres
+- separe la seccion de talleres en primer y segundo año
+
+18/03/2026
+FELIPE
+- Se corrigio el responsive del ciclo basico
+
+17/03/2026
+FELIPE
+- Maquetedo de ciclo basico completo
+
+15/03/2026
+FELIPE
+- Se corrigio El resposive otra vez porque se habia roto 
+- puse en el menu desplegable en el resposive las redes sociales porque no se veian 
+
+11/03/2026
+FELIPE
+- Se sacaron los links del footer
+- Se ajustaron los estilos del footer
+- Se termino el Responsive del index
+- Arregle el link del gmail para que te mande a redactar un mail al colegio
+
+07/03/2026
+FELIPE 
+- Se corrigio los links del navbar
+- Arreglos los links del footer de la seccion de enlaces que te refrescaban la pagina
+- Se hizo el menu desplegable de especialidades y lo deje de que si lo apretas te lleva a la seccion de especialidades(sujeto a cambios) 
+- Arreglos de los links en general
+- Se aprolijo el codigo para que sea mas legible y ordenado
+
 28/10 
 
 FRAN
@@ -71,3 +113,36 @@ Vista 1: Se cambió la imagen de fondo del hero por una foto de la fachada de la
 
 Vista 2: Se corrigió el enrutamiento respecto de las páginas de especialidades, porque tenían un target blank que abría una nueva pestaña. 
 
+-------------------------------------
+NUEVA RAMA DEV
+-------------------------------------
+
+En esta rama trabajamos y probamos los cambios antes de clonar cualquier zapallo a main. 
+Se trabaja en esta rama y se mergea con main una vez estemos seguros. 
+
+Rama creada el 27/11 por Fran
+Cambios realizados:
+Se eliminó el index original y la carpeta de vista 2
+Los directorios de vista 1 se movieron a la raíz del repositorio, de modo que ahora al acceder al sitio se accede directamente a este nuevo diseño. 
+
+5/3 Fran
+
+Se cambió el título para cumplir con la formalidad solicitada
+Se eliminó el subrayado del correo en el footer, pues no se veían los guíones bajos
+Editado el hipervínculo de facebook, pues no era un link de verdad
+Se agregó texto a los carruseles de computación para darle una estructura al contenido, aunque no son la versión final.
+
+6/3 Fran con Marco
+
+Se agregó información faltante en la página de computación
+Se agregó información sobre la ubicación en el footer del index
+Más comentarios en el index con cosas para arreglar
+
+10/3 Fran 
+Se concretó con el texto correspondiente a la página del área de computación
+
+23/3 Fran
+Ciclo básico: Se reemplazaron algunos placeholders, se corrigieron errores y se añadió una sección
+
+27/3 Fran
+Correcciones de textos e imágenes en páginas de ciclo básico y computación

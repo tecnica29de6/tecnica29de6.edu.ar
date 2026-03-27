@@ -1,172 +1,641 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/stylesGenerales.css">
-  <link rel="stylesheet" href="../css/stylesEspecs.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-  <title>Computación - E.T. N°29</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computación - ET N°29</title>
+
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/ciclo_basico.css">
+    <link rel="stylesheet" href="../css/compu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 
-<body>
-  <!-- NAVBAR -->
-  <nav class="barra-navegacion">
-  <div class="contenedor-navegacion">
-    <div class="logo">
-      <img src="../img/logoet29.png" alt="Logo Técnica 29" />
-      <a id = "linkInicio" href="../index.html">Escuela Técnica N°29<br>D.E. 6 Reconquista de Buenos Aires</a>
-    </div>
+<body class="compu-body">
 
-    <ul class="menu">
-      <li><a href="#inicio" class="activo">Inicio</a></li>
-      <li class="dropdown">
-        <a href="#" class="dropbtn">Especialidades <i class="fa-solid fa-caret-down"></i></a>
-        <div class="dropdown-content">
-          <a href="compu.html">Computación</a>
-          <a href="electricidad.html">Electricidad</a>
-          <a href="mecanica.html">Mecánica</a>
+<header class="encabezado">
+    <a href="../index.html" class="encabezado__logo-contenedor">
+        <div class="encabezado__logo-imagen"></div>
+        <div class="encabezado__logo-texto">
+            <span>Escuela técnica N°29 de 6</span>
+            <span>Reconquista de Buenos Aires</span>
         </div>
-      </li>
-      <li><a href="#contactos">Contactos</a></li>
-    </ul>
-
-    <div class="redes">
-      <a href="https://www.facebook.com/et29de6" target="_blank" aria-label="Facebook">
-        <i class="fa-brands fa-facebook-f"></i>
-      </a>
-      <a href="https://www.instagram.com/et29de6" target="_blank" aria-label="Instagram">
-        <i class="fa-brands fa-instagram"></i>
-      </a>
-    </div>
-  </div>
-</nav>
-
-  <div class = "ig">
-    <a href="https://www.instagram.com/et29de6_computacion/" aria-label="Instagram del Área de Computación">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.148 3.227-1.667 4.771-4.919 4.919-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.07-1.646-.07-4.85s.012-3.584.07-4.85c.148-3.227 1.667-4.771 4.919-4.919 1.266-.058 1.646.07 4.85.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.059 1.689.073 4.948.073s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059 1.281.073 1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/>
-      </svg>
-      Seguí las novedades del Área en Instagram
     </a>
-  </div>
 
-  <!-- En este div están la columna principal (toda la info que mostremos en cascada)
-  y los sides, así después podemos mostrarlo en un flex, donde el main column ocupe un espacio considerable y el aside tenga 
-  un espacio más chico en el flex-->
-  <div class="content-wrapper">
-    <main class="main-column">
-      <h1>Área de Computación</h1>
-      <div class="video-container">
-        <iframe 
-          src="https://www.youtube.com/embed/ugLx3llSC10"
-          title="Video Área de Computación"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
-      </div>
-
-      <div class="content-section">
-        <h2>Plan de estudios</h2>
-          <div class="accordion-item">
-              <button class="accordion-header">CICLO BÁSICO <span class="arrow">▼</span></button>
-              <div class="accordion-content">
-                <ul>
-                  <li>
-                    Primer año introduce al estudiante a los fundamentos del nivel secundario técnico.
-                    Se desarrollan capacidades de comprensión lectora, expresión oral y escrita, pensamiento lógico y formación ciudadana.
-                    Incluye contenidos base en matemáticas, ciencias, historia y geografía.
-                    Objetivo: construir las bases para el aprendizaje científico-tecnológico.
-                  </li>
-                  <li>
-                    
-                  </li>
-                </ul>
-              </div>
-          </div>
-          <div class="accordion-item">
-              <button class="accordion-header">PRIMER AÑO <span class="arrow">▼</span></button>
-              <div class="accordion-content">
-                <ul>
-                  <li>
-                    
-                  </li>
-                </ul>
-              </div>
-          </div>
-
-      </div>
-
-      <div class="content-section">
-        <h2>Perfil del Técnico en Computación</h2>
-        <p>El perfil actual del Técnico en Computación es el siguiente:</p>
-        <ul>
-          <li>Estará capacitado para <b>proyectar, producir, adaptar...</b></li>
-          <li>Tendrá competencias para <b>proyectar, instalar...</b></li>
-          <li>Podrá <b>asistir y asesorar...</b></li>
-        </ul>
-        <p>Este profesional puede desempeñarse tanto en relación de dependencia...</p>
-      </div>
-    </main>
-
-    <aside>
-      <div class = "mala-señal">
-        <p>Proyecto de Streaming</p>
-        <img src="../img/malasenal.jpg" alt="Mala señal">
-        
-        <div class="social-links">
-          <a href="https://www.instagram.com/malasenal.29/" target="_blank" aria-label="Instagram">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.148 3.227-1.667 4.771-4.919 4.919-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.07-1.646-.07-4.85s.012-3.584.07-4.85c.148-3.227 1.667-4.771 4.919-4.919 1.266-.058 1.646.07 4.85.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.059 1.689.073 4.948.073s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059 1.281.073 1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/>
-            </svg>
-            Instagram
-          </a>
-          <a href="http://youtube.com/@MalaSenal.ET29" target="_blank" aria-label="Youtube">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M21.582,6.186c-0.23-0.854-0.908-1.532-1.762-1.762C18.254,4,12,4,12,4S5.746,4,4.179,4.424c-0.854,0.23-1.532,0.908-1.762,1.762C2,7.754,2,12,2,12s0,4.246,0.417,5.814c0.23,0.854,0.908,1.532,1.762,1.762C5.746,20,12,20,12,20s6.254,0,7.821-0.424c0.854-0.23,1.532-0.908,1.762-1.762C22,16.246,22,12,22,12S22,7.754,21.582,6.186z M10,15.5V8.5l6,3.5L10,15.5z"/>
-            </svg>
-            Youtube
-          </a>
-        </div>
-      </div>
-    </aside>
-  </div>
-
-  <!-- FOOTER -->
-  <footer id="contactos" class="pie-de-pagina">
-    <div class="contenedor-pie">
-      <div class="columna">
-        <h3>Contactos</h3>
-        <p>Teléfono: <a href="tel:+541149572920">+54 011 4957-2920</a></p>
-        <p>Email: <a href="mailto:det_29_de6@bue.edu.ar">det_29_de6@bue.edu.ar</a></p>
-      </div>
-
-      <div class="columna">
-        <h3>Enlaces</h3>
-        <a href="#inicio">Inicio</a>
-        <a href="#especialidades">Especialidades</a>
-        <a href="#visita-virtual">Visita Virtual</a>
-      </div>
-
-      <div class="columna mapa">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.3023294802247!2d-58.41885242351912!3d-34.62179947294788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccaf8b0c7ce0f%3A0x17ca663276a69e1b!2sEscuela%20T%C3%A9cnica%20N%C2%B0%2029%20-%20Reconquista%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1761158376874!5m2!1ses-419!2sar"
-          width="100%"
-          height="200"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy"
-        ></iframe>
-      </div>
+    <div class="encabezado__menu-hamburger" id="menu-hamburger">
+        <i class="fas fa-bars"></i>
     </div>
 
-    <p class="texto-final">
-      © 2025 Escuela Técnica N°29 D.E.6 - Reconquista de Buenos Aires. Sitio
-      desarrollado por alumnos.
-    </p>
-  </footer>
+    <nav class="encabezado__navegacion" id="navegacion">
+        <ul class="encabezado__lista-enlaces">
+            <li><a href="ciclo_basico.html">Ciclo básico </a></li>
+            <li class="nav-desplegable nav-escritorio">
+                <a href="#especialidades" class="nav-desplegable__toggle">Especialidades ▼</a>
+                <ul class="nav-desplegable__menu">
+                    <li><a href="compu.html">Computación</a></li>
+                    <li><a href="mecanica.html">Mecánica</a></li>
+                    <li><a href="electricidad.html">Electricidad</a></li>
+                </ul>
+            </li>
+            <li class="nav-movil"><a href="compu.html">Computación</a></li>
+            <li class="nav-movil"><a href="mecanica.html">Mecánica</a></li>
+            <li class="nav-movil"><a href="electricidad.html">Electricidad</a></li>
+            <li><a href="#pie-pagina-nuevo">Contactar</a></li>
+        </ul>
+        <div class="encabezado__redes-sociales-movil">
+            <a href="https://www.facebook.com/search/top?q=ET%2029%20De%206%20Reconquista%20de%20Buenos%20Aires"
+                target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/et29de6" target="_blank" aria-label="Instagram"><i
+                    class="fab fa-instagram"></i></a>
+        </div>
+    </nav>
 
-  <script src="../js/tabs.js" defer></script>
+    <div class="encabezado__redes-sociales">
+        <a href="https://www.facebook.com/search/top?q=ET%2029%20De%206%20Reconquista%20de%20Buenos%20Aires"
+            target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/et29de6" target="_blank" aria-label="Instagram"><i
+                class="fab fa-instagram"></i></a>
+    </div>
+</header>
+
+<main class="contenido-principal">
+
+<!-- HERO -->
+<section class="seccion-hero compu-hero">
+    <div class="hero-imagen-fondo"></div>
+    <div class="hero-images-container">
+        <img src="../img/elipses/Ellipse_1.png" alt="" class="hero-elipse">
+        <img src="../img/elipses/Ellipse_2.png" alt="" class="hero-elipse">
+        <img src="../img/elipses/Ellipse_3.png" alt="" class="hero-elipse">
+    </div>
+    <div class="hero-contenido">
+        <h1>COMPUTACIÓN</h1>
+        <p>El área de computación es la más amplia de la escuela, contando con cursos en los 3 turnos de la escuela. Tiene su propio piso, dentro del cual hay 4 laboratorios equipados, más dos carritos con computadoras portátiles.</p>
+    </div>
+</section>
+
+<!-- INFO GRID (Video + Perfil) -->
+<section class="compu-info-grid">
+    <div class="info-container">
+        <!-- Video -->
+        <div class="video-section">
+            <div class="video-box">
+                <!-- Placeholder for video -->
+                <div style="background: #2a2a2a; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; min-height: 400px; border-radius: 14px;">
+                    <i class="fas fa-play-circle" style="font-size: 4rem; color: white; cursor: pointer;"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Perfil Técnico (FULL WIDTH) -->
+<section class="cb-perfil-section">
+    <div class="cb-perfil-container">
+        
+        <div class="cb-perfil-badge-box">
+            <span class="redes-badge-edge">PERFIL DEL TÉCNICO EN COMPUTACIÓN</span>
+        </div>
+        
+        <div class="cb-perfil-content">
+            <p class="cb-perfil-desc">
+                En la actualidad el perfil del Técnico en Computación se van actualizado del plan original en función de las innovaciones que se producen en los campos tecnológicos y ocupacionales. Las innovaciones mayores fueron realizadas en la programación de contenidos de las distintas asignaturas. Esta estrategia de innovación tuvo como efecto que cada establecimiento definiera la pertinencia de ciertos contenidos sobre otros en función de cada proyecto institucional particular. No obstante, el conjunto de materias correspondientes a la especialidad son comunes para las áreas de computación de todas las escuelas técnicas de C.A.B.A.
+            </p>
+            <p class="cb-perfil-desc">
+                Resumiendo lo que establece la resolución, el <strong>Técnico en Computación</strong> está capacitado para manifestar conocimientos, habilidades, destrezas, valores y actitudes en situaciones reales de trabajo, conforme a criterios de profesionalidad propios de su área y de responsabilidad social al:
+            </p>
+            
+            <div class="cb-perfil-grid">
+                <div class="cb-perfil-card">
+                    <i class="fas fa-check-circle"></i>
+                    <span><strong>Desarrollo de Software:</strong> Proyectar, producir, adaptar, implantar y mantener aplicaciones informáticas.</span>
+                </div>
+                <div class="cb-perfil-card">
+                    <i class="fas fa-check-circle"></i>
+                    <span><strong>Sistemas Informáticos:</strong> Proyectar, instalar, configurar y mantener sistemas informáticos.</span>
+                </div>
+                <div class="cb-perfil-card">
+                    <i class="fas fa-check-circle"></i>
+                    <span><strong>Documentación Técnica:</strong> Realizar la documentación técnica y de usuarios de acuerdo con los requerimientos funcionales y técnicos.</span>
+                </div>
+                <div class="cb-perfil-card">
+                    <i class="fas fa-check-circle"></i>
+                    <span><strong>Asistencia al Usuario:</strong> Asistir y asesorar en la elección, adquisición e instalación de sistemas y aplicaciones.</span>
+                </div>
+                <div class="cb-perfil-card">
+                    <i class="fas fa-check-circle"></i>
+                    <span><strong>Paradigmas de Programación:</strong> Manejar los distintos paradigmas de la programación y sus características.</span>
+                </div>
+                <div class="cb-perfil-card">
+                    <i class="fas fa-check-circle"></i>
+                    <span><strong>Lenguajes de Desarrollo:</strong> Seleccionar y aplicar lenguajes de programación de diferentes características.</span>
+                </div>
+                <div class="cb-perfil-card">
+                    <i class="fas fa-check-circle"></i>
+                    <span><strong>Pensamiento Lógico:</strong> Desarrollar un pensamiento estructurado para la administración eficiente de datos.</span>
+                </div>
+                <div class="cb-perfil-card">
+                    <i class="fas fa-check-circle"></i>
+                    <span><strong>Diseño e Implementación:</strong> Interpretar e implementar el diseño técnico de una aplicación informática.</span>
+                </div>
+                <div class="cb-perfil-card">
+                    <i class="fas fa-check-circle"></i>
+                    <span><strong>Operatividad del Usuario:</strong> Facilitar y optimizar la operatoria técnica del usuario final.</span>
+                </div>
+                <div class="cb-perfil-card">
+                    <i class="fas fa-check-circle"></i>
+                    <span><strong>Seguridad de Datos:</strong> Mantener la integridad de los datos locales y protección total contra amenazas (virus).</span>
+                </div>
+                <div class="cb-perfil-card">
+                    <i class="fas fa-check-circle"></i>
+                    <span><strong>Infraestructura de Redes:</strong> Instalar y poner en marcha componentes o sistemas, equipos y redes informáticas.</span>
+                </div>
+                <div class="cb-perfil-card">
+                    <i class="fas fa-check-circle"></i>
+                    <span><strong>Soporte Técnico:</strong> Mantener equipos y sistemas de baja complejidad o componentes de los mismos.</span>
+                </div>
+                <div class="cb-perfil-card">
+                    <i class="fas fa-check-circle"></i>
+                    <span><strong>Ambiente de Trabajo:</strong> Optimizar el ambiente informático de trabajo del usuario bajo normativas vigentes.</span>
+                </div>
+                <div class="cb-perfil-card">
+                    <i class="fas fa-check-circle"></i>
+                    <span><strong>Asesoría Comercial:</strong> Asesorar y apoyar en la compra y venta de productos o servicios informáticos.</span>
+                </div>
+                <div class="cb-perfil-card">
+                    <i class="fas fa-check-circle"></i>
+                    <span><strong>Autogestión Profesional:</strong> Autogestionar sus actividades en relación de dependencia o emprendimientos propios.</span>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+
+
+
+
+
+<!-- PLAN DE ESTUDIO -->
+<section id="compu-plan" class="compu-plan cb-section">
+
+    <div class="cb-tabs-container">
+        <div class="cb-plan-de-box">
+            <div class="cb-plan-de-title">PLAN DE ESTUDIOS</div>
+            <div class="cb-tabs-header">
+                <button class="cb-tab-btn" data-year="3">TERCER AÑO</button>
+                <button class="cb-tab-btn active" data-year="4">CUARTO AÑO</button>
+                <button class="cb-tab-btn" data-year="5">QUINTO AÑO</button>
+                <button class="cb-tab-btn" data-year="6">SEXTO AÑO</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="plan-grid">
+
+        <!-- MATERIAS -->
+        <div>
+            <h3 id="compu-year-title" style="text-align: center; margin-bottom: 2rem; font-size: 2rem; color: var(--blue-dark); text-transform: uppercase;">PLAN DE ESTUDIOS - CUARTO AÑO</h3>
+            <div class="cb-curriculum-grid subjects-grid" id="subjects-grid">
+                
+                <!-- ========================================================= -->
+                <!-- FRAN Y MARCO: ACA METAN LA INFORMACIÓN DEL PLAN DE   -->
+                <!-- ESTUDIOS. COPIEN Y PEGUEN EL BLOQUE <div class="cb-card"> -->
+                <!-- PARA AGREGAR MÁS MATERIAS A CADA AÑO. RECORDAR CAMBIAR EL -->
+                <!-- "data-year", "data-desc" Y "data-hours" PARA CADA UNA.    -->
+                <!-- ========================================================= -->
+
+                <!-- 3er Año -->
+                <div class="cb-card" data-year="3">
+                    <div class="cb-card__header">
+                        <i class="fas fa-code cb-card__subject-icon"></i>
+                        <span class="cb-card__title">Taller de Programación</span>
+                        <span class="cb-card__hours">4hs</span>
+                    </div>
+                </div>
+                <div class="cb-card" data-year="3">
+                    <div class="cb-card__header">
+                        <i class="fas fa-microchip cb-card__subject-icon"></i>
+                        <span class="cb-card__title">Taller de Tecnología de Control</span>
+                        <span class="cb-card__hours">4hs</span>
+                    </div>
+                </div>
+                <div class="cb-card" data-year="3">
+                    <div class="cb-card__header">
+                        <i class="fas fa-palette cb-card__subject-icon"></i>
+                        <span class="cb-card__title">Taller de Diseño Multimedial</span>
+                        <span class="cb-card__hours">3hs</span>
+                    </div>
+                </div>
+                <div class="cb-card" data-year="3">
+                    <div class="cb-card__header">
+                        <i class="fas fa-calculator cb-card__subject-icon"></i>
+                        <span class="cb-card__title">Matemática</span>
+                        <span class="cb-card__hours">5hs</span>
+                    </div>
+                </div>
+                <div class="cb-card" data-year="3">
+                    <div class="cb-card__header">
+                        <i class="fas fa-book cb-card__subject-icon"></i>
+                        <span class="cb-card__title">Lengua y Literatura</span>
+                        <span class="cb-card__hours">4hs</span>
+                    </div>
+                </div>
+                <div class="cb-card" data-year="3">
+                    <div class="cb-card__header">
+                        <i class="fas fa-pencil-ruler cb-card__subject-icon"></i>
+                        <span class="cb-card__title">Tecnología de la Representación</span>
+                        <span class="cb-card__hours">4hs</span>
+                    </div>
+                </div>
+                <div class="cb-card" data-year="3">
+                    <div class="cb-card__header">
+                        <i class="fas fa-globe-americas cb-card__subject-icon"></i>
+                        <span class="cb-card__title">Geografía</span>
+                        <span class="cb-card__hours">3hs</span>
+                    </div>
+                </div>
+                <div class="cb-card" data-year="3">
+                    <div class="cb-card__header">
+                        <i class="fas fa-landmark cb-card__subject-icon"></i>
+                        <span class="cb-card__title">Historia</span>
+                        <span class="cb-card__hours">3hs</span>
+                    </div>
+                </div>
+                <div class="cb-card" data-year="3">
+                    <div class="cb-card__header">
+                        <i class="fas fa-running cb-card__subject-icon"></i>
+                        <span class="cb-card__title">Educación Física</span>
+                        <span class="cb-card__hours">3hs</span>
+                    </div>
+                </div>
+                <div class="cb-card" data-year="3">
+                    <div class="cb-card__header">
+                        <i class="fas fa-language cb-card__subject-icon"></i>
+                        <span class="cb-card__title">Inglés</span>
+                        <span class="cb-card__hours">3hs</span>
+                    </div>
+                </div>
+                <div class="cb-card" data-year="3">
+                    <div class="cb-card__header">
+                        <i class="fas fa-atom cb-card__subject-icon"></i>
+                        <span class="cb-card__title">Física</span>
+                        <span class="cb-card__hours">3hs</span>
+                    </div>
+                </div>
+                <div class="cb-card" data-year="3">
+                    <div class="cb-card__header">
+                        <i class="fas fa-vial cb-card__subject-icon"></i>
+                        <span class="cb-card__title">Química</span>
+                        <span class="cb-card__hours">3hs</span>
+                    </div>
+                </div>
+                <div class="cb-card" data-year="3">
+                    <div class="cb-card__header">
+                        <i class="fas fa-users cb-card__subject-icon"></i>
+                        <span class="cb-card__title">Educación Ciudadana</span>
+                        <span class="cb-card__hours">2hs</span>
+                    </div>
+                </div>
+                
+                <!-- 4to Año -->
+                <div class="cb-card" data-year="4">
+                    <div class="cb-card__header">
+                        <i class="fas fa-terminal cb-card__subject-icon"></i>
+                        <span class="cb-card__title">Lab. de Algoritmos y Estructura de Datos</span>
+                        <span class="cb-card__hours">9hs</span>
+                    </div>
+                </div>
+                <div class="cb-card" data-year="4">
+                    <div class="cb-card__header">
+                        <i class="fas fa-server cb-card__subject-icon"></i>
+                        <span class="cb-card__title">Organización de las computadoras</span>
+                        <span class="cb-card__hours">7hs</span>
+                    </div>
+                </div>
+                <div class="cb-card" data-year="4">
+                    <div class="cb-card__header">
+                        <i class="fas fa-database cb-card__subject-icon"></i>
+                        <span class="cb-card__title">Base de Datos</span>
+                        <span class="cb-card__hours">6hs</span>
+                    </div>
+                </div>
+                <div class="cb-card" data-year="4">
+                    <div class="cb-card__header">
+                        <i class="fas fa-project-diagram cb-card__subject-icon"></i>
+                        <span class="cb-card__title">Proyecto Informático I</span>
+                        <span class="cb-card__hours">4hs</span>
+                    </div>
+                </div>
+                <div class="cb-card" data-year="4">
+                    <div class="cb-card__header">
+                        <i class="fas fa-brain cb-card__subject-icon"></i>
+                        <span class="cb-card__title">Lógica Computacional</span>
+                        <span class="cb-card__hours">3hs</span>
+                    </div>
+                </div>
+                <div class="cb-card" data-year="4">
+                    <div class="cb-card__header">
+                        <i class="fas fa-calculator cb-card__subject-icon"></i>
+                        <span class="cb-card__title">Matemática</span>
+                        <span class="cb-card__hours">4hs</span>
+                    </div>
+                </div>
+                <div class="cb-card" data-year="4">
+                    <div class="cb-card__header">
+                        <i class="fas fa-book cb-card__subject-icon"></i>
+                        <span class="cb-card__title">Lengua y Literatura</span>
+                        <span class="cb-card__hours">3hs</span>
+                    </div>
+                </div>
+                <div class="cb-card" data-year="4">
+                    <div class="cb-card__header">
+                        <i class="fas fa-language cb-card__subject-icon"></i>
+                        <span class="cb-card__title">Inglés</span>
+                        <span class="cb-card__hours">3hs</span>
+                    </div>
+                </div>
+                <div class="cb-card" data-year="4">
+                    <div class="cb-card__header">
+                        <i class="fas fa-running cb-card__subject-icon"></i>
+                        <span class="cb-card__title">Educación Física</span>
+                        <span class="cb-card__hours">3hs</span>
+                    </div>
+                </div>
+                <div class="cb-card" data-year="4">
+                    <div class="cb-card__header">
+                        <i class="fas fa-landmark cb-card__subject-icon"></i>
+                        <span class="cb-card__title">Historia</span>
+                        <span class="cb-card__hours">2hs</span>
+                    </div>
+                </div>
+                <div class="cb-card" data-year="4">
+                    <div class="cb-card__header">
+                        <i class="fas fa-globe-americas cb-card__subject-icon"></i>
+                        <span class="cb-card__title">Geografía</span>
+                        <span class="cb-card__hours">2hs</span>
+                    </div>
+                </div>
+                
+                <!-- 5to Año -->
+                <div class="cb-card" data-year="5">
+                    <div class="cb-card__header">
+                        <i class="fas fa-laptop-code cb-card__subject-icon"></i>
+                        <span class="cb-card__title">Lab. de Programación Orientada a Objetos</span>
+                        <span class="cb-card__hours">9hs</span>
+                    </div>
+                </div>
+                <div class="cb-card" data-year="5">
+                    <div class="cb-card__header">
+                        <i class="fas fa-network-wired cb-card__subject-icon"></i>
+                        <span class="cb-card__title">Redes</span>
+                        <span class="cb-card__hours">7hs</span>
+                    </div>
+                </div>
+                <div class="cb-card" data-year="5">
+                    <div class="cb-card__header">
+                        <i class="fas fa-database cb-card__subject-icon"></i>
+                        <span class="cb-card__title">Adm. y Gestión de Bases de Datos</span>
+                        <span class="cb-card__hours">6hs</span>
+                    </div>
+                </div>
+                <div class="cb-card" data-year="5">
+                    <div class="cb-card__header">
+                        <i class="fas fa-project-diagram cb-card__subject-icon"></i>
+                        <span class="cb-card__title">Proyecto Informático II</span>
+                        <span class="cb-card__hours">4hs</span>
+                    </div>
+                </div>
+                <div class="cb-card" data-year="5">
+                    <div class="cb-card__header">
+                        <i class="fas fa-chart-line cb-card__subject-icon"></i>
+                        <span class="cb-card__title">Análisis de Sistemas</span>
+                        <span class="cb-card__hours">4hs</span>
+                    </div>
+                </div>
+                <div class="cb-card" data-year="5">
+                    <div class="cb-card__header">
+                        <i class="fas fa-calculator cb-card__subject-icon"></i>
+                        <span class="cb-card__title">Matemática</span>
+                        <span class="cb-card__hours">4hs</span>
+                    </div>
+                </div>
+                <div class="cb-card" data-year="5">
+                    <div class="cb-card__header">
+                        <i class="fas fa-book cb-card__subject-icon"></i>
+                        <span class="cb-card__title">Lengua y Literatura</span>
+                        <span class="cb-card__hours">3hs</span>
+                    </div>
+                </div>
+                <div class="cb-card" data-year="5">
+                    <div class="cb-card__header">
+                        <i class="fas fa-language cb-card__subject-icon"></i>
+                        <span class="cb-card__title">Inglés</span>
+                        <span class="cb-card__hours">3hs</span>
+                    </div>
+                </div>
+                <div class="cb-card" data-year="5">
+                    <div class="cb-card__header">
+                        <i class="fas fa-running cb-card__subject-icon"></i>
+                        <span class="cb-card__title">Educación Física</span>
+                        <span class="cb-card__hours">3hs</span>
+                    </div>
+                </div>
+                <div class="cb-card" data-year="5">
+                    <div class="cb-card__header">
+                        <i class="fas fa-coins cb-card__subject-icon"></i>
+                        <span class="cb-card__title">Economía y Gestión de las Org.</span>
+                        <span class="cb-card__hours">3hs</span>
+                    </div>
+                </div>
+                
+                <!-- 6to Año -->
+                <div class="cb-card" data-year="6">
+                    <div class="cb-card__header">
+                        <i class="fas fa-user-tie cb-card__subject-icon"></i>
+                        <span class="cb-card__title">Prácticas Profesionalizantes</span>
+                        <span class="cb-card__hours">9hs</span>
+                    </div>
+                </div>
+                <div class="cb-card" data-year="6">
+                    <div class="cb-card__header">
+                        <i class="fas fa-network-wired cb-card__subject-icon"></i>
+                        <span class="cb-card__title">Administración de Redes</span>
+                        <span class="cb-card__hours">7hs</span>
+                    </div>
+                </div>
+                <div class="cb-card" data-year="6">
+                    <div class="cb-card__header">
+                        <i class="fas fa-project-diagram cb-card__subject-icon"></i>
+                        <span class="cb-card__title">Desarrollo de Sistemas</span>
+                        <span class="cb-card__hours">6hs</span>
+                    </div>
+                </div>
+                <div class="cb-card" data-year="6">
+                    <div class="cb-card__header">
+                        <i class="fas fa-wifi cb-card__subject-icon"></i>
+                        <span class="cb-card__title">Programación sobre Redes</span>
+                        <span class="cb-card__hours">6hs</span>
+                    </div>
+                </div>
+                <div class="cb-card" data-year="6">
+                    <div class="cb-card__header">
+                        <i class="fas fa-industry cb-card__subject-icon"></i>
+                        <span class="cb-card__title">Gestión de Procesos Prod.</span>
+                        <span class="cb-card__hours">4hs</span>
+                    </div>
+                </div>
+                <div class="cb-card" data-year="6">
+                    <div class="cb-card__header">
+                        <i class="fas fa-calculator cb-card__subject-icon"></i>
+                        <span class="cb-card__title">Matemática</span>
+                        <span class="cb-card__hours">4hs</span>
+                    </div>
+                </div>
+                <div class="cb-card" data-year="6">
+                    <div class="cb-card__header">
+                        <i class="fas fa-language cb-card__subject-icon"></i>
+                        <span class="cb-card__title">Inglés</span>
+                        <span class="cb-card__hours">3hs</span>
+                    </div>
+                </div>
+                <div class="cb-card" data-year="6">
+                    <div class="cb-card__header">
+                        <i class="fas fa-microscope cb-card__subject-icon"></i>
+                        <span class="cb-card__title">Ciencia y Tecnología</span>
+                        <span class="cb-card__hours">2hs</span>
+                    </div>
+                </div>
+                <div class="cb-card" data-year="6">
+                    <div class="cb-card__header">
+                        <i class="fas fa-briefcase cb-card__subject-icon"></i>
+                        <span class="cb-card__title">Ciudadanía y trabajo</span>
+                        <span class="cb-card__hours">2hs</span>
+                    </div>
+                </div>
+                <div class="cb-card" data-year="6">
+                    <div class="cb-card__header">
+                        <i class="fas fa-running cb-card__subject-icon"></i>
+                        <span class="cb-card__title">Educación física</span>
+                        <span class="cb-card__hours">3hs</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+<!-- PROYECTOS -->
+<section class="compu-projects" style="margin-bottom: 4rem;">
+    <div class="compu-badge-top" style="margin-bottom: 2rem; text-align: center;">
+        <span class="badge" style="background: white; border-radius: 999px; padding: 0.5rem 1.5rem;">PROYECTOS</span>
+    </div>
+    
+    <div class="project-gallery-wrapper" style="margin: 0 auto; max-width: 1200px; padding: 0 5%;">
+        <div class="project-track" style="display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center;">
+            
+            <div class="img-gallery-card" onclick="openProjectModal('VIDEOJUEGO: PEDRO EN LA RECO', '../img/imagen_prueba1.jpg', 'Proyecto desarrollado en entorno 2D enseñando habilidades de programación estructurada, lógica de colisiones y diseño de niveles en la herramienta correspondiente. Los alumnos combinan su lógica algorítmica y su creatividad.')">
+                 <img src="../img/imagen_prueba1.jpg" alt="Pedro en la Reco">
+                 <div class="img-gallery-overlay">
+                     <h3>videojuego:<br>Pedro en la Reco</h3>
+                 </div>
+            </div>
+            
+            <div class="img-gallery-card" onclick="openProjectModal('REGADO AUTOMÁTICO DE AGUA', '../img/compuWork.jpg', 'Integración de placas programables (como Arduino) y sensores de humedad para optimizar la irrigación automática. Este proyecto fomenta tanto conocimientos en electrónica básica como en el ciclo de programación y robótica educativa.')">
+                 <img src="../img/compuWork.jpg" alt="Regado automatico">
+                 <div class="img-gallery-overlay">
+                     <h3>Regado automático<br>de agua</h3>
+                 </div>
+            </div>
+            
+            <div class="img-gallery-card" onclick="openProjectModal('ROBOT E.L.H.U.E', '../img/mecaWork.jpg', 'Prototipo robótico programado en C++ para competencias y demostraciones tecnológicas. Implementación de control por Bluetooth, manejo de servo-motores y codificación de algoritmos para evasión de obstáculos automatizada.')">
+                 <img src="../img/mecaWork.jpg" alt="robot E.L.H.U.E">
+                 <div class="img-gallery-overlay">
+                     <h3>robot<br>E.L.H.U.E</h3>
+                 </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<!-- Modal Proyectos UX/UI -->
+<div id="project-modal" class="project-modal">
+    <div class="project-modal-content">
+        <span class="close-modal" onclick="closeProjectModal()">&times;</span>
+        <div class="modal-body">
+            <img id="modal-img" src="" alt="Proyecto">
+            <div class="modal-info">
+                <h2 id="modal-title">Título</h2>
+                <p id="modal-desc">Descripción detallada del proyecto...</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FOTOS INSTALACIONES -->
+<section style="margin-top: 2rem;">
+    <div style="position: relative;">
+        <img src="../img/compuWork.jpg" alt="" style="width: 100%; height: 350px; object-fit: cover;">
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to top, #0077c8 0%, transparent 50%); display: flex; align-items: flex-end; padding: 2rem;">
+            <h2 style="color: white; font-size: 2rem; width: 100%; text-align: right; padding-right: 5%;">FOTOS INSTALACIONES</h2>
+        </div>
+        <!-- arrows -->
+        <button style="position: absolute; left: 2rem; top: 50%; transform: translateY(-50%); background: transparent; color: white; border: none; font-size: 2rem;"><i class="fas fa-chevron-left"></i></button>
+        <button style="position: absolute; right: 2rem; top: 50%; transform: translateY(-50%); background: transparent; color: white; border: none; font-size: 2rem;"><i class="fas fa-chevron-right"></i></button>
+    </div>
+</section>
+
+
+</main>
+
+<footer class="pie-pagina-nuevo" id="pie-pagina-nuevo" style="margin-top: 0; background-color: var(--blue-main); border-top: none;">
+    <div class="pie-pagina__seccion pie-pagina__contactos">
+        <h3>CONTACTOS</h3>
+        <p>Teléfono: <strong>+54 011 4957-2920</strong></p>
+        <p>Email: <a href="https://mail.google.com/mail/?view=cm&fs=1&to=det_29_de6@bue.edu.ar&su=Consulta%20T%C3%A9cnica%20N29" target="_blank"><strong>det_29_de6@bue.edu.ar</strong></a></p>
+
+        <h3 class="pie-pagina__titulo-redes" style="margin-top: 1.5rem;">REDES SOCIALES</h3>
+        <p>Instagram: <a href="https://www.instagram.com/et29de6" target="_blank">@et29de6computacion</a></p>
+        <p>Facebook: <a href="https://www.facebook.com/et29de6" target="_blank">ET 29 De 6 Reconquista de Buenos Aires</a></p>
+    </div>
+
+    <div class="pie-pagina__seccion pie-pagina__ubicacion">
+        <h3>UBICACIÓN</h3>
+        <p>Avenida Boedo 760, Comuna 5, Buenos Aires</p>
+        <p>Líneas de colectivo: 7, 31, 32, 41, 53, 56, 84, 88, 96, 97, 101, 115, 126, 127, 128, 160, 164, 180</p>
+        <p>Subte Línea E: Estación Boedo</p>
+        <div class="footer__mapa-contenedor" style="width: 100%; height: 250px; padding-bottom: 0; margin-top: 1rem;">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.302504134705!2d-58.41885242413697!3d-34.62179505845324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccaf8b0c7ce0f%3A0x17ca663276a69e1b!2sEscuela%20T%C3%A9cnica%20N%C2%B0%2029%20-%20Reconquista%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1763526991967!5m2!1ses-419!2sar"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</footer>
+
+<script src="../js/compu.js"></script>
+<!-- js de navegacion de index util? -->
+<script>
+    // simple mobil nav
+    const hamburger = document.getElementById('menu-hamburger');
+    const nav = document.getElementById('navegacion');
+    if (hamburger && nav) {
+        hamburger.addEventListener('click', () => {
+            nav.classList.toggle('activo');
+        });
+    }
+</script>
+    <!-- FAB Redes del Área -->
+    <a href="https://www.instagram.com/et29de6_computacion" target="_blank" class="cb-fab-social" aria-label="Instagram del Área">
+        <i class="fab fa-instagram"></i>
+        <span class="cb-fab-text">SEGUINOS</span>
+    </a>
 </body>
 </html>
