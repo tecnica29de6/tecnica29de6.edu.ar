@@ -770,6 +770,9 @@ body {
     font-size: 1.1rem;
     font-weight: 600;
     color: #333;
+    flex: 1;
+    text-align: center;
+    margin: 0 10px;
 }
 
 .cb-card__icon {
