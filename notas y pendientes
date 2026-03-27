@@ -1,8 +1,12 @@
 MUY IMPORTANTE
 Cada vez que usen una ruta relativa, en vez de hacer "/" tienen que hacer "../" porque si no funciona localmente pero github sites no lo juna
 
-- los items de la barra de navegación y del título no sirven del index no sirven. Los botones de ver especialidades y contactar para en el frente, y los botones de ciclo básico, especialidades y contactar arriba. El de especialidades de arriba debería ser un desplegable en vez de un botón (hecho)
-- algunos links del footer no sirven en ningún aspecto: no llevan a ningún lado, tampoco cumplen una función muy útil. (hecho)
-- la onda del index se ve un poco invasiva, tapando un poco la foto de la fachada del colegio. Esta foto también tiene que mostrar la fachada más del centro, o directamente mostrar la fachada completa, que es lo que pidió el rector 
 
-- Revisar documento correcciones urgentes en la raíz del drive y seguir sus indicaciones por favor
+- El desplegable de especialidades en el nav (que es común a todas las páginas), funciona como un link que lleva a la sección de especialidades dentro de la misma página. Claro que sólo funciona en el index, en el resto es un link que sólo cambia la dirección de la página. Si se puede remover el link en el resto de las páginas. Es un detalle bastante mínimo, no tiene prioridad. 
+- Los footer de las páginas que no son index tienen diseños al azar XD. Copiarle las propiedades del index así queda normalizado. El instagram del footer tiene que ser el de la escuela así queda estandarizado. El instagram del área queda en el sticky que bien puesto está (esto último ya lo corregí para la página de computación, es más que nada una nota). 
+- Por un cambio en las tarjetas de texto de los planes de estudio de ciclo básico (dibujo técnico), éste quedó descentrado. Perdón
+- El slider de imágenes del index muestra las flechas aunque no haya más para slidear. La forma más fácil de resolver ésto es hacerlo carrusel así las flechas no tienen que desaparecer. 
+- Las flechas del carrusel de imágenes en la página de computación no funcionan. 
+- Hacer un poco más alto el apartado de fotos instalaciones en la página de computación? Se ve muy chato
+
+- En las tarjetas de los planes de estudio se podría aclarar que las horas cátedra son semanales (esto no es para Felipe, lo deberíamos debatir para ver dónde iría eso)
