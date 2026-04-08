@@ -1,12 +1,4 @@
+- Hay que cambiar la informacion del plan de estudio, el perfil tecnico en computacion y alguna data mas.
+- Hay un boton llamdo Vistas de puerbas donde es un despegable de mas botones que cada uno de ellos te deberia de llevar a otras vistas mediante links que mas adelante haremos 
 MUY IMPORTANTE
 Cada vez que usen una ruta relativa, en vez de hacer "/" tienen que hacer "../" porque si no funciona localmente pero github sites no lo juna
-
-
-- El desplegable de especialidades en el nav (que es común a todas las páginas), funciona como un link que lleva a la sección de especialidades dentro de la misma página. Claro que sólo funciona en el index, en el resto es un link que sólo cambia la dirección de la página. Si se puede remover el link en el resto de las páginas. Es un detalle bastante mínimo, no tiene prioridad. 
-- Los footer de las páginas que no son index tienen diseños al azar XD. Copiarle las propiedades del index así queda normalizado. El instagram del footer tiene que ser el de la escuela así queda estandarizado. El instagram del área queda en el sticky que bien puesto está (esto último ya lo corregí para la página de computación, es más que nada una nota). 
-- Por un cambio en las tarjetas de texto de los planes de estudio de ciclo básico (dibujo técnico), éste quedó descentrado. Perdón
-- El slider de imágenes del index muestra las flechas aunque no haya más para slidear. La forma más fácil de resolver ésto es hacerlo carrusel así las flechas no tienen que desaparecer. 
-- Las flechas del carrusel de imágenes en la página de computación no funcionan. 
-- Hacer un poco más alto el apartado de fotos instalaciones en la página de computación? Se ve muy chato
-
-- En las tarjetas de los planes de estudio se podría aclarar que las horas cátedra son semanales (esto no es para Felipe, lo deberíamos debatir para ver dónde iría eso)

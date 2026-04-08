@@ -24,9 +24,9 @@
             </div>
         </a>
 
-        <div class="encabezado__menu-hamburger" id="menu-hamburger">
-            <i class="fas fa-bars"></i>
-        </div>
+        <button class="encabezado__menu-hamburger" id="menu-hamburger" aria-label="Abrir menú" aria-expanded="false">
+            <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
 
         <nav class="encabezado__navegacion" id="navegacion">
             <ul class="encabezado__lista-enlaces">
@@ -76,11 +76,11 @@
                 <h2>RECONQUISTA DE BUENOS AIRES</h2> <!--El estilo de este subtítulo podría cambiar. 
                 También se puede modificar el título del título y del subtítulo
                 No más tratemos de no repetir el mismo error de la 29-->
-                <p>Formando técnicos con vocación, innovación y compromiso con la sociedad.<br>Una institución educativa
-                    que impulsa el aprendizaje técnico desde la práctica.</p>
+                <p>Formamos técnicos con excelencia, innovación y compromiso social.
+                    Una institución educativa que impulsa el aprendizaje profesional desde la práctica cotidiana.</p>
                 <div class="hero-botones">
-                    <a href="#especialidades" class="boton-llamada-accion">Ver especialidades</a>
-                    <a href="#pie-pagina-nuevo" class="boton-llamada-accion">Contactar</a>
+                    <a href="#especialidades" class="boton-llamada-accion boton-llamada-accion--primario">Ver especialidades</a>
+                    <a href="#pie-pagina-nuevo" class="boton-llamada-accion boton-llamada-accion--secundario">Contactar</a>
                 </div>
             </div>
         </section>
@@ -91,9 +91,9 @@
 
                 <div class="contenedor-carrusel">
                     <button class="boton-carrusel boton-carrusel--anterior" id="prevBtn"
-                        aria-label="Anterior">◀</button>
+                        aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
                     <button class="boton-carrusel boton-carrusel--siguiente" id="nextBtn"
-                        aria-label="Siguiente">▶</button>
+                        aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
 
                     <div class="carrusel-contenedor">
                         <div class="carrusel-deslizador">
@@ -143,28 +143,26 @@
         <h2 class="titulo-seccion-especialidades-externo" id="especialidades">ESPECIALIDADES</h2>
         <section class="seccion-especialidades-contenedor">
             <div class="seccion-especialidades">
-                <div class="item-especialidad">
-                    <a href="html/compu.html"><img src="img/boton_compu.png" alt="Computación"
-                            class="img-especialidad"></a>
+                <a href="html/compu.html" class="item-especialidad">
+                    <img src="img/boton_compu.png" alt="Computación" class="img-especialidad">
                     <h3>COMPUTACIÓN</h3>
-                    <p>Formación en programación, redes y hardware, integrando la tecnología al servicio del
-                        conocimiento.</p>
-                </div>
+                    <p>Formación en programación, redes y hardware, integrando la tecnología al servicio del conocimiento.</p>
+                    <span class="boton-tarjeta">Ver especialidad <i class="fas fa-arrow-right"></i></span>
+                </a>
 
-                <div class="item-especialidad">
-                    <a href="html/mecanica.html"><img src="img/boton_meca.png" alt="Mecánica"
-                            class="img-especialidad"></a>
+                <a href="html/mecanica.html" class="item-especialidad">
+                    <img src="img/boton_meca.png" alt="Mecánica" class="img-especialidad">
                     <h3>MECÁNICA</h3>
                     <p>Diseño, operación y mantenimiento de sistemas mecánicos y herramientas industriales.</p>
-                </div>
+                    <span class="boton-tarjeta">Ver especialidad <i class="fas fa-arrow-right"></i></span>
+                </a>
 
-                <div class="item-especialidad">
-                    <a href="html/electricidad.html"><img src="img/boton_elec.png" alt="Electricidad"
-                            class="img-especialidad"></a>
+                <a href="html/electricidad.html" class="item-especialidad">
+                    <img src="img/boton_elec.png" alt="Electricidad" class="img-especialidad">
                     <h3>ELECTRICIDAD</h3>
-                    <p>Capacitación en instalaciones, mantenimiento y proyectos eléctricos con orientación profesional.
-                    </p>
-                </div>
+                    <p>Capacitación en instalaciones, mantenimiento y proyectos eléctricos con orientación profesional.</p>
+                    <span class="boton-tarjeta">Ver especialidad <i class="fas fa-arrow-right"></i></span>
+                </a>
             </div>
         </section>
 
@@ -174,10 +172,8 @@
 
         <div class="pie-pagina__seccion pie-pagina__contactos">
             <h3>CONTACTOS</h3>
-            <p>Teléfono: <strong>+54 011 4957-2920</strong></p>
-            <p>Email: <a
-                    href="https://mail.google.com/mail/?view=cm&fs=1&to=det_29_de6@bue.edu.ar&su=Consulta%20T%C3%A9cnica%20N29"
-                    target="_blank"><strong>det_29_de6@bue.edu.ar</strong></a></p>
+            <p>Teléfono: <a href="tel:+5401149572920"><strong>+54 011 4957-2920</strong></a></p>
+            <p>Email: <a href="https://mail.google.com/mail/?view=cm&fs=1&to=det_29_de6@bue.edu.ar&su=Consulta%20desde%20el%20Sitio%20Web" target="_blank"><strong>det_29_de6@bue.edu.ar</strong></a></p>
 
             <h3 class="pie-pagina__titulo-redes">REDES SOCIALES</h3>
             <p>Instagram: <a href="https://www.instagram.com/et29de6" target="_blank">@et29de6</a></p>

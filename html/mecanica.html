@@ -2,16 +2,22 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mecánica - E.T. N°29</title>
-  <link rel="stylesheet" href="../css/stylesGenerales.css">
-  <link rel="stylesheet" href="../css/stylesEspecs.css">
-  <link rel="stylesheet" href="../css/base.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mecánica - ET N°29</title>
+
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/ciclo_basico.css">
+    <link rel="stylesheet" href="../css/compu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 </head>
 
-<body>
+<body class="compu-body">
+
     <header class="encabezado">
         <a href="../index.html" class="encabezado__logo-contenedor">
             <div class="encabezado__logo-imagen"></div>
@@ -21,15 +27,16 @@
             </div>
         </a>
 
-        <div class="encabezado__menu-hamburger" id="menu-hamburger">
-            <i class="fas fa-bars"></i>
-        </div>
+        <button class="encabezado__menu-hamburger" id="menu-hamburger" aria-label="Abrir menú" aria-expanded="false">
+            <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
 
         <nav class="encabezado__navegacion" id="navegacion">
             <ul class="encabezado__lista-enlaces">
-                <li><a href="ciclo_basico.html">Ciclo básico</a></li>
+                <li><a href="ciclo_basico.html">Ciclo básico </a></li>
                 <li class="nav-desplegable nav-escritorio">
-                    <a href="#especialidades" class="nav-desplegable__toggle">Especialidades ▼</a>
+                    <a href="javascript:void(0)" style="cursor: pointer;" class="nav-desplegable__toggle">Especialidades
+                        ▼</a>
                     <ul class="nav-desplegable__menu">
                         <li><a href="compu.html">Computación</a></li>
                         <li><a href="mecanica.html">Mecánica</a></li>
@@ -39,7 +46,7 @@
                 <li class="nav-movil"><a href="compu.html">Computación</a></li>
                 <li class="nav-movil"><a href="mecanica.html">Mecánica</a></li>
                 <li class="nav-movil"><a href="electricidad.html">Electricidad</a></li>
-                <li><a href="#contactos">Contactar</a></li>
+                <li><a href="#pie-pagina-nuevo">Contactar</a></li>
             </ul>
             <div class="encabezado__redes-sociales-movil">
                 <a href="https://www.facebook.com/search/top?q=ET%2029%20De%206%20Reconquista%20de%20Buenos%20Aires"
@@ -57,77 +64,296 @@
         </div>
     </header>
 
-  <div class="content-wrapper">
-    <main class="main-column">
-      <h1>Área de Mecánica (sitio en construcción)</h1>
-      <p>La especialidad de Mecánica prepara a los alumnos en el diseño, fabricación y reparación de componentes mecánicos y maquinaria industrial.</p>
+    <main class="contenido-principal">
 
-      <div class="content-section">
-        <h2>Plan de estudios</h2>
-        <div class="cb-curriculum-grid">
-            <div class="cb-card" data-hours="10hs">
-                <div class="cb-card__header">
-                    <span class="cb-card__title">Tecnología de Fabricación</span>
-                    <i class="fas fa-chevron-down cb-card__icon"></i>
+        <!-- HERO -->
+        <section class="seccion-hero compu-hero">
+            <div class="hero-imagen-fondo"></div>
+            <div class="hero-images-container">
+                <img src="../img/elipses/Ellipse_1.png" alt="" class="hero-elipse">
+                <img src="../img/elipses/Ellipse_2.png" alt="" class="hero-elipse">
+                <img src="../img/elipses/Ellipse_3.png" alt="" class="hero-elipse">
+            </div>
+            <div class="hero-contenido">
+                <h1>MECÁNICA</h1>
+                <p>La especialidad de Mecánica prepara a los alumnos en el diseño, fabricación y reparación de
+                    componentes mecánicos y maquinaria industrial, integrando tecnologías tradicionales y avanzadas.</p>
+                <div class="hero-botones">
+                    <a href="#mecanica-plan" class="boton-llamada-accion boton-llamada-accion--primario">PLAN DE ESTUDIOS</a>
+                    <a href="#pie-pagina-nuevo" class="boton-llamada-accion boton-llamada-accion--secundario">CONTACTAR</a>
                 </div>
-                <div class="cb-card__drawer">
-                    <div class="cb-card__content">
-                        <p class="cb-card__description">Estudio de procesos de mecanizado por arranque de viruta (torno, fresa) y conformado de metales.</p>
+            </div>
+        </section>
+
+
+        <!-- INFO GRID (Spaciado) -->
+        <section class="compu-info-grid">
+            <div class="info-container" style="padding: 2rem 0;"></div>
+        </section>
+
+        <!-- Perfil Técnico (FULL WIDTH) -->
+        <section class="cb-perfil-section">
+            <div class="cb-perfil-container">
+
+                <div class="cb-perfil-badge-box">
+                    <span class="redes-badge-edge">PERFIL DEL TÉCNICO EN MECÁNICA</span>
+                </div>
+
+                <div class="cb-perfil-content">
+                    <p class="cb-perfil-desc">
+                        El Técnico en Mecánica está capacitado para manifestar conocimientos, habilidades, destrezas,
+                        valores y actitudes en situaciones reales de trabajo, conforme a criterios de profesionalidad
+                        propios de su área y de responsabilidad social al:
+                    </p>
+
+                    <div class="cb-perfil-grid">
+                        <div class="cb-perfil-card">
+                            <i class="fas fa-check-circle"></i>
+                            <span><strong>Fabricación:</strong> Operar tornos, fresadoras y rectificadoras para la
+                                producción de piezas de precisión.</span>
+                        </div>
+                        <div class="cb-perfil-card">
+                            <i class="fas fa-check-circle"></i>
+                            <span><strong>Diseño CAD:</strong> Utilizar herramientas de diseño asistido por computadora
+                                para modelado 2D y 3D.</span>
+                        </div>
+                        <div class="cb-perfil-card">
+                            <i class="fas fa-check-circle"></i>
+                            <span><strong>Sistemas:</strong> Diseñar y mantener circuitos neumáticos e hidráulicos de
+                                automatización.</span>
+                        </div>
+                        <div class="cb-perfil-card">
+                            <i class="fas fa-check-circle"></i>
+                            <span><strong>Metrología:</strong> Realizar mediciones de alta precisión y control de
+                                calidad en productos terminados.</span>
+                        </div>
+                        <div class="cb-perfil-card">
+                            <i class="fas fa-check-circle"></i>
+                            <span><strong>Mantenimiento:</strong> Diagnosticar y reparar fallas en maquinaria industrial
+                                y sistemas de transmisión.</span>
+                        </div>
+                        <div class="cb-perfil-card">
+                            <i class="fas fa-check-circle"></i>
+                            <span><strong>Materiales:</strong> Seleccionar y aplicar tratamientos térmicos y ensayos
+                                sobre metales y polímeros.</span>
+                        </div>
+                        <div class="cb-perfil-card">
+                            <i class="fas fa-check-circle"></i>
+                            <span><strong>Soldadura:</strong> Aplicar técnicas de unión por arco y gas bajo normas de
+                                seguridad industrial.</span>
+                        </div>
+                        <div class="cb-perfil-card">
+                            <i class="fas fa-check-circle"></i>
+                            <span><strong>Procesos:</strong> Gestionar y optimizar procesos productivos en plantas
+                                industriales de diversa índole.</span>
+                        </div>
+                        <div class="cb-perfil-card">
+                            <i class="fas fa-check-circle"></i>
+                            <span><strong>Seguridad:</strong> Operar bajo rigurosos estándares de seguridad e higiene
+                                laboral.</span>
+                        </div>
+                        <div class="cb-perfil-card">
+                            <i class="fas fa-check-circle"></i>
+                            <span><strong>Emprendimiento:</strong> Autogestionar proyectos de servicios mecánicos o
+                                manufactura propia.</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- PLAN DE ESTUDIO -->
+        <section id="compu-plan" class="compu-plan cb-section">
+
+            <div class="cb-tabs-container">
+                <div class="cb-plan-de-box">
+                    <div class="cb-plan-de-title">PLAN DE ESTUDIOS</div>
+                    <div class="cb-tabs-header">
+                        <button class="cb-tab-btn" data-year="3">TERCER AÑO</button>
+                        <button class="cb-tab-btn active" data-year="4">CUARTO AÑO</button>
+                        <button class="cb-tab-btn" data-year="5">QUINTO AÑO</button>
+                        <button class="cb-tab-btn" data-year="6">SEXTO AÑO</button>
                     </div>
                 </div>
             </div>
-            <div class="cb-card" data-hours="8hs">
-                <div class="cb-card__header">
-                    <span class="cb-card__title">Mecánica Técnica</span>
-                    <i class="fas fa-chevron-down cb-card__icon"></i>
-                </div>
-                <div class="cb-card__drawer">
-                    <div class="cb-card__content">
-                        <p class="cb-card__description">Análisis de fuerzas, estática y resistencia de materiales aplicados al diseño de estructuras mecánicas.</p>
+
+            <div class="plan-grid">
+
+                <!-- MATERIAS -->
+                <div>
+                    <h3 id="meca-year-title"
+                        style="text-align: center; margin-bottom: 2rem; font-size: 2rem; color: var(--blue-dark); text-transform: uppercase;">
+                        PLAN DE ESTUDIOS - CUARTO AÑO</h3>
+                    <div class="cb-curriculum-grid subjects-grid" id="subjects-grid">
+
+                        <!-- 3er Año -->
+                        <div class="cb-card" data-year="3"><div class="cb-card__header"><i class="fas fa-landmark cb-card__subject-icon"></i><span class="cb-card__title">Historia</span><span class="cb-card__hours">3hs</span></div></div>
+                        <div class="cb-card" data-year="3"><div class="cb-card__header"><i class="fas fa-globe-americas cb-card__subject-icon"></i><span class="cb-card__title">Geografía</span><span class="cb-card__hours">3hs</span></div></div>
+                        <div class="cb-card" data-year="3"><div class="cb-card__header"><i class="fas fa-running cb-card__subject-icon"></i><span class="cb-card__title">Educación Física</span><span class="cb-card__hours">3hs</span></div></div>
+                        <div class="cb-card" data-year="3"><div class="cb-card__header"><i class="fas fa-users cb-card__subject-icon"></i><span class="cb-card__title">Educación Ciudadana</span><span class="cb-card__hours">2hs</span></div></div>
+                        <div class="cb-card" data-year="3"><div class="cb-card__header"><i class="fas fa-language cb-card__subject-icon"></i><span class="cb-card__title">Inglés</span><span class="cb-card__hours">3hs</span></div></div>
+                        <div class="cb-card" data-year="3"><div class="cb-card__header"><i class="fas fa-book cb-card__subject-icon"></i><span class="cb-card__title">Lengua y Literatura</span><span class="cb-card__hours">4hs</span></div></div>
+                        <div class="cb-card" data-year="3"><div class="cb-card__header"><i class="fas fa-calculator cb-card__subject-icon"></i><span class="cb-card__title">Matemática</span><span class="cb-card__hours">4hs</span></div></div>
+                        <div class="cb-card" data-year="3"><div class="cb-card__header"><i class="fas fa-atom cb-card__subject-icon"></i><span class="cb-card__title">Física</span><span class="cb-card__hours">4hs</span></div></div>
+                        <div class="cb-card" data-year="3"><div class="cb-card__header"><i class="fas fa-pencil-ruler cb-card__subject-icon"></i><span class="cb-card__title">Tecnología de la Representación</span><span class="cb-card__hours">4hs</span></div></div>
+                        <div class="cb-card" data-year="3"><div class="cb-card__header"><i class="fas fa-microchip cb-card__subject-icon"></i><span class="cb-card__title">Taller de Tecnología y del Control*</span><span class="cb-card__hours">4hs</span></div></div>
+                        <div class="cb-card" data-year="3"><div class="cb-card__header"><i class="fas fa-tools cb-card__subject-icon"></i><span class="cb-card__title">Taller*</span><span class="cb-card__hours">8hs</span></div></div>
+
+                        <!-- 4to Año -->
+                        <div class="cb-card" data-year="4"><div class="cb-card__header"><i class="fas fa-running cb-card__subject-icon"></i><span class="cb-card__title">Educación Física</span><span class="cb-card__hours">3hs</span></div></div>
+                        <div class="cb-card" data-year="4"><div class="cb-card__header"><i class="fas fa-language cb-card__subject-icon"></i><span class="cb-card__title">Inglés</span><span class="cb-card__hours">3hs</span></div></div>
+                        <div class="cb-card" data-year="4"><div class="cb-card__header"><i class="fas fa-book cb-card__subject-icon"></i><span class="cb-card__title">Lengua y Literatura</span><span class="cb-card__hours">3hs</span></div></div>
+                        <div class="cb-card" data-year="4"><div class="cb-card__header"><i class="fas fa-calculator cb-card__subject-icon"></i><span class="cb-card__title">Matemática</span><span class="cb-card__hours">4hs</span></div></div>
+                        <div class="cb-card" data-year="4"><div class="cb-card__header"><i class="fas fa-drafting-compass cb-card__subject-icon"></i><span class="cb-card__title">Dibujo Mecánico I</span><span class="cb-card__hours">4hs</span></div></div>
+                        <div class="cb-card" data-year="4"><div class="cb-card__header"><i class="fas fa-tint cb-card__subject-icon"></i><span class="cb-card__title">Hidráulica Industrial I</span><span class="cb-card__hours">4hs</span></div></div>
+                        <div class="cb-card" data-year="4"><div class="cb-card__header"><i class="fas fa-plug cb-card__subject-icon"></i><span class="cb-card__title">Electrotecnia</span><span class="cb-card__hours">4hs</span></div></div>
+                        <div class="cb-card" data-year="4"><div class="cb-card__header"><i class="fas fa-flask cb-card__subject-icon"></i><span class="cb-card__title">Química Aplicada</span><span class="cb-card__hours">2hs</span></div></div>
+                        <div class="cb-card" data-year="4"><div class="cb-card__header"><i class="fas fa-cubes cb-card__subject-icon"></i><span class="cb-card__title">Tecnología de los Materiales</span><span class="cb-card__hours">3hs</span></div></div>
+                        <div class="cb-card" data-year="4"><div class="cb-card__header"><i class="fas fa-cogs cb-card__subject-icon"></i><span class="cb-card__title">Mecánica Técnica</span><span class="cb-card__hours">4hs</span></div></div>
+                        <div class="cb-card" data-year="4"><div class="cb-card__header"><i class="fas fa-tools cb-card__subject-icon"></i><span class="cb-card__title">Taller</span><span class="cb-card__hours">12hs</span></div></div>
+
+                        <!-- 5to Año -->
+                        <div class="cb-card" data-year="5"><div class="cb-card__header"><i class="fas fa-running cb-card__subject-icon"></i><span class="cb-card__title">Educación Física</span><span class="cb-card__hours">3hs</span></div></div>
+                        <div class="cb-card" data-year="5"><div class="cb-card__header"><i class="fas fa-language cb-card__subject-icon"></i><span class="cb-card__title">Inglés</span><span class="cb-card__hours">3hs</span></div></div>
+                        <div class="cb-card" data-year="5"><div class="cb-card__header"><i class="fas fa-book cb-card__subject-icon"></i><span class="cb-card__title">Lengua y Literatura</span><span class="cb-card__hours">3hs</span></div></div>
+                        <div class="cb-card" data-year="5"><div class="cb-card__header"><i class="fas fa-calculator cb-card__subject-icon"></i><span class="cb-card__title">Matemática</span><span class="cb-card__hours">3hs</span></div></div>
+                        <div class="cb-card" data-year="5"><div class="cb-card__header"><i class="fas fa-drafting-compass cb-card__subject-icon"></i><span class="cb-card__title">Dibujo Mecánico II</span><span class="cb-card__hours">4hs</span></div></div>
+                        <div class="cb-card" data-year="5"><div class="cb-card__header"><i class="fas fa-cogs cb-card__subject-icon"></i><span class="cb-card__title">Mecanismos</span><span class="cb-card__hours">4hs</span></div></div>
+                        <div class="cb-card" data-year="5"><div class="cb-card__header"><i class="fas fa-dumbbell cb-card__subject-icon"></i><span class="cb-card__title">Resistencia de Materiales</span><span class="cb-card__hours">6hs</span></div></div>
+                        <div class="cb-card" data-year="5"><div class="cb-card__header"><i class="fas fa-microscope cb-card__subject-icon"></i><span class="cb-card__title">Laboratorio de Ensayo de Materiales</span><span class="cb-card__hours">4hs</span></div></div>
+                        <div class="cb-card" data-year="5"><div class="cb-card__header"><i class="fas fa-fire cb-card__subject-icon"></i><span class="cb-card__title">Termodinámica</span><span class="cb-card__hours">4hs</span></div></div>
+                        <div class="cb-card" data-year="5"><div class="cb-card__header"><i class="fas fa-tools cb-card__subject-icon"></i><span class="cb-card__title">Taller</span><span class="cb-card__hours">8hs</span></div></div>
+                        <div class="cb-card" data-year="5"><div class="cb-card__header"><i class="fas fa-user-tie cb-card__subject-icon"></i><span class="cb-card__title">Prácticas Profesionalizantes</span><span class="cb-card__hours">4hs</span></div></div>
+
+                        <!-- 6to Año -->
+                        <div class="cb-card" data-year="6"><div class="cb-card__header"><i class="fas fa-running cb-card__subject-icon"></i><span class="cb-card__title">Educación Física</span><span class="cb-card__hours">3hs</span></div></div>
+                        <div class="cb-card" data-year="6"><div class="cb-card__header"><i class="fas fa-users cb-card__subject-icon"></i><span class="cb-card__title">Ciudadanía y Trabajo</span><span class="cb-card__hours">2hs</span></div></div>
+                        <div class="cb-card" data-year="6"><div class="cb-card__header"><i class="fas fa-microscope cb-card__subject-icon"></i><span class="cb-card__title">Ciencia y Tecnología</span><span class="cb-card__hours">2hs</span></div></div>
+                        <div class="cb-card" data-year="6"><div class="cb-card__header"><i class="fas fa-box cb-card__subject-icon"></i><span class="cb-card__title">Gestión de los Procesos Productivos</span><span class="cb-card__hours">4hs</span></div></div>
+                        <div class="cb-card" data-year="6"><div class="cb-card__header"><i class="fas fa-chart-line cb-card__subject-icon"></i><span class="cb-card__title">Economía y Gestión de las organizaciones</span><span class="cb-card__hours">3hs</span></div></div>
+                        <div class="cb-card" data-year="6"><div class="cb-card__header"><i class="fas fa-truck-loading cb-card__subject-icon"></i><span class="cb-card__title">Sistemas de Elevación y Transporte</span><span class="cb-card__hours">3hs</span></div></div>
+                        <div class="cb-card" data-year="6"><div class="cb-card__header"><i class="fas fa-wrench cb-card__subject-icon"></i><span class="cb-card__title">Instalaciones Industriales y Mantenimiento</span><span class="cb-card__hours">2hs</span></div></div>
+                        <div class="cb-card" data-year="6"><div class="cb-card__header"><i class="fas fa-fire cb-card__subject-icon"></i><span class="cb-card__title">Instalaciones Termodinámicas</span><span class="cb-card__hours">4hs</span></div></div>
+                        <div class="cb-card" data-year="6"><div class="cb-card__header"><i class="fas fa-tachometer-alt cb-card__subject-icon"></i><span class="cb-card__title">Instrumentación y Ensayo de Máquinas y Motores</span><span class="cb-card__hours">4hs</span></div></div>
+                        <div class="cb-card" data-year="6"><div class="cb-card__header"><i class="fas fa-project-diagram cb-card__subject-icon"></i><span class="cb-card__title">Proyecto Mecánico</span><span class="cb-card__hours">4hs</span></div></div>
+                        <div class="cb-card" data-year="6"><div class="cb-card__header"><i class="fas fa-industry cb-card__subject-icon"></i><span class="cb-card__title">Tecnología de Fabricación</span><span class="cb-card__hours">2hs</span></div></div>
+                        <div class="cb-card" data-year="6"><div class="cb-card__header"><i class="fas fa-hard-hat cb-card__subject-icon"></i><span class="cb-card__title">Seguridad e Higiene Industrial y Medioambiente</span><span class="cb-card__hours">2hs</span></div></div>
+                        <div class="cb-card" data-year="6"><div class="cb-card__header"><i class="fas fa-tools cb-card__subject-icon"></i><span class="cb-card__title">Taller</span><span class="cb-card__hours">6hs</span></div></div>
+                        <div class="cb-card" data-year="6"><div class="cb-card__header"><i class="fas fa-user-tie cb-card__subject-icon"></i><span class="cb-card__title">Prácticas Profesionalizantes</span><span class="cb-card__hours">5hs</span></div></div>
                     </div>
                 </div>
             </div>
-            <div class="cb-card" data-hours="6hs">
-                <div class="cb-card__header">
-                    <span class="cb-card__title">Sistemas Neumáticos e Hidráulicos</span>
-                    <i class="fas fa-chevron-down cb-card__icon"></i>
+        </section>
+
+        <!-- PROYECTOS -->
+        <!-- 
+        <section class="compu-projects" style="margin-bottom: 4rem;">
+            <div class="compu-badge-top" style="margin-bottom: 2rem; text-align: center;">
+                <span class="badge"
+                    style="background: white; border-radius: 999px; padding: 0.5rem 1.5rem;">PROYECTOS</span>
+            </div>
+
+            <div class="project-gallery-wrapper" style="margin: 0 auto; max-width: 1200px; padding: 0 5%;">
+                <div class="project-track" style="display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center;">
+
+                    <div class="img-gallery-card"
+                        onclick="openProjectModal('ROBOT E.L.H.U.E', '../img/mecaWork.jpg', 'Prototipo robótico programado para competencias, integrando diseño mecánico avanzado y control electrónico.')">
+                        <img src="../img/mecaWork.jpg" alt="ELHUE Result">
+                        <div class="img-gallery-overlay">
+                            <h3>Robot<br>E.L.H.U.E</h3>
+                        </div>
+                    </div>
+
+                    <div class="img-gallery-card"
+                        onclick="openProjectModal('MAQUETA HIDRÁULICA', '../img/meca.jpg', 'Demostración de los principios de Pascal mediante un sistema de brazos mecánicos accionados por fluidos.')">
+                        <img src="../img/meca.jpg" alt="Hidraulica">
+                        <div class="img-gallery-overlay">
+                            <h3>Maqueta<br>Hidráulica</h3>
+                        </div>
+                    </div>
+
                 </div>
-                <div class="cb-card__drawer">
-                    <div class="cb-card__content">
-                        <p class="cb-card__description">Principios de transmisión de potencia mediante fluidos, diseño de circuitos y mantenimiento de componentes.</p>
+            </div>
+        </section>
+        -->
+        <!-- Modal Proyectos UX/UI -->
+        <div id="project-modal" class="project-modal">
+            <div class="project-modal-content">
+                <span class="close-modal" onclick="closeProjectModal()">&times;</span>
+                <div class="modal-body">
+                    <img id="modal-img" src="" alt="Proyecto">
+                    <div class="modal-info">
+                        <h2 id="modal-title">Título</h2>
+                        <p id="modal-desc">Descripción detallada del proyecto...</p>
                     </div>
                 </div>
             </div>
         </div>
-      </div>
+
+        <!-- FOTOS INSTALACIONES -->
+        <section style="margin-top: 2rem;">
+            <div style="position: relative; overflow: hidden;">
+                <div class="inst-deslizador" id="inst-deslizador"
+                    style="display: flex; overflow-x: scroll; scrollbar-width: none; scroll-snap-type: x mandatory;">
+                    <img src="../img/mecaWork.jpg" alt=""
+                        style="width: 100%; height: 550px; object-fit: cover; flex: 0 0 100%; scroll-snap-align: start;">
+                    <img src="../img/frenteCole.jpg" alt=""
+                        style="width: 100%; height: 550px; object-fit: cover; flex: 0 0 100%; scroll-snap-align: start;">
+                </div>
+
+                <div
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to top, #0077c8 0%, transparent 50%); display: flex; align-items: flex-end; padding: 2rem; pointer-events: none;">
+                    <h2 style="color: white; font-size: 2rem; width: 100%; text-align: right; padding-right: 5%;">FOTOS
+                        INSTALACIONES</h2>
+                </div>
+                <!-- arrows -->
+                <button id="meca-prev-btn" aria-label="Foto anterior"
+                    style="position: absolute; left: 2rem; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.3); color: white; border: none; font-size: 2rem; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center;"><i
+                        class="fas fa-chevron-left" aria-hidden="true"></i></button>
+                <button id="meca-next-btn" aria-label="Foto siguiente"
+                    style="position: absolute; right: 2rem; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.3); color: white; border: none; font-size: 2rem; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center;"><i
+                        class="fas fa-chevron-right" aria-hidden="true"></i></button>
+            </div>
+        </section>
+
     </main>
-  </div>
 
-  <!-- FOOTER -->
-  <footer id="contactos" class="pie-de-pagina">
-    <div class="contenedor-pie">
-      <div class="columna">
-        <h3>Contactos</h3>
-        <p>Teléfono: <a href="tel:+541149572920">+54 011 4957-2920</a></p>
-        <p>Email: <a href="https://mail.google.com/mail/?view=cm&fs=1&to=det_29_de6@bue.edu.ar&su=Consulta%20T%C3%A9cnica%20N29" target="_blank">det_29_de6@bue.edu.ar</a></p>
-      </div>
+    <footer class="pie-pagina-nuevo" id="pie-pagina-nuevo">
+        <div class="pie-pagina__seccion pie-pagina__contactos">
+            <h3>CONTACTOS</h3>
+            <p>Teléfono: <a href="tel:+5401149572920"><strong>+54 011 4957-2920</strong></a></p>
+            <p>Email: <a href="https://mail.google.com/mail/?view=cm&fs=1&to=det_29_de6@bue.edu.ar&su=Consulta%20desde%20el%20Sitio%20Web" target="_blank"><strong>det_29_de6@bue.edu.ar</strong></a></p>
+            
+            <h3 class="pie-pagina__titulo-redes">REDES SOCIALES</h3>
+            <p>Instagram: <a href="https://www.instagram.com/et29de6" target="_blank">@et29de6</a></p>
+            <p>Facebook: <a href="https://www.facebook.com/et29de6" target="_blank">ET 29 De 6 Reconquista de Buenos Aires</a></p>
+        </div>
 
+        <div class="pie-pagina__seccion pie-pagina__ubicacion">
+            <h3>UBICACIÓN</h3>
+            <p>Avenida Boedo 760, Comuna 5, Buenos Aires</p>
+            <p>Líneas de colectivo: 7, 31, 32, 41, 53, 56, 84, 88, 96, 97, 101, 115, 126, 127, 128, 160, 164, 180</p>
+            <p>Subte Línea E: Estación Boedo</p>
+            <div class="footer__mapa-contenedor">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.302504134705!2d-58.41885242413697!3d-34.62179505845324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccaf8b0c7ce0f%3A0x17ca663276a69e1b!2sEscuela%20T%C3%A9cnica%20N%C2%B0%2029%20-%20Reconquista%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1763526991967!5m2!1ses-419!2sar"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </footer>
 
-
-      <div class="columna mapa">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.3023294802247!2d-58.41885242351912!3d-34.62179947294788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccaf8b0c7ce0f%3A0x17ca663276a69e1b!2sEscuela%20T%C3%A9cnica%20N%C2%B0%2029%20-%20Reconquista%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1761158376874!5m2!1ses-419!2sar"
-          width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-      </div>
-    </div>
-
-    <p class="texto-final">
-      © 2025 Escuela Técnica N°29 D.E.6 - Reconquista de Buenos Aires. Sitio
-      desarrollado por alumnos.
-    </p>
-  </footer>
-    <script src="../js/index.js"></script>
-    <script src="../js/accordion.js"></script>
+    <script src="../js/mecanica.js"></script>
+    <script>
+        const hamburger = document.getElementById('menu-hamburger');
+        const nav = document.getElementById('navegacion');
+        if (hamburger && nav) {
+            hamburger.addEventListener('click', () => {
+                nav.classList.toggle('activo');
+            });
+        }
+    </script>
 </body>
 
 </html>

@@ -283,12 +283,7 @@ body.compu-body::before {
     display: flex; align-items: flex-end; justify-content: flex-end; padding: 3rem 5%;
 }
 
-/* Footer humo override */
-.pie-pagina-nuevo {
-    background: var(--blue-main) !important; color: #ffffff; padding: 2rem 5%; display: flex;
-    justify-content: space-between; align-items: flex-start; gap: 2rem; position: relative; border-top: none; margin-top: 0;
-    margin: 0; font-size: 1.4rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;
-}
+
 
 /* UX/UI Project Modal */
 
@@ -443,14 +438,7 @@ body.compu-body::before {
     display: flex; align-items: flex-end; justify-content: flex-end; padding: 3rem 5%;
 }
 
-/* Footer humo override */
-.pie-pagina-nuevo {
-    background: var(--blue-main) !important; color: #ffffff; padding: 2rem 5%; display: flex;
-    justify-content: space-between; align-items: flex-start; gap: 2rem; position: relative; border-top: none; margin-top: 0;
-}
-.pie-pagina__contactos p { margin: 0.6rem 0; }
-.pie-pagina__contactos p a { color: #fff; text-decoration: none; font-weight: 500; }
-.pie-pagina__contactos p a:hover { text-decoration: underline; }
+
 
 @media (max-width: 1024px) {
     .plan-grid { grid-template-columns: 1fr; }
@@ -468,14 +456,14 @@ body.compu-body::before {
     .cb-curriculum-grid { grid-template-columns: repeat(2, 1fr) !important; }
     .project-track { gap: 0.5rem; }
     .project-card { min-width: 130px; }
-    .pie-pagina-nuevo { flex-direction: column; align-items: center; text-align: center; }
+
     .section-label-mockup { font-size: 0.8rem; padding: 0.8rem 2rem; }
 }
 
 html body.compu-body .hero-contenido h1 {
-    font-size: min(8.2vw, 4.5rem) !important;
+    font-size: min(7vw, 3rem) !important;
     line-height: 1.1 !important;
-    letter-spacing: -1.5px !important;
+    letter-spacing: -1px !important;
     transition: font-size 0.2s ease !important;
     width: 100% !important;
     word-break: normal !important;
@@ -653,4 +641,44 @@ html body.compu-body .hero-contenido h1 {
     .cb-fab-social i { font-size: 1.5rem; min-width: 50px; }
     .cb-fab-social:hover { width: 50px; }
     .cb-fab-text { display: none; }
+}
+
+/* Accessibility & Sticky Navbar Fixes */
+.encabezado {
+    position: fixed !important;
+    top: 0;
+    width: 100% !important;
+    left: 0;
+    z-index: 9999 !important;
+    background: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08) !important;
+}
+
+.encabezado__logo-imagen {
+    margin: 0 !important;
+    transform: none !important;
+    position: relative !important;
+    top: 0 !important;
+    background-image: url('../img/logo_transparent.png') !important;
+}
+
+.encabezado__logo-contenedor {
+    display: flex !important;
+    align-items: center !important;
+}
+
+
+/* Centrar texto en los botones de llamada a la acción (Contactar) */
+.boton-llamada-accion {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+}
+
+/* Visibilidad de foco y accesibilidad */
+:focus-visible {
+    outline: 3px solid #00E5FF !important;
+    outline-offset: 3px;
+    border-radius: 2px;
 }

@@ -46,18 +46,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Evento para el botón "Siguiente"
         botonSiguiente.addEventListener('click', () => {
-            // Calcula el ancho de una diapositiva
             const anchoSlide = deslizador.querySelector('.carrusel-diapositiva').clientWidth;
-            // Mueve el scroll a la derecha por el ancho de una diapositiva
-            deslizador.scrollLeft += anchoSlide;
+            // Si llegamos al final, volvemos al principio
+            if (deslizador.scrollLeft + deslizador.clientWidth >= deslizador.scrollWidth - 10) {
+                deslizador.scrollLeft = 0;
+            } else {
+                deslizador.scrollLeft += anchoSlide;
+            }
         });
 
         // Evento para el botón "Anterior"
         botonAnterior.addEventListener('click', () => {
-            // Calcula el ancho de una diapositiva
             const anchoSlide = deslizador.querySelector('.carrusel-diapositiva').clientWidth;
-            // Mueve el scroll a la izquierda por el ancho de una diapositiva
-            deslizador.scrollLeft -= anchoSlide;
+            // Si estamos al principio, vamos al final
+            if (deslizador.scrollLeft <= 10) {
+                deslizador.scrollLeft = deslizador.scrollWidth - deslizador.clientWidth;
+            } else {
+                deslizador.scrollLeft -= anchoSlide;
+            }
         });
     }
 
