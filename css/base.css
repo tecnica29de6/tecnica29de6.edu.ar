@@ -349,7 +349,16 @@ body {
         justify-content: center;
     }
 
+    .encabezado {
+        align-items: flex-start;
+        padding-bottom: 0.4rem;
+    }
+
     .encabezado__navegacion {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
         display: block;
         /* Always block but hidden by max-height/opacity for transition */
         max-height: 0;
@@ -357,16 +366,15 @@ body {
         visibility: hidden;
         overflow: hidden;
         width: 100%;
-        margin-left: 0;
-        margin-top: 0;
-        flex-basis: 100%;
+        margin: 0;
         border-top: 1px solid #e8e8e8;
         background-color: #ffffff;
         transition: max-height 0.4s ease, opacity 0.3s ease, visibility 0.3s ease, padding 0.3s ease;
+        z-index: 999;
     }
 
     .encabezado__navegacion.activo {
-        max-height: 800px;
+        max-height: 1000px;
         /* Incrementado para el menú expandido */
         opacity: 1;
         visibility: visible;

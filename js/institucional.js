@@ -1,13 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Navbar Hamburger
-    const hamburger = document.getElementById('menu-hamburger');
-    const nav = document.getElementById('navegacion');
-    if (hamburger && nav) {
-        hamburger.addEventListener('click', () => {
-            nav.classList.toggle('activo');
-        });
-    }
-
     // Dropdown (Especialidades)
     const toggles = document.querySelectorAll('.nav-desplegable__toggle');
     toggles.forEach(toggle => {

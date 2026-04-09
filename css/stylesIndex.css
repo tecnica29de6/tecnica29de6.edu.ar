@@ -299,9 +299,9 @@
     .carrusel-diapositiva {
         grid-template-columns: 100%;
         height: auto;
-        flex: 0 0 100%; /* En móvil, cada slide ocupa el ancho completo */
-        width: 100%;
-        min-width: 100%;
+        flex: 0 0 33.333%; /* Mantener el ancho original para el cálculo */
+        width: 33.333%;
+        min-width: 33.333%;
     }
 
     .diapositiva-contenido {

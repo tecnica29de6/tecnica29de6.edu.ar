@@ -66,8 +66,10 @@ document.addEventListener('DOMContentLoaded', () => {
             actualizarCarrusel();
         });
 
-        // Ajuste opcional para resize (por si cambia el ancho)
-        window.addEventListener('resize', actualizarCarrusel);
+        // Ajuste para resize (actualizar cálculo si cambia el ancho)
+        window.addEventListener('resize', () => {
+            actualizarCarrusel();
+        });
     }
 
 });
