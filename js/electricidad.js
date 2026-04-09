@@ -75,31 +75,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /* ==========================================================================
-       4. CARRUSEL DE INSTALACIONES
+       4. CARRUSEL DE INSTALACIONES (OPTIMIZADO)
        ========================================================================== */
     const instDeslizador = document.getElementById('inst-deslizador');
     const instPrevBtn = document.getElementById('elec-prev-btn');
     const instNextBtn = document.getElementById('elec-next-btn');
 
     if (instDeslizador && instPrevBtn && instNextBtn) {
-        instNextBtn.addEventListener('click', () => {
-            const currentScroll = instDeslizador.scrollLeft;
-            const maxScroll = instDeslizador.scrollWidth - instDeslizador.clientWidth;
+        const slides = instDeslizador.querySelectorAll('img');
+        let currentSlide = 0;
 
-            if (currentScroll >= maxScroll - 50) {
-                instDeslizador.scrollTo({ left: 0, behavior: 'smooth' });
-            } else {
-                instDeslizador.scrollBy({ left: instDeslizador.clientWidth, behavior: 'smooth' });
-            }
+        function updateInstSlider() {
+            const offset = -currentSlide * 100;
+            instDeslizador.style.transform = `translateX(${offset}%)`;
+        }
+
+        instNextBtn.addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            updateInstSlider();
         });
 
         instPrevBtn.addEventListener('click', () => {
-            const currentScroll = instDeslizador.scrollLeft;
-            if (currentScroll <= 50) {
-                instDeslizador.scrollTo({ left: instDeslizador.scrollWidth, behavior: 'smooth' });
-            } else {
-                instDeslizador.scrollBy({ left: -instDeslizador.clientWidth, behavior: 'smooth' });
-            }
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            updateInstSlider();
         });
     }
 

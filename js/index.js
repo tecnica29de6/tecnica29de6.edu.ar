@@ -3,13 +3,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Selecciona los elementos del carrusel
     const deslizador = document.querySelector('.carrusel-deslizador');
+    const slides = document.querySelectorAll('.carrusel-diapositiva');
     const botonAnterior = document.getElementById('prevBtn');
     const botonSiguiente = document.getElementById('nextBtn');
     
     //  Dropdown Móvil
     const menuHamburger = document.getElementById('menu-hamburger');
     const navegacion = document.getElementById('navegacion');
-    const navDesplegableToggle = document.querySelector('.nav-desplegable__toggle');
 
     if (menuHamburger && navegacion) {
         menuHamburger.addEventListener('click', () => {
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Cerrar el menú al hacer clic en un enlace (excepto el toggle del dropdown)
+        // Cerrar el menú al hacer clic en un enlace
         const enlaces = navegacion.querySelectorAll('a:not(.nav-desplegable__toggle)');
         enlaces.forEach(enlace => {
             enlace.addEventListener('click', () => {
@@ -39,32 +39,35 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Logic for dropdown removed as links are now flat
+    // Lógica del Carrusel con Transform (Alto Rendimiento)
+    if (deslizador && slides.length > 0 && botonAnterior && botonSiguiente) {
+        let indiceActual = 0;
 
-    // Verifica si los elementos existen en la página
-    if (deslizador && botonAnterior && botonSiguiente) {
+        const actualizarCarrusel = () => {
+            const desplazamiento = -indiceActual * 100;
+            deslizador.style.transform = `translateX(${desplazamiento}%)`;
+        };
 
-        // Evento para el botón "Siguiente"
         botonSiguiente.addEventListener('click', () => {
-            const anchoSlide = deslizador.querySelector('.carrusel-diapositiva').clientWidth;
-            // Si llegamos al final, volvemos al principio
-            if (deslizador.scrollLeft + deslizador.clientWidth >= deslizador.scrollWidth - 10) {
-                deslizador.scrollLeft = 0;
+            if (indiceActual >= slides.length - 1) {
+                indiceActual = 0; // Volver al inicio
             } else {
-                deslizador.scrollLeft += anchoSlide;
+                indiceActual++;
             }
+            actualizarCarrusel();
         });
 
-        // Evento para el botón "Anterior"
         botonAnterior.addEventListener('click', () => {
-            const anchoSlide = deslizador.querySelector('.carrusel-diapositiva').clientWidth;
-            // Si estamos al principio, vamos al final
-            if (deslizador.scrollLeft <= 10) {
-                deslizador.scrollLeft = deslizador.scrollWidth - deslizador.clientWidth;
+            if (indiceActual <= 0) {
+                indiceActual = slides.length - 1; // Ir al final
             } else {
-                deslizador.scrollLeft -= anchoSlide;
+                indiceActual--;
             }
+            actualizarCarrusel();
         });
+
+        // Ajuste opcional para resize (por si cambia el ancho)
+        window.addEventListener('resize', actualizarCarrusel);
     }
 
-});
+});

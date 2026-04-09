@@ -77,36 +77,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /* ==========================================================================
-       4. CARRUSEL DE INSTALACIONES
+       4. CARRUSEL DE INSTALACIONES (OPTIMIZADO)
        ========================================================================== */
     const instDeslizador = document.getElementById('inst-deslizador');
     const instPrevBtn = document.getElementById('compu-prev-btn');
     const instNextBtn = document.getElementById('compu-next-btn');
 
     if (instDeslizador && instPrevBtn && instNextBtn) {
+        const slides = instDeslizador.querySelectorAll('img');
+        let currentSlide = 0;
+
+        function updateInstSlider() {
+            const offset = -currentSlide * 100;
+            instDeslizador.style.transform = `translateX(${offset}%)`;
+        }
+
         instNextBtn.addEventListener('click', () => {
-            const currentScroll = instDeslizador.scrollLeft;
-            const maxScroll = instDeslizador.scrollWidth - instDeslizador.clientWidth;
-            
-            if (currentScroll >= maxScroll - 50) {
-                // Ir al inicio
-                instDeslizador.scrollTo({ left: 0, behavior: 'smooth' });
-            } else {
-                // Siguiente slide
-                instDeslizador.scrollBy({ left: instDeslizador.clientWidth, behavior: 'smooth' });
-            }
+            currentSlide = (currentSlide + 1) % slides.length;
+            updateInstSlider();
         });
 
         instPrevBtn.addEventListener('click', () => {
-            const currentScroll = instDeslizador.scrollLeft;
-            
-            if (currentScroll <= 50) {
-                // Ir al final
-                instDeslizador.scrollTo({ left: instDeslizador.scrollWidth, behavior: 'smooth' });
-            } else {
-                // Slide anterior
-                instDeslizador.scrollBy({ left: -instDeslizador.clientWidth, behavior: 'smooth' });
-            }
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            updateInstSlider();
         });
     }
 

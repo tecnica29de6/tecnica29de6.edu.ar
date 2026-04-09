@@ -123,6 +123,10 @@ body {
     color: #004E8E;
 }
 
+.nav-branding-movil {
+    display: none; /* Oculto por defecto en escritorio */
+}
+
 .nav-movil {
     display: none;
 }
@@ -288,17 +292,51 @@ body {
 /* ── Tablet Chica / Móvil ── */
 @media (max-width: 768px) {
     .encabezado {
-        flex-wrap: wrap;
         padding: 0.8rem 1rem;
-        position: sticky;
+        position: fixed;
         top: 0;
-        z-index: 1000;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        z-index: 10000;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-branding-movil {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .nav-branding-movil__logo {
+        width: 60px;
+        height: 60px;
+        background-image: url('../img/logoet29.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .nav-branding-movil__texto {
+        display: flex;
+        flex-direction: column;
+        color: #333;
+    }
+
+    .nav-branding-movil__texto span:first-child {
+        font-weight: 800;
+        font-size: 1.1rem;
+    }
+
+    .nav-branding-movil__texto span:last-child {
+        font-size: 0.85rem;
+        opacity: 0.7;
     }
 
     .encabezado__logo-imagen {
-        width: 55px;
-        height: 55px;
+        width: 60px;
+        height: 60px;
+        transform: translateY(0); /* Reset for mobile */
     }
 
     .encabezado__logo-texto {
@@ -926,116 +964,13 @@ body {
     }
 }
 
-/* ========================================
-   CURRICULUM EXPANDABLE CARDS
-   ======================================== */
-
+/* Curriculum grid logic (keeping common structure) */
 .cb-curriculum-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 1.5rem;
-    margin: 2rem 0;
-}
-
-.cb-card {
-    background: #ffffff;
-    border: 1px solid #e0e0e0;
-    border-radius: 12px;
-    padding: 1.2rem;
-    text-align: left;
     display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-.cb-card:hover {
-    transform: translateY(-4px);
-    border-color: #004E8E;
-    box-shadow: 0 8px 24px rgba(0, 78, 142, 0.12);
-}
-
-.cb-card.active {
-    border-color: #004E8E;
-    background-color: #fcfdfe;
-}
-
-.cb-card__hours {
-    display: inline-block;
-    background-color: #004E8E;
-    color: white;
-    padding: 4px 10px;
-    border-radius: 6px;
-    font-size: 0.85rem;
-    font-weight: 700;
-    margin-bottom: 0.8rem;
-    box-shadow: 0 2px 4px rgba(0, 78, 142, 0.2);
-}
-
-.cb-card__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-.cb-card__title {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #333;
-    flex: 1;
-    text-align: center;
-    margin: 0 10px;
-}
-
-.cb-card__icon {
-    color: #004E8E;
-    transition: transform 0.3s ease;
-}
-
-.cb-card.active .cb-card__icon {
-    transform: rotate(180deg);
-}
-
-/* Expansion Drawer */
-.cb-card__drawer {
-    display: grid;
-    grid-template-rows: 0fr;
-    transition: grid-template-rows 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    overflow: hidden;
-}
-
-.cb-card.active .cb-card__drawer {
-    grid-template-rows: 1fr;
-}
-
-.cb-card__content {
-    min-height: 0;
-    overflow: hidden;
-    transition: padding 0.3s ease;
-}
-
-.cb-card.active .cb-card__content {
-    padding-top: 1rem;
-}
-
-.cb-card__description {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: #555;
-    border-top: 1px solid #eee;
-    padding-top: 1rem;
-    margin: 0;
-}
-
-/* Responsive adjustments for the grid */
-@media (max-width: 768px) {
-    .cb-curriculum-grid {
-        grid-template-columns: 1fr;
-    }
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem 1.5rem;
+    margin: 4rem 0;
 }
 /* --- Bot�n Gmail Footer --- */
 .btn-gmail {
