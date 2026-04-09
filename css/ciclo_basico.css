@@ -19,7 +19,7 @@ body.cb-body {
 
 /* Hero override for this page */
 .cb-body .hero-imagen-fondo {
-    background-image: url('../imgnuevas/fondoCB.jpg');
+    background-image: url('../img/basico/fondoCB.webp');
 }
 
 /* Hero overrides removed to fix mobile bugs and consolidate design */

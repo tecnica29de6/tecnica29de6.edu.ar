@@ -4,11 +4,10 @@
 
 /* Hero Specifics */
 .institucional-bg {
-    background-image: url('../img/frenteCole.jpg');
+    background-image: url('../img/insti/fondoInsti.webp');
     background-size: cover;
     background-position: center;
     background-blend-mode: overlay;
-    background-color: rgba(0, 0, 0, 0.4);
 }
 
 /* -----------------------------

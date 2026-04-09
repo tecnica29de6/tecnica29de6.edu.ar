@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
        ========================================================================== */
     const yearTabs = document.querySelectorAll('.cb-tabs-header .cb-tab-btn');
     const materiaCards = document.querySelectorAll('.subjects-grid .cb-card');
-    
+
 
     // Lógica al hacer click en un año (tab)
     yearTabs.forEach(tab => {
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
             tab.classList.add('active');
 
             const selectedYear = tab.getAttribute('data-year');
-            
+
 
             // Filtrar materias
             materiaCards.forEach(card => {
@@ -28,9 +28,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Actualizar título dinámico
             const yearNames = { '3': 'TERCER AÑO', '4': 'CUARTO AÑO', '5': 'QUINTO AÑO', '6': 'SEXTO AÑO' };
-            const compuTitle = document.getElementById('compu-year-title');
-            if (compuTitle && yearNames[selectedYear]) {
-                compuTitle.textContent = 'PLAN DE ESTUDIOS - ' + yearNames[selectedYear];
+            const eleTitle = document.getElementById('compu-year-title');
+            if (eleTitle && yearNames[selectedYear]) {
+                eleTitle.textContent = 'PLAN DE ESTUDIOS - ' + yearNames[selectedYear];
             }
 
             const planGrid = document.querySelector('.plan-grid');
@@ -38,18 +38,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Inicializar mostrando el año seleccionado por defecto (e.g., 3ro año, que es el primero)
-    const activeTab = document.querySelector('.cb-tabs-header .cb-tab-btn.active') || document.querySelector('.cb-tab-btn[data-year="3"]');
+    // Inicializar mostrando el año activo por defecto
+    const activeTab = document.querySelector('.cb-tabs-header .cb-tab-btn.active');
     if (activeTab) {
-        if (!activeTab.classList.contains('active')) activeTab.classList.add('active');
-        activeTab.click(); 
+        activeTab.click();
     }
 
 
     /* ==========================================================================
-       3. MODAL DE PROYECTOS UX/UI
+       3. MODAL DE PROYECTOS
        ========================================================================== */
-    window.openProjectModal = function(title, imgSrc, desc) {
+    window.openProjectModal = function (title, imgSrc, desc) {
         const modalTitle = document.getElementById('modal-title');
         const modalImg = document.getElementById('modal-img');
         const modalDesc = document.getElementById('modal-desc');
@@ -63,13 +62,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    window.closeProjectModal = function() {
+    window.closeProjectModal = function () {
         const modal = document.getElementById('project-modal');
         if (modal) modal.style.display = 'none';
     };
 
-    // Cerrar con click afuera del recuadro blanco
-    window.addEventListener('click', function(e) {
+    window.addEventListener('click', function (e) {
         const modal = document.getElementById('project-modal');
         if (e.target === modal) {
             window.closeProjectModal();
@@ -87,8 +85,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const slides = instDeslizador.querySelectorAll('img');
         let currentSlide = 0;
 
+        // Set dynamic width and flex for slides
+        instDeslizador.style.width = `${slides.length * 100}%`;
+        slides.forEach(slide => {
+            slide.style.flex = `0 0 ${100 / slides.length}%`;
+        });
+
         function updateInstSlider() {
-            const offset = -currentSlide * 100;
+            const offset = -currentSlide * (100 / slides.length);
             instDeslizador.style.transform = `translateX(${offset}%)`;
         }
 

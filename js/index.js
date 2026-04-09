@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let indiceActual = 0;
 
         const actualizarCarrusel = () => {
-            const desplazamiento = -indiceActual * 100;
+            const desplazamiento = -indiceActual * (100 / slides.length);
             deslizador.style.transform = `translateX(${desplazamiento}%)`;
         };
 
@@ -70,4 +70,4 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('resize', actualizarCarrusel);
     }
 
-});
+});

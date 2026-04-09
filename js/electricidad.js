@@ -85,8 +85,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const slides = instDeslizador.querySelectorAll('img');
         let currentSlide = 0;
 
+        // Set dynamic width and flex for slides
+        instDeslizador.style.width = `${slides.length * 100}%`;
+        slides.forEach(slide => {
+            slide.style.flex = `0 0 ${100 / slides.length}%`;
+        });
+
         function updateInstSlider() {
-            const offset = -currentSlide * 100;
+            const offset = -currentSlide * (100 / slides.length);
             instDeslizador.style.transform = `translateX(${offset}%)`;
         }
 
