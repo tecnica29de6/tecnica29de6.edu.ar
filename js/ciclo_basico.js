@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const materiaCards = container.querySelectorAll('.subjects-grid .cb-card');
                     materiaCards.forEach(card => {
                         if (card.getAttribute('data-year') === selectedYear) {
-                            card.style.display = 'block';
+                            card.style.display = 'flex';
                         } else {
                             card.style.display = 'none';
                         }
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const talleresCards = container.querySelectorAll('#talleres-grid .cb-card');
                     talleresCards.forEach(card => {
                         if (card.getAttribute('data-year-talleres') === selectedYearTalleres) {
-                            card.style.display = 'block';
+                            card.style.display = 'flex';
                         } else {
                             card.style.display = 'none';
                         }

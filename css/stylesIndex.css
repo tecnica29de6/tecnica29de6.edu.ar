@@ -297,8 +297,10 @@
 
 @media (max-width: 768px) {
     .carrusel-diapositiva {
+        display: grid;
         grid-template-columns: 100%;
-        height: auto;
+        grid-template-rows: 1fr 250px; /* Text takes available space, image is fixed at bottom */
+        height: 550px; /* Uniform height for all slides */
         flex: 0 0 33.333%; /* Mantener el ancho original para el cálculo */
         width: 33.333%;
         min-width: 33.333%;
@@ -306,13 +308,23 @@
 
     .diapositiva-contenido {
         margin-right: 0;
-        padding: 2rem;
+        padding: 2rem 2.5rem; /* Balanced padding */
         clip-path: none;
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden; /* Safety against text overflow */
     }
 
     .diapositiva-contenido h3 {
-        font-size: 1.8rem;
+        font-size: 1.5rem; /* Reduced to fit better in mobile */
+        margin-bottom: 0.5rem;
+    }
+
+    .diapositiva-contenido p {
+        font-size: 0.95rem; /* Reduced for mobile */
+        line-height: 1.4;
     }
 
     .diapositiva-imagen {
@@ -323,6 +335,13 @@
         width: 36px;
         height: 36px;
         font-size: 0.95rem;
+        top: auto;
+        bottom: 100px; /* Positioned roughly over the image area */
+        transform: none;
+    }
+
+    .boton-carrusel:hover {
+        transform: scale(1.1); /* Simplified hover transform for mobile */
     }
 
     .boton-carrusel--anterior {
@@ -335,7 +354,7 @@
 
     .carrusel-deslizador {
         width: 300%; /* Mantener para deslizar */
-        height: auto; /* Altura automática en móvil */
+        height: 550px; /* Fixed height matching slides */
     }
 
     .seccion-especialidades {
@@ -355,11 +374,14 @@
         width: 90%;
         max-width: 340px;
         padding: 2rem 1.5rem;
+        margin: 0 auto; /* Ensure centering within flex/grid */
     }
 
     .img-especialidad {
         width: 140px;
         height: 140px;
+        display: block;
+        margin: 0 auto; /* Explicit center */
     }
 
     .item-especialidad p {
@@ -443,6 +465,9 @@
     .index-image-block {
         height: 300px;
         order: -1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     
     .index-text-block h2 {

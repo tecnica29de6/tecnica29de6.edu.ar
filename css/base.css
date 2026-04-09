@@ -594,6 +594,17 @@ body {
         padding: 0.8rem 1.2rem; /* Reduced padding */
         font-size: 0.9rem; /* Reduced font size */
     }
+
+    /* Centering and balancing elipses on mobile */
+    .hero-elipse {
+        height: 100%;
+        object-fit: contain;
+        transform: scale(1.5) translateX(-100%); /* Adjusted scale for better mobile look */
+    }
+
+    .hero-elipse:nth-child(1) { left: -150px; top: 0; }
+    .hero-elipse:nth-child(2) { left: -100px; top: 20px; }
+    .hero-elipse:nth-child(3) { left: -50px; top: 40px; }
 }
 
 

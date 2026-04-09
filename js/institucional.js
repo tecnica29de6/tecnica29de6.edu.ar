@@ -19,7 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
         let currentIndex = 0;
 
         function updateSlider() {
-            const offset = -currentIndex * 100;
+            // Correct math: translateX in % is relative to the slider's OWN width.
+            // If we have 5 items of 100% container width, the slider is 500% width.
+            // To move 1 item, we move 1/5th of the slider, which is (100 / 5) = 20%.
+            const offset = -currentIndex * (100 / items.length);
             slider.style.transform = `translateX(${offset}%)`;
         }
 

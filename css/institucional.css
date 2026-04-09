@@ -441,6 +441,11 @@
         direction: ltr;
     }
 
+    .inst-history-image {
+        margin: 0 auto;
+        max-width: 500px;
+    }
+
     .inst-practicas-header h2 {
         font-size: clamp(1.8rem, 8vw, 2.5rem);
         line-height: 1.1;
@@ -460,7 +465,8 @@
     }
     
     .inst-gallery-item img {
-        height: 450px; /* Increased height for better visibility */
+        height: auto; /* Allow height to be determined by aspect ratio */
+        aspect-ratio: 16 / 9; /* Standard wide aspect ratio for gallery feel */
         object-fit: cover;
         object-position: center;
         image-rendering: -webkit-optimize-contrast;
