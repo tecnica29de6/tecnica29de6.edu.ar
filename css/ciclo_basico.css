@@ -7,20 +7,7 @@ body.cb-body {
     position: relative;
 }
 
-/* The "ola" (wave) effect for the whole body background */
-body.cb-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%230085C8' fill-opacity='0.5' d='M0,160L80,176C160,192,320,224,480,213.3C640,203,800,149,960,144C1120,139,1280,181,1360,202.7L1440,224L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
-    background-size: cover;
-    background-position: center bottom;
-    pointer-events: none;
-    z-index: -1;
-}
+/* The background wave effect was removed as requested */
 
 :root {
     --cb-blue-primary: #0085C8;
@@ -30,47 +17,9 @@ body.cb-body::before {
     --cb-bg-gray: #f8f9fa;
 }
 
-/* Aumento de tamaño del Hero para Ciclo Básico */
-.seccion-hero {
-    min-height: 70vh !important;
-    padding: 6rem 0 !important;
-}
+/* Hero overrides removed to fix mobile bugs and consolidate design */
 
-.hero-contenido h1 {
-    font-size: 5rem !important;
-}
-
-.hero-contenido p {
-    font-size: 1.5rem !important;
-    margin-bottom: 2.5rem !important;
-}
-
-.hero-elipse {
-    height: 110% !important;
-}
-
-/* Wavy Separator (between sections) */
-.cb-wave-divider {
-    position: relative;
-    width: 100%;
-    line-height: 0;
-    z-index: 2;
-}
-
-.cb-wave-divider svg {
-    display: block;
-    width: 100%;
-    height: 80px;
-}
-
-.cb-wave-divider--bottom {
-    margin-top: -1px;
-}
-
-.cb-wave-divider--top {
-    transform: rotate(180deg);
-    margin-bottom: -1px;
-}
+/* Wave dividers were removed as requested */
 
 .section-transition-bar {
     background-color: transparent; /* Totally clear to see the body wave */
@@ -341,7 +290,11 @@ body.cb-body::before {
     align-items: center;
     justify-content: center;
     min-height: 75px;
+    height: auto; /* Allow growth */
     font-size: 1.1rem;
+    overflow-wrap: break-word; /* Security against long words */
+    word-break: break-word;
+    padding: 1rem;
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -527,8 +480,17 @@ body.cb-body::before {
     }
     
     .cb-card {
-        min-height: 60px;
-        font-size: 1rem;
+        min-height: 65px;
+        height: auto;
+        padding: 0.8rem;
+        font-size: 0.95rem;
+        line-height: 1.2;
+    }
+
+    .cb-section-title {
+        font-size: 1.8rem;
+        margin: 2rem 0;
+        text-align: center;
     }
 
     .cb-footer__container { flex-direction: column; align-items: center; text-align: center; }

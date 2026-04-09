@@ -1,0 +1,488 @@
+/* ==============================
+   INSTITUCIONAL PAGE STYLES
+   ============================== */
+
+/* Hero Specifics */
+.institucional-bg {
+    background-image: url('../img/frenteCole.jpg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* -----------------------------
+   INTRO SECTION
+----------------------------- */
+.inst-info-section {
+    padding: 6rem 5%;
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.inst-info-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.inst-info-card {
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(12px);
+    padding: 3rem;
+    border-radius: 24px;
+    box-shadow: 0 20px 50px rgba(0, 59, 115, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    text-align: center;
+}
+
+.inst-badge {
+    display: inline-block;
+    background: #004E8E;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.inst-info-card h2 {
+    color: #003D73;
+    font-size: 2.8rem;
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.inst-info-card p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.inst-highlight {
+    font-size: 1.4rem !important;
+    color: #003D73 !important;
+    font-weight: 700 !important;
+    line-height: 1.6 !important;
+    margin-bottom: 2rem !important;
+    position: relative;
+    padding: 0 1rem;
+}
+
+.inst-highlight::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0;
+    width: 4px; height: 100%;
+    background: #0085C8;
+    border-radius: 2px;
+}
+
+/* -----------------------------
+   GALLERY / SLIDER
+----------------------------- */
+.inst-gallery-section {
+    padding: 0 0 4rem;
+    background: transparent;
+}
+
+.inst-gallery-wrapper {
+    position: relative;
+    max-width: 1100px; /* Reduced from 1400px to avoidBeing 'giant' */
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 30px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.2);
+}
+
+.inst-gallery-slider {
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.inst-gallery-item {
+    min-width: 100%;
+    position: relative;
+}
+
+.inst-gallery-item img {
+    width: 100%;
+    height: 500px; /* Reduced from 600px */
+    object-fit: cover;
+}
+
+.inst-gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 2.5rem 5% 1.5rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0,0,0,0.3) 40%, transparent 100%);
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-align: right;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Gallery Controls */
+.inst-gallery-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: none;
+    width: 60px; height: 60px;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+    z-index: 10;
+    font-size: 1.2rem;
+}
+
+.inst-gallery-btn:hover {
+    background: #0085C8;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.inst-gallery-btn.prev { left: 2rem; }
+.inst-gallery-btn.next { right: 2rem; }
+
+/* -----------------------------
+   HISTORY PREMIUM
+----------------------------- */
+.inst-historia-premium {
+    padding: 8rem 5%;
+    background: transparent; /* Changed from white to show page background */
+}
+
+.inst-content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.inst-history-header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.inst-pre-title {
+    color: #0085C8;
+    font-weight: 800;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.inst-history-header h2 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #003D73;
+}
+
+.inst-history-alternating {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+}
+
+.inst-history-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.inst-history-row.row-reverse {
+    direction: rtl;
+}
+
+.inst-history-row.row-reverse .inst-history-text {
+    direction: ltr;
+}
+
+.inst-history-text {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(8px);
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 59, 115, 0.05);
+}
+
+.inst-history-text h3 {
+    font-size: 2.2rem;
+    color: #003D73;
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+}
+
+.inst-history-text p {
+    font-size: 1.15rem; /* Slightly larger */
+    line-height: 1.9;
+    color: #444; /* Darker for contrast */
+    margin-bottom: 1.5rem;
+}
+
+.inst-history-text strong {
+    color: #0085C8;
+    font-weight: 800;
+}
+
+.inst-history-image {
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.1);
+    transform: rotate(1deg);
+    transition: all 0.5s ease;
+}
+
+.inst-history-row.row-reverse .inst-history-image {
+    transform: rotate(-1deg);
+}
+
+.inst-history-image:hover {
+    transform: rotate(0deg) scale(1.02);
+    box-shadow: 0 20px 60px rgba(0, 59, 115, 0.2);
+}
+
+.inst-history-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+/* -----------------------------
+   PRACTICAS PREMIUM
+----------------------------- */
+.inst-practicas-premium {
+    padding: 6rem 5% 10rem;
+    background: transparent;
+}
+
+.inst-practicas-box {
+    background: #003D73;
+    border-radius: 40px;
+    padding: 5rem;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.inst-practicas-box::before {
+    content: "";
+    position: absolute;
+    top: -50%; right: -20%;
+    width: 400px; height: 400px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 50%;
+}
+
+.inst-practicas-header h2 {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+
+.inst-practicas-header p {
+    font-size: 1.25rem;
+    color: rgba(255,255,255,0.8);
+    max-width: 800px;
+    margin: 0 auto 4rem;
+}
+
+.inst-practicas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+}
+
+.inst-practica-card {
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(10px);
+    padding: 3rem 2rem;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.inst-practica-card:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateY(-15px);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.card-icon {
+    font-size: 3rem;
+    color: #0085C8;
+    margin-bottom: 1.5rem;
+}
+
+.inst-practica-card h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.inst-practica-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.9);
+}
+
+/* -----------------------------
+   RESPONSIVE ADJUSTMENTS
+----------------------------- */
+@media (max-width: 768px) {
+    .inst-info-section {
+        padding: 4rem 15px;
+    }
+
+    .inst-info-card {
+        padding: 2rem 1.5rem;
+        border-radius: 16px;
+    }
+
+    .inst-info-card h2 {
+        font-size: 2rem;
+    }
+
+    .inst-info-card p {
+        font-size: 1.05rem;
+    }
+
+    .inst-highlight {
+        font-size: 1.15rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+
+    /* History Blocks */
+    .inst-history-item {
+        flex-direction: column !important;
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid rgba(0,0,0,0.05); /* Separator on mobile */
+    }
+
+    .inst-history-img, 
+    .inst-history-text {
+        width: 100% !important;
+        padding: 0 !important;
+    }
+
+    .inst-history-text h3 {
+        font-size: 1.5rem;
+        word-break: break-word;
+    }
+
+    .inst-history-card {
+        padding: 1.5rem;
+    }
+
+    /* Interaction Slider */
+    .inst-gallery-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 0.9rem;
+        opacity: 0.9;
+    }
+
+    .inst-slider-dots {
+        bottom: 15px;
+    }
+
+    /* Timeline Grid */
+    .inst-timeline-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+/* -----------------------------
+   RESPONSIVITY
+----------------------------- */
+@media (max-width: 1024px) {
+    .inst-practicas-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .inst-history-header h2 {
+        font-size: clamp(2rem, 8vw, 2.8rem);
+        line-height: 1.1;
+    }
+    
+    .inst-history-row {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .inst-history-row.row-reverse {
+        direction: ltr;
+    }
+
+    .inst-practicas-header h2 {
+        font-size: clamp(1.8rem, 8vw, 2.5rem);
+        line-height: 1.1;
+    }
+}
+
+@media (max-width: 768px) {
+    .inst-info-card h2 {
+        font-size: 2rem;
+    }
+    
+    /* Hero Paragraph refinement for long text */
+    body.institucional-body .hero-contenido p {
+        font-size: clamp(0.85rem, 3.5vw, 1rem); /* Slightly smaller for the new long text */
+        line-height: 1.4;
+        max-width: 100%;
+    }
+    
+    .inst-gallery-item img {
+        height: 450px; /* Increased height for better visibility */
+        object-fit: cover;
+        object-position: center;
+    }
+    
+    .inst-gallery-caption {
+        padding: 2rem 1rem;
+        font-size: 1.1rem;
+        text-align: center; /* Centered on mobile */
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+    }
+    
+    .inst-gallery-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
+        background: rgba(0, 0, 0, 0.4); 
+        backdrop-filter: blur(4px);
+    }
+    
+    .inst-gallery-btn.prev { left: 0.5rem; }
+    .inst-gallery-btn.next { right: 0.5rem; }
+
+    .inst-practicas-box {
+        padding: 3rem 1.5rem;
+    }
+    
+    .inst-history-image img {
+        height: 300px;
+    }
+}

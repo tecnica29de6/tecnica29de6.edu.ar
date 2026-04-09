@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institucional - ET N°29</title>
+
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/ciclo_basico.css">
+    <link rel="stylesheet" href="../css/compu.css">
+    <link rel="stylesheet" href="../css/institucional.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="compu-body">
+
+    <header class="encabezado">
+        <a href="../index.html" class="encabezado__logo-contenedor">
+            <div class="encabezado__logo-imagen"></div>
+            <div class="encabezado__logo-texto">
+                <span>Escuela técnica N°29 de 6</span>
+                <span>Reconquista de Buenos Aires</span>
+            </div>
+        </a>
+
+        <button class="encabezado__menu-hamburger" id="menu-hamburger" aria-label="Abrir menú" aria-expanded="false">
+            <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
+
+        <nav class="encabezado__navegacion" id="navegacion">
+            <ul class="encabezado__lista-enlaces">
+                <li><a href="institucional.html">Institucional</a></li>
+                <li><a href="ciclo_basico.html">Ciclo básico</a></li>
+                <li class="nav-desplegable nav-escritorio">
+                    <a href="javascript:void(0)" style="cursor: pointer;" class="nav-desplegable__toggle">Especialidades
+                        ▼</a>
+                    <ul class="nav-desplegable__menu">
+                        <li><a href="compu.html">Computación</a></li>
+                        <li><a href="mecanica.html">Mecánica</a></li>
+                        <li><a href="electricidad.html">Electricidad</a></li>
+                    </ul>
+                </li>
+                <li class="nav-movil"><a href="compu.html">Computación</a></li>
+                <li class="nav-movil"><a href="mecanica.html">Mecánica</a></li>
+                <li class="nav-movil"><a href="electricidad.html">Electricidad</a></li>
+                <li><a href="#pie-pagina-nuevo">Contactar</a></li>
+            </ul>
+            <div class="encabezado__redes-sociales-movil">
+                <a href="https://www.facebook.com/et29de6"
+                    target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/et29de6" target="_blank" aria-label="Instagram"><i
+                        class="fab fa-instagram"></i></a>
+            </div>
+        </nav>
+
+        <div class="encabezado__redes-sociales">
+            <a href="https://www.facebook.com/et29de6"
+                target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/et29de6" target="_blank" aria-label="Instagram"><i
+                    class="fab fa-instagram"></i></a>
+        </div>
+    </header>
+
+    <main class="contenido-principal">
+
+        <!-- HERO -->
+        <section class="seccion-hero compu-hero">
+            <div class="hero-imagen-fondo institucional-bg"></div>
+            <div class="hero-images-container">
+                <img src="../img/elipses/Ellipse_1.png" alt="" class="hero-elipse">
+                <img src="../img/elipses/Ellipse_2.png" alt="" class="hero-elipse">
+                <img src="../img/elipses/Ellipse_3.png" alt="" class="hero-elipse">
+            </div>
+            <div class="hero-contenido">
+                <h1>LA ESCUELA</h1>
+                <p>Formando técnicos con excelencia, impulsando la innovación y construyendo una historia rica en compromiso educativo y profesional. Brindamos una formación sólida y actualizada, preparando estudiantes capaces de enfrentar los desafíos del mundo tecnológico y laboral, con valores de responsabilidad, esfuerzo y superación.
+</p>
+                <div class="hero-botones">
+                    <a href="#historia" class="boton-llamada-accion boton-llamada-accion--primario">Conocé nuestra Historia</a>
+                    <a href="#practicas" class="boton-llamada-accion boton-llamada-accion--secundario">Prácticas</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- INTRODUCION / INSTALACIONES -->
+        <section class="inst-info-section">
+            <div class="inst-info-container">
+                <div class="inst-info-card">
+                    <h2>Nuestras Instalaciones</h2>
+                    <p class="inst-highlight">La escuela cuenta con dos edificios separados por el patio abierto, más el taller, al cual se accede a la vuelta por la calle Maza. Contamos también con un aula digital, equipada con computadoras de escritorio y portátiles para todas las especialidades, auditorio, biblioteca, buffet y un laboratorio de química, además de las instalaciones específicas de cada especialidad en su respectivo sector.</p>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- FOTOS INSTALACIONES SLIDER -->
+        <section class="inst-gallery-section">
+            <div class="inst-gallery-wrapper">
+                <div class="inst-gallery-slider" id="inst-gallery-slider">
+                    <div class="inst-gallery-item">
+                        <img src="../img/et29frente-1280x720.jpeg" alt="Frente de la escuela">
+                        <div class="inst-gallery-caption">Fachada Histórica - Av. Boedo 760</div>
+                    </div>
+                    <div class="inst-gallery-item">
+                        <img src="../img/computacion.jpeg" alt="Taller">
+                        <div class="inst-gallery-caption">Taller de Especialidades - Entrada por Calle Maza</div>
+                    </div>
+                    <div class="inst-gallery-item">
+                        <img src="../img/compuWork.jpg" alt="Aula Digital">
+                        <div class="inst-gallery-caption">Aula Digital - Tecnología de última generación</div>
+                    </div>
+                </div>
+                <button class="inst-gallery-btn prev" id="inst-gallery-prev"><i class="fas fa-arrow-left"></i></button>
+                <button class="inst-gallery-btn next" id="inst-gallery-next"><i class="fas fa-arrow-right"></i></button>
+            </div>
+        </section>
+
+        <!-- HISTORIA - LAYOUT PREMIUM ASIMETRICO -->
+        <section id="historia" class="inst-historia-premium">
+            <div class="inst-content-wrapper">
+                <div class="inst-history-header">
+                    <span class="inst-pre-title">Desde 1944</span>
+                    <h2>Historia del Establecimiento</h2>
+                </div>
+
+                <div class="inst-history-alternating">
+                    <!-- Bloque 1 -->
+                    <div class="inst-history-row">
+                        <div class="inst-history-text">
+                            <h3>Orígenes y Formación</h3>
+                            <p>Establecida en Boedo 760, la Corporación de Transporte crea en el año 1944 la Escuela de Aprendizaje con el objetivo de formar obreros capacitados para sus talleres en las especialidades de soldadura, chapistería, tornería, mecánica de ajuste, mecánica de automotor y electricidad.</p>
+                            <p>Estaba compuesta por una sección de aulas para las clases teóricas y una sección para los distintos talleres. En 1945, comienza a funcionar en la escuela el primer año.</p>
+                        </div>
+                        <div class="inst-history-image">
+                            <img src="../img/foto_escuela.png" alt="Fundación">
+                        </div>
+                    </div>
+
+                    <!-- Bloque 2 -->
+                    <div class="inst-history-row row-reverse">
+                        <div class="inst-history-text">
+                            <h3>Crecimiento y Excelencia</h3>
+                            <p>Al comenzar el curso en 1947, la Escuela completa el ciclo básico, de tres años. Durante el año 1948, un nuevo servicio social se incorpora: almuerzo gratuito para todo el alumnado y personal docente, como así también el ciclo técnico superior.</p>
+                            <p>La escuela adquirió fama en Sudamérica, recibiendo delegaciones de Venezuela, Colombia, Ecuador y Brasil. Su lema era: <strong>“Enseñar produciendo”</strong>.</p>
+                        </div>
+                        <div class="inst-history-image">
+                            <img src="../img/mecaWork.jpg" alt="Maquinas">
+                        </div>
+                    </div>
+
+                    <!-- Bloque 3 -->
+                    <div class="inst-history-row">
+                        <div class="inst-history-text">
+                            <h3>Consolidación como ET N°29</h3>
+                            <p>En 1963, la Escuela se incorpora al régimen de las Escuelas Nacionales de Educación Técnica de la Nación, pasando a ser Escuela Nacional de Educación Técnica Nº 188. Con posterioridad se le asigna el Nº 29.</p>
+                            <p>En 1967 recibe el nombre de <strong>Reconquista de Buenos Aires</strong>. Su distintivo es la galera del Regimiento de Patricios, ganadora de un concurso institucional.</p>
+                        </div>
+                        <div class="inst-history-image">
+                            <img src="../img/meca.jpg" alt="Banderas">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRACTICAS PROFESIONALIZANTES - ESTILO MODERNO -->
+        <section id="practicas" class="inst-practicas-premium">
+            <div class="inst-content-wrapper">
+                <div class="inst-practicas-box">
+                    <div class="inst-practicas-header">
+                        <h2>Prácticas Profesionalizantes</h2>
+                        <p>Consolidando saberes y capacidades del perfil profesional en entornos reales de trabajo.</p>
+                    </div>
+
+                    <div class="inst-practicas-grid">
+                        <div class="inst-practica-card">
+                            <div class="card-icon"><i class="fas fa-building"></i></div>
+                            <h3>Ambientes Productivos</h3>
+                            <p>Realizadas fuera de la escuela en Organismos Públicos o Privados, aplicando conocimientos en entornos verdaderos de trabajo.</p>
+                        </div>
+                        <div class="inst-practica-card">
+                            <div class="card-icon"><i class="fas fa-laptop-code"></i></div>
+                            <h3>Proyectos Institucionales</h3>
+                            <p>Llevados a cabo en la escuela, integrando habilidades técnicas para resolver problemáticas significativas del sector.</p>
+                        </div>
+                        <div class="inst-practica-card">
+                            <div class="card-icon"><i class="fas fa-sync-alt"></i></div>
+                            <h3>Empresa Simulada</h3>
+                            <p>Un ambiente productivo real dentro de la escuela, trabajando variables propias del sector productivo de cada especialidad.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="pie-pagina-nuevo" id="pie-pagina-nuevo">
+        <div class="pie-pagina__seccion pie-pagina__contactos">
+            <h3>CONTACTOS</h3>
+            <p>Teléfono: <a href="tel:+5401149572920"><strong>+54 011 4957-2920</strong></a></p>
+            <p>Email: <a href="https://mail.google.com/mail/?view=cm&fs=1&to=det_29_de6@bue.edu.ar&su=Consulta%20desde%20el%20Sitio%20Web" target="_blank"><strong>det_29_de6@bue.edu.ar</strong></a></p>
+            
+            <h3 class="pie-pagina__titulo-redes">REDES SOCIALES</h3>
+            <p>Instagram: <a href="https://www.instagram.com/et29de6" target="_blank">@et29de6</a></p>
+            <p>Facebook: <a href="https://www.facebook.com/et29de6" target="_blank">ET 29 De 6 Reconquista de Buenos Aires</a></p>
+        </div>
+
+        <div class="pie-pagina__seccion pie-pagina__ubicacion">
+            <h3>UBICACIÓN</h3>
+            <p>Avenida Boedo 760, Comuna 5, Buenos Aires</p>
+            <p>Líneas de colectivo: 7, 31, 32, 41, 53, 56, 84, 88, 96, 97, 101, 115, 126, 127, 128, 160, 164, 180</p>
+            <p>Subte Línea E: Estación Boedo</p>
+            <div class="footer__mapa-contenedor">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.302504134705!2d-58.41885242413697!3d-34.62179505845324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccaf8b0c7ce0f%3A0x17ca663276a69e1b!2sEscuela%20T%C3%A9cnica%20N%C2%B0%2029%20-%20Reconquista%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1763526991967!5m2!1ses-419!2sar"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón flotante para Contacto / WhatsApp si se desea -->
+    <a href="https://www.instagram.com/et29de6" target="_blank" class="cb-fab-social">
+        <span class="cb-fab-text">SEGUINOS</span>
+        <i class="fab fa-instagram"></i>
+    </a>
+
+    <script src="../js/institucional.js"></script>
+</body>
+
+</html>

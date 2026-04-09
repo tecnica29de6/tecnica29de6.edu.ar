@@ -25,15 +25,24 @@
             </div>
         </a>
 
-        <div class="encabezado__menu-hamburger" id="menu-hamburger">
-            <i class="fas fa-bars"></i>
-        </div>
+        <button class="encabezado__menu-hamburger" id="menu-hamburger" aria-label="Abrir menú" aria-expanded="false">
+            <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
 
         <nav class="encabezado__navegacion" id="navegacion">
+            <div class="nav-branding-movil">
+                <div class="nav-branding-movil__logo"></div>
+                <div class="nav-branding-movil__texto">
+                    <span>Escuela Técnica N°29</span>
+                    <span>Reconquista de Buenos Aires</span>
+                </div>
+            </div>
             <ul class="encabezado__lista-enlaces">
+                <li><a href="institucional.html">Institucional</a></li>
                 <li><a href="ciclo_basico.html">Ciclo básico</a></li>
                 <li class="nav-desplegable nav-escritorio">
-                    <a href="javascript:void(0)" style="cursor: pointer;" class="nav-desplegable__toggle">Especialidades ▼</a>
+                    <a href="javascript:void(0)" style="cursor: pointer;" class="nav-desplegable__toggle">Especialidades
+                        ▼</a>
                     <ul class="nav-desplegable__menu">
                         <li><a href="compu.html">Computación</a></li>
                         <li><a href="mecanica.html">Mecánica</a></li>
@@ -46,18 +55,18 @@
                 <li><a href="#pie-pagina-nuevo">Contactar</a></li>
             </ul>
             <div class="encabezado__redes-sociales-movil">
-                <a href="https://www.facebook.com/et29de6"
-                    target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.facebook.com/et29de6" target="_blank" aria-label="Facebook"><i
+                        class="fab fa-facebook-f"></i></a>
                 <a href="https://www.instagram.com/et29de6" target="_blank" aria-label="Instagram"><i
                         class="fab fa-instagram"></i></a>
             </div>
         </nav>
 
         <div class="encabezado__redes-sociales">
-            <a href="https://www.facebook.com/et29de6"
-                target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.facebook.com/et29de6" target="_blank" aria-label="Facebook"><i
+                    class="fab fa-facebook-f"></i></a>
             <a href="https://www.instagram.com/et29de6" target="_blank" aria-label="Instagram"><i
-                        class="fab fa-instagram"></i></a>
+                    class="fab fa-instagram"></i></a>
         </div>
 
     </header>
@@ -76,7 +85,10 @@
                 <h1>CICLO BÁSICO</h1>
                 <h2>RECONQUISTA DE BUENOS AIRES</h2>
                 <p>
-                    Los primeros dos años de escuela técnica conforman el ciclo básico. Aquí se introduce a los alumnos tanto a materias teóricas del secundario (como Matemática y Lengua y Literatura), como a los talleres, donde se aprende trabajando por medio de actividades prácticas con el objetivo de desarrollar conocimientos, técnicas y experiencia en primera persona.
+                    Los primeros dos años de escuela técnica conforman el ciclo básico. Aquí se introduce a los alumnos
+                    tanto a materias teóricas del secundario (como Matemática y Lengua y Literatura), como a los
+                    talleres, donde se aprende trabajando por medio de actividades prácticas con el objetivo de
+                    desarrollar conocimientos, técnicas y experiencia en primera persona.
                 </p>
                 <div class="hero-botones">
                     <a href="#materias" class="boton-llamada-accion boton-llamada-accion--primario">Ver materias</a>
@@ -86,7 +98,7 @@
         </section>
 
         <section class="cb-section" id="materias">
-            <div class="cb-wave-divider cb-wave-divider--top"></div>
+
 
             <div class="cb-container">
                 <div class="cb-tabs-container">
@@ -98,7 +110,8 @@
                         </div>
                     </div>
 
-                    <h2 class="cb-section-title" id="materias-year-title" style="text-align:center; margin: 1.5rem 0 1rem;">PLAN DE ESTUDIOS - PRIMER AÑO</h2>
+                    <h2 class="cb-section-title" id="materias-year-title"
+                        style="text-align:center; margin: 1.5rem 0 1rem;">PLAN DE ESTUDIOS - PRIMER AÑO</h2>
 
                     <div class="plan-grid">
                         <div class="cb-curriculum-grid subjects-grid" id="subjects-grid">
@@ -254,13 +267,17 @@
 
 
         <section class="cb-section" id="talleres">
-            <div class="cb-wave-divider cb-wave-divider--top"></div>
+
             <div class="cb-intro-container cb-intro-container--blue">
                 <div class="cb-grid-2">
                     <div class="cb-section__text">
                         <h2>El Taller</h2>
-                        <p>Hasta tercer año, todos los cursos de todas las Especialidades asisten al taller en el contraturno dos veces por semana (en la misma jornada en el caso del turno noche).</p>
-                        <P>Taller es una materia más del diseño curricular, por ende es de carácter obligatorio. A lo largo del año, los alumnos asisten en rotaciones a los distintos sectores del mismo. Estas rotaciones varían con los años. En el caso de tercero, también varían con la especialidad del curso.</P>
+                        <p>Hasta tercer año, todos los cursos de todas las Especialidades asisten al taller en el
+                            contraturno dos veces por semana (en la misma jornada en el caso del turno noche).</p>
+                        <P>Taller es una materia más del diseño curricular, por ende es de carácter obligatorio. A lo
+                            largo del año, los alumnos asisten en rotaciones a los distintos sectores del mismo. Estas
+                            rotaciones varían con los años. En el caso de tercero, también varían con la especialidad
+                            del curso.</P>
                     </div>
                     <div class="cb-illustration cb-illustration--right">
                         <img src="../img/ciclo_basico_workshop.png" alt="Estudiantes en talleres"
@@ -279,7 +296,8 @@
                         </div>
                     </div>
 
-                    <h2 class="cb-section-title" id="talleres-year-title" style="text-align:center; margin: 1.5rem 0 1rem;">TALLERES - PRIMER AÑO</h2>
+                    <h2 class="cb-section-title" id="talleres-year-title"
+                        style="text-align:center; margin: 1.5rem 0 1rem;">TALLERES - PRIMER AÑO</h2>
 
                     <div class="plan-grid">
                         <div class="cb-curriculum-grid subjects-grid" id="talleres-grid">
@@ -362,37 +380,44 @@
             </div>
         </section>
 
-        <div class="cb-wave-divider cb-wave-divider--top"></div>
-            <div class="cb-intro-container cb-intro-container--blue">
-                <div class="cb-grid-2">
-                    <div class="cb-section__text">
-                        <h2>Período <strong>EPA</strong>: Empezando Primer Año</h2>
-                        <p>Los últimos tres días hábiles antes de empezar las clases, los alumnos ingresantes asisten a la escuela para el período EPA, el cual busca amenizar su introducción a la escuela secundaria, con tres materias: Metodología de investigación, Lengua y Literatura y Matemática.</p>
-                        <P>En este período los alumnos y sus padres pueden conocer las instalaciones de la escuela por medio de recorridos guiados por las autoridades.</P>
-                    </div>
-                    <div class="cb-illustration cb-illustration--right">
-                        <img src="../img/ciclo_basico_workshop.png" alt="Estudiantes en talleres"
-                            style="filter: hue-rotate(45deg);">
-                    </div>
+
+        <div class="cb-intro-container cb-intro-container--blue">
+            <div class="cb-grid-2">
+                <div class="cb-section__text">
+                    <h2>Período <strong>EPA</strong>: Empezando Primer Año</h2>
+                    <p>Los últimos tres días hábiles antes de empezar las clases, los alumnos ingresantes asisten a la
+                        escuela para el período EPA, el cual busca amenizar su introducción a la escuela secundaria, con
+                        tres materias: Metodología de investigación, Lengua y Literatura y Matemática.</p>
+                    <P>En este período los alumnos y sus padres pueden conocer las instalaciones de la escuela por medio
+                        de recorridos guiados por las autoridades.</P>
+                </div>
+                <div class="cb-illustration cb-illustration--right">
+                    <img src="../img/ciclo_basico_workshop.png" alt="Estudiantes en talleres"
+                        style="filter: hue-rotate(45deg);">
                 </div>
             </div>
+        </div>
 
         <footer class="pie-pagina-nuevo" id="pie-pagina-nuevo">
 
             <div class="pie-pagina__seccion pie-pagina__contactos">
                 <h3>CONTACTOS</h3>
                 <p>Teléfono: <a href="tel:+5401149572920"><strong>+54 011 4957-2920</strong></a></p>
-                <p>Email: <a href="https://mail.google.com/mail/?view=cm&fs=1&to=det_29_de6@bue.edu.ar&su=Consulta%20desde%20el%20Sitio%20Web" target="_blank"><strong>det_29_de6@bue.edu.ar</strong></a></p>
+                <p>Email: <a
+                        href="https://mail.google.com/mail/?view=cm&fs=1&to=det_29_de6@bue.edu.ar&su=Consulta%20desde%20el%20Sitio%20Web"
+                        target="_blank"><strong>det_29_de6@bue.edu.ar</strong></a></p>
 
                 <h3 class="pie-pagina__titulo-redes">REDES SOCIALES</h3>
                 <p>Instagram: <a href="https://www.instagram.com/et29de6" target="_blank">@et29de6</a></p>
-                <p>Facebook: <a href="https://www.facebook.com/et29de6" target="_blank">ET 29 De 6 Reconquista de Buenos Aires</a></p>
+                <p>Facebook: <a href="https://www.facebook.com/et29de6" target="_blank">ET 29 De 6 Reconquista de Buenos
+                        Aires</a></p>
             </div>
 
             <div class="pie-pagina__seccion pie-pagina__ubicacion">
                 <h3>UBICACIÓN</h3>
                 <p>Avenida Boedo 760, Comuna 5, Buenos Aires</p>
-                <p>Líneas de colectivo: 7, 31, 32, 41, 53, 56, 84, 88, 96, 97, 101, 115, 126, 127, 128, 160, 164, 180</p>
+                <p>Líneas de colectivo: 7, 31, 32, 41, 53, 56, 84, 88, 96, 97, 101, 115, 126, 127, 128, 160, 164, 180
+                </p>
                 <p>Subte Línea E: Estación Boedo</p>
                 <div class="footer__mapa-contenedor">
                     <iframe
