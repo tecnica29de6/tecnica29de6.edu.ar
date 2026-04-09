@@ -26,6 +26,15 @@ body {
     background-repeat: no-repeat;
 }
 
+/* Mobile Background Optimization */
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll; /* Fixed backgrounds cause white gaps on mobile scroll */
+        background-size: auto 100%; /* Better for vertical wave patterns on narrow screens */
+        background-repeat: repeat-y;
+    }
+}
+
 /* ========================================
    2. HEADER / NAVBAR
    ======================================== */
