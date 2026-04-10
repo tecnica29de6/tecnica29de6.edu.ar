@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /* ==========================================================================
-       4. CARRUSEL DE INSTALACIONES (OPTIMIZADO)
+       4. CARRUSEL DE INSTALACIONES (OPTIMIZADO Y MULTI-ITEM)
        ========================================================================== */
     const instDeslizador = document.getElementById('inst-deslizador');
     const instPrevBtn = document.getElementById('elec-prev-btn');
@@ -83,28 +83,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (instDeslizador && instPrevBtn && instNextBtn) {
         const slides = instDeslizador.querySelectorAll('img');
-        let currentSlide = 0;
+        let indiceActual = 0;
 
-        // Set dynamic width and flex for slides
-        instDeslizador.style.width = `${slides.length * 100}%`;
-        slides.forEach(slide => {
-            slide.style.flex = `0 0 ${100 / slides.length}%`;
-        });
+        const obtenerItemsPorVista = () => {
+            if (window.innerWidth > 1024) return 3;
+            if (window.innerWidth > 768) return 2;
+            return 1;
+        };
 
-        function updateInstSlider() {
-            const offset = -currentSlide * (100 / slides.length);
-            instDeslizador.style.transform = `translateX(${offset}%)`;
-        }
+        const actualizarCarrusel = () => {
+            const itemsPorVista = obtenerItemsPorVista();
+            const anchoItem = 100 / itemsPorVista;
+            const desplazamiento = -indiceActual * anchoItem;
+            instDeslizador.style.transform = `translateX(${desplazamiento}%)`;
+        };
 
         instNextBtn.addEventListener('click', () => {
-            currentSlide = (currentSlide + 1) % slides.length;
-            updateInstSlider();
+            const itemsPorVista = obtenerItemsPorVista();
+            if (indiceActual + itemsPorVista >= slides.length) {
+                indiceActual = 0;
+            } else {
+                indiceActual += itemsPorVista;
+            }
+            actualizarCarrusel();
         });
 
         instPrevBtn.addEventListener('click', () => {
-            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-            updateInstSlider();
+            const itemsPorVista = obtenerItemsPorVista();
+            if (indiceActual - itemsPorVista < 0) {
+                indiceActual = Math.max(0, slides.length - itemsPorVista);
+            } else {
+                indiceActual -= itemsPorVista;
+            }
+            actualizarCarrusel();
         });
+
+        window.addEventListener('resize', actualizarCarrusel);
     }
 
 });

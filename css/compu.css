@@ -445,19 +445,31 @@ body.compu-body::before {
 /* INSTALACIONES SLIDER OPTIMIZATION */
 .inst-deslizador {
     display: flex;
-    overflow: hidden !important; /* Hide native scroll */
-    scroll-behavior: smooth;
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
     will-change: transform;
-    transition: transform 0.2s ease;
+    /* Optional: overflow-x: auto; scroll-snap-type: x mandatory; if you want touch support too */
 }
 
 .inst-deslizador img {
-    width: 100%;
+    width: 33.333%; /* Show 3 images on desktop */
     height: 550px;
     object-fit: cover;
-    image-rendering: high-quality;
-    transform: translateZ(0); /* Force GPU */
-    backface-visibility: hidden;
+    flex-shrink: 0;
+    transition: transform 0.5s ease;
+    scroll-snap-align: start;
+}
+
+@media (max-width: 1024px) {
+    .inst-deslizador img {
+        width: 50%; /* Show 2 images on tablet */
+    }
+}
+
+@media (max-width: 768px) {
+    .inst-deslizador img {
+        width: 100%; /* Show 1 image on mobile */
+        height: 350px;
+    }
 }
 .img-gallery-card {
     position: relative; overflow: hidden; border-radius: 12px; cursor: pointer;

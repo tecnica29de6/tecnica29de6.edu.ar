@@ -18,40 +18,55 @@ document.addEventListener('DOMContentLoaded', () => {
         const items = slider.querySelectorAll('.inst-gallery-item');
         let currentIndex = 0;
 
-        function updateSlider() {
-            // Correct math: translateX in % is relative to the slider's OWN width.
-            // If we have 5 items of 100% container width, the slider is 500% width.
-            // To move 1 item, we move 1/5th of the slider, which is (100 / 5) = 20%.
-            const offset = -currentIndex * (100 / items.length);
+        const obtenerItemsPorVista = () => {
+            if (window.innerWidth > 1024) return 3;
+            if (window.innerWidth > 768) return 2;
+            return 1;
+        };
+
+        const updateSlider = () => {
+            const itemsPorVista = obtenerItemsPorVista();
+            const anchoItem = 100 / itemsPorVista;
+            const offset = -currentIndex * anchoItem;
             slider.style.transform = `translateX(${offset}%)`;
-        }
+        };
 
-        prevBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex > 0) ? currentIndex - 1 : items.length - 1;
+        const showNext = () => {
+            const itemsPorVista = obtenerItemsPorVista();
+            if (currentIndex + itemsPorVista >= items.length) {
+                currentIndex = 0;
+            } else {
+                currentIndex += itemsPorVista;
+            }
             updateSlider();
-        });
+        };
 
-        nextBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
+        const showPrev = () => {
+            const itemsPorVista = obtenerItemsPorVista();
+            if (currentIndex - itemsPorVista < 0) {
+                currentIndex = Math.max(0, items.length - itemsPorVista);
+            } else {
+                currentIndex -= itemsPorVista;
+            }
             updateSlider();
-        });
+        };
+
+        nextBtn.addEventListener('click', showNext);
+        prevBtn.addEventListener('click', showPrev);
 
         // Auto-rotation every 6 seconds
-        let autoPlay = setInterval(() => {
-            currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
-            updateSlider();
-        }, 6000);
+        let autoPlay = setInterval(showNext, 6000);
 
         // Pause on hover
         const wrapper = document.querySelector('.inst-gallery-wrapper');
         if (wrapper) {
             wrapper.addEventListener('mouseenter', () => clearInterval(autoPlay));
             wrapper.addEventListener('mouseleave', () => {
-                autoPlay = setInterval(() => {
-                    currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
-                    updateSlider();
-                }, 6000);
+                autoPlay = setInterval(showNext, 6000);
             });
         }
+        
+        // Update on resize
+        window.addEventListener('resize', updateSlider);
     }
 });
