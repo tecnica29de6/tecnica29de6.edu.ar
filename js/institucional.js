@@ -9,46 +9,30 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Premium Gallery Slider
+    /* ==========================================================================
+       2. PREMIUM GALLERY SLIDER (NATIVO Y ROBUSTO)
+       ========================================================================== */
     const slider = document.getElementById('inst-gallery-slider');
     const prevBtn = document.getElementById('inst-gallery-prev');
     const nextBtn = document.getElementById('inst-gallery-next');
     
     if (slider && prevBtn && nextBtn) {
-        const items = slider.querySelectorAll('.inst-gallery-item');
-        let currentIndex = 0;
-
-        const obtenerItemsPorVista = () => {
-            if (window.innerWidth > 1024) return 3;
-            if (window.innerWidth > 768) return 2;
-            return 1;
-        };
-
-        const updateSlider = () => {
-            const itemsPorVista = obtenerItemsPorVista();
-            const anchoItem = 100 / itemsPorVista;
-            const offset = -currentIndex * anchoItem;
-            slider.style.transform = `translateX(${offset}%)`;
-        };
 
         const showNext = () => {
-            const itemsPorVista = obtenerItemsPorVista();
-            if (currentIndex + itemsPorVista >= items.length) {
-                currentIndex = 0;
+            const maxScroll = slider.scrollWidth - slider.clientWidth;
+            if (slider.scrollLeft >= maxScroll - 10) {
+                slider.scrollTo({ left: 0, behavior: 'smooth' });
             } else {
-                currentIndex += itemsPorVista;
+                slider.scrollBy({ left: slider.clientWidth, behavior: 'smooth' });
             }
-            updateSlider();
         };
 
         const showPrev = () => {
-            const itemsPorVista = obtenerItemsPorVista();
-            if (currentIndex - itemsPorVista < 0) {
-                currentIndex = Math.max(0, items.length - itemsPorVista);
+            if (slider.scrollLeft <= 10) {
+                slider.scrollTo({ left: slider.scrollWidth, behavior: 'smooth' });
             } else {
-                currentIndex -= itemsPorVista;
+                slider.scrollBy({ left: -slider.clientWidth, behavior: 'smooth' });
             }
-            updateSlider();
         };
 
         nextBtn.addEventListener('click', showNext);
@@ -66,7 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
         
-        // Update on resize
-        window.addEventListener('resize', updateSlider);
+        // El navegador maneja el resize automáticamente con scroll nativo
     }
 });

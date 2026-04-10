@@ -75,50 +75,30 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /* ==========================================================================
-       4. CARRUSEL DE INSTALACIONES (OPTIMIZADO Y MULTI-ITEM)
+       4. CARRUSEL DE INSTALACIONES (NATIVO Y ROBUSTO)
        ========================================================================== */
     const instDeslizador = document.getElementById('inst-deslizador');
     const instPrevBtn = document.getElementById('meca-prev-btn');
     const instNextBtn = document.getElementById('meca-next-btn');
 
     if (instDeslizador && instPrevBtn && instNextBtn) {
-        const slides = instDeslizador.querySelectorAll('img');
-        let indiceActual = 0;
-
-        const obtenerItemsPorVista = () => {
-            if (window.innerWidth > 1024) return 3;
-            if (window.innerWidth > 768) return 2;
-            return 1;
-        };
-
-        const actualizarCarrusel = () => {
-            const itemsPorVista = obtenerItemsPorVista();
-            const anchoItem = 100 / itemsPorVista;
-            const desplazamiento = -indiceActual * anchoItem;
-            instDeslizador.style.transform = `translateX(${desplazamiento}%)`;
-        };
-
+        
         instNextBtn.addEventListener('click', () => {
-            const itemsPorVista = obtenerItemsPorVista();
-            if (indiceActual + itemsPorVista >= slides.length) {
-                indiceActual = 0;
+            const maxScroll = instDeslizador.scrollWidth - instDeslizador.clientWidth;
+            if (instDeslizador.scrollLeft >= maxScroll - 10) {
+                instDeslizador.scrollTo({ left: 0, behavior: 'smooth' });
             } else {
-                indiceActual += itemsPorVista;
+                instDeslizador.scrollBy({ left: instDeslizador.clientWidth, behavior: 'smooth' });
             }
-            actualizarCarrusel();
         });
 
         instPrevBtn.addEventListener('click', () => {
-            const itemsPorVista = obtenerItemsPorVista();
-            if (indiceActual - itemsPorVista < 0) {
-                indiceActual = Math.max(0, slides.length - itemsPorVista);
+            if (instDeslizador.scrollLeft <= 10) {
+                instDeslizador.scrollTo({ left: instDeslizador.scrollWidth, behavior: 'smooth' });
             } else {
-                indiceActual -= itemsPorVista;
+                instDeslizador.scrollBy({ left: -instDeslizador.clientWidth, behavior: 'smooth' });
             }
-            actualizarCarrusel();
         });
-
-        window.addEventListener('resize', actualizarCarrusel);
     }
 
 
