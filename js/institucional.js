@@ -17,22 +17,33 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextBtn = document.getElementById('inst-gallery-next');
     
     if (slider && prevBtn && nextBtn) {
+        let isScrolling = false;
 
         const showNext = () => {
+            if (isScrolling) return;
+            isScrolling = true;
+
             const maxScroll = slider.scrollWidth - slider.clientWidth;
             if (slider.scrollLeft >= maxScroll - 10) {
-                slider.scrollTo({ left: 0, behavior: 'smooth' });
+                slider.scrollTo({ left: 0 });
             } else {
-                slider.scrollBy({ left: slider.clientWidth, behavior: 'smooth' });
+                slider.scrollBy({ left: slider.clientWidth });
             }
+
+            setTimeout(() => { isScrolling = false; }, 600);
         };
 
         const showPrev = () => {
+            if (isScrolling) return;
+            isScrolling = true;
+
             if (slider.scrollLeft <= 10) {
-                slider.scrollTo({ left: slider.scrollWidth, behavior: 'smooth' });
+                slider.scrollTo({ left: slider.scrollWidth });
             } else {
-                slider.scrollBy({ left: -slider.clientWidth, behavior: 'smooth' });
+                slider.scrollBy({ left: -slider.clientWidth });
             }
+
+            setTimeout(() => { isScrolling = false; }, 600);
         };
 
         nextBtn.addEventListener('click', showNext);

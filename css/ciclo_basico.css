@@ -296,8 +296,8 @@ body.cb-body {
     align-items: center;
     text-align: center;
     width: auto;
-    min-width: 140px;
-    max-width: 195px;
+    min-width: 160px;
+    max-width: 220px;
     gap: 0.8rem;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     padding: 1rem;
@@ -376,9 +376,9 @@ body.cb-body {
     color: #333;
     line-height: 1.2;
     max-width: 100%;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    hyphens: none; /* Desactivado para evitar cortes feos como ALGORIT-MOS */
+    overflow-wrap: normal;
+    word-break: normal;
+    hyphens: none; /* Evitar cortes feos como ALGORIT-MOS */
     text-transform: uppercase;
     padding: 0 4px;
     text-align: center;

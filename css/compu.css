@@ -137,10 +137,13 @@ body.compu-body::before {
 }
 
 .cb-card__title {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     line-height: 1.2;
     font-weight: 800;
     color: var(--text-dark);
+    overflow-wrap: normal;
+    word-break: normal;
+    hyphens: none;
 }
 
 .cb-card__hours {
@@ -278,10 +281,13 @@ body.compu-body::before {
 }
 
 .cb-card__title {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     line-height: 1.2;
     font-weight: 800;
     color: var(--text-dark);
+    overflow-wrap: normal;
+    word-break: normal;
+    hyphens: none;
 }
 
 .cb-card__hours {
@@ -432,8 +438,7 @@ body.compu-body::before {
         min-height: 60px;
         height: auto;
         padding: 0.8rem;
-        font-size: 0.95rem;
-        word-break: break-word;
+        font-size: 0.9rem;
     }
     .project-track { gap: 0.5rem; }
     .project-card { min-width: 130px; }
@@ -451,6 +456,8 @@ body.compu-body::before {
     scrollbar-width: none; /* Oculta scrollbar en Firefox */
     -ms-overflow-style: none; /* Oculta scrollbar en Edge/IE */
     transition: none; /* Quitamos transform anterior */
+    scroll-snap-stop: always;
+    will-change: scroll-position;
 }
 
 .inst-deslizador::-webkit-scrollbar {

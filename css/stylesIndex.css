@@ -37,6 +37,8 @@
     margin-top: 2rem;
     margin-right: -50vw;
     margin-left: -50vw;
+    content-visibility: auto;
+    contain-intrinsic-size: 100vw 450px;
 }
 
 .carrusel-contenedor {

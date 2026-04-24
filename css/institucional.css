@@ -110,6 +110,8 @@
     scrollbar-width: none;
     -ms-overflow-style: none;
     transition: none;
+    scroll-snap-stop: always;
+    will-change: scroll-position;
 }
 
 .inst-gallery-slider::-webkit-scrollbar {

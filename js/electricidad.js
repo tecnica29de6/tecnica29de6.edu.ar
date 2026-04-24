@@ -82,23 +82,31 @@ document.addEventListener('DOMContentLoaded', () => {
     const instNextBtn = document.getElementById('elec-next-btn');
 
     if (instDeslizador && instPrevBtn && instNextBtn) {
-        
-        instNextBtn.addEventListener('click', () => {
-            const maxScroll = instDeslizador.scrollWidth - instDeslizador.clientWidth;
-            if (instDeslizador.scrollLeft >= maxScroll - 10) {
-                instDeslizador.scrollTo({ left: 0, behavior: 'smooth' });
-            } else {
-                instDeslizador.scrollBy({ left: instDeslizador.clientWidth, behavior: 'smooth' });
-            }
-        });
+        let isScrolling = false;
 
-        instPrevBtn.addEventListener('click', () => {
-            if (instDeslizador.scrollLeft <= 10) {
-                instDeslizador.scrollTo({ left: instDeslizador.scrollWidth, behavior: 'smooth' });
+        const handleScroll = (direction) => {
+            if (isScrolling) return;
+            isScrolling = true;
+
+            if (direction === 'next') {
+                const maxScroll = instDeslizador.scrollWidth - instDeslizador.clientWidth;
+                if (instDeslizador.scrollLeft >= maxScroll - 10) {
+                    instDeslizador.scrollTo({ left: 0 });
+                } else {
+                    instDeslizador.scrollBy({ left: instDeslizador.clientWidth });
+                }
             } else {
-                instDeslizador.scrollBy({ left: -instDeslizador.clientWidth, behavior: 'smooth' });
+                if (instDeslizador.scrollLeft <= 10) {
+                    instDeslizador.scrollTo({ left: instDeslizador.scrollWidth });
+                } else {
+                    instDeslizador.scrollBy({ left: -instDeslizador.clientWidth });
+                }
             }
-        });
+
+            setTimeout(() => { isScrolling = false; }, 600); // Duración de la transición smooth
+        };
+
+        instNextBtn.addEventListener('click', () => handleScroll('next'));
+        instPrevBtn.addEventListener('click', () => handleScroll('prev'));
     }
-
 });
