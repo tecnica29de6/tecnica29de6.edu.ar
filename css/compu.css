@@ -1,13 +1,4 @@
 
-:root {
-    --blue-main: #0077c8;
-    --blue-dark: #003D73;
-    --blue-accent: #0085C8;
-    --blue-soft: #E3F2FD;
-    --white: #ffffff;
-    --text-dark: #0c1d3c;
-    --surface: #e6f3fa;
-}
 
 /* Hero override for this page */
 .compu-hero .hero-imagen-fondo {
@@ -560,70 +551,7 @@ body.compu-body::before {
     .modal-body img, .modal-info { width: 100%; }
     .modal-body img { max-height: 250px; margin-bottom: 1.5rem; }
 }
-/* FAB Redes Social */
-@keyframes cb-fab-pulse {
-    0% { box-shadow: 0 0 0 0 rgba(0, 119, 200, 0.4); }
-    70% { box-shadow: 0 0 0 20px rgba(0, 119, 200, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(0, 119, 200, 0); }
-}
 
-.cb-fab-social {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background: rgba(0, 59, 115, 0.9);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    color: white;
-    width: 60px;
-    height: 60px;
-    border-radius: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    z-index: 9999;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    overflow: hidden;
-    animation: cb-fab-pulse 2.5s infinite;
-}
-
-.cb-fab-social i {
-    font-size: 1.8rem;
-    min-width: 60px;
-    text-align: center;
-}
-
-.cb-fab-text {
-    font-size: 0.8rem;
-    font-weight: 800;
-    letter-spacing: 1px;
-    white-space: nowrap;
-    opacity: 0;
-    max-width: 0;
-    transition: all 0.3s ease;
-}
-
-.cb-fab-social:hover {
-    width: 170px;
-    background: var(--blue-main);
-    animation: none;
-}
-
-.cb-fab-social:hover .cb-fab-text {
-    opacity: 1;
-    max-width: 100px;
-    margin-right: 15px;
-}
-
-@media (max-width: 768px) {
-    .cb-fab-social { bottom: 20px; right: 20px; width: 50px; height: 50px; }
-    .cb-fab-social i { font-size: 1.5rem; min-width: 50px; }
-    .cb-fab-social:hover { width: 50px; }
-    .cb-fab-text { display: none; }
-}
 
 /* Accessibility & Sticky Navbar Fixes */
 .encabezado {

@@ -1,5 +1,19 @@
 /* ========================================
-   1. RESET Y GLOBALES
+   1. VARIABLES Y DISEÑO
+   ======================================== */
+:root {
+    --blue-main: #0077c8;
+    --blue-dark: #003D73;
+    --blue-accent: #0085C8;
+    --blue-soft: #E3F2FD;
+    --white: #ffffff;
+    --text-dark: #0c1d3c;
+    --surface: #e6f3fa;
+    --transition-smooth: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* ========================================
+   2. RESET Y GLOBALES
    ======================================== */
 * {
     margin: 0;
