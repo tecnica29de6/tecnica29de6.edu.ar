@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     titleIds.forEach(id => {
                         const ele = document.getElementById(id);
                         if (ele && yearNames[selectedYear]) {
-                            ele.textContent = 'PLAN DE ESTUDIOS - ' + yearNames[selectedYear];
+                            ele.textContent = yearNames[selectedYear];
                         }
                     });
 
@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     });
                     const talleresTitle = document.getElementById('talleres-year-title');
                     if (talleresTitle) {
-                        talleresTitle.textContent = selectedYearTalleres === '1' ? 'TALLERES - PRIMER AÑO' : 'TALLERES - SEGUNDO AÑO';
+                        talleresTitle.textContent = selectedYearTalleres === '1' ? 'PRIMER AÑO' : 'SEGUNDO AÑO';
                     }
                 }
             });
