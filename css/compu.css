@@ -21,7 +21,6 @@
 .mec-hero .hero-imagen-fondo {
     background-image: url('../img/mec/fondoMec.webp');
     transform: scaleX(-1);
-     
 }
 
 /* Page background */
@@ -29,7 +28,7 @@ body.compu-body {
     margin: 0;
     background-color: var(--surface);
     color: var(--text-dark);
-    font-family: 'Montserrat', "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     scroll-behavior: smooth;
     position: relative;
     overflow-x: hidden;
