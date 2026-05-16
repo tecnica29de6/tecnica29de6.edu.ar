@@ -1,4 +1,16 @@
 
+/* ========================================
+   CICLO SUPERIOR - ESPECIALIDADES
+   ========================================
+   Estilos centralizados para Computación, Mecánica y Electricidad
+   
+   Estructura:
+   - Variables CSS globales para todas las especialidades
+   - Estilos compartidos (tabs, plan de estudios, perfil técnico)
+   - Overrides específicos para cada especialidad (.compu-hero, .mec-hero, .elec-hero)
+   - Utilizado por: compu.html, mecanica.html, electricidad.html, institucional.html
+   ======================================== */
+
 :root {
     --blue-main: #0077c8;
     --blue-dark: #003D73;
@@ -121,39 +133,8 @@ body.compu-body::before {
 }
 
 
-.cb-card__header {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    width: 100%;
-}
-
-.cb-card__subject-icon {
-    font-size: 1.8rem;
-    color: var(--blue-main);
-    margin-bottom: 0.5rem;
-    opacity: 0.9;
-}
-
-.cb-card__title {
-    font-size: 1.25rem;
-    line-height: 1.2;
-    font-weight: 800;
-    color: var(--text-dark);
-}
-
-.cb-card__hours {
-    display: inline-block;
-    align-self: flex-start;
-    background: var(--blue-dark);
-    color: white;
-    padding: 0.4rem 1rem;
-    border-radius: 8px;
-    font-size: 0.8rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    box-shadow: 0 4px 10px rgba(0, 61, 115, 0.2);
+.plan-grid {
+    display: block; /* No more side panel, use full width */
 }
 
 /* Perfil Lista Competencias */
@@ -260,41 +241,6 @@ body.compu-body::before {
 .cb-card:hover::before {
     width: 8px;
     opacity: 1;
-}
-
-.cb-card__header {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    width: 100%;
-}
-
-.cb-card__subject-icon {
-    font-size: 1.8rem;
-    color: var(--blue-main);
-    margin-bottom: 0.5rem;
-    opacity: 0.9;
-}
-
-.cb-card__title {
-    font-size: 1.25rem;
-    line-height: 1.2;
-    font-weight: 800;
-    color: var(--text-dark);
-}
-
-.cb-card__hours {
-    display: inline-block;
-    align-self: flex-start;
-    background: var(--blue-dark);
-    color: white;
-    padding: 0.4rem 1rem;
-    border-radius: 8px;
-    font-size: 0.8rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    box-shadow: 0 4px 10px rgba(0, 61, 115, 0.2);
 }
 
 /* Perfil Lista Competencias */
@@ -594,31 +540,6 @@ body.compu-body::before {
     .cb-fab-social:hover { width: 50px; }
     .cb-fab-text { display: none; }
 }
-
-/* Accessibility & Sticky Navbar Fixes */
-.encabezado {
-    position: fixed !important;
-    top: 0;
-    width: 100% !important;
-    left: 0;
-    z-index: 9999 !important;
-    background: #ffffff !important;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08) !important;
-}
-
-.encabezado__logo-imagen {
-    margin: 0 !important;
-    transform: none !important;
-    position: relative !important;
-    top: 0 !important;
-    background-image: url('../img/logo_transparent.png') !important;
-}
-
-.encabezado__logo-contenedor {
-    display: flex !important;
-    align-items: center !important;
-}
-
 
 /* Centrar texto en los botones de llamada a la acción (Contactar) */
 .boton-llamada-accion {

@@ -11,3 +11,6 @@ Se cambiaron los íconos de las materias en los planes de estudio
 Se clonaron los progresos realizados desde la rama main (push de emergencia por adición de imágenes).
 Se eliminaron algunas líneas con propiedades y vínculos redundantes
 Se agregó un hipervínculo a un documento para cada materia en los planes de estudios de todas las páginas que contengan. A forma de placeholder, todos los planes de estudio llevan a Claro de Luna de Beethoven
+
+16/5
+Se optimizaron y redujeron parcialmente todas las páginas y css, eliminando secciones redundantes y refactorizándolas para facilitar la legibilidad del código.
