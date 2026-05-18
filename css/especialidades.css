@@ -1,16 +1,3 @@
-
-/* ========================================
-   CICLO SUPERIOR - ESPECIALIDADES
-   ========================================
-   Estilos centralizados para Computación, Mecánica y Electricidad
-   
-   Estructura:
-   - Variables CSS globales para todas las especialidades
-   - Estilos compartidos (tabs, plan de estudios, perfil técnico)
-   - Overrides específicos para cada especialidad (.compu-hero, .mec-hero, .elec-hero)
-   - Utilizado por: compu.html, mecanica.html, electricidad.html, institucional.html
-   ======================================== */
-
 :root {
     --blue-main: #0077c8;
     --blue-dark: #003D73;
@@ -98,43 +85,6 @@ body.compu-body::before {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-}
-
-
-/* Plan de Estudios Area Reutilizado */
-.compu-plan {
-    padding: 0 5% 2.5rem; max-width: 1400px; margin: 0 auto;
-}
-
-.cb-tabs-container { text-align: center; margin-bottom: 0.5rem; }
-.cb-plan-de-box {
-    background-color: var(--blue-accent); display: inline-block; padding: 0.8rem 1.5rem 1.2rem;
-    border-radius: 15px; box-shadow: 0 8px 15px rgba(0,0,0,0.2); width: 100%; max-width: 1000px;
-}
-.cb-plan-de-title {
-    color: white; font-size: 1.8rem; font-weight: 700; margin-bottom: 0.5rem; text-transform: uppercase;
-}
-.cb-tabs-header {
-    background-color: rgba(0, 163, 255, 0.4); display: flex; padding: 6px; border-radius: 12px;
-    backdrop-filter: blur(5px); border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
-}
-.cb-tab-btn {
-    flex: 1; padding: 0.8rem 1rem; border: none; background: transparent; color: white;
-    font-weight: 700; cursor: pointer; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    font-size: 1rem; border-radius: 8px; text-transform: uppercase; letter-spacing: 1px;
-}
-.cb-tab-btn:hover:not(.active) { background-color: rgba(255, 255, 255, 0.1); transform: translateY(-1px); }
-.cb-tab-btn.active {
-    background-color: white; color: var(--blue-dark); box-shadow: 0 4px 12px rgba(0,0,0,0.15); transform: scale(1.02);
-}
-
-.plan-grid {
-    display: block; /* No more side panel, use full width */
-}
-
-
-.plan-grid {
-    display: block; /* No more side panel, use full width */
 }
 
 /* Perfil Lista Competencias */
@@ -234,124 +184,11 @@ body.compu-body::before {
     display: flex; align-items: flex-end; justify-content: flex-end; padding: 3rem 5%;
 }
 
-
-
 /* UX/UI Project Modal */
 
 .cb-card:hover::before {
     width: 8px;
     opacity: 1;
-}
-
-/* Perfil Lista Competencias */
-/* Perfil del Técnico Section */
-.cb-perfil-section {
-    background: var(--blue-main);
-    width: 100%;
-    margin: 0;
-    padding: 0 0 5rem 0;
-    position: relative;
-    box-sizing: border-box;
-}
-@media (max-width: 768px) {
-    .cb-perfil-section {
-        width: 100vw;
-        margin-left: calc(-50vw + 50%);
-    }
-}
-@media (max-width: 480px) {
-    .cb-perfil-section {
-        width: auto;
-        margin-left: -5%;
-        margin-right: -5%;
-    }
-}
-
-.cb-perfil-container {
-    max-width: 1200px;
-    padding: 0 5%;
-    margin: 0 auto;
-}
-
-.cb-perfil-badge-box {
-    display: flex;
-    align-items: center;
-    margin-bottom: 2rem;
-    justify-content: flex-start;
-    transform: translateY(-50%);
-}
-
-.cb-perfil-content {
-    color: white;
-    padding: 0 1rem;
-    margin-top: -1rem;
-}
-
-.cb-perfil-desc {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    margin-bottom: 1.5rem;
-    font-weight: 500;
-    color: rgba(255, 255, 255, 0.9);
-    max-width: 1000px;
-}
-
-.cb-perfil-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 1.2rem;
-    margin-top: 3rem;
-}
-
-.cb-perfil-card {
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(10px);
-    padding: 1.5rem;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-.cb-perfil-card:hover {
-    background: rgba(255, 255, 255, 0.15);
-    transform: translateY(-5px);
-    border-color: rgba(255, 255, 255, 0.4);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-
-.cb-perfil-card i {
-    color: #4fc3f7;
-    font-size: 1.3rem;
-    margin-top: 0.1rem;
-}
-
-.cb-perfil-card span {
-    font-size: 0.95rem;
-    line-height: 1.5;
-    font-weight: 500;
-}
-
-/* Proyectos Carousel */
-.compu-projects { padding: 2.5rem 5% 4rem; max-width: 1200px; margin: 0 auto; }
-.project-carousel { display: flex; align-items: center; gap: 1rem; margin-top: 1rem; }
-.project-track-wrapper { overflow: hidden; width: 100%; }
-.project-track { display: flex; gap: 1rem; }
-.project-card {
-    min-width: 220px; flex: 1; background: var(--blue-dark); border-radius: 6px; overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1); transition: transform 0.3s; cursor: pointer;
-}
-.project-card:hover { transform: translateY(-5px); }
-.p-info h4 { color: white; margin: 0; font-size: 0.95rem; text-transform: uppercase; }
-
-/* Fotos */
-.fotos-instalaciones { position: relative; width: 100%; margin-top: 2rem; height: 400px; }
-.fotos-instalaciones img { width: 100%; height: 100%; object-fit: cover; }
-.fotos-instalaciones-overlay {
-    position: absolute; inset: 0; background: linear-gradient(to top, rgba(0, 119, 200, 0.9) 0%, transparent 60%);
-    display: flex; align-items: flex-end; justify-content: flex-end; padding: 3rem 5%;
 }
 
 
@@ -360,8 +197,6 @@ body.compu-body::before {
     .plan-grid { grid-template-columns: 1fr; }
     .slider-box { grid-template-columns: 1fr; text-align: center; }
     .slider-nav { display: none; }
-    .cb-tabs-header { flex-wrap: wrap; }
-    .cb-tab-btn { flex: 1 1 40%; margin-bottom: 0.5rem; }
 }
 
 @media (max-width: 768px) {
@@ -539,19 +374,4 @@ body.compu-body::before {
     .cb-fab-social i { font-size: 1.5rem; min-width: 50px; }
     .cb-fab-social:hover { width: 50px; }
     .cb-fab-text { display: none; }
-}
-
-/* Centrar texto en los botones de llamada a la acción (Contactar) */
-.boton-llamada-accion {
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    text-align: center !important;
-}
-
-/* Visibilidad de foco y accesibilidad */
-:focus-visible {
-    outline: 3px solid #00E5FF !important;
-    outline-offset: 3px;
-    border-radius: 2px;
 }

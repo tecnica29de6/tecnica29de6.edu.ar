@@ -900,6 +900,8 @@ body {
 .cb-tabs-header {
     background-color: rgba(0, 163, 255, 0.4);
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     padding: 6px;
     border-radius: 12px;
     backdrop-filter: blur(5px);
@@ -908,8 +910,7 @@ body {
 }
 
 .cb-tab-btn {
-    flex: 1;
-    padding: 0.8rem 1.5rem;
+    padding: 0.8rem 2rem;
     border: none;
     background: transparent;
     color: white;

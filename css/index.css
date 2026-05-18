@@ -450,14 +450,6 @@
     }
 }
 
-/* Centrar texto en los botones de llamada a la acción (Contactar) */
-.boton-llamada-accion {
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    text-align: center !important;
-}
-
 /* Visibilidad de foco y accesibilidad */
 :focus-visible {
     outline: 3px solid #00E5FF !important;

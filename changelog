@@ -14,3 +14,6 @@ Se agregó un hipervínculo a un documento para cada materia en los planes de es
 
 16/5
 Se optimizaron y redujeron parcialmente todas las páginas y css, eliminando secciones redundantes y refactorizándolas para facilitar la legibilidad del código.
+
+18/5
+Segunda parte de optimización de código. Entre otras maniobras, se removieron 152 líneas de propiedades repetidas en especialidades.css
