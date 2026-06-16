@@ -711,6 +711,7 @@ body {
 
 .hero-botones {
     display: flex;
+    flex-wrap: wrap;
     gap: 2.5rem;
 }
 
@@ -727,30 +728,13 @@ body {
     letter-spacing: 1px;
     border: 2px solid transparent;
     text-align: center;
-}
-
-.boton-llamada-accion--primario {
-    background-color: #004E8E;
-    color: #ffffff;
-    border-color: #004E8E;
-    box-shadow: 0 6px 20px rgba(0, 78, 142, 0.3);
-}
-
-.boton-llamada-accion--primario:hover {
-    background-color: #003a6b;
-    border-color: #003a6b;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0, 78, 142, 0.5);
-}
-
-.boton-llamada-accion--secundario {
     background-color: rgba(255, 255, 255, 0.1);
     color: #ffffff;
     border-color: #ffffff;
     backdrop-filter: blur(5px);
 }
 
-.boton-llamada-accion--secundario:hover {
+.boton-llamada-accion:hover {
     background-color: #ffffff;
     color: #004E8E;
     transform: translateY(-3px);
@@ -794,8 +778,7 @@ body {
 
     .boton-llamada-accion {
         width: 100%; /* Full width buttons on mobile for easier tapping */
-        max-width: 280px;
-        padding: 1rem 2rem;
+        padding: 1rem;
     }
 
     /* Ajuste de olas en móvil */
@@ -817,6 +800,11 @@ body {
     margin-top: 0;
     border-top: 4px solid #005682;
     align-items: center;
+}
+
+.pie-pagina-nuevo h2{
+    margin-bottom: 0.2rem;
+    margin-top: 2rem;
 }
 
 .pie-pagina__seccion {

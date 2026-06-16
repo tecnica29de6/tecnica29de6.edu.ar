@@ -17,3 +17,7 @@ Se optimizaron y redujeron parcialmente todas las páginas y css, eliminando sec
 
 18/5
 Segunda parte de optimización de código. Entre otras maniobras, se removieron 152 líneas de propiedades repetidas en especialidades.css
+
+16/6
+Se añadieron secciones de ciclo básico e institucional con placeholders en el index, y los botones que llevan a estas secciones en el hero
+Se corrigieron algunos detalles de css y responsividad
