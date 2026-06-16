@@ -497,9 +497,15 @@
 
 .pie-pagina-nuevo {
     display: grid !important;
+    --cb-blue-light: #E3F2FD;
+    --cb-white: #ffffff;
+    --cb-bg-gray: #f8f9fa;
+    background: #0085C8;
+    
+    display: grid !important;
     grid-template-columns: repeat(3, 1fr) !important; /* Fuerza las 3 columnas en horizontal */
     gap: 4rem;
-    background: var(--cb-blue-dark);
+    background-color: #0085C8;
     color: var(--cb-white);
     padding: 6rem 10%;
     position: relative;

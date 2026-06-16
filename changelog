@@ -21,3 +21,7 @@ Segunda parte de optimización de código. Entre otras maniobras, se removieron 
 16/6
 Se añadieron secciones de ciclo básico e institucional con placeholders en el index, y los botones que llevan a estas secciones en el hero
 Se corrigieron algunos detalles de css y responsividad
+
+16/6 b
+Se corrigieron los enrutamientos de cada uno de los footers. 
+Se corrigieron errores de ccs
