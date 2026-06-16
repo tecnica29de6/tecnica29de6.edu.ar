@@ -493,3 +493,107 @@
         height: 300px;
     }
 }
+
+
+.pie-pagina-nuevo {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important; /* Fuerza las 3 columnas en horizontal */
+    gap: 4rem;
+    background: var(--cb-blue-dark);
+    color: var(--cb-white);
+    padding: 6rem 10%;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 -10px 30px rgba(0,0,0,0.15);
+    overflow: hidden;
+}
+
+.pie-pagina-nuevo::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    right: -100px;
+    width: 600px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 50%;
+    transform: rotate(15deg);
+    pointer-events: none;
+}
+
+.index-block {
+    position: relative;
+    z-index: 2;
+    text-align: left;
+    width: 100%;
+}
+
+.index-block h2 {
+    color: var(--cb-white);
+    font-size: 1.1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1.8rem;
+    padding-left: 0;
+    border-bottom: 2px solid var(--cb-blue-primary);
+    padding-bottom: 8px;
+    display: block;
+}
+
+.index-block ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.index-block ul li,
+.pie-pagina__ubicacion-texto p {
+    margin-bottom: 1rem;
+    color: var(--cb-blue-light);
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.index-block ul li a {
+    color: var(--cb-blue-light);
+    text-decoration: none;
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), color 0.3s ease;
+    display: inline-block;
+}
+
+.index-block ul li a:hover {
+    color: var(--cb-white);
+    transform: translateX(8px);
+}
+
+.footer__mapa-contenedor {
+    margin-top: 1.5rem;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 100%;
+    height: 200px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.footer__mapa-contenedor iframe {
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 1024px) {
+    .pie-pagina-nuevo {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .pie-pagina-nuevo {
+        grid-template-columns: 1fr !important;
+        gap: 2.5rem;
+        padding: 4rem 1.5rem;
+    }
+}
