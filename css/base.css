@@ -72,8 +72,8 @@ body {
     margin: 0;
     position: relative;
     top: 0;
-    width: 110px; /* Slightly larger */
-    height: 110px;
+    width: 60px; /* Slightly larger */
+    height: 60px;
     background-image: url('../img/logo_transparent.png');
     background-size: contain;
     background-repeat: no-repeat;
